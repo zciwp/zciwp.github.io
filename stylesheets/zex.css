@@ -1,0 +1,36 @@
+/* css reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+img{border:0}
+address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+select{font-size:12px}
+button{line-height:1.231;white-space:nowrap;vertical-align:middle;cursor:pointer}
+input,textarea,select,button{outline:none;resize:none}
+a{text-decoration:none; color:#006A92}
+a:hover{text-decoration:underline}
+a:focus{outline:none}
+.clear:after{content:'.';clear:both;display:block;height:0;visibility:hidden; font-size:0;line-height:0}
+.clear{ *zoom:1}
+.left{ float: left;}
+.right{ float: right;}
+
+body{ background-color: #333;font-size: 16px}
+
+.userpic{ background: url(https://si0.twimg.com/profile_images/378800000408437093/8a1ba3d48b4df69690fc238a497f642f_normal.png) no-repeat; width: 48px; height: 48px; border-radius: 50%; -webkit-animation-duration: 3s; -webkit-animation-delay: 0; -webkit-animation-timing-function: ease-in-out; -webkit-animation-name:picScroll;-webkit-animation-fill-mode:both;}
+.userpic .shine{ background: url(../images/shine.png) no-repeat -90px 0px; width: 100%; height: 100%; border-radius: 50%; -webkit-animation-duration: .4s; -webkit-animation-delay: 3s; -webkit-animation-timing-function: ease; /*-webkit-animation-iteration-count: infinite;*/ -webkit-animation-fill-mode:both;-webkit-animation-name:glasslight;}
+@-webkit-keyframes glasslight{
+	 0%{ background-position: -90px 0}
+	 100%{ background-position: 15px 0}
+}
+@-webkit-keyframes picScroll{
+	 0%{ margin-left: 0; -webkit-transform: rotate(0deg)}
+	 100%{ margin-left: 240px; -webkit-transform: rotate(720deg)}
+}
+.welcome{ position: absolute; top: 0; left: 0; color: #FFFFFF; font-size: 20px; line-height: 48px; padding-left: 20px; -webkit-animation-duration: 3s; -webkit-animation-delay: .3s; -webkit-animation-timing-function: ease-in-out; -webkit-animation-fill-mode:both;-webkit-animation-name:welcomeshow; overflow: hidden; white-space: nowrap;}
+@-webkit-keyframes welcomeshow{
+	 0%{ width: 0;}
+	 100%{ width: 240px; }
+}
