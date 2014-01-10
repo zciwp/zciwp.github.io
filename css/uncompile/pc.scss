@@ -1,14 +1,185 @@
 @charset "utf-8";
 @import "_variable";
+// variable
+$global_FontSet:12px/1.75 "Mircosoft YaHei",微软雅黑,"STHeiti Light",Tahoma,Arial,sans-serif;
+$global_FontMainColor:#333;
+$global_FontSubColor:#999;
+$global_grayborder:#ccc;
+$mainColor:#edae21;
+// variable END
 @import "/Users/sunrise/Sites/global/css/_reset";
+@import "/Users/sunrise/Sites/global/css/_animation";
 @import "/Users/sunrise/Sites/global/css/_public";
 
 
-.wrapper{
-	max-width: 960px;
-	min-width: 767px;
-	margin: 0 auto;
-	.sidebar{
-		
+// css3动画
+@-webkit-keyframes textmask{
+	0%{
+		-webkit-mask: -webkit-gradient(radial, 17 17, 123, 17 17, 138, from(rgb(0, 0, 0)), color-stop(0.5, rgba(0, 0, 0, 0.2)), to(rgb(0, 0, 0)));
+	}
+	100%{
+		-webkit-mask: -webkit-gradient(radial, 17 17, 123, 17 17, 138, from(rgb(0, 0, 0)), color-stop(0.5, rgba(0, 0, 0, 0.2)), to(rgb(0, 0, 0)));
 	}
 }
+
+@-webkit-keyframes welcome{
+	0%{
+		width:0%;
+	}
+	100%{
+		width:100%;
+	}
+}
+
+
+.wrapper{
+	header{
+		position: fixed;
+		width: 30%;
+		height: 100%;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		border-right: 1px solid #ccc;
+		background: $header_bg;
+		.inner{
+			width: 200px;
+			float: right;
+		}
+	}
+	.logo{
+		position: relative; 
+		height: 70px;
+		.welcome{
+			font-size: 14px;
+			height: 70px;
+			line-height: 70px;
+			
+		}
+	}
+	nav{
+		a{
+			display: block;
+			height: 30px;
+			line-height: 30px;
+			padding-left: 30px; 
+			font-size: 16px;
+			border-left: 3px solid $nav-1-color;
+			margin: 10px 0 0;
+			&:first-child,&.first-child{
+				border-left-color: $nav-2-color;
+			}
+			&:last-child,&.last-child{
+				border-left-color: $nav-3-color;
+			}
+			&.on{
+				background: $nav-1-color;
+				color: #FFFFFF;
+			}
+			&:first-child.on{
+				background: $nav-2-color;
+				color: #FFFFFF;
+			}
+			&:last-child.on{
+				background: $nav-3-color;
+				color: #FFFFFF;
+			}
+		}
+	}
+	.photo{
+		width: 50px;
+		height: 50px;
+		border: 2px solid #FFFFFF;
+		@include bor_ra(25px);
+		-webkit-box-shadow: 0 2px 2px rgba(0,0,0,.2);
+		box-shadow: 0 2px 2px rgba(0,0,0,.2);
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		img{
+			width: 50px;
+			height: 50px;
+			@include bor_ra(25px);
+		}
+	}
+	.g_block{
+		max-width: 700px;
+		min-width: 490px;
+		margin-left: 33%;
+		padding-top: 15px;
+		li{
+			padding-bottom: 15px;
+		}
+		.t{
+			border-left:3px solid $nav-2-color;
+			height: 20px;
+			line-height: 20px;
+			overflow: hidden;
+			margin-bottom: 5px;
+			h6{
+				font-size:16px;
+				font-weight: bold;
+				a{
+					padding-left: 20px;
+					color: $global_FontMainColor;
+				}
+			}
+		}
+		.translate{
+			border-left-color:$nav-1-color;
+		}
+		.summary{
+			border-left-color:$nav-3-color;
+		}
+		.article_summary{
+			color: $global_FontSubColor;
+			padding-left: 23px;
+		}
+	}
+	.page-content{
+		@extend .g_block;
+		font-size: 14px;
+		padding-right: 30px;
+		h2{
+			font-size: 18px;
+			-webkit-box-flex: 1;
+		}
+		.hd{
+			display: -webkit-box;
+		}
+		p{ margin-bottom: 15px;}
+		.time{
+			color: $global_FontSubColor;
+			font-size:12px;
+			margin-bottom:5px;
+		}
+		.arr{
+			position: absolute;
+			top: -18px;
+			left:-83px;
+			background: url("../../images/arr.png") no-repeat;
+			width:90px;
+			height: 90px;
+		}
+	}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

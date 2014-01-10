@@ -1,8 +1,7 @@
 ---
 layout: post
 title: title
-category: opinion
+category: summary
 description: description
 ---
-
 

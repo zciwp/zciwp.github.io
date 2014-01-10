@@ -1,7 +1,9 @@
 ---
 layout: post
 title: title
-category: project
+category: translate
 description: description
+tags: translate
 ---
+
 

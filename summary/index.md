@@ -1,12 +1,10 @@
 ---
 layout: default
-title: 最新文章
 ---
 
 
-
-<ul class="g_block">
-    {% for post in site.posts %}
+<ul class="g_block js_cate" name="summary">
+    {% for post in site.categories.summary %}
     <li class="article">
         <div class="t {{ post.categories }}">
             <h6><a href="{{ post.url }}">{{ post.title }}</a></h6>
