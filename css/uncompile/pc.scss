@@ -13,15 +13,6 @@ $mainColor:#edae21;
 
 
 // css3动画
-@-webkit-keyframes textmask{
-	0%{
-		-webkit-mask: -webkit-gradient(radial, 17 17, 123, 17 17, 138, from(rgb(0, 0, 0)), color-stop(0.5, rgba(0, 0, 0, 0.2)), to(rgb(0, 0, 0)));
-	}
-	100%{
-		-webkit-mask: -webkit-gradient(radial, 17 17, 123, 17 17, 138, from(rgb(0, 0, 0)), color-stop(0.5, rgba(0, 0, 0, 0.2)), to(rgb(0, 0, 0)));
-	}
-}
-
 @-webkit-keyframes welcome{
 	0%{
 		width:0%;
@@ -30,6 +21,79 @@ $mainColor:#edae21;
 		width:100%;
 	}
 }
+@-moz-keyframes welcome{
+	0%{
+		width:0%;
+	}
+	100%{
+		width:100%;
+	}
+}
+@-o-keyframes welcome{
+	0%{
+		width:0%;
+	}
+	100%{
+		width:100%;
+	}
+}
+@keyframes welcome{
+	0%{
+		width:0%;
+	}
+	100%{
+		width:100%;
+	}
+}
+// logo 文字 结束
+
+@-webkit-keyframes userpic{
+	0%{
+		width:0%;
+	}
+	100%{
+		width:100%;
+	}
+}
+@-moz-keyframes userpic{
+	0%{
+		width:0%;
+	}
+	100%{
+		width:100%;
+	}
+}
+@-o-keyframes userpic{
+	0%{
+		width:0%;
+	}
+	100%{
+		width:100%;
+	}
+}
+@keyframes userpic{
+	0%{
+		width:0%;
+	}
+	100%{
+		width:100%;
+	}
+}
+@-webkit-keyframes glasslight{
+   0%{ background-position: -90px 0}
+   100%{ background-position: 15px 0}
+}
+@-webkit-keyframes picScroll{
+   0%{ margin-left: -40px; -webkit-transform: rotate(0deg)}
+   100%{ margin-left: 135px; -webkit-transform: rotate(720deg)}
+}
+
+
+
+
+.userpic{ background: url(../../images/zex50.jpeg) no-repeat; width: 48px; height: 48px; border-radius: 50%;  -webkit-animation-duration: 3s; -webkit-animation-delay: 0; -webkit-animation-timing-function: ease-in-out; -webkit-animation-name:picScroll;-webkit-animation-fill-mode:both; top: 10px; position: absolute; border:2px solid #FFFFFF; box-shadow: 1px 1px 1px rgba(0,0,0,.2)}
+
+.userpic .shine{ background: url(../../images/shine.png) no-repeat -90px 0px; width: 100%; height: 100%; border-radius: 50%; -webkit-animation-duration: .4s; -webkit-animation-delay: 3s; -webkit-animation-timing-function: ease; /*-webkit-animation-iteration-count: infinite;*/ -webkit-animation-fill-mode:both;-webkit-animation-name:glasslight;}
 
 
 .wrapper{
@@ -54,7 +118,18 @@ $mainColor:#edae21;
 			font-size: 14px;
 			height: 70px;
 			line-height: 70px;
-			
+			font-family: Arial,sans-serif;
+			margin-left:-20px;
+			overflow: hidden;
+			position: absolute;
+			$an_count:1;
+			$an_duration:3s;
+			$an_timefunction:ease-in-out;
+			@include animation($an_duration,$an_count,$an_delay,$an_fillmode,$an_timefunction);
+			@include prefixer(animation-name,welcome,$prefixes);
+			&:first-letter{
+				font-size: 30px;
+			}
 		}
 	}
 	nav{
