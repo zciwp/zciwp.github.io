@@ -91,7 +91,7 @@ $mainColor:#edae21;
 
 
 
-.userpic{ background: url(../../images/zex50.jpeg) no-repeat; width: 48px; height: 48px; border-radius: 50%;  -webkit-animation-duration: 3s; -webkit-animation-delay: 0; -webkit-animation-timing-function: ease-in-out; -webkit-animation-name:picScroll;-webkit-animation-fill-mode:both; top: 10px; position: absolute; border:2px solid #FFFFFF; box-shadow: 1px 1px 1px rgba(0,0,0,.2)}
+.userpic{ background: url(../../images/zex.jpeg) no-repeat; width: 48px; height: 48px; border-radius: 50%;  -webkit-animation-duration: 3s; -webkit-animation-delay: 0; -webkit-animation-timing-function: ease-in-out; -webkit-animation-name:picScroll;-webkit-animation-fill-mode:both; top: 10px; position: absolute; border:2px solid #FFFFFF; box-shadow: 1px 1px 1px rgba(0,0,0,.2); background-size: 50px 50px;}
 
 .userpic .shine{ background: url(../../images/shine.png) no-repeat -90px 0px; width: 100%; height: 100%; border-radius: 50%; -webkit-animation-duration: .4s; -webkit-animation-delay: 3s; -webkit-animation-timing-function: ease; /*-webkit-animation-iteration-count: infinite;*/ -webkit-animation-fill-mode:both;-webkit-animation-name:glasslight;}
 
@@ -181,7 +181,7 @@ $mainColor:#edae21;
 		max-width: 700px;
 		min-width: 490px;
 		margin-left: 33%;
-		padding-top: 15px;
+		padding-top: 30px;
 		li{
 			padding-bottom: 15px;
 		}
