@@ -79,9 +79,16 @@ $global_FontSubColor:#999;
 		padding: 15px;
 		font-size:16px;
 		h2{
-			font-size:18px;
+			font-size:24px;
 			font-weight: bold;
 			-webkit-box-flex: 1;
+		}
+		h3{ padding-bottom: 0}
+		h4{
+			padding:10px 0 0;
+		}
+		pre{
+			margin-bottom:5px;
 		}
 		.hd{
 			display: -webkit-box;

@@ -5,3 +5,38 @@
 		font-size: 12px;
 	}
 }
+
+.wrapper{
+	.page-content{
+		pre{
+			margin-bottom: 15px;
+			white-space: pre-wrap; /* css-3 */
+	        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	        white-space: -pre-wrap; /* Opera 4-6 */
+	        white-space: -o-pre-wrap; /* Opera 7 */
+	        word-wrap: break-word; /* Internet Explorer 5.5+ */
+			li{ padding-bottom: 0}
+		}
+		h3{
+			font-size: 20px;
+			-webkit-box-flex: 1;
+			padding-bottom: 5px;
+			font-weight: bold;
+			padding-top: 10px;
+		}
+		h4{
+			font-size: 18px;
+			font-weight: bold;
+			padding-bottom: 5px;
+		}
+		blockquote{
+			background: #f0f0f0;
+			padding:10px 15px;
+			color: #666666;
+			margin-bottom: 15px;
+			p{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
