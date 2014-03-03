@@ -1,8 +1,21 @@
 .content{
+	.source{
+		color: $global_FontSubColor;
+		padding:10px 0;
+	}
 	.tips{
 		color: $global_FontSubColor;
-		padding: 10px 0;
+		padding: 0 0 10px;
 		font-size: 12px;
+	}
+	ul{
+		margin-left: 15px;
+		list-style-type: circle;
+	}
+	pre{
+		ol,ul{
+			list-style-type: none;
+		}
 	}
 }
 
