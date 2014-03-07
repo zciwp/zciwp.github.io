@@ -13,8 +13,13 @@
 		list-style-type: circle;
 	}
 	pre{
-		ol,ul{
+		font-size: 16px;
+		ul{
 			list-style-type: none;
+		}
+		ol{
+			padding-left: 25px;
+			list-style-type: decimal;
 		}
 	}
 }
