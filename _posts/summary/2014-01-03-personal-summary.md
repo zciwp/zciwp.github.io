@@ -2,7 +2,7 @@
 layout: post
 title: 个人简介
 category: summary
-description: 姓名:zEx  性别:男  居住地:北京
+description: 详情请点击上面的标题查看
 ---
 
 
@@ -14,4 +14,6 @@ description: 姓名:zEx  性别:男  居住地:北京
 性别：男
 
 爱好：女
+
+邮箱：chao.zhang.bj@gmail.com
 
