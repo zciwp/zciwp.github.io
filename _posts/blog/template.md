@@ -1,12 +1,7 @@
 ---
 layout: post
-title: 存在感
-description: 存在感对于每个人的生活有多么的重要，可能平时并不是太关注，其实他就是生活的全部
+title: # 前端新技术 #  yeoman,bower,grunt
+description: 还没学会，只看了yeoman，grunt官网上说yeoman在几个月后会替代grunt-init
 category: blog
 ---
 
-
-
-
-
-[BeiYuu]:    http://beiyuu.com  "BeiYuu"

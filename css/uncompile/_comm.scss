@@ -8,6 +8,16 @@
 		padding: 0 0 10px;
 		font-size: 12px;
 	}
+	.suggest{
+		border-left: 8px solid #bfcada;
+		background-color: #f9f9f9;
+		padding: 10px;
+	}
+	.code{
+		background-color: #ececec;
+		text-shadow: 1px 1px #fff;
+		font: .95em/1.5 'andale mono','lucida console',monospace;
+	}
 	ul{
 		margin-left: 15px;
 		list-style-type: circle;
