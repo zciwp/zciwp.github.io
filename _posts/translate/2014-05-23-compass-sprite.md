@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: 网站设计：使用compass来拼合css雪碧(sprite)图
 category: translate
