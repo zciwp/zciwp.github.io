@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 网站设计：使用compass来拼合css雪碧(sprite)图
+title: 【Compass】网站设计：使用compass来拼合css雪碧(sprite)图
 category: translate
 description: 使用compass来拼合css雪碧(sprite)图
 tags: translate
