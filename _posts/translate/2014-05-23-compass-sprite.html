@@ -1,0 +1,245 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+              "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
+pre code { border: 0px !important; padding: 0;}
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%; outline:none;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+</style><title>2014-05-23-compass-sprite</title></head><body><hr />
+<p>layout: post
+title: 【Compass】网站设计：使用compass来拼合css雪碧(sprite)图
+category: translate
+description: 使用compass来拼合css雪碧(sprite)图
+tags: translate</p>
+<hr />
+<div class="source">
+    根据http://www.hongkiat.com/blog/compass-image-sprite/翻译，仅是本人个人理解，有不对的地方，还请大家留言指正，多谢。
+</div>
+
+<p>CSS雪碧图是将几个图片拼合成一张图片，以此来减少HTTP请求的方法，并且可以提升网站加载性能。除了使用传统方法在Photoshop中手动拼合，还有一些简便的方法和便捷的工具来帮助我们完成这项工作。</p>
+<p><img alt="Alt compassLogo" src="file:///Users/sunrise/Sites/github/zciwp.github.io/_posts/translate/../images/blog/compass-sprite/compass-cover.jpg" /></p>
+<p>但是，以我处理CSS雪碧图的经验来说，没有哪种方法比使用Compass的Sprite函数更轻松容易的了。现在就让我们来看看他是如何工作的。</p>
+<div class="suggest">建议开始本章前先阅读：<a href="http://www.hongkiat.com/blog/saas-compass">完美的样式语法：在sass中使用Compass</a></div>
+
+<h2 id="开始使用compass">开始使用Compass</h2>
+<p>在使用Compass工作之前，我们需要创建一个Compass的项目然后监视它。这样，当这个项目中包含的图片和<span class="code">.scss</span>一发生改变，Compass就会编译成合适的形式。</p>
+<p>让我们打开你的终端或者命令行窗口（如果你使用的是Windows），然后运行下面的这段命令。</p>
+<pre><code>compass create /path/to/project
+cd /path/to/project
+compass watch
+</code></pre>
+<h2 id="合并图片">合并图片</h2>
+<p>正如我们上面提到的，你可以使用Photoshop来手动增减图片或者你也可以使用一些便捷的工具，例如：<a href="http://www.spritebox.net/">SpriteBox</a>或者<a href="http://spriteme.org/">SpriteMe</a>。Compass将这些功能整合成一个函数。我们在<strong>images/browsers/</strong>这个文件夹下有一些icon图片，命名为XXX.png。</p>
+<p><img alt="Alt browsers" src="file:///Users/sunrise/Sites/github/zciwp.github.io/_posts/translate/../images/blog/compass-sprite/browsers.jpg" /></p>
+<p>这些icon是通过<a href="http://kde-look.org/usermanager/search.php?username=Sephiroth6779">Futurosoft</a>得来的。</p>
+<p>在Compass中添加这些icon，我们可以在<span class="code">.scss</span>文件中使用<span class="code">@import</span>语法指向图片文件夹下的所有png扩展名的图片。就像下面这样：</p>
+<pre><code>@import "browsers/*.png";
+</code></pre>
+<p>保存文件后，Compass将会将这些图片进行合并，然后生成一个新的图片文件，如下：</p>
+<p><img alt="Alt image-sprite" src="file:///Users/sunrise/Sites/github/zciwp.github.io/_posts/translate/../images/blog/compass-sprite/image-sprite.jpg" /></p>
+<h3 id="雪碧图陈列方向（即合并完后的图片是横向排列还是纵向排列）">雪碧图陈列方向（即合并完后的图片是横向排列还是纵向排列）</h3>
+<p>此外，我们还可以设置雪碧图排列的方向。正如你之前看到的图片截屏，图片默认排列是纵向的。假设纵向排列不能适应当前的情况下，我们可以使用<span class="code">$&lt;map&gt;-layout: horizontal;</span>或者<span class="code">$&lt;map&gt;-layout: diagonal;</span>变量来指定他们水平排列或者对角线排列，将变量中的<span class="code">&lt;map&gt;</span>替换成你存储图片的文件夹的名字。</p>
+<p><strong>水平排列例子</strong></p>
+<pre><code>$browsers-layout:horizontal;  
+@import "browsers/*.png";
+</code></pre>
+<p><img alt="Alt image-sprite-horizontal" src="file:///Users/sunrise/Sites/github/zciwp.github.io/_posts/translate/../images/blog/compass-sprite/image-sprite-horizontal.jpg" /></p>
+<p><strong>对角线排列例子</strong></p>
+<pre><code>$browsers-layout:diagonal;  
+@import "browsers/*.png";
+</code></pre>
+<p><img alt="Alt image-sprite-horizontal" src="file:///Users/sunrise/Sites/github/zciwp.github.io/_posts/translate/../images/blog/compass-sprite/image-sprite-diagonal.jpg" /></p>
+<h2 id="在样式表中添加图片">在样式表中添加图片</h2>
+<p>一旦我们将图片合并完，我们就可以在样式表中的背景图中调用它了。我们用传统的做法就可以了。</p>
+<pre><code>.chrome {
+    background-position: 0 0; width: 128px; height: 128px; 
+}   
+.firefox { 
+    background-position: 0 -133px; width: 128px; height: 128px;
+}   
+.ie { 
+    background-position: 0 -266px; width: 128px; height: 128px;
+}   
+.opera { 
+    background-position: 0 -399px; width: 128px; height: 128px;
+}   
+.safari { 
+    background-position: 0 -532px; width: 128px; height: 128px;
+}
+</code></pre>
+<p>在Compass中，我们有更简单的的方法。首先，我们用@include <span class="code">all-&lt;map&gt;-sprites</span>这个语法来生成一些CSS规则，其中，将替换成我们存放图片的文件夹名称。</p>
+<pre><code>@include  all-browsers-sprites;
+</code></pre>
+<p>当上面这行编译成正常的CSS时，除了会生成背景图的声明，还有对应的位置，正如下面展示的。</p>
+<pre><code>.browsers-sprite, .browsers-chrome, .browsers-firefox, .browsers-ie, .browsers-opera, .browsers-safari { 
+    background: url('/images/browsers-sad8e949931.png') no-repeat;  
+}  
+.browsers-chrome { 
+    background-position: 0 0;  
+}  
+.browsers-firefox {
+    background-position: 0 -128px;
+}  
+.browsers-ie { 
+    background-position: 0 -256px;  
+}
+.browsers-opera {
+    background-position: 0 -384px;
+}  
+.browsers-safari {
+    background-position: 0 -512px;
+}
+</code></pre>
+<p>或者，我们也可以用<span class="code">@include map-sprite(image-naem)</span>语法将背景图中的某一个对应的位置图片传给指定的选择器：和前面的代码一样，只需要将map替换成存储图片的文件夹名字即可。下面是一个例子。</p>
+<pre><code>li {
+    @include browsers-sprite(safari);
+}
+</code></pre>
+<p>然后，Compass会聪明的识别出背景的位置，不用我们明确指定。在正常的CSS中，上面那行代码会转换成：</p>
+<pre><code>.browsers-sprite, li {
+    background: url('/images/browsers-sad8e949931.png') no-repeat;
+}  
+li {
+    background-position: 0 -512px;
+}
+</code></pre>
+<h2 id="指定容器的尺寸">指定容器的尺寸</h2>
+<p>最后我们需要做的就是指定需要显示背景图容器的宽高属性。我们传统的做法是手动查看图片的宽和高（绝大多数情况是通过查看图片信息或图片属性获得）。</p>
+<p>使用Compass，我们就可以使用 <span class="code">map-sprite-height(image-name)</span> 或者 <span class="code">map-sprite-width(image-name)</span> 函数来获取到图片的宽和高。在下面这个例子中，我们会获取其中一个图片的宽和高，并将值存储给变量。再使用@include指令获得分配背景图。</p>
+<pre><code>$height: browsers-sprite-height(safari);  
+$width: browsers-sprite-width(safari);  
+li {
+    display: inline-block;
+    height: $height;
+    width: $width;
+    @include browsers-sprite(safari);
+}
+</code></pre>
+<p>当我们编译上面这些代码，他就会转成下面这些正常的CSS。</p>
+<pre><code>.browsers-sprite, li {
+    background: url('/images/browsers-sad8e949931.png') no-repeat;
+}
+li {
+    display: inline-block;
+    height: 128px;
+    width: 128px;
+    background-position: 0 -512px;
+}
+</code></pre>
+<h2 id="结论">结论</h2>
+<p>实际上，Compass除了这些创建CSS雪碧图的基本函数，Compass还有很多有用的函数可以使用。然而，如果你是Compass的新手，我们建议你关注我们之前写的关于<a href="http://www.hongkiat.com/blog/tag/sass/">Sass和Compass</a>的文章。我们希望这些文章对你有所帮助。</p></body></html>

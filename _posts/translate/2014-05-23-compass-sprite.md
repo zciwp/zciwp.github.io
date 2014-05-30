@@ -46,7 +46,7 @@ CSS雪碧图是将几个图片拼合成一张图片，以此来减少HTTP请求�
 
 ###雪碧图陈列方向（即合并完后的图片是横向排列还是纵向排列）
 
-此外，我们还可以设置雪碧图排列的方向。正如你之前看到的图片截屏，图片默认排列是纵向的。假设纵向排列不能适应当前的情况下，我们可以使用<span class="code">$map-layout: horizontal;</span>或者<span class="code">$map-layout: diagonal;</span>变量来指定他们水平排列或者对角线排列，将变量中的<span class="code">map</span>替换成你存储图片的文件夹的名字。
+此外，我们还可以设置雪碧图排列的方向。正如你之前看到的图片截屏，图片默认排列是纵向的。假设纵向排列不能适应当前的情况下，我们可以使用<span class="code">$&lt;map&gt;-layout: horizontal;</span>或者<span class="code">$&lt;map&gt;-layout: diagonal;</span>变量来指定他们水平排列或者对角线排列，将变量中的<span class="code">&lt;map&gt;</span>替换成你存储图片的文件夹的名字。
 
 **水平排列例子**
 
@@ -82,7 +82,7 @@ CSS雪碧图是将几个图片拼合成一张图片，以此来减少HTTP请求�
 		background-position: 0 -532px; width: 128px; height: 128px;
 	}   
 
-在Compass中，我们有更简单的的方法。首先，我们用@include <span class="code">all-map-sprites</span>这个语法来生成一些CSS规则，其中，将map替换成我们存放图片的文件夹名称。
+在Compass中，我们有更简单的的方法。首先，我们用@include <span class="code">all-&lt;map&gt;-sprites</span>这个语法来生成一些CSS规则，其中，将&lt;map&gt;替换成我们存放图片的文件夹名称。
 
 	@include  all-browsers-sprites; 
 
@@ -107,7 +107,7 @@ CSS雪碧图是将几个图片拼合成一张图片，以此来减少HTTP请求�
 		background-position: 0 -512px;
 	}  
 
-或者，我们也可以用<span class="code">@include map-sprite(image-naem)</span>语法将背景图中的某一个对应的位置图片传给指定的选择器：和前面的代码一样，只需要将map替换成存储图片的文件夹名字即可。下面是一个例子。
+或者，我们也可以用<span class="code">@include &lt;map&gt;-sprite(image-name)</span>语法将背景图中的某一个对应的位置图片传给指定的选择器：和前面的代码一样，只需要将&lt;map&gt;替换成存储图片的文件夹名字即可。下面是一个例子。
 
 	li {
 		@include browsers-sprite(safari);
@@ -126,7 +126,7 @@ CSS雪碧图是将几个图片拼合成一张图片，以此来减少HTTP请求�
 
 最后我们需要做的就是指定需要显示背景图容器的宽高属性。我们传统的做法是手动查看图片的宽和高（绝大多数情况是通过查看图片信息或图片属性获得）。
 
-使用Compass，我们就可以使用 <span class="code">map-sprite-height(image-name)</span> 或者 <span class="code">map-sprite-width(image-name)</span> 函数来获取到图片的宽和高。在下面这个例子中，我们会获取其中一个图片的宽和高，并将值存储给变量。再使用@include指令获得分配背景图。
+使用Compass，我们就可以使用 <span class="code">&lt;map&gt;-sprite-height(image-name)</span> 或者 <span class="code">&lt;map&gt;-sprite-width(image-name)</span> 函数来获取到图片的宽和高。在下面这个例子中，我们会获取其中一个图片的宽和高，并将值存储给变量。再使用@include指令获得分配背景图。
 
 	$height: browsers-sprite-height(safari);  
 	$width: browsers-sprite-width(safari);  
