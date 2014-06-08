@@ -1,0 +1,25 @@
+section.present p{
+	text-align: left;
+}
+
+ul, li{ list-style: none;}
+
+.hor_lst li{
+	display: inline-block;
+}
+
+.reveal .show_all_code{
+	width: 100%;
+}
+
+.reveal .show_all_code code{
+	max-height: none;
+}
+
+.space{
+	height: 50px;
+}
+
+.space_1{
+	height: 10px;
+}
