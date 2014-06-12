@@ -105,7 +105,16 @@ Sublime，koala，Codekit，WebStorm，etc。
 
 变量，嵌套，mixin（@include，@extend），运算，控制语句（判断，循环）,function。
 
-<a href="http://localhost/tencent/kpi/home.html" target="_blank">Demo</a>
+
+<div style="text-align: center">
+
+	<img src="img/example.png" alt="example-image" style="height: 300px;">
+	
+	<div>
+		<a href="http://localhost/tencent/kpi/home.html" target="_blank">Demo</a>
+	</div>
+
+</div>
 
 
 源代码：
@@ -160,7 +169,7 @@ Sublime，koala，Codekit，WebStorm，etc。
 如果不是installed，点击install安装或者下载[OSX-GCC-Installer](https://github.com/kennethreitz/osx-gcc-installer)来安装gcc，不然在安装ruby编译的时候会报误.
 
 
-mac自带ruby环境，版本可通过 ruby -v 查看。如要更新ruby可以使用 gem update ruby或使用RVM。
+mac自带ruby环境，版本可通过 ruby -v 查看。如要更新ruby可以使用 gem update ruby或使用RVM(ruby包管理工具)。
 
 <div class="space"></div>
 
@@ -311,11 +320,11 @@ ps:嫌麻烦的同学可以写个bat命令，每次双击就可以了，省去�
 
 **变量的定义：**
 
-$
+$/^[A-Za-z_]+\w*/ : value，$$也是不行的。
 
 	$width: 100px;
 
-	$name: facebook;
+	$_name: facebook;
 
 <div class="space"></div>
 
@@ -323,7 +332,7 @@ $
 
 	.test{ width: $width;}
 
-	.ico_#{$name}{ background: url("...");}
+	.ico_#{$_name}{ background: url("...");}
 
 
 **变量的类型：**
@@ -356,6 +365,24 @@ $
 
 7.sass 3.3.4中新增加一种数据类型map（e.g. $map:(key1:value1,key2,value2,key3:value3) ）
 
+
+**变量可以做什么**
+
+<div class="space_1"></div>
+
+1.属性值
+
+2.选择器名（有规律的选择器名）
+
+3.进行运算
+
+&nbsp;&nbsp;运算符号：+ - * / % == !=
+
+&nbsp;&nbsp;3.1 运算注意事项
+
+	$n = 3px; $m = 4pt; $n + $m; $m + $n;
+	font: $n / $m;
+	font: #{$n} / #{$m};
 
 
 
