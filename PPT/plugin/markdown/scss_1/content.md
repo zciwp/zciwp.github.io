@@ -103,7 +103,7 @@ Sublime，koala，Codekit，WebStorm，etc。
 
 ### Sass的特性
 
-变量，嵌套，mixin（@include，@extend），运算，控制语句（判断，循环）,function。
+变量，嵌套，mixin（@include，@extend），运算，控制语句（判断，循环）,function，@debug。
 
 
 <div style="text-align: center">
@@ -259,7 +259,7 @@ Scss源代码：
 		color: #fff;
 		background-color: #000; }
 		#main p {
-		width: 10em; }
+			width: 10em; }
 
 	.huge {
 		font-size: 10em;
@@ -372,7 +372,7 @@ $/^[A-Za-z_]+\w*/ : value，$$也是不行的。
 
 1.属性值
 
-2.选择器名（有规律的选择器名）
+2.选择器名（更适合有规律的选择器名）
 
 3.进行运算
 
@@ -387,7 +387,59 @@ $/^[A-Za-z_]+\w*/ : value，$$也是不行的。
 
 **当不确定变量的数量时**
 
-$args...
+$var_name...
+
+e.g
+
+	@mixin colors($text, $background, $border) {
+		color: $text;
+		background-color: $background;
+		border-color: $border;
+	}
+
+	$values: #ff0000, #00ff00, #0000ff;
+		.primary {
+		@include colors($values...);
+	}
+
+	$value-map: (text: #00ff00, background: #0000ff, border: #ff0000);
+	.secondary {
+		@include colors($value-map...);
+	}
 
 
-未完待续。。。
+
+## Chapter 5 调试
+
+
+传统的CSS（Scss）调试方法：
+
+1.在浏览器中“审查元素”，查找需要修改的css。
+
+2.复制class名，到css中查找，修改。（在Scss中查找位置）
+
+3.回到浏览器中刷新查看效果。
+
+4.用“审查元素”查看下一个需要修改的css。
+
+5.复制class名，到css中查找，修改。（在Scss中查找位置）
+
++ 。
+
++ 。
+
++ 。
+
+XX.修改完成，保存。
+
+
+
+
+
+
+
+
+
+
+
+

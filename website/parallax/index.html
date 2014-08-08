@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>视差滚动效果1</title>
+	<script type="text/javascript" src="../../js/jquery-1.11.1.js"></script>
+
+    <script type="text/javascript" src="../../js/parallay/plax.js"></script>
+    <style type="text/css">
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background: #000 top left repeat;
+        position: relative;
+      }
+      div#shell {
+        display: block;
+        position: relative;
+        margin: 100px auto;
+        width: 318px;
+        height: 318px;
+      }
+      div#shell{
+        z-index: 1;
+      }
+      img#plax-logo {
+        position: absolute;
+        top: 125px;
+        left: 90px;
+        z-index: 3;
+      }
+      img#plax-sphere-1 {
+        position: absolute;
+        z-index: 4;
+        top: 189px;
+        left: 191px;
+      }
+      img#plax-sphere-2 {
+        position: absolute;
+        z-index: 2;
+        top: 49px;
+        left: 53px;
+      }
+      img#plax-sphere-3 {
+        position: absolute;
+        top: 35px;
+        left: 32px;
+        z-index: 1;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#shell img').plaxify()
+        $.plax.enable()
+      })
+    </script>
+</head>
+<body>
+	
+  <body>
+    <div id="shell">
+      <img src="../../images/website/parallay/f1.png" width="150" height="150" data-xrange="40" data-yrange="40" id="plax-sphere-1"/>
+      <img src="../../images/website/parallay/m2.png" width="200" height="200" data-xrange="10" data-yrange="10" id="plax-sphere-2"/>
+      <img src="../../images/website/parallay/b3.png" width="130" height="100" data-xrange="40" data-yrange="40" data-invert="true" id="plax-sphere-3"/>
+    </div>
+
+</body>
+</html>
