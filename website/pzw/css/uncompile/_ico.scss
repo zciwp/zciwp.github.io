@@ -1,0 +1,27 @@
+.ico{
+	@extend .dis_ib;
+	width: 18px;
+	height:18px;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+}
+
+.ico-time{
+	background-image: url(../../img/time.png);
+}
+
+.ico-comment{
+	background-image: url(../../img/comment.png);
+}
+
+.ico-ask{
+	background-image: url(../../img/ask.png);
+}
+
+.ico-place{
+	background-image: url(../../img/place.png);
+}
+
+.ico-gwb{
+	background-image: url(../../img/gwb.png);
+}

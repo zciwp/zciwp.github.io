@@ -363,7 +363,7 @@ $/^[A-Za-z_]+\w*/ : value，$$也是不行的。
 
 <div class="space_1"></div>
 
-7.sass 3.3.4中新增加一种数据类型map（e.g. $map:(key1:value1,key2,value2,key3:value3) ）
+7.sass 3.3.4中新增加一种数据类型map(映射类型)（e.g. $map:(key1:value1,key2,value2,key3:value3) ）
 
 
 **变量可以做什么**
@@ -376,7 +376,7 @@ $/^[A-Za-z_]+\w*/ : value，$$也是不行的。
 
 3.进行运算
 
-&nbsp;&nbsp;运算符号：+ - * / % == !=
+&nbsp;&nbsp;运算符号：+ - * / %
 
 &nbsp;&nbsp;3.1 运算注意事项
 
@@ -385,7 +385,60 @@ $/^[A-Za-z_]+\w*/ : value，$$也是不行的。
 	font: #{$n} / #{$m};
 
 
-**当不确定变量的数量时**
+**列表类型变量**
+
+比如：
+	
+	$list: item1, item2, item3;
+	$list: item1 item2 item3;
+	$list: item1-1 item1-2 item1-3, item2-1 item2-2 item2-3;
+	(看起来有些像数组)
+
+
+**列表变量可以和function配合使用**
+
+<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#length-instance_method">length($list)</a>
+
+<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#nth-instance_method">nth($list,$index)</a>
+
+<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#index-instance_method">index($list,$value)</a>
+
+<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#append-instance_method">append($list,$value[,separator])</a>
+
+<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#join-instance_method">join($list1,$list2[,separator])</a>
+
+<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#zip-instance_method">zip($lists...)</a>
+
+<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#list_separator-instance_method">list-separator(#list)</a>
+
+@each $var in &lt;list&gt;
+
+	@each $animal in puma, sea-slug, egret, salamander {
+	  .#{$animal}-icon {
+	    background-image: url('/images/#{$animal}.png');
+	  }
+	}
+
+
+**map类型变量同样有封装好的function可以使用**
+
+<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#map_get-instance_method">map-get($map, $key)</a>
+
+<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#map_merge-instance_method">map-merge($map1, $map2)</a>
+
+<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#map_remove-instance_method">map-remove($map, $key)</a>
+
+<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#map_keys-instance_method">map-keys($map)</a>
+
+<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#map_values-instance_method">map-value($map)</a>
+
+<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#map_has_key-instance_method">map-has-key($map, $key)</a>
+
+<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#keywords-instance_method">keywords($args)</a>
+
+
+
+**简写参数列表**
 
 $var_name...
 
@@ -396,15 +449,262 @@ e.g
 		background-color: $background;
 		border-color: $border;
 	}
-
-	$values: #ff0000, #00ff00, #0000ff;
-		.primary {
+	
+	//list类型变量
+	$values: #ff0000, #00ff00, #0000ff; 
+	.primary {
 		@include colors($values...);
 	}
-
-	$value-map: (text: #00ff00, background: #0000ff, border: #ff0000);
+	
+	//map类型变量
+	$value-map: (text: #00ff00, background: #0000ff, border: #ff0000); 
 	.secondary {
 		@include colors($value-map...);
+	}
+
+
+
+**%foo**
+
+占位符选择器（不属于变量）
+
+它看起来像是类选择器或id选择器，除了将#或.替换成%。调用时使用@extend命令。
+
+	#context a%extreme {
+	  color: blue;
+	  font-weight: bold;
+	  font-size: 2em;
+	}
+	.notice {
+	  @extend %extreme;
+	}
+
+编译完：
+
+	#context a.notice {
+	  color: blue;
+	  font-weight: bold;
+	  font-size: 2em;
+	}
+
+
+再看个例子：
+
+	.test a%placeholder{
+		color: #333;
+	}
+	.notice{
+		@extend %placeholder;
+		width: 10px;
+	}
+	.test-2{
+		@extend .notice;
+	}
+
+编译完：
+	
+	.test a.notice, .test a.test-2{
+		color: #333;
+	}
+	.notice, .test-2{
+		width: 10px;
+	}
+
+
+
+**!default和!optional**
+
+<div class="space"></div>
+
+***!default***
+
+表示如果这个变量的值在其他地方没有被定义过，那么值就等于!default的值，被定义过则变成定义过的值
+
+<div class="space"></div>
+
+***!optional***
+
+如果引用了一个不存在的class名或id，不加的话会报错。
+
+看个例子：
+
+	.test{
+		@extend .test-2; //编译时报错
+	}
+
+	.test{
+		@extend .test-2 !optional; //编译时不报错，不输出到生成的css中
+	}
+
+ps: !optional 要和前面的class名中间需要加空格。
+
+
+**&选择器(父选择器)**
+
+例子：
+
+	a{
+		color: #333;
+		&:hover{
+			color: #fff;
+		}
+	}
+
+
+
+###4.2 嵌套###
+
+省去了重复书写class和属性名公共部分。
+
+	a{
+		color: #333;
+		span{
+			font:{
+				family: "Tohoma";
+				size: 20px;
+			}
+		}
+	}
+
+编译后：
+
+	a{
+		color: #333;
+	}
+	a span{
+		font-family: "Tohoma";
+		font-size: 20px;
+	}
+
+
+
+###4.3 @规则###
+
+**目录**
+
+@import
+
+@media
+
+@mixin
+
+@content
+
+@extend
+
+@include
+
+@at-root
+
+@debug
+
+@warm
+
+
+
+**@import**
+
+和CSS的作用是一样的，将SCSS和SASS合并在一起输出CSS。
+
+<div class="space"></div>
+
+只是有几点需要注意：
+
+&nbsp;&nbsp;&nbsp;&nbsp;1.文件的扩展名是.css。
+
+&nbsp;&nbsp;&nbsp;&nbsp;2.文件名是以 http:// 开头的。
+
+&nbsp;&nbsp;&nbsp;&nbsp;3.文件是用url()引入的。
+
+&nbsp;&nbsp;&nbsp;&nbsp;4.如果import里有任何的媒体查询。
+
+<div class="space"></div>
+
+都只会编译后生成一个@import规则，而不会将里面的内容复制出来到生成的CSS中。
+
+
+后缀是.scss或.sass的文件如果文件名是以_开头的，例如_reset.scss，在编译后不会出现，只会在不加_的scss中出现。
+
+<div class="space"></div>
+
+例如：
+
+_reset.scss中的内容：
+
+	*{
+		margin: 0;
+		padding: 0;
+	}
+
+style.scss中的内容：
+
+	@import "_reset"
+
+编译之后，只会生成style.css文件。
+
+
+
+**@mixin**
+
+
+
+**@content**
+
+
+
+**@extend和@include**
+
+<div class="space"></div>
+
+相同：
+
+&nbsp;&nbsp;&nbsp;&nbsp;这两个都是调用@mixin指令的命令。
+
+不同：
+
+&nbsp;&nbsp;&nbsp;&nbsp;@extend 会将所有使用@extend命令调用的@mixin内容提取出来。
+
+&nbsp;&nbsp;&nbsp;&nbsp;@include 会将@mixin的内容放到当前调用的class或id中。
+
+
+@extend例子：
+
+	@mixin extend-example($font-color: #333){
+		color: $font-color;
+	}
+	.test{
+		@extend extend-example();
+	}
+	.test-2{
+		@extend extend-example();
+	}
+
+编译后：
+
+	.test, .test-2{
+		color: #333;
+	}
+
+
+@include例子：
+
+	@mixin extend-example($font-color: #333){
+		color: $font-color;
+	}
+	.test{
+		@include extend-example($font-color: #666);
+	}
+	.test-2{
+		@include extend-example($font-color: #999);
+	}
+
+编译后：
+
+	.test{
+		color: #666;
+	}
+	.test-2{
+		color: #999;
 	}
 
 
@@ -430,7 +730,7 @@ e.g
 
 + 。
 
-XX.修改完成，保存。
+XX.修改完成，保存
 
 
 
