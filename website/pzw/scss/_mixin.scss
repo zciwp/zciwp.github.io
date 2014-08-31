@@ -1,0 +1,9 @@
+$bc:#f3f3f3;
+$fc9: #999999;
+$lc: #3aaae3;
+@mixin m-bor($m-bor:5px){
+	-webkit-border-radius: $m-bor;
+	   -moz-border-radius: $m-bor;
+	     -o-border-radius: $m-bor;
+			border-radius: $m-bor;
+}
