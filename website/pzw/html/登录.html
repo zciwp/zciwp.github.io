@@ -32,12 +32,19 @@
             </div>
             <div class="search">
                 <div class="searchInner">
-                    <span class="down">找律师<i></i></span>
+                   <span class="down">找律师<i></i></span>
                     <ul class="downList" style="display:none">
-                        <li>找律师</li>
-                        <li>找律师</li>
+                        <li class="downList_value" v='1'>找律师</li>
+                        <li class="downList_value" v='2'>找调解员</li>
+                        <li class="downList_value" v='3'>找行业专家</li>
+                        <li class="downList_value" v='4'>找司法鉴定</li>
+                        <li class="downList_value" v='5'>找公证处</li>
+                        <li class="downList_value" v='6'>找话题</li>
                     </ul>
-                    <input class="put" type="text" value="请输入关键字" />
+                    <form method="get" action="/">
+                        <input type="hidden" id="select_v" name="select_v" value="" />                       
+                        <input class="put" type="text" value=" " />
+                    </form>
                     <a href="#" class="btn"><i></i></a>
                 </div>
             </div>
@@ -46,34 +53,86 @@
     <div class="pzNavPn">
         <div class="pzNavBg"></div>
         <ul class="pzNavInner clearFix">
-            <li class="hover"><a href="#">服务类型<i></i></a>
-                <dl style="display: none">
-                    <dd class="select">
+            <li class=""><a href="#" class="navLink">服务类型<i class="icnCirUp"></i></a>
+                <dl>
+                    <dd class="service_list">
+                        <div class="bg"></div>
                         <i class="pzIcn1"></i>
                         <p class="topFont">生 活</p>
                         <p>企业 / 个人 / 通用</p> 
+                        <div class="threeTag">
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                        </div>
                     </dd>
-                    <dd>
+                    <dd class="service_list">
+                        <div class="bg"></div>
                         <i class="pzIcn2"></i>
-                        <p class="topFont">生 活</p>
-                        <p>企业 / 个人 / 通用</p> 
+                        <p class="topFont">工作</p>
+                        <p>企业 / 个人 / 通用</p>
+                        <div class="threeTag">
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                        </div>
                     </dd>
-                    <dd>
+                    <dd class="service_list">
+                        <div class="bg"></div>
                         <i class="pzIcn3"></i>
-                        <p class="topFont">生 活</p>
+                        <p class="topFont">经济</p>
                         <p>企业 / 个人 / 通用</p> 
+                        <div class="threeTag">
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                        </div>
                     </dd>
-                    <dd>
+                    <dd class="service_list">
+                        <div class="bg"></div>
                         <i class="pzIcn4"></i>
                         <p class="topFont">生 活</p>
-                        <p>企业 / 个人 / 通用</p> 
+                        <p>企业 / 个人 / 通用</p>
+                        <div class="threeTag">
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                           <a href="#"><span class="icnDot"></span>感情事件</a>
+                        </div>
                     </dd>
                 </dl>
             </li>
-            <li class="select"><a href="#">首页</a></li>
-            <li><a href="#">我的凭证</a></li>
-            <li><a href="#">帮手</a></li>
-            <li><a href="#">社区</a></li>
+            <li class="select"><a href="#" class="navLink">首页</a></li>
+            <li><a href="#" class="navLink">我的凭证</a></li>
+            <li><a href="#" class="navLink">帮手</a></li>
+            <li><a href="#" class="navLink">社区</a></li>
         </ul>
     </div><!-- end pzNavPn -->
 

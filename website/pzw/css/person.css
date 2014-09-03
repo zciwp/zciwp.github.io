@@ -1,0 +1,655 @@
+.pzProfessorPn {
+  background-color: #46a5d5;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  margin-bottom: 65px;
+}
+.pzProfessorPn .pzProFessorInner {
+  width: 1000px;
+  margin: 0 auto;
+  color: #a3d2ea;
+}
+.pzProfessorPn .pzProFessorInner .hd {
+  margin-bottom: 78px;
+}
+.pzProfessorPn .pzProFessorInner .hd ul {
+  text-align: center;
+  font-size: 0;
+}
+.pzProfessorPn .pzProFessorInner .hd li {
+  display: inline-block;
+  width: 260px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.pzProfessorPn .pzProFessorInner .hd li {
+  *display: inline;
+}
+.pzProfessorPn .pzProFessorInner .hd .select {
+  color: #fff;
+}
+.pzProfessorPn .pzProFessorInner .bd .moreBtn {
+  margin-right: 30px;
+  margin-top: 50px;
+  display: inline-block;
+  width: 65px;
+  height: 25px;
+  background: url(../images/moreTrp.png);
+}
+.pzProfessorPn .pzProFessorInner .bd ul {
+  margin: 0 -25px;
+}
+.pzProfessorPn .pzProFessorInner .bd ul li {
+  float: left;
+  width: 25%;
+  *width: 24.99%;
+}
+.pzProfessorPn .pzProFessorInner .bd ul li .cirImg {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  width: 154px;
+  height: 154px;
+}
+.pzProfessorPn .pzProFessorInner .bd ul li .inner {
+  text-align: center;
+}
+.pzProfessorPn .pzProFessorInner .bd ul li .icnTag {
+  display: inline-block;
+  vertical-align: text-top;
+  width: 149px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  background: url(../images/tag.png);
+}
+.pzProfessorPn .pzProFessorInner .bd ul li .star {
+  font-size: 0;
+  margin-bottom: 16px;
+}
+.pzProfessorPn .pzProFessorInner .bd ul li .icnStar {
+  display: inline-block;
+  width: 17px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: text-top;
+  cursor: pointer;
+  background-image: url(../images/star.png);
+}
+.pzProfessorPn .pzProFessorInner .bd ul li .gray {
+  background-image: url(../images/star2.png);
+}
+.pzProfessorPn .pzProFessorInner .bd ul li .name {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.pzProfessorPn .pzProFessorInner .bd ul li .picCont {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  margin: 0 auto 35px;
+}
+.pzProfessorPn .pzProFessorInner .bd ul li .picCont .icnTag {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+}
+.pzDynamicNewsPn {
+  padding-bottom: 65px;
+}
+.pzDynamicNewsPn .pzDynamicInner {
+  width: 1000px;
+  margin: 0 auto;
+}
+.pzDynamicNewsPn .pzDynamicInner h2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.pzDynamicNewsPn .pzDynamicInner .bd {
+  margin-right: -40px;
+}
+.pzDynamicNewsPn .pzDynamicInner .commentPn {
+  float: left;
+  width: 33.33%;
+  *width: 33.22%;
+  margin-bottom: 40px;
+}
+.pzDynamicNewsPn .pzDynamicInner .commentPn .commentHd {
+  margin-right: 40px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.pzDynamicNewsPn .pzDynamicInner .commentPn .commentHd a {
+  color: #3aaae3;
+}
+.pzDynamicNewsPn .pzDynamicInner .commentPn .commentHd .cont {
+  line-height: 27px;
+  margin-bottom: 24px;
+}
+.pzDynamicNewsPn .pzDynamicInner .commentPn .commentHd .info {
+  color: #999;
+}
+.pzDynamicNewsPn .pzDynamicInner .commentPn .commentHd .info .icnTime {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: text-top;
+  margin-top: 3px;
+  margin-right: 10px;
+  background: url(../images/time.png);
+}
+.pzDynamicNewsPn .pzDynamicInner .commentPn .commentHd .info .icnCommet {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  vertical-align: text-top;
+  margin-right: 10px;
+  margin-top: 3px;
+  background: url(../images/pl.png);
+}
+.pzDynamicNewsPn .pzDynamicInner .commentPn .commentHd .icnCir {
+  display: inline-block;
+  position: absolute;
+  bottom: -16px;
+  left: 28px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/comment.png);
+}
+.pzDynamicNewsPn .pzDynamicInner .commentPn .commentBd {
+  padding-left: 10px;
+}
+.pzDynamicNewsPn .pzDynamicInner .commentPn .commentBd .name {
+  font-size: 20px;
+}
+.pzPartnerPn {
+  background-color: #f3f3f3;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.pzPartnerPn .pzPartnerInner {
+  width: 1000px;
+  margin: 0 auto;
+}
+.pzPartnerPn .pzPartnerInner h2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.pzPartnerPn .pzPartnerInner .bd li {
+  float: left;
+  width: 14.28%;
+  *width: 14.2%;
+}
+.pzPartnerPn .pzPartnerInner .bd li .inner {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  *display: block;
+  *font-size: 87.3px;
+  /*约为高度的0.873*/
+  *font-family: Arial;
+}
+.pzPartnerPn .pzPartnerInner .bd li img {
+  vertical-align: middle;
+}
+.pzBotNavPn {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.pzBotNavPn .col1 {
+  float: left;
+}
+.pzBotNavPn .col1 ul {
+  float: left;
+  width: 150px;
+  line-height: 28px;
+}
+.pzBotNavPn .col1 ul a {
+  font-size: 12px;
+  color: #8b8b8b;
+}
+.pzBotNavPn .col2 {
+  float: left;
+}
+.pzBotNavPn .col2 img {
+  margin-right: 60px;
+}
+.pzBotNavPn .col3 {
+  float: right;
+}
+.pzWebInfoPn {
+  height: 110px;
+  background-color: #34383c;
+  text-align: center;
+  font-size: 12px;
+  color: #717477;
+}
+.pzWebInfoPn p {
+  padding-top: 30px;
+}
+/*个人中心*/
+.personalPn {
+  margin-top: 213px;
+  margin-bottom: 80px;
+}
+.personalPn .personalInner {
+  width: 1000px;
+  margin: 0 auto;
+}
+.personalPn .personalInner .col1 {
+  width: 200px;
+  float: left;
+}
+.personalPn .personalInner .col2 {
+  float: right;
+  width: 750px;
+}
+.personalPn .personNavPn {
+  background: #f5f5f5;
+  border: 2px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 0 18px;
+  margin-top: 60px;
+}
+.personalPn .personNavPn .hd {
+  position: relative;
+}
+.personalPn .personNavPn .headPn {
+  margin-top: -60px;
+  text-align: center;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 30px;
+}
+.personalPn .personNavPn .headPn .headImg {
+  width: 114px;
+  height: 114px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 30px;
+}
+.personalPn .personNavPn .headPn .headName {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.personalPn .personNavPn .headPn .headTit {
+  margin-bottom: 30px;
+  color: #999;
+}
+.personalPn .personNavPn .bd li {
+  position: relative;
+  padding: 0 18px;
+  color: #999;
+  line-height: 42px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  *zoom: 1;
+}
+.personalPn .personNavPn .bd li span {
+  position: absolute;
+  right: 18px;
+  font-size: 12px;
+}
+.personalPn .personNavPn .bd .select {
+  background: #fff;
+}
+.personalPn .personListNav .hd {
+  position: relative;
+  height: 59px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.personalPn .personListNav .hd h2 {
+  font-size: 24px;
+}
+.personalPn .personListNav .hd .blueBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  background: url(../images/btnBlue.png);
+}
+.personalPn .personListNav .hd .select {
+  position: absolute;
+  right: 120px;
+  top: 6px;
+}
+.personalPn .personListNav .bd li {
+  position: relative;
+  height: 63px;
+  line-height: 63px;
+  border-bottom: 1px solid #f3f3f3;
+  *zoom: 1;
+}
+.personalPn .personListNav .bd li .opt {
+  display: none;
+}
+.personalPn .personListNav .bd li .iconYp,
+.personalPn .personListNav .bd li .iconPic,
+.personalPn .personListNav .bd li .iconZh,
+.personalPn .personListNav .bd li .iconSp,
+.personalPn .personListNav .bd li .iconWd,
+.personalPn .personListNav .bd li .iconQt {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: text-top;
+  margin: 0 10px 0 0;
+  background: url(../images/ly.png);
+}
+.personalPn .personListNav .bd li .iconPic {
+  background: url(../images/tp.png);
+}
+.personalPn .personListNav .bd li .iconZh {
+  background: url(../images/zh.png);
+}
+.personalPn .personListNav .bd li .iconSp {
+  background: url(../images/sp.png);
+}
+.personalPn .personListNav .bd li .iconWd {
+  background: url(../images/wd.png);
+}
+.personalPn .personListNav .bd li .iconQt {
+  background: url(../images/qt.png);
+}
+.personalPn .personListNav .bd li:hover {
+  background: url(../images/LineBg.png);
+}
+.personalPn .personListNav .bd li:hover .opt {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+.personalPn .personListNav .bd li:hover .opt a {
+  margin-right: 30px;
+  cursor: pointer;
+  color: #999;
+  font-size: 12px;
+}
+.personalPn .personListNav .bd li:hover .opt .iconCy {
+  display: inline-block;
+  width: 16px;
+  height: 14px;
+  vertical-align: text-top;
+  background: url(../images/cy.png);
+  margin-right: 8px;
+}
+.personalPn .personListNav .bd li:hover .opt .iconSq {
+  display: inline-block;
+  width: 17px;
+  height: 16px;
+  vertical-align: text-top;
+  background: url(../images/sq.png);
+  margin-right: 8px;
+}
+.personalPn .personListNav .bd li:hover .opt .iconDel {
+  display: inline-block;
+  width: 15px;
+  height: 16px;
+  vertical-align: text-top;
+  background: url(../images/sc.png);
+  margin-right: 8px;
+}
+.personalPn .personListNav2 .hd {
+  position: relative;
+  height: 59px;
+}
+.personalPn .personListNav2 .hd h2 {
+  font-size: 24px;
+}
+.personalPn .personListNav2 .bd .myProe {
+  margin-left: -20px;
+}
+.personalPn .personListNav2 .bd li {
+  float: left;
+  width: 130px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  padding-top: 5px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.personalPn .personListNav2 .bd li .imgIcn {
+  margin-bottom: 30px;
+}
+.personalPn .personListNav2 .bd li .tit {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.personalPn .personListNav2 .bd li .tit a {
+  color: #999;
+}
+.pzTip {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.pzTip .bg {
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: alpha(opacity=35);
+  -moz-opacity: 0.35;
+  opacity: 0.35;
+}
+.pzTip .pzTipInner {
+  width: 560px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  border-radius: 5px;
+  margin: -190px 0 0 -280px;
+  box-shadow: 0 0 10px #bababa;
+}
+.pzTip .pzTipInner .hd {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 20px;
+  padding-left: 30px;
+  height: 70px;
+  line-height: 70px;
+  background: #f3f3f3;
+}
+.pzTip .pzTipInner .hd h3 {
+  font-weight: normal;
+}
+.pzTip .pzTipInner .hd .close {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  background: url(../images/close.jpg);
+}
+.pzTip .pzTipInner .detailsHd {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: #f3f3f3;
+  padding: 40px;
+}
+.pzTip .pzTipInner .detailsHd .detailsBtnCnt {
+  text-align: right;
+  margin-bottom: 20px;
+}
+.pzTip .pzTipInner .detailsHd .imgCnt {
+  float: left;
+  margin-right: 40px;
+}
+.pzTip .pzTipInner .detailsHd .imgCnt .detailsOpt {
+  margin-top: 20px;
+}
+.pzTip .pzTipInner .detailsHd .imgCnt .detailsOpt .iconDown,
+.pzTip .pzTipInner .detailsHd .imgCnt .detailsOpt .iconDdel {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../images/detail_06.jpg);
+  margin-right: 20px;
+}
+.pzTip .pzTipInner .detailsHd .imgCnt .detailsOpt .iconDdel {
+  background: url(../images/detail_08.jpg);
+}
+.pzTip .pzTipInner .detailsHd .detailsInfo {
+  width: 290px;
+  float: left;
+}
+.pzTip .pzTipInner .detailsHd .detailsInfo li {
+  margin-bottom: 15px;
+  color: #999;
+}
+.pzTip .pzTipInner .detailsHd .detailsInfo .tit {
+  font-size: 24px;
+  border-bottom: 1px dashed #ccc;
+  height: 39px;
+  color: #555;
+}
+.pzTip .pzTipInner .detailsHd .btnCl,
+.pzTip .pzTipInner .detailsHd .btnOk {
+  display: inline-block;
+  width: 68px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 28px;
+  color: #ccc;
+}
+.pzTip .pzTipInner .detailsHd .btnCl:hover,
+.pzTip .pzTipInner .detailsHd .btnOk:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+.pzTip .pzTipInner .detailsHd .btnOk {
+  border: 1px solid #46a5d5;
+  color: #46a5d5;
+  margin-left: 10px;
+}
+.pzTip .pzTipInner .detailsHd .btnOk:hover {
+  color: #46a5d5;
+}
+.pzTip .pzTipInner .bd {
+  padding: 40px;
+}
+.pzTip .pzTipInner .bd .btnCont {
+  margin: 0 -30px 0 -10px;
+  padding-top: 40px;
+  font-size: 0;
+}
+.pzTip .pzTipInner .bd .btnCont .androidBtn,
+.pzTip .pzTipInner .bd .btnCont .iphoneBtn,
+.pzTip .pzTipInner .bd .btnCont .pcBtn {
+  display: inline-block;
+  width: 218px;
+  height: 60px;
+  background: url(../images/btn_07.jpg);
+  margin: 0 40px 40px 0;
+}
+.pzTip .pzTipInner .bd .btnCont .iphoneBtn {
+  background: url(../images/btn_09.jpg);
+}
+.pzTip .pzTipInner .bd .btnCont .pcBtn {
+  background: url(../images/btn_13.jpg);
+}
+.pzTip .pzTipInner .bd .yellowSmTip {
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid #ece9d6;
+  border-radius: 5px;
+  line-height: 33px;
+  color: #bbb072;
+  background: #fffdf1;
+  margin-bottom: 20px;
+}
+.addPzList {
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+.addPzList li {
+  line-height: 40px;
+  color: #999;
+}
+.addPzList li .icnCirRig {
+  display: inline-block;
+  width: 6px;
+  height: 16px;
+  vertical-align: text-top;
+  margin: 5px 20px 0 0;
+  background: url(../images/tip_03.jpg);
+}
+.btnBottonMod .btnQx {
+  float: left;
+  width: 198px;
+  height: 50px;
+  background: url(../images/tip_07.jpg);
+}
+.btnBottonMod .btnQd,
+.btnBottonMod .btnLjsq {
+  float: right;
+  width: 198px;
+  height: 50px;
+  background: url(../images/tip_09.jpg);
+}
+.btnBottonMod .btnLjsq {
+  background: url(../images/btnBlue2.png);
+}
+.inputGroup {
+  padding-right: 20px;
+}
+.inputGroup .inputGroupTit {
+  color: #555;
+  float: left;
+  line-height: 48px;
+  width: 90px;
+  text-align: right;
+  margin-right: 10px;
+}
+.inputGroup .inputGroupPut {
+  border: 1px solid #f3f3f3;
+  border-radius: 3px;
+  height: 48px;
+  overflow: hidden;
+  *zoom: 1;
+}
+.inputGroup .inputGroupPut input {
+  color: #ccc;
+  font-size: 14px;
+  border: 0;
+  outline: none;
+  height: 22px;
+  line-height: 22px;
+  margin-top: 12px;
+  margin-left: 10px;
+  font-family: "Microsoft Yahei";
+}
+.inputGroup .mess {
+  margin-top: 20px;
+  color: #999;
+  height: 48px;
+  margin-bottom: 10px;
+}
+.inputGroup .mess a {
+  color: #3aaae3;
+}
+/*# sourceMappingURL=pzw.css.map */
