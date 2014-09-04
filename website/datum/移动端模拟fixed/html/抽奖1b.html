@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>问问7周年</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="../css/compile/style.css" />
+</head>
+
+<body>
+
+<div class="seventh-page lottery-page" id="seventh-page">
+	<div class="hd">活动日期：2014年9月10日-9月30日</div>
+	<div class="bd">
+		<div class="g-block">
+			<a href="">
+				<div class="fcr fsb">别灰心，再来一次</div>
+				<div class="mt5">您共有3次抽奖机会</div>
+			</a>
+		</div>
+		<div class="gift-box">
+			<div class="pic-box">
+				<img src="../img/gift1.png" alt="" />
+				<img src="../img/gift2.png" alt="" />
+			</div>
+			<div class="info-box">
+				<table>
+					<tr>
+						<th colspan="2">奖品说明：</th>
+					</tr>
+					<tr>
+						<td><span class="t">特等奖</span></td>
+						<td><div>iphone5s</div></td>
+					</tr>
+					<tr>
+						<td><span class="t">大奖</span></td>
+						<td><div>ipad Mini</div></td>
+					</tr>
+					<tr>
+						<td><span class="t">其他奖品</span></td>
+						<td>
+							<div>充电宝</div>
+							<div>手机套</div>
+							<div>耳机</div>
+						</td>
+					</tr>
+					<tr>
+						<td><span class="t">Q币红包</span></td>
+						<td><div>共计百万元</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="fixed-box" id="fixed-box">
+	<div class="lottery-footer">
+		<div class="txt">
+			<p>若您抢到过朋友分享的七周年Q币红包</p>
+			<p>可以在这里提现到你的QQ账户</p>
+		</div>
+		<div class="btn-box">
+			<a href="" class="btn btn-1"><span>红包提现</span></a>
+		</div>
+	</div>
+</div>
+
+<script>
+// 移动端当页面不够长时模拟成fixed，够长时设置为static
+function fixed(){
+	var screen_height = document.documentElement.clientHeight;
+	var page_height = document.getElementById("seventh-page").offsetHeight;
+	var footer = document.getElementById("fixed-box");
+	var footerMargin = parseInt(getStyle(footer,"margin-top"));
+	var footer_totle_height = footer.offsetHeight + footerMargin;
+	if(screen_height > page_height + footer_totle_height){
+		footer.style.position = "absolute";
+		footer.style.top = screen_height - footer_totle_height + "px";
+		footer.style.left = "0px";
+		footer.style.width = "100%";
+	}
+	else{
+		footer.style.position = "";
+		footer.style.top = "auto";
+		footer.style.left = "auto";
+		footer.style.width = "100%";
+	}
+}
+
+// 获取写在css中的样式值
+function getStyle(obj,attr){ 
+	if(obj.currentStyle){ 
+		return obj.currentStyle[attr]; 
+	} 
+	else{ 
+		return document.defaultView.getComputedStyle(obj,null)[attr]; 
+	} 
+} 
+
+// 移动端横竖屏判断
+function orientationChange(){
+	switch(window.orientation) {  
+		case 0: // Upside-down Portrait   
+		// Javascript to setup Portrait view 
+			fixed();
+			break; 
+		case 180: // Upside-down Portrait   
+		// Javascript to setup Portrait view 
+			fixed();
+			break; 
+		case -90: // Landscape: turned 90 degrees clockwise   
+		// Javascript to steup Landscape view
+			fixed();
+			break;
+		case 90: // Landscape: turned 90 degrees clockwise   
+		// Javascript to steup Landscape view 
+			fixed();
+			break;   
+	}   
+} 
+
+window.addEventListener("load",fixed,false);
+window.addEventListener("resize",fixed,false);
+window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", orientationChange, false); 
+</script>
+</body>
+</html>
+	

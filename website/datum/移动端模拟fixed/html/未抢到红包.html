@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>问问7周年</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="../css/compile/style.css" />
+</head>
+
+<body>
+<div class="seventh-page" id="seventh-page">
+	<div class="notice">
+		<div>很遗憾，您来迟啦</div>
+		<div><span class="fcr">50Q</span>币已经被其他15个小伙伴抢光了</div>
+	</div>
+	<div class="btn-box">
+		<a href="" class="btn btn-2"><span>看大家抢了多少</span></a>
+		<a href="" class="btn btn-1"><span>我也要免费送红包</span></a>
+	</div>
+
+	<div class="memory-box">
+		<div class="title">
+			<div class="inner">
+				<h4>TA的问问回忆</h4>
+			</div>
+		</div>
+
+		<div class="txt-panel">
+			<div>我的问问年龄有<span class="fcr">2199</span>天了</div>
+			<div>超越了<span class="fcr">670000000</span>人</div>
+		</div>
+
+		<div class="txt-panel">
+			<div>但是还有<span class="fcr">3000</span>个家伙排在我前面</div>
+			<div>在此期间我为网友解决了<span class="fcr">30</span>个问题</div>
+			<div><span class="fcr">10.0%</span>的网友对我的回答非常满意。</div>
+		</div>
+
+		<div class="detail-box">
+			<a href="" class="btn-3">查看详情</a>
+		</div>
+	</div>
+
+</div>
+
+<div class="fixed-box" id="fixed-box">
+	<div class="get-box col-2">
+		<div class="col">
+			<a href="">提现</a>
+		</div>
+		<div class="col">
+			<a href="">我的红包</a>
+		</div>
+		<div class="col-2-mask"></div>
+	</div>
+</div>
+
+<script>
+// 移动端当页面不够长时模拟成fixed，够长时设置为static
+function fixed(){
+	var screen_height = document.documentElement.clientHeight;
+	var page_height = document.getElementById("seventh-page").offsetHeight;
+	var footer = document.getElementById("fixed-box");
+	var footerMargin = parseInt(getStyle(footer,"margin-top"));
+	var footer_totle_height = footer.offsetHeight + footerMargin;
+	if(screen_height > page_height + footer_totle_height){
+		footer.style.position = "absolute";
+		footer.style.top = screen_height - footer_totle_height + "px";
+		footer.style.left = "0px";
+		footer.style.width = "100%";
+	}
+	else{
+		footer.style.position = "";
+		footer.style.top = "auto";
+		footer.style.left = "auto";
+		footer.style.width = "100%";
+	}
+}
+
+// 获取写在css中的样式值
+function getStyle(obj,attr){ 
+	if(obj.currentStyle){ 
+		return obj.currentStyle[attr]; 
+	} 
+	else{ 
+		return document.defaultView.getComputedStyle(obj,null)[attr]; 
+	} 
+} 
+
+// 移动端横竖屏判断
+function orientationChange(){
+	switch(window.orientation) {  
+		case 0: // Upside-down Portrait   
+		// Javascript to setup Portrait view 
+			fixed();
+			break; 
+		case 180: // Upside-down Portrait   
+		// Javascript to setup Portrait view 
+			fixed();
+			break; 
+		case -90: // Landscape: turned 90 degrees clockwise   
+		// Javascript to steup Landscape view
+			fixed();
+			break;
+		case 90: // Landscape: turned 90 degrees clockwise   
+		// Javascript to steup Landscape view 
+			fixed();
+			break;   
+	}   
+} 
+
+window.addEventListener("load",fixed,false);
+window.addEventListener("resize",fixed,false);
+window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", orientationChange, false); 
+</script>
+</body>
+</html>
+	

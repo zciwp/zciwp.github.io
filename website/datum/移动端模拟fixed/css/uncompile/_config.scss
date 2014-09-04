@@ -1,0 +1,13 @@
+@charset "utf-8";
+$global-FontSet:12px/1.75;
+$global-FontMainColor:#333;
+$body-bg:#FFFFFF;
+$mobile-switch:true!default;//是否为移动端，默认关闭
+$pc-switch:false!default;//是否为移动端，默认开启
+$ie6:false;//是否兼容ie6，默认关闭
+
+// 按钮
+$m-bor-num:5px 5px 5px 5px;
+
+// 标题背景色
+$title-bg:#ff6091;

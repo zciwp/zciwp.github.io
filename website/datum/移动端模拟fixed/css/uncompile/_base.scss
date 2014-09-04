@@ -1,0 +1,105 @@
+@charset "utf-8";
+@mixin png_img($png-url:null,$png-w:0,$png-h:0){
+	background-image:url($png-url);
+	background-repeat:no-repeat;
+	@if $mobile-switch{
+		background-size: $png-w/2 $png-h/2;
+	}
+	@if $ie6{
+		_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='#{$png-url}');
+		width:$png-w;
+		height: $png-h;
+	}
+}
+// .png_img{ @include png_img($png-url,$png-w,$png-h)}
+@mixin bg_position($x:0,$y:0,$offset:-16px){
+	@if $mobile-switch{
+		background-position: $x*$offset/2 $y*$offset/2;
+	}
+	@if $pc-switch{
+		background-position: $x*$offset $y*$offset;
+		@if $ie6{
+			@if($x == 0){
+				$x:null;
+				@if($y == 0){
+					$y:null;
+					_padding-top:$y;
+					_padding-left:$x;
+					_margin-top:$y;
+					_margin-left:$x;
+				}
+				@else{
+					_padding-top:$y*abs($offset);
+					_padding-left:$x;
+					_margin-top:$y*$offset;
+					_margin-left:$x;
+				}
+			}
+			@else{
+				@if($y == 0){
+					$y:null;
+					_padding-top:$y;
+					_padding-left:$x*abs($offset);
+					_margin-top:$y;
+					_margin-left:$x*$offset;
+				}
+				@else{
+					_padding-top:$y*abs($offset);
+					_padding-left:$x*abs($offset);
+					_margin-top:$y*$offset;
+					_margin-left:$x*$offset;
+				}
+			}
+		}
+	}
+}
+
+// 自适应布局,只适用于移动端
+@mixin father{
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+}
+//-webkit-box-orient:vertical,box-align是子节点元素如何对齐，start，center，end
+@mixin child($flex-num:1){
+	-webkit-box-flex: $flex-num;
+	display: block;
+}
+
+// 解决移动版本中border写圆形的兼容问题
+// 因为android 2.3 自带浏览器不支持百分比，所以需要一个较大的值999px，4.2.X 下不支持缩写radius，所以需要拆开写
+@mixin m_border($m-bor-num: 999px 999px 999px 999px){
+	@if $mobile-switch{
+		border-top-left-radius: nth($m-bor-num,1);
+		border-top-right-radius: nth($m-bor-num,2);
+		border-bottom-right-radius: nth($m-bor-num,3);
+		border-bottom-left-radius: nth($m-bor-num,4);
+		border-radius: $m-bor-num;
+		background-clip: padding-box; //防止背景溢出
+	}
+}
+
+// 动画,这样不加载动画时，动画样式库(animation.scss)里样式不会加载到css中，实现了按需加载
+@mixin keyframes($animation-name){
+	@-webkit-keyframes $animation-name{
+		@content;
+	}
+}
+
+// 动画的公用样式
+$animation-arg-o:(
+	name: "",
+	time: 1s,
+	delay: 0s,
+	type: linear,
+	mode: true
+);
+
+@mixin animation-mixin($animation-arg){
+	$f-animation-arg: map-merge($animation-arg-o,$animation-arg);
+	-webkit-animation: map-get($f-animation-arg,name) map-get($f-animation-arg,time) map-get($f-animation-arg,delay) map-get($f-animation-arg,type);
+	@if map-get($f-animation-arg,mode){
+		-webkit-animation-fill-mode: forwards;
+	}
+}
+

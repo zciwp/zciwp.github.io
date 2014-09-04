@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>问问7周年</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="../css/compile/style.css" />
+</head>
+
+<body>
+<div class="seventh-page getstp-page" id="seventh-page">
+	<div class="hd">
+		<div>您成功提取了<span class="fcr">88Q</span>币问问红包到</div>
+		<div>您指定QQ号：<span class="fcb">8888888899</span></div>
+		<div class="content-2">
+			<div>Q币将在24小时内到账，请您及时查收</div>
+		</div>
+	</div>
+	<div class="bd">
+		<div class="btn-box">
+			<a href="" class="btn btn-1"><span>炫耀成果  请更多人来免费发红包</span></a>
+		</div>
+	</div>
+</div>
+<script>
+// 移动端当页面不够长时模拟成fixed，够长时设置为static
+function fixed(){
+	var screen_height = document.documentElement.clientHeight;
+	var page_height = document.getElementById("seventh-page").offsetHeight;
+	var footer = document.getElementById("fixed-box");
+	var footerMargin = parseInt(getStyle(footer,"margin-top"));
+	var footer_totle_height = footer.offsetHeight + footerMargin;
+	if(screen_height > page_height + footer_totle_height){
+		footer.style.position = "absolute";
+		footer.style.top = screen_height - footer_totle_height + "px";
+		footer.style.left = "0px";
+		footer.style.width = "100%";
+	}
+	else{
+		footer.style.position = "";
+		footer.style.top = "auto";
+		footer.style.left = "auto";
+		footer.style.width = "100%";
+	}
+}
+
+// 获取写在css中的样式值
+function getStyle(obj,attr){ 
+	if(obj.currentStyle){ 
+		return obj.currentStyle[attr]; 
+	} 
+	else{ 
+		return document.defaultView.getComputedStyle(obj,null)[attr]; 
+	} 
+} 
+
+// 移动端横竖屏判断
+function orientationChange(){
+	switch(window.orientation) {  
+		case 0: // Upside-down Portrait   
+		// Javascript to setup Portrait view 
+			fixed();
+			break; 
+		case 180: // Upside-down Portrait   
+		// Javascript to setup Portrait view 
+			fixed();
+			break; 
+		case -90: // Landscape: turned 90 degrees clockwise   
+		// Javascript to steup Landscape view
+			fixed();
+			break;
+		case 90: // Landscape: turned 90 degrees clockwise   
+		// Javascript to steup Landscape view 
+			fixed();
+			break;   
+	}   
+} 
+
+window.addEventListener("load",fixed,false);
+window.addEventListener("resize",fixed,false);
+window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", orientationChange, false); 
+</script>
+</body>
+</html>
