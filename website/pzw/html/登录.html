@@ -8,16 +8,36 @@
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/login.css" />
     <style>
-        body{
+        /*body{
             background: url(../images/login/login-bg.png) no-repeat center top;
             padding-bottom: 50px;
+        }*/
+        html,body{
+          height: 100%;
+        }
+        .bg-box{
+          position: fixed;
+          _position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          overflow: hidden;
+        }
+        .bg-panel{
+          position: absolute;
+          width: 100%;
+          height: 100%;
         }
     </style>
 </head>
 <body>
-    <!-- <div class="bg-box" id="bg-box">
-        <img src="../images/login/login-bg.png" alt="" />
-    </div> -->
+    <div class="bg-box" id="bg-box">
+      <div class="bg-panel" id="bg-box">
+        <img src="../images/login/login-bg.png" alt="" id="bg-pic" />
+      </div>
+    </div>
 
     <div class="pzTopPn">
         <div class="pzTopBg"></div>
@@ -221,11 +241,55 @@
 
     </div>
    
-   <script>
-    function loginBg(){
-        var bgBox = document.getElementById("bg-box");
+  <script>
+    // 获取浏览器的可视范围的高
+    function getBrowserHeight(){
+      return bh = document.documentElement.clientHeight || window.innerHeight || document.body.clientHeight;
     }
-   </script> 
+
+    // 获取浏览器的可视范围的宽
+    function getBrowserWidth(){
+      return bw = document.documentElement.clientWidth || window.innerWidth || document.body.clientWidth;
+    }
+
+    var bg_pic = document.getElementById("bg-pic");
+    var img_url = bg_pic.getAttribute("src");
+    var new_img = new Image();
+    new_img.src = img_url;
+
+    var check_pic = function(){
+      if(new_img.width > 0 || new_img.height > 0){
+        clearInterval(set);
+      }
+    }
+
+    var set = setInterval(check_pic,40);
+
+    function test(){
+      getBrowserHeight();
+      getBrowserWidth();
+      if(bh/bw > 0.75){
+        bg_pic.style.width = "auto";
+        bg_pic.style.height = bh + "px";
+        bg_pic.style.marginLeft = - (parseInt(bh/3)*4 - bw)/2 + "px";
+        bg_pic.style.marginTop = 0 + "px";
+      }
+      if(bh/bw < 0.75){
+        bg_pic.style.width = bw + "px";
+        bg_pic.style.height = "auto";
+        bg_pic.style.marginLeft = 0 + "px";
+        bg_pic.style.marginTop = - (parseInt(bw/4)*3 - bh)/2 + "px";
+      }
+    }
+
+
+    setTimeout(test,100);
+
+
+    window.onresize = test;
+
+
+  </script> 
 
 </body>
 </html>
