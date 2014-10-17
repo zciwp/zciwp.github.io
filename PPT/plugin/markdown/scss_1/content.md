@@ -437,6 +437,19 @@ $/^[A-Za-z_]+\w*/ : value，$$也是不行的。
 <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#keywords-instance_method">keywords($args)</a>
 
 
+ps: map类型也可以嵌套，而且里面的值的类型可以不一样，即：
+
+	$map: (
+	  'this': 'is',             //string
+	  'a': ('great', 'test'),   //list
+	  'isn\'t it?': true,       //bool
+	  'and this': 42,           //number
+	  'and': ('also', 'this'),  //list
+	  'nested': (
+	    'map': 1337
+	  )                         //map
+	);
+
 
 **简写参数列表**
 
@@ -552,7 +565,7 @@ ps: !optional 要和前面的class名中间需要加空格。
 
 
 
-###4.2 嵌套###
+### 4.2 嵌套
 
 省去了重复书写class和属性名公共部分。
 
@@ -578,7 +591,7 @@ ps: !optional 要和前面的class名中间需要加空格。
 
 
 
-###4.3 @规则###
+### 4.3 @规则和指令
 
 **目录**
 
@@ -588,11 +601,13 @@ ps: !optional 要和前面的class名中间需要加空格。
 
 @mixin
 
-@content
-
 @extend
 
 @include
+
+@content
+
+@function
 
 @at-root
 
@@ -646,9 +661,73 @@ style.scss中的内容：
 
 **@mixin**
 
+最常使用的命令。相当于把一个样式块封装起来。
+
+例子：
+	@mixin dis-ib{
+		display: inline-block;
+		*display: inline;
+		zoom: 1;
+	}
+
+usage:
+
+	.dis-ib{
+		@include dis-ib;
+	}
+
+	.dis-ib{
+		@extend dis-ib;
+	}
 
 
-**@content**
+@mixin命令也可以带参数。
+
+	@mixin icon($width: 15px,$height: 15px){
+		width: $width;
+		height: $height;
+	}
+
+usage:
+	
+	.ico{
+		@include icon; //@include icon();
+	}
+
+or
+	
+	.ico{
+		@include icon($width: 20px,$height: 20px);
+	}
+
+
+关于mixin的位置
+
+	//正确 
+
+	@mixin dis-ib{
+		display: inline-block;
+		*display: inline;
+		zoom: 1;
+	}
+
+	.dis-ib{
+		@include dis-ib;
+	}
+
+<div class="space"></div>
+	
+	//报错
+
+	.dis-ib{
+		@include dis-ib;
+	}
+
+	@mixin dis-ib{
+		display: inline-block;
+		*display: inline;
+		zoom: 1;
+	}
 
 
 
@@ -706,6 +785,305 @@ style.scss中的内容：
 	.test-2{
 		color: #999;
 	}
+
+
+
+**@content**
+
+传递一个内容块到mixin命令中。
+
+例子：
+
+	@mixin tt{
+		.wrapper{
+			@content;
+		}
+	}
+
+usage:
+
+	@include tt{
+		.tt-1{
+			width: 10px;
+		}
+	}
+
+result:
+	
+	.wrapper .tt-1{
+		width: 10px;
+	}
+
+
+在内容块中变量的作用域
+
+	$color: white;
+
+	@mixin colors($color: blue){
+		background-color: $color;
+		@content;
+		border-color: $color;
+	}
+
+	.colors{
+		@include colors{
+			color: $color;
+		}
+	}
+
+
+result:
+
+	.colors{
+		background-color: blue;
+		color: white;
+		border-color: blue;
+	}
+
+
+
+**@function**
+
+在sass中定义自己的function，在值或者脚本上下文中使用。
+
+sass内置了很多function。可以参考：<a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#opacity-instance_method">http://sass-lang.com/documentation/Sass/Script/Functions.html#opacity-instance_method</a>
+
+例如：
+
+	//左右结构
+	$wrapWidth: 960px;
+	$mainWidth: 700px;
+	$space: 10px;
+
+	@function sidebarWidth(){
+		@return $wrapWidth - $mainWidth - $space;
+	}
+	
+	.wrapper{
+		width: $wrapWidth;
+	}
+
+	.main{
+		width: $mainWidth;
+	}
+
+	.sidebar{
+		width: sidebarWidth();
+	}
+
+
+
+**@at-root**
+
+将@at-root命令包括的样式提出到最外层。
+
+例子：
+
+	.parent{
+		width: 10px;
+		.parent-2{
+			width: 20px;
+			@at-root{
+				.child-1{
+					width: 30px;
+				}
+			}
+		}
+	}
+
+result:
+
+	.parent{
+		width: 10px;
+	}
+	.parent .parent-2{
+		width: 20px;
+	}
+	.child-1{
+		width: 30px;
+	}
+
+
+@at-root在实际中的应用可以参考：
+
+<a href="http://www.w3cplus.com/preprocessor/Sass-3-3-new-feature-at-root-bem.html">http://www.w3cplus.com/preprocessor/Sass-3-3-new-feature-at-root-bem.html</a>
+
+文章中的应用是css的class使用BEM方式命名。
+
+
+
+### 4.4 控制命令
+
+@if
+
+@for
+
+@each
+
+@while
+
+
+
+**@if指令**
+
+例子：
+
+	$type: monster;
+	p {
+	  @if $type == ocean {
+	    color: blue;
+	  }
+	  @else if $type == monster {
+	    color: green;
+	  }
+	  @else {
+	    color: black;
+	  }
+	}
+
+
+
+**@for指令**
+
+语法：
+
+@for $var from &lt;start&gt; through &lt;end&gt;
+
+@for $var from &lt;start&gt; to &lt;end&gt;
+
+
+例子：
+
+	@for $i from 1 through 3 {
+	  .item-#{$i} { width: 2em * $i; }
+	}
+
+result:
+	
+	.item-1{
+		width: 2em;
+	}
+
+	.item-2{
+		width: 4em;
+	}
+
+	.item-3{
+		width: 6em;
+	}
+
+
+3.3版本后新添加了from ... to
+
+	@for $i from 1 to 3 {
+	  .item-#{$i} { width: 2em * $i; }
+	}
+
+result:
+	
+	.item-1{
+		width: 2em;
+	}
+
+	.item-2{
+		width: 4em;
+	}
+
+
+
+**@each指令**
+
+语法：
+
+@each $var in &lt;list or map&gt;
+
+例子：
+
+	@each $animal in puma, sea-slug, egret, salamander {
+	  .#{$animal}-icon {
+	    background-image: url('/images/#{$animal}.png');
+	  }
+	}
+
+result:
+	
+	.puma-icon {
+	  background-image: url('/images/puma.png'); }
+	.sea-slug-icon {
+	  background-image: url('/images/sea-slug.png'); }
+	.egret-icon {
+	  background-image: url('/images/egret.png'); }
+	.salamander-icon {
+	  background-image: url('/images/salamander.png'); }
+
+
+也可以传递多个参数
+
+	@each $animal, $color, $cursor in (puma, black, default),
+                                  (sea-slug, blue, pointer),
+                                  (egret, white, move) {
+	  .#{$animal}-icon {
+	    background-image: url('/images/#{$animal}.png');
+	    border: 2px solid $color;
+	    cursor: $cursor;
+	  }
+	}
+
+result：
+	
+	.puma-icon {
+	  background-image: url('/images/puma.png');
+	  border: 2px solid black;
+	  cursor: default; }
+	.sea-slug-icon {
+	  background-image: url('/images/sea-slug.png');
+	  border: 2px solid blue;
+	  cursor: pointer; }
+	.egret-icon {
+	  background-image: url('/images/egret.png');
+	  border: 2px solid white;
+	  cursor: move; }
+
+
+因为新版sass中增加了map类型，所以上面的传递多个参数也可以这样写。
+
+	@each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
+	  #{$header} {
+	    font-size: $size;
+	  }
+	}
+
+result：
+	
+	h1 {
+	  font-size: 2em; }
+	h2 {
+	  font-size: 1.5em; }
+	h3 {
+	  font-size: 1.2em; }
+
+
+
+**@while指令**
+
+例子：
+
+	$i: 6;
+	@while $i > 0 {
+	  .item-#{$i} { width: 2em * $i; }
+	  $i: $i - 2;
+	}
+
+result：
+
+	.item-6 {
+	  width: 12em; }
+
+	.item-4 {
+	  width: 8em; }
+
+	.item-2 {
+	  width: 4em; }
 
 
 
