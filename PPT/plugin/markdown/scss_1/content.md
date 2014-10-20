@@ -200,6 +200,49 @@ sass的gem包可以在 [rubygems.org](http://rubygems.org/gem/sass) 上下载得
 使用 sass -v 命令查看sass版本，如出现版本信息，则安装成功。
 
 
+使用Git repository来安装
+
+	git clone git://github.com.nex3/sass.git
+
+	cd sass
+
+	rake install
+
+
+通过淘宝RubyGems镜像安装sass
+
+由于国内网络原因，导致rubygems.org存放在Amazon S3上面的资源文件间歇性连接失败。我们可以通过gem sources命令来配置源，先移除默认的 https://rubygems.org 源，然后添加淘宝的源 https://ruby.taobao.org ，然后查看当前使用的源是哪个，如果是淘宝的，就可以输入gem install sass来安装了，常用gem source命令可在下一页查看。
+
+	$ gem sources --remove https://rubygems.org/
+	$ gem sources -a https://ruby.taobao.org/
+	$ gem sources -l
+	*** CURRENT SOURCES ***
+
+	https://ruby.taobao.org
+	
+	#如果是淘宝的地址，就可以直接gem install sass
+
+
+常用gem source命令
+
+	//显示当前使用的sources
+	gem sources
+
+	//添加一个source
+	gem sources -a url地址
+
+	//删除一个source
+	gem sources -r url地址
+
+	//更新source cache
+	gem sources -u
+
+
+sass版本升级命令：
+
+	gem update sass
+
+
 
 ## Chapter 3 基本用法
 
@@ -1111,13 +1154,111 @@ result：
 XX.修改完成，保存
 
 
+不用切来切去，一个界面修改scss
+
+<img src="img/debug.png" alt="" />
+
+
+### 需要的环境
+
+<div class="space"></div>
+
+·sass3.3+
+
+&nbsp;&nbsp;&nbsp;&nbsp;·sass -v //查看sass版本
+
+&nbsp;&nbsp;&nbsp;&nbsp;·gem update sass //升级到最新版
+
+&nbsp;&nbsp;&nbsp;&nbsp;·gem install sass –v ‘>=3.3.0alpha’
+
+&nbsp;&nbsp;&nbsp;&nbsp;//安装某一版本的sass
+
+<div class="space"></div>
+
+chrome canary 版本
+
+https://www.google.com/intl/en/chrome/browser/canary.html
 
 
 
+### 配置Sass
+
+<div class="space"></div>
+
+	scss –sourcemap path/style.scss path/style.css
+
+·如果想要修改scss后自动保存成css，可以使用-watch命令
+
+	scss –sourcemap –watch path/style.scss:path/style.css
+
+
+如果顺利的话，你会在css文件的最后一行看到下面的一行字符
+
+<img src="img/debug-2.png" alt="">
+
+同时你会在css同级目录下看到.map文件，这个文件是用来将scss和css进行关联的文件
+
+<table>
+	<tr>
+		<td>
+			<img src="img/debug-3.png" alt="" />
+		</td>
+		<td>
+			<img src="img/debug-4.png" alt="" />
+		</td>
+	</tr>
+</table>
+
+
+### 开启chrome对css sourcemap的支持
+
+<div class="space"></div>
+
+·在地址栏输入chrome://flags进入chrome的flags
+
+<img src="img/debug-5.png" alt="" />
+
+·开启开发者工具实验
+
+<img src="img/debug-6.png" alt="" />
+
+
+在experiments选项卡中开启sass的debug功能
+
+<img src="img/debug-7.png" alt="" />
+
+
+### 建立workspace
+
+<div class="space"></div>
+
+·在workspace选项卡中选择文件夹
+
+<img src="img/debug-8.png" alt="" />
+
+
+### 创建文件的对应表
+
+<div class="space"></div>
+
+在sources选项卡下可以看到scss，右键scss文件，选择map to file system resource
+
+<table>
+	<tr>
+		<td><img src="img/debug-9.png" alt="" /></td>
+		<td><img src="img/debug-10.png" alt="" /></td>
+	</tr>
+</table>
+
+
+### 配置完成
+
+·经过上面的步骤完成配置，就可以在浏览器中进行修改并查看修改效果，并且在浏览器中的修改会直接改变scss文件，如果命令中使用了—watch，那么css文件也会同步进行更新。
+
+·对于属性值，按command+鼠标单击可以进入source选项卡进行修改
+
+<img src="img/debug-11.png" alt="" />
 
 
 
-
-
-
-
+### END
