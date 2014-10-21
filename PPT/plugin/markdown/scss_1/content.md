@@ -567,6 +567,56 @@ e.g
 	}
 
 
+** ps:%placeholder和	mixin的区别 **
+
+通过上面我们发现，%placeholder和mixin都可以用@extend来调用，那两者的区别在哪里？
+
+我们通过一个例子来看一下：
+
+	%placeholder{
+		width: 300px;
+		.inner{
+			width: 400px;
+		}
+	}
+
+	@mixin mixin-test{
+		width: 100px;
+		.inner{
+			width: 200px;
+		}
+	}
+
+	.mixin-test{
+		@extend mixin-test;
+	}
+
+	.placeholder{
+		@extend %placeholder;
+	}
+
+
+编译后：
+
+	.placeholder{
+		width: 300px;
+	}
+
+	.placeholder .inner{
+		width:  400px;
+	}
+
+	.mixin-test{
+		width: 100px;
+	}
+
+	.mixin-test .inner{
+		width: 200px;
+	}
+
+可以看出，%placeholder是将调用它的地方引到定义的地方替换并显示，而mixin却是在调用的地方将定义的样式块复制过来显示。
+
+
 
 **!default和!optional**
 
