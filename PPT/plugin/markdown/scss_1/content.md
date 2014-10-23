@@ -1209,11 +1209,12 @@ XX.修改完成，保存
 <img src="img/debug.png" alt="" />
 
 
+
 ### 需要的环境
 
 <div class="space"></div>
 
-·sass3.3+
+·Sass的版本：sass3.3+
 
 &nbsp;&nbsp;&nbsp;&nbsp;·sass -v //查看sass版本
 
@@ -1229,17 +1230,28 @@ chrome canary 版本
 
 https://www.google.com/intl/en/chrome/browser/canary.html
 
+(现在可以不用canary版本的chrome，最新版已经支持scss的debug，下面也以最新版讲解)
+
 
 
 ### 配置Sass
 
 <div class="space"></div>
 
-	scss –sourcemap path/style.scss path/style.css
+	scss –sourcemap=TYPE path/style.scss path/style.css
+
+	/*
+		好像只有最新版的sass才需要加type
+		type: 
+		1.atuo(默认) 相对路径
+	    2.file 绝对路径
+	    3.inline 包含在源文本中的sourcemap
+	    4.none 忽略sourcemap
+	*/
 
 ·如果想要修改scss后自动保存成css，可以使用-watch命令
 
-	scss –sourcemap –watch path/style.scss:path/style.css
+	scss –sourcemap=TYPE –watch path/style.scss:path/style.css
 
 
 如果顺利的话，你会在css文件的最后一行看到下面的一行字符
@@ -1260,38 +1272,44 @@ https://www.google.com/intl/en/chrome/browser/canary.html
 </table>
 
 
-### 开启chrome对css sourcemap的支持
+
+### 在chrome中开启sourcemap
 
 <div class="space"></div>
 
-·在地址栏输入chrome://flags进入chrome的flags
+在chrome中右键然后选择审查元素，或者按F12开启DevTools。
+
+然后点击齿轮icon。
 
 <img src="img/debug-5.png" alt="" />
 
-·开启开发者工具实验
+
+在打开的settings面板中，选择“Enable CSS Source maps”及下面的选项。
 
 <img src="img/debug-6.png" alt="" />
 
-
-在experiments选项卡中开启sass的debug功能
-
-<img src="img/debug-7.png" alt="" />
 
 
 ### 建立workspace
 
 <div class="space"></div>
 
-·在workspace选项卡中选择文件夹
+·在workspace选项卡中选择文件夹（存放scss的文件夹）
+
+<img src="img/debug-7.png" alt="" />
+
+
+chrome会询问你是否允许DevTools获取文件夹权限，选择“允许”。
 
 <img src="img/debug-8.png" alt="" />
 
 
+
 ### 创建文件的对应表
 
-<div class="space"></div>
+在sources选项卡下可以看到线上地址和刚才加的workspace。
 
-在sources选项卡下可以看到scss，右键scss文件，选择map to file system resource
+在线上地址下的scss文件夹下，右键scss文件，选择map to file system resource，然后和本地的scss对应。
 
 <table>
 	<tr>
@@ -1300,12 +1318,16 @@ https://www.google.com/intl/en/chrome/browser/canary.html
 	</tr>
 </table>
 
+然后会弹出一个对话框，告诉你需要重启inspector，点击确定后会自己重启。
+
 
 ### 配置完成
 
 ·经过上面的步骤完成配置，就可以在浏览器中进行修改并查看修改效果，并且在浏览器中的修改会直接改变scss文件，如果命令中使用了—watch，那么css文件也会同步进行更新。
 
-·对于属性值，按command+鼠标单击可以进入source选项卡进行修改
+·对于scss中@import的样式同样管用，浏览器会自己找到包含的scss文件，然后修改即可。
+
+·对于属性值，按command+鼠标（mac）单击可以进入source选项卡进行修改，修改后刷新页面就可以看到效果。
 
 <img src="img/debug-11.png" alt="" />
 
