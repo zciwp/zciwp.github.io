@@ -1,5 +1,9 @@
 # Sass & Scss
 
+<div class="space"></div>
+
+## author: zEx zhang
+
 
 
 ## Chapter 1 简介
@@ -519,7 +523,6 @@ e.g
 	}
 
 
-
 **%foo**
 
 占位符选择器（不属于变量）
@@ -615,7 +618,6 @@ e.g
 	}
 
 可以看出，%placeholder是将调用它的地方引到定义的地方替换并显示，而mixin却是在调用的地方将定义的样式块复制过来显示。
-
 
 
 **!default和!optional**

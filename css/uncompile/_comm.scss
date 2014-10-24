@@ -66,6 +66,19 @@
 				margin-bottom: 0;
 			}
 		}
+		.ppt-lst{
+			padding: 10px 0 0;
+			li{
+				padding: 0 0 10px;
+			}
+			.sub-ppt-lst{
+				padding: 0 0 0 20px;
+				li{
+					padding-top: 5px;
+					padding-bottom: 0;
+				}
+			}
+		}
 	}
 }
 
@@ -74,3 +87,5 @@
 }
 
 .table th{ text-align: center;}
+
+
