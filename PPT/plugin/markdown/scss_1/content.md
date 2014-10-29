@@ -410,7 +410,7 @@ $/^[A-Za-z_]+\w*/ : value，$$也是不行的。
 
 <div class="space_1"></div>
 
-7.sass 3.3.4中新增加一种数据类型map(映射类型)（e.g. $map:(key1:value1,key2,value2,key3:value3) ）
+7.sass 3.3.4中新增加一种数据类型map(映射类型)（e.g. $map:(key1:value1,key2:value2,key3:value3) ）
 
 
 **变量可以做什么**
