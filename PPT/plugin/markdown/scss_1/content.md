@@ -572,7 +572,7 @@ e.g
 
 ** ps:%placeholder和	mixin的区别 **
 
-通过上面我们发现，%placeholder和mixin都可以用@extend来调用，那两者的区别在哪里？
+通过上面我们发现，%placeholder通过@extend来调用，mixin通过@include来调用，那两者还有什么区别？
 
 我们通过一个例子来看一下：
 
@@ -591,7 +591,7 @@ e.g
 	}
 
 	.mixin-test{
-		@extend mixin-test;
+		@include mixin-test;
 	}
 
 	.placeholder{
@@ -771,10 +771,6 @@ usage:
 		@include dis-ib;
 	}
 
-	.dis-ib{
-		@extend dis-ib;
-	}
-
 
 @mixin命令也可以带参数。
 
@@ -830,16 +826,13 @@ or
 
 <div class="space"></div>
 
-相同：
+@extend
 
-&nbsp;&nbsp;&nbsp;&nbsp;这两个都是调用@mixin指令的命令。
+&nbsp;&nbsp;&nbsp;&nbsp;不能直接调用@mixin指令，只能调用class或者id名
 
-不同：
+@include
 
-&nbsp;&nbsp;&nbsp;&nbsp;@extend 会将所有使用@extend命令调用的@mixin内容提取出来。
-
-&nbsp;&nbsp;&nbsp;&nbsp;@include 会将@mixin的内容放到当前调用的class或id中。
-
+&nbsp;&nbsp;&nbsp;&nbsp;可以直接调用@mixin指令。
 
 @extend例子：
 
@@ -847,10 +840,13 @@ or
 		color: $font-color;
 	}
 	.test{
-		@extend extend-example();
+		@include extend-example;
 	}
 	.test-2{
-		@extend extend-example();
+		@extend .test;
+	}
+	.test-3{
+		@extend extend-example; //报错，但如果加了!optional就不会报错，并且这行css不会输出，建议不要这么使用，没有意义
 	}
 
 编译后：
