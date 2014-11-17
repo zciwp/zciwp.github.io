@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="../css/idangerous.swiper.css">
+	<script src="../js/idangerous.swiper.min.js"></script>
+	<title>广告展示</title>
+</head>
+
+
+
+<body>
+
+<link rel="stylesheet" href="../css/mobile-ad-template.css">
+
+
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+      <!--First Slide-->
+      <div class="swiper-slide section01"> 
+        <!-- Any HTML content of the first slide goes here -->
+        <div class="swiper-txt">
+        	slide 1
+        </div>
+        
+      </div>
+      
+      <!--Second Slide-->
+      <div class="swiper-slide section02">
+        <!-- Any HTML content of the second slide goes here -->
+        <div class="swiper-container swiper-nested-1">
+        	<div class="swiper-wrapper">
+        		<div class="swiper-slide section02-01">
+        			slide 2-1
+        		</div>
+        		<div class="swiper-slide section02-02">
+        			slide 2-2
+        		</div>
+        	</div>
+        </div>
+      </div>
+      
+      <!--Third Slide-->
+      <div class="swiper-slide section03"> 
+        <!-- Any HTML content of the third slide goes here -->
+        <div class="swiper-txt">
+        	slide 3
+        </div>
+      </div>
+      <!--Etc..-->
+  </div>
+</div>
+
+
+<script>
+  var mySwiper = new Swiper('.swiper-container',{
+    mode: 'vertical'
+  })
+  var SwiperNested1 = new Swiper('.swiper-nested-1',{
+  })
+  </script>
+
+</body>
+</html>

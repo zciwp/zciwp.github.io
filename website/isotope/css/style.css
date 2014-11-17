@@ -1,0 +1,228 @@
+@charset "UTF-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+html {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  border: 0;
+  max-width: 100%;
+  vertical-align: top; }
+
+address, caption, cite, code, dfn, em, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+select {
+  font-size: 12px; }
+
+button {
+  line-height: 1.231;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer; }
+
+input, textarea, select, button {
+  outline: none;
+  resize: none; }
+
+a {
+  text-decoration: none;
+  outline: none; }
+
+a:focus {
+  outline: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+.clear:after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0; }
+
+.clear {
+  *zoom: 1; }
+
+body {
+  height: 100%;
+  font: 6.85714px;
+  color: #333;
+  background: #FFFFFF; }
+
+iframe {
+  vertical-align: top; }
+
+/*=================usage===============
+.animation{
+	@include animation-mixin();
+}
+
+@include keyframes(changeWidth){
+	0%{ width: 0}
+	100%{ width: 100%}
+}
+=======================================*/
+/*=================usage===============
+@mixin boxShadow($value: 0 0 0 #333){
+	@include prefix($name: box-shadow,$value: $value,$prefixer: (webkit,moz));
+}
+.zciwp{
+	@include boxShadow();
+}
+=======================================*/
+/*=====================================
+hugo 大神写的debug map类型变量内部数据都是什么类型的mixin
+=======================================*/
+/*=================usage===============
+/// Sample map
+/// @type Map
+$map: (
+  'this': 'is',
+  'a': ('great', 'test'),
+  'isn\'t it?': true,
+  'and this': 42,
+  'and': ('also', 'this'),
+  'nested': (
+    'map': 1337
+  )
+);
+
+@include debug-map($map);
+
+result：
+@debug-map {
+  __inspect__: ("this": "is", "a": ("great", "test"), "isn't it?": true, "and this": 42, "and": ("also", "this"), "nested": (("map": 1337)));
+  __length__: 6;
+  __depth__: 2;
+  __properties__ {
+    (string) this: "is";
+    (list) a: "great", "test";
+    (bool) isn't it?: true;
+    (number) and this: 42;
+    (list) and: "also", "this";
+    (map) nested: ("map": 1337);
+  }
+}
+=======================================*/
+/*=================usage===============
+
+<div class="multiline-ellipsis">多行显示的内容那个</div>
+
+.multiline-ellipsis{
+	@include multiline-ellipsis();
+}
+=======================================*/
+.isotope-wrapper {
+  margin: 0 auto;
+  height: 300px;
+  background-color: #333; }
+  .isotope-wrapper .item {
+    width: 100%;
+    height: 200px; }
+
+.nav-collapse li {
+  background-color: #f4421a;
+  margin: 0 0 2px;
+  padding: 10px 0; }
+
+@media (min-width: 768px) {
+  .isotope-wrapper {
+    max-width: 750px;
+    background-color: red; }
+    .isotope-wrapper .item {
+      width: 33.3333333333333%;
+      height: 200px; }
+
+  .nav-toggle {
+    display: none; }
+
+  .nav-collapse {
+    width: 750px;
+    margin: 0 auto;
+    zoom: 1; }
+    .nav-collapse:after {
+      content: '.';
+      clear: both;
+      display: block;
+      height: 0;
+      visibility: hidden;
+      font-size: 0;
+      line-height: 0; }
+    .nav-collapse li {
+      float: left;
+      width: 20%;
+      text-align: center;
+      margin: 0 2px 0 0; }
+
+  .js .nav-collapse.closed {
+    max-height: none; } }
+@media (min-width: 992px) {
+  .isotope-wrapper {
+    max-width: 970px;
+    background-color: blue; }
+    .isotope-wrapper .item {
+      width: 33.3333333333333333%;
+      height: 200px; }
+
+  .nav-toggle {
+    display: none; }
+
+  .nav-collapse {
+    width: 970px; }
+    .nav-collapse li {
+      padding: 5px 10px;
+      float: left;
+      width: 20%; }
+
+  .js .nav-collapse.closed {
+    max-height: none; } }
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1; }
+
+.nav-collapse.opened {
+  max-height: 9999px; }
+
+.nav-toggle {
+  float: right;
+  position: relative;
+  z-index: 3; }
+  .nav-toggle:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #333; }
+
+/*# sourceMappingURL=style.css.map */
