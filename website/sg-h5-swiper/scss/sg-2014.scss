@@ -1,0 +1,733 @@
+@charset "utf-8";
+$mobile-switch:true;//是否为移动端，默认关闭
+$pc-switch:false;//是否为移动端，默认开启
+
+@import "../../../../../global/css/zeus/uncompile/_config";
+
+@import "../../../../../global/css/zeus/uncompile/_reset";
+
+@import "../../../../../global/css/zeus/uncompile/_base";
+
+@import "../../../../../global/css/zeus/uncompile/_animation";
+
+@import "_config";
+
+html,body,.swiper-container{width:100%;height:100%; overflow: hidden}
+
+
+.loadPage{
+	width: 100%;
+	height: 100%;
+	background-color: #f7644c;
+	position: relative;
+	color: #fff;
+	.loading{
+		.wrap{
+			padding-top: 40%;
+		}
+		.inner{
+			margin: 0 auto;
+			width: 90px;
+			height: 90px;
+			background: url(../img/logo-w.png) no-repeat center center;
+			background-size: 90px;
+		}
+		.loading-progress{
+			width: 100%;
+			height: 90px;
+			background-color: #f7644c;
+			background-image: url(../img/logo-r.png);
+			background-size: 90px;
+			-webkit-transition-property: height;
+			transition-property: height;
+			-webkit-transition-duration: 1s;
+			transition-duration: 1s;
+		}
+		.subinfo{
+			margin-top: 30px;
+		}
+	}
+	.loading-num{
+		width: 100%;
+		padding-top: 15%;
+		text-align: center;
+		font-style: italic;
+	}
+}
+
+body{
+	background-color: #f7644c;
+}
+
+.suggest-box{
+	visibility: hidden;
+	width: 100%;
+	height: 100%;
+	background: #000 url(../img/suggest.png) no-repeat center center;
+	background-size: 320px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+#sg-2014{
+	display: none;
+}
+
+.section{
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+	img{
+		margin: 0 auto;
+	}
+	.adjust-box{
+		width: 100%;
+		height: 5%;
+	}
+	.adjust-box2{
+		width: 100%;
+		height: 3%;
+	}
+	.txt{
+		max-width: 480px;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.wrap{
+		position: relative;
+		max-width: 480px;
+		margin: 0 auto;
+		.ani-ele{
+			position: absolute;
+			text-align: center;
+			left: 0;
+			top: 0;
+			width: 100%;
+		}
+	}
+}
+
+.section1,.section-final{
+	color: #fff;
+	position: relative;
+	.logo{
+		text-align: left;
+		margin-top: 40px;
+		img{
+			margin: 0;
+		}
+	}
+	.cover{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 95%;
+		height: 80%;
+		padding: 0 15% 30% 0;
+		.inner{
+			border: 1px solid #fff;
+			width: 100%;
+			height: 100%;
+			position:relative;
+			img{
+				position: absolute;
+				top:0;
+				left: 0;
+				bottom:0;
+				right: 0;
+				margin: auto;
+			}
+		}
+	}
+	.cover-b-border{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		border:1px solid #fff;
+		border-style: none solid;
+		padding: 30% 0 0%;
+		width: 80%;
+		-webkit-transform: skewX(45deg); 
+		transform: skewX(45deg);
+	}
+	.cover-r-border{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		border-top:1px solid #fff;
+		height: 80%;
+		padding: 0 15% 0 0;
+		-webkit-transform: skewY(45deg); 
+		transform: skewY(45deg);
+		-webkit-transform-origin: 0 0;
+		transform-origin: 0 0;
+	}
+}
+
+
+.section2{
+	background-color: #3dd2bb;
+	.wrap{
+		.hot.dis-b{
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+		}
+	}
+}
+
+.section3{
+	background-color: #59c5ec;
+	.wrap{
+		.hot.dis-b{
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+		}
+	}
+}
+
+.section4{
+	background-color: #a1a8af;
+	.gohome{
+		opacity: 0;
+	}
+	.wrap{
+		.hot.dis-b{
+			-webkit-animation-delay: 2s;
+			animation-delay: 2s;
+		}
+	}
+}
+
+.section5{
+	background-color: #ffd300;
+	.wrap{
+		.hot.dis-b{
+			-webkit-animation-delay: 3.5s;
+			animation-delay: 3.5s;
+		}
+	}
+}
+
+
+.section6{
+	background-color: #c174b5;
+	.wrap{
+		.hot.dis-b{
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+		}
+	}
+	.info{
+		opacity: 0;
+	}
+	.photo.dis-b{
+		@include animation-mixin($animation-arg-o-s6-photo);
+	}
+	.info.dis-b{
+		@include animation-mixin($animation-arg-o-s6-info);
+		-webkit-animation-delay: 1s;
+		animation-delay: 1s;
+	}
+}
+
+.section7{
+	background-color: #f29c9f;
+	.wrap{
+		.hot.dis-b{
+			-webkit-animation-delay: 0.5s;
+			animation-delay: 0.5s;
+		}
+		.ps.dis-b img{
+			-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+		}
+	}
+	.ani-ele{
+		visibility: visible;
+	}
+	// 摇头动画
+	.ps.dis-b img{
+		@include animation-mixin($animation-arg-o-s7-p1);
+	}
+	.p1.dis-b img{
+		-webkit-transform-origin: 20% 100%;
+		transform-origin: 20% 100%;
+	}
+	.p2.dis-b img{
+		-webkit-transform-origin: 40% 100%;
+		transform-origin: 40% 100%;
+	}
+	.p3.dis-b img{
+		-webkit-transform-origin: 60% 100%;
+		transform-origin: 60% 100%;
+	}
+	.p4.dis-b img{
+		-webkit-transform-origin: 80% 100%;
+		transform-origin: 80% 100%;
+	}
+	.p5.dis-b img{
+		-webkit-transform-origin: 25% 100%;
+		transform-origin: 25% 100%;
+	}
+	.p6.dis-b img{
+		-webkit-transform-origin: 50% 100%;
+		transform-origin: 50% 100%;
+	}
+	.p7.dis-b img{
+		-webkit-transform-origin: 75% 100%;
+		transform-origin: 75% 100%;
+	}
+}
+
+.section8{
+	background-color: #3dd2bb;
+	.wrap{
+		.hot.dis-b{
+			-webkit-animation-delay: 2s;
+			animation-delay: 2s;
+		}
+	}
+	.apple.dis-b{
+		@include animation-mixin($animation-arg-o-s8-apple);
+	}
+	.shoe.dis-b{
+		@include animation-mixin($animation-arg-o-s2-dd);
+	}
+}
+
+.section9{
+	background-color: #6b6fde;
+	.wrap{
+		.hot.dis-b{
+			-webkit-animation-delay: 2s;
+			animation-delay: 2s;
+		}
+	}
+	.p.dis-b img{
+		@include animation-mixin($animation-arg-o-s8-apple);
+	}
+}
+
+
+.section10{
+	background-color: #ffd300;
+	.wrap{
+		.hot.dis-b{
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+		}
+		.rc.dis-b img{
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+		}
+	}
+	.cat{
+		position: relative;
+		z-index: 3;
+	}
+	.gc.dis-b img{
+		@include animation-mixin($animation-arg-o-s10-cat);
+		opacity: 1;
+		-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+	}
+	.rc.dis-b img{
+		@include animation-mixin($animation-arg-o-s10-cat);
+		opacity: 1;
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+	}
+	.bird.dis-b{
+		@include animation-mixin($animation-arg-o-s10-bird);
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+	}
+}
+
+.section11{
+	background-color: #ae5da1;
+	.wrap{
+		.hot.dis-b{
+			-webkit-animation-delay: 4s;
+			animation-delay: 4s;
+		}
+		.ad2.dis-b{
+			-webkit-animation-delay: 1.3s;
+			animation-delay: 1.3s;
+			-webkit-transform-origin: 10% 55%;
+			transform-origin: 10% 55%;
+		}
+		.ad3.dis-b{
+			-webkit-animation-delay: 1.6s;
+			animation-delay: 1.6s;
+			-webkit-transform-origin: 10% 70%;
+			transform-origin: 10% 70%;
+		}
+		.ad4.dis-b{
+			-webkit-animation-delay: 1.9s;
+			animation-delay: 1.9s;
+			-webkit-transform-origin: 10% 85%;
+			transform-origin: 10% 85%;
+		}
+		.ad5.dis-b{
+			-webkit-animation-delay: 2.2s;
+			animation-delay: 2.2s;
+			-webkit-transform-origin: 10% 55%;
+			transform-origin: 10% 55%;
+		}
+		.ad6.dis-b{
+			-webkit-animation-delay: 2.5s;
+			animation-delay: 2.5s;
+			-webkit-transform-origin: 10% 70%;
+			transform-origin: 10% 70%;
+		}
+		.ad7.dis-b{
+			-webkit-animation-delay: 2.8s;
+			animation-delay: 2.8s;
+			-webkit-transform-origin: 10% 85%;
+			transform-origin: 10% 85%;
+		}
+		.ad8.dis-b{
+			-webkit-animation-delay: 3.1s;
+			animation-delay: 3.1s;
+			-webkit-transform-origin: 10% 70%;
+			transform-origin: 10% 70%;
+		}
+		.ad9.dis-b{
+			-webkit-animation-delay: 3.4s;
+			animation-delay: 3.4s;
+			-webkit-transform-origin: 10% 85%;
+			transform-origin: 10% 85%;
+		}
+		.ad10.dis-b{
+			-webkit-animation-delay: 3.7s;
+			animation-delay: 3.7s;
+			-webkit-transform-origin: 10% 55%;
+			transform-origin: 10% 55%;
+		}
+		.ad11.dis-b{
+			-webkit-animation-delay: 4s;
+			animation-delay: 4s;
+			-webkit-transform-origin: 10% 70%;
+			transform-origin: 10% 70%;
+		}
+		.ad12.dis-b{
+			-webkit-animation-delay: 4.3s;
+			animation-delay: 4.3s;
+			-webkit-transform-origin: 10% 85%;
+			transform-origin: 10% 85%;
+		}
+	}
+	.du.dis-b{
+		@include animation-mixin($animation-arg-o-s11-du);
+	}
+	.flipinX{
+		-webkit-transform:perspective(400px) rotate3d(1,0,0,90deg);
+		transform:perspective(400px) rotate3d(1,0,0,90deg);
+	}
+	.flipinX.dis-b{
+		@include animation-mixin($animation-arg-o-s11-ad);
+		-webkit-animation-delay: 1.5s;
+		animation-delay: 1.5s;
+		-webkit-transform-origin: 10% 40%;
+		transform-origin: 10% 40%;
+	}
+	
+}
+
+.section12{
+	background-color: #f29c9f;
+	.sogou.dis-b{
+		@include animation-mixin($animation-arg-o-s2-dw);
+		-webkit-animation-delay: 0.5s;
+			animation-delay: 0.5s;
+	}
+}
+
+
+.section13{
+	background-color: #a6937c;
+	.wrap{
+		.hot.dis-b{
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+		}
+	}
+	.wsc.dis-b{
+		@include animation-mixin($animation-arg-o-s7-p1);
+		-webkit-transform-origin: 25% 100%;
+		transform-origin: 25% 100%;
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+
+	}
+}
+
+
+@mixin sogou-logo(){
+	@include keyframes(sogou-logo){
+		0% {
+			-webkit-transform: scale3d(0.8,0.8,0.8);
+			transform: scale3d(0.8,0.8,0.8);
+		}
+		50%{
+			-webkit-transform: scale3d(1,1,1);
+			transform: scale3d(1,1,1);
+		}
+		100%{
+			-webkit-transform: scale3d(0.8,0.8,0.8);
+			transform: scale3d(0.8,0.8,0.8);
+		}
+	}
+}
+@include sogou-logo();
+.section14{
+	background-color: #cccccc;
+	.wrap{
+		.hot.dis-b{
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+		}
+	}
+	.s-logo.dis-b{
+		@include animation-mixin($animation-arg-s14-sogou);
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+		-webkit-transform-origin: 50% 60%;
+		transform-origin: 50% 60%;
+	}
+}
+
+
+// 飞机
+@mixin mixani-du(){
+	@include keyframes(mixani-du){
+		0%{
+			-webkit-transform:translate3d(100%,50%,0) scale(0.3);
+			transform:translate3d(100%,50%,0) scale(0.3);
+		}
+		100%{
+			-webkit-transform:none;
+			transform:none;
+		}
+	}
+}
+@include mixani-du();
+
+
+.fadein{
+	opacity: 0;
+	display: block;
+}
+
+
+.zoomOut{
+	opacity: 0;
+}
+
+.ani-ele{
+	visibility: hidden;
+}
+
+.ani-ele.dis-b{
+	visibility: visible;
+}
+
+
+// 动画
+@include fadein();
+@include fadeInDown();
+@include flash();
+@include zoomIn();
+@include zoomOut();
+@include shake();
+@include bounceInLeft();
+@include bounceInRight();
+@include bounceInDown();
+@include shake1();
+@include opacityChange();
+@include bird();
+@include flipinX();
+
+// 第二页文字
+.section{
+	.hot{
+		opacity: 0;
+		&.dis-b{
+			@include animation-mixin($animation-arg-o-hot);
+			-webkit-transform-origin: center bottom;
+			transform-origin: center bottom;
+		}
+	}
+}
+
+
+.txt.dis-b{
+	@include animation-mixin($animation-arg-o-s2);
+}
+
+// 第三页文字
+.section3 .txt.dis-b{
+	@include animation-mixin($animation-arg-o-s3);
+}
+// 东莞地图
+.dg.dis-b{
+	@include animation-mixin($animation-arg-o-s2-dw);
+}
+// 东莞人物
+.person.dis-b,.hand.dis-b{
+	@include animation-mixin($animation-arg-o-s2-person);
+}
+.hand.dis-b img{
+	@include animation-mixin($animation-arg-o-s2-hand);
+	-webkit-transform-origin: 30px 100%;
+	transform-origin: 30px 100%;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+// 老虎
+.tiger.dis-b img{
+	@include animation-mixin($animation-arg-o-s2-tiger);
+}
+// 大大
+.dd.dis-b img{
+	@include animation-mixin($animation-arg-o-s2-dd);
+}
+
+// 回家
+@mixin mixani-gohome(){
+	@include keyframes(mixani-gohome){
+		0% {
+			-webkit-transform: translateY(20px) translateZ(0);
+			transform: translateY(20px) translateZ(0);
+			opacity: 0;
+		}
+		100%{
+			-webkit-transform: translateY(0) translateZ(0);
+			transform: translateY(0) translateZ(0);
+			opacity: 1;
+		}
+	}
+}
+@include mixani-gohome();
+
+.mixani-gohome.dis-b{
+	@include animation-mixin($animation-arg-o-s3-gohome);
+}
+
+// 飞机
+@mixin mixani-plane(){
+	@include keyframes(mixani-plane){
+		0%{
+			-webkit-transform:translate3d(-100%,50%,0) scale(0.3);
+			transform:translate3d(-100%,50%,0) scale(0.3);
+		}
+		100%{
+			-webkit-transform:none;
+			transform:none;
+		}
+	}
+}
+@include mixani-plane();
+
+.mixani-plane.dis-b{
+	@include animation-mixin($animation-arg-o-s3-plane);
+}
+
+// 第四页，监狱人物
+.section5{
+	.zoomOut{
+		opacity: 0;
+	}
+	.zoomOut.dis-b{
+		@include animation-mixin($animation-arg-o-s4);
+	}
+	.wrap{
+		.ldm{
+			-webkit-animation-delay: 0s;
+			animation-delay: 0s;
+		}
+		.gmm{
+			-webkit-animation-delay: 0.5s;
+			animation-delay: 0.5s;
+		}
+		.hhb{
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+		}
+		.kzd{
+			-webkit-animation-delay: 1.5s;
+			animation-delay: 1.5s;
+		}
+		.fzm{
+			-webkit-animation-delay: 2s;
+			animation-delay: 2s;
+		}
+		.ncs{
+			-webkit-animation-delay: 2.5s;
+			animation-delay: 2.5s;
+		}
+		.yxj{
+			-webkit-animation-delay: 3s;
+			animation-delay: 3s;
+		}
+	}
+}
+
+
+
+
+// 底部指引向下箭头
+@mixin arr(){
+	@include keyframes(arr){
+		0% {
+			-webkit-transform: translateY(0) translateZ(0);
+			transform: translateY(0) translateZ(0);
+		}
+		100%{
+			-webkit-transform: translateY(-10px) translateZ(0);
+			transform: translateY(-10%) translateZ(0);
+		}
+	}
+}
+@include arr();
+
+.arr-box{
+	background: url(../img/arr.png) no-repeat center bottom;
+	background-size: auto 9px;
+	padding-bottom: 15px;
+	position: fixed;
+	z-index:3;
+	bottom: 20px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	-webkit-animation: arr 1s linear 0ms infinite alternate;
+	.txt{
+		transition-property: opacity;
+		opacity: 1;
+		transition-duration: 1s;
+	}
+}
+
+.open-box{
+	position: absolute;
+	left: 0;
+	bottom: 20px;
+	width: 100%;
+	.open{
+		color:#fff;
+		height: 27px;
+		line-height: 27px;
+		width: 72px;
+		font-size: 14px;
+		border: 1px solid #fff;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+

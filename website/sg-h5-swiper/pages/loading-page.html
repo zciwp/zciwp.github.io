@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loading</title>
+</head>
+<body>
+	<div class="loadPage" style="z-index:99999;">
+        <div class="loading">
+            <div class="loading-num">Loading...<span></span></div>
+            <div class="inner">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <script>
+var pics = [
+"http://mat1.gtimg.com/news/2014/see/iris_mask.png",
+"http://mat1.gtimg.com/news/2014/see/colBg.png",
+"http://mat1.gtimg.com/news/2014/see/colBnt.png",
+"http://mat1.gtimg.com/news/2014/see/cover_bg.jpg",
+"http://mat1.gtimg.com/news/2014/see/cover_bg2.jpg",
+"http://mat1.gtimg.com/news/2014/see/cover_bg3.jpg",
+"http://mat1.gtimg.com/news/2014/see/cover_bg4.jpg",
+"http://mat1.gtimg.com/news/2014/see/cover_circle.png",
+"http://mat1.gtimg.com/news/2014/see/cpBg.jpg",
+"http://mat1.gtimg.com/news/2014/see/endBg.jpg",
+"http://mat1.gtimg.com/news/2014/see/henglf1.jpg",
+"http://mat1.gtimg.com/news/2014/see/henglf4.jpg",
+"http://mat1.gtimg.com/news/2014/see/henglf201.png",
+"http://mat1.gtimg.com/news/2014/see/henglf202.png",
+"http://mat1.gtimg.com/news/2014/see/henglf203.jpg",
+"http://mat1.gtimg.com/news/2014/see/henglf301.png",
+"http://mat1.gtimg.com/news/2014/see/henglf302.png",
+"http://mat1.gtimg.com/news/2014/see/henglf303.jpg",
+"http://mat1.gtimg.com/news/2014/see/hengrt1.jpg",
+"http://mat1.gtimg.com/news/2014/see/hengrt4.jpg",
+"http://mat1.gtimg.com/news/2014/see/hengrt201.png",
+"http://mat1.gtimg.com/news/2014/see/hengrt202.jpg",
+"http://mat1.gtimg.com/news/2014/see/hengrt301.png",
+"http://mat1.gtimg.com/news/2014/see/logo.png",
+"http://mat1.gtimg.com/news/2014/see/logoBign.png",
+"http://mat1.gtimg.com/news/2014/see/plane.png",
+"http://mat1.gtimg.com/news/2014/see/shuft1n.jpg",
+"http://mat1.gtimg.com/news/2014/see/shuft2n.jpg",
+"http://mat1.gtimg.com/news/2014/see/shuft3n.jpg",
+"http://mat1.gtimg.com/news/2014/see/shutop1n.jpg",
+"http://mat1.gtimg.com/news/2014/see/shutop2n.jpg",
+"http://mat1.gtimg.com/news/2014/see/shutop3n.jpg",
+"http://mat1.gtimg.com/news/2014/see/shutop4n.jpg",
+"http://mat1.gtimg.com/news/2014/see/shuft4n.jpg"
+];
+_loadImages(pics, function(){
+});
+
+function _loadImages(pics, callback, len){
+    len = len || pics.length;
+    if(pics.length){
+        var IMG = new Image(),
+            picelem = pics.shift();
+            
+        if(window._pandaImageLoadArray){
+            window._pandaImageLoadArray = window._pandaImageLoadArray
+        }else{
+            window._pandaImageLoadArray = [];
+        }
+        window._pandaImageLoadArray.push(picelem);
+        IMG.src = picelem;
+        // 从数组中取出对象的一刻，就开始变化滚动条
+        _drawLoadProgress(window._pandaImageLoadArray.length/(len*len));
+        // 缓存处理
+        if (IMG.complete) {
+            window._pandaImageLoadArray.shift();
+            return _loadImages(pics,callback, len); 
+        }else{
+            // 加载处理
+            IMG.onload = function() {
+                window._pandaImageLoadArray.shift();
+                IMG.onload = null;  // 解决内存泄漏和GIF图多次触发onload的问题
+            }
+            // 容错处理 todo 应该如何处理呢?
+            // 目前是忽略这个错误，不影响正常使用
+            IMG.onerror = function(){
+                window._pandaImageLoadArray.shift();
+                IMG.onerror = null;
+            }
+            return _loadImages(pics, callback, len);
+        }
+        return;
+    }
+    if(callback) _loadProgress(callback, window._pandaImageLoadArray.length, len);
+}
+// 监听实际的加载情况
+function _loadProgress(callback, begin, all){
+    var loadinterval = setInterval(function(){
+        if(window._pandaImageLoadArray.length != 0 && window._pandaImageLoadArray.length != begin){
+            _drawLoadProgress((begin - window._pandaImageLoadArray.length )/all);
+        }else if(window._pandaImageLoadArray.length == 0){
+            _drawLoadProgress(1)
+            setTimeout(function(){
+                callback.call(window);
+            },500);
+            clearInterval(loadinterval);
+        }
+    },300);
+}
+function _drawLoadProgress(w){
+    var num = Math.floor(w*100) >= 100 ? 100 : Math.floor(w*100);
+    $('.loading-progress').animate({width:$('.loading').width()*num/100}, 100, 'linear');
+    $(".loading-num span").html(num+"%");
+}
+    </script>
+</body>
+</html>

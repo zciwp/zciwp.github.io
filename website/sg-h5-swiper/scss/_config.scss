@@ -1,0 +1,142 @@
+// 热度
+$animation-arg-o-hot:(
+	name: zoomIn,
+	time: 0.5s
+);
+
+// 第二页文字动画
+$animation-arg-o-s2:(
+	name: fadein,
+	delay: 2.5s,
+	time: 1s
+);
+
+// 第三页文字动画
+$animation-arg-o-s3:(
+	name: fadein,
+	delay: 2s,
+	time: 1s
+);
+
+// 第二页，东莞地图
+$animation-arg-o-s2-dw:(
+	name: zoomOut,
+	delay: 0s,
+	time: 0.3s
+);
+// 第二页，东莞人物
+$animation-arg-o-s2-person:(
+	name: fadein,
+	delay: 0.5s,
+	time: 0.5s
+);
+$animation-arg-o-s2-hand:(
+	name: shake,
+	delay: 0s,
+	time: 2s,
+	mode: false
+);
+// 第三页，老虎
+$animation-arg-o-s2-tiger:(
+	name: bounceInLeft,
+	delay: 0s,
+	time: 1s
+);
+// 大大
+$animation-arg-o-s2-dd:(
+	name: bounceInRight,
+	delay: 0s,
+	time: 1s
+);
+
+// 第四页，回家
+$animation-arg-o-s3-gohome:(
+	name: mixani-gohome,
+	delay: 1s,
+	time: 0.8s
+);
+// 第四页，飞机
+$animation-arg-o-s3-plane:(
+	name: mixani-plane,
+	time: 1s
+);
+// 第五页，监狱人物
+$animation-arg-o-s4:(
+	name: zoomOut,
+	time: 0.5s
+);
+// 第六页
+$animation-arg-o-s6-photo:(
+	name: flash,
+	time: 1s
+);
+$animation-arg-o-s6-info:(
+	name: fadeInDown,
+	time: 1s
+);
+// 第7页 女神
+$animation-arg-o-s7-p1:(
+	name: shake1,
+	time: 1.5s,
+	mode: false
+);
+// 第8页 小苹果和滑板鞋
+$animation-arg-o-s8-apple:(
+	name: bounceInDown,
+	time: 1.5s
+);
+// 第10页 神经猫
+$animation-arg-o-s10-cat:(
+	name: opacityChange,
+	time: 1s,
+	mode: false
+);
+$animation-arg-o-s10-bird:(
+	name: bird,
+	time: 1s,
+	mode: false
+);
+// 第11页 都教授
+$animation-arg-o-s11-du:(
+	name: mixani-du,
+	time: 1s,
+	mode: false
+);
+$animation-arg-o-s11-ad:(
+	name: flipinX,
+	time: 0.5s
+);
+// 第14页 川总
+$animation-arg-s14-sogou:(
+	name: sogou-logo,
+	time: 3s
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
