@@ -1,6 +1,5 @@
 // 图片加载loading
 var pics = [
-"../img/cover.png",
 "../img/cover-final.png",
 "../img/suggest.png",
 "../img/arr.png",
@@ -21,16 +20,9 @@ var pics = [
 "../img/4/person.png",
 "../img/4/plane.png",
 "../img/4/txt.png",
-"../img/5/fzm.png",
-"../img/5/gmm.png",
-"../img/5/hhb.png",
-"../img/5/hot.png",
-"../img/5/kzd.png",
-"../img/5/ldm.png",
-"../img/5/ncs.png",
+"../img/5/p.png",
 "../img/5/prison.png",
 "../img/5/txt.png",
-"../img/5/yxj.png",
 "../img/6/hot.png",
 "../img/6/info.png",
 "../img/6/love.png",
@@ -60,18 +52,7 @@ var pics = [
 "../img/10/hot.png",
 "../img/10/rc.png",
 "../img/10/txt.png",
-"../img/11/ad1.png",
-"../img/11/ad2.png",
-"../img/11/ad3.png",
-"../img/11/ad4.png",
-"../img/11/ad5.png",
-"../img/11/ad6.png",
-"../img/11/ad7.png",
-"../img/11/ad8.png",
-"../img/11/ad9.png",
-"../img/11/ad10.png",
-"../img/11/ad11.png",
-"../img/11/ad12.png",
+"../img/11/ad.png",
 "../img/11/du.png",
 "../img/11/hot.png",
 "../img/11/txt.png",
@@ -186,19 +167,12 @@ function _drawLoadProgress(w){
 function fullpage(){
     var mySwiper = new Swiper('.swiper-container',{
             mode: 'vertical',
-            autoResize: false,
             onSlideChangeEnd: function(swiper){
-                var num = $(".swiper-slide").length;
                 oIndex = swiper.activeIndex+1;
                 $('.section'+(oIndex)+ ' .ani-ele').addClass('dis-b');
-                if(oIndex !== 1){
-                    $(".arr-box .txt").css("opacity","0")
-                }
-                if(oIndex === num){
-                    $(".arr-box").css("display","none");
-                }
             }
         });
+    coverFinal();
 }
 
 function adjustBrowser(){
@@ -239,6 +213,32 @@ $(window).bind("orientationchange",function(){
 
 // 防止屏幕拖动
 document.documentElement.addEventListener('touchmove', function (e) { e.preventDefault(); });
+
+
+// 获取浏览器的可视范围的高
+function getBrowserHeight(){
+  return bh = document.documentElement.clientHeight || window.innerHeight || document.body.clientHeight;
+}
+
+function setWrapHeight(){
+    getBrowserHeight();
+    var wraph = bh-bh*0.13-60 + "px";
+    $(".section .wrap").css("width",wraph);
+}
+
+
+function coverFinal(){
+    var coverbFw = $("#cover-final-box").width()*0.8 + "px";
+    var coverbFh = $("#cover-final-box").height()*0.2 + "px";
+    var coverrFw = $("#cover-final-box").width()*0.15 + "px";
+    var coverrFh = $("#cover-final-box").height()*0.8 + "px";
+    $(".section-final .cover-b-border").css("height",coverbFh);
+    $(".section-final .cover-b-border").css("width",coverbFw);
+    $(".section-final .cover-r-border").css("height",coverrFh);
+    $(".section-final .cover-r-border").css("width",coverrFw);
+}
+
+
 
 // 手机倾斜
 

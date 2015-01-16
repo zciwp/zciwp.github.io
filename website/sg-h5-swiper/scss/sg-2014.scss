@@ -28,17 +28,17 @@ html,body,.swiper-container{width:100%;height:100%; overflow: hidden}
 	.loading{
 		.inner{
 			margin: 0 auto;
-			width: 90px;
-			height: 90px;
+			width: 60px;
+			height: 60px;
 			background: url(../img/logo-w.png) no-repeat center center;
-			background-size: 90px;
+			background-size: 60px;
 		}
 		.loading-progress{
 			width: 100%;
-			height: 90px;
+			height: 60px;
 			background-color: #f7644c;
 			background-image: url(../img/logo-r.png);
-			background-size: 90px;
+			background-size: 60px;
 			-webkit-transition-property: height;
 			transition-property: height;
 			-webkit-transition-duration: 1s;
@@ -52,7 +52,6 @@ html,body,.swiper-container{width:100%;height:100%; overflow: hidden}
 		width: 100%;
 		padding-top: 15%;
 		text-align: center;
-		font-style: italic;
 	}
 }
 
@@ -77,9 +76,9 @@ body{
 }
 
 .section{
-	height: 100%;
 	overflow: hidden;
 	text-align: center;
+	position: relative;
 	img{
 		margin: 0 auto;
 	}
@@ -110,9 +109,8 @@ body{
 	}
 }
 
-.section1,.section-final{
+.section1{
 	color: #fff;
-	position: relative;
 	.logo{
 		text-align: left;
 		margin-top: 40px;
@@ -131,12 +129,13 @@ body{
 			border: 1px solid #fff;
 			width: 100%;
 			height: 100%;
-			position:relative;
+			position: relative;
+			overflow: hidden;
 			img{
 				position: absolute;
-				top:0;
+				top: 0;
+				bottom: 0;
 				left: 0;
-				bottom:0;
 				right: 0;
 				margin: auto;
 			}
@@ -160,6 +159,58 @@ body{
 		border-top:1px solid #fff;
 		height: 80%;
 		padding: 0 15% 0 0;
+		-webkit-transform: skewY(45deg); 
+		transform: skewY(45deg);
+		-webkit-transform-origin: 0 0;
+		transform-origin: 0 0;
+	}
+}
+
+
+.section-final{
+	color: #fff;
+	.cover{
+		position: absolute;
+		bottom: 20%;
+		right: 15%;
+		left: 5%;
+		top: 15%;
+		.inner{
+			border: 1px solid #fff;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+			img{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+		}
+	}
+	.cover-b-border{
+		position: absolute;
+		bottom: 0;
+		right: 15%;
+		left: 5%;
+		height: 20%;
+		border:1px solid #fff;
+		border-style: none solid;
+		-webkit-transform: skewX(45deg); 
+		transform: skewX(45deg);
+		-webkit-transform-origin: 0 0;
+		transform-origin: 0 0;
+	}
+	.cover-r-border{
+		position: absolute;
+		bottom: 20%;
+		right: 0;
+		top: 15%;
+		width: 15%;
+		border-top:1px solid #fff;
 		-webkit-transform: skewY(45deg); 
 		transform: skewY(45deg);
 		-webkit-transform-origin: 0 0;
@@ -195,8 +246,8 @@ body{
 	}
 	.wrap{
 		.hot.dis-b{
-			-webkit-animation-delay: 2s;
-			animation-delay: 2s;
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
 		}
 	}
 }
@@ -205,8 +256,8 @@ body{
 	background-color: #ffd300;
 	.wrap{
 		.hot.dis-b{
-			-webkit-animation-delay: 3.5s;
-			animation-delay: 3.5s;
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
 		}
 	}
 }
@@ -236,10 +287,6 @@ body{
 .section7{
 	background-color: #f29c9f;
 	.wrap{
-		.hot.dis-b{
-			-webkit-animation-delay: 0.5s;
-			animation-delay: 0.5s;
-		}
 		.ps.dis-b img{
 			-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
@@ -286,12 +333,12 @@ body{
 	background-color: #3dd2bb;
 	.wrap{
 		.hot.dis-b{
-			-webkit-animation-delay: 2s;
-			animation-delay: 2s;
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
 		}
 	}
 	.apple.dis-b{
-		@include animation-mixin($animation-arg-o-s8-apple);
+		@include animation-mixin($animation-arg-o-s2-tiger);
 	}
 	.shoe.dis-b{
 		@include animation-mixin($animation-arg-o-s2-dd);
@@ -300,14 +347,17 @@ body{
 
 .section9{
 	background-color: #6b6fde;
+	.adjust-box{
+		height: 5%;
+	}
 	.wrap{
 		.hot.dis-b{
-			-webkit-animation-delay: 2s;
-			animation-delay: 2s;
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
 		}
 	}
 	.p.dis-b img{
-		@include animation-mixin($animation-arg-o-s8-apple);
+		@include animation-mixin($animation-arg-o-s9-p);
 	}
 }
 
@@ -316,8 +366,8 @@ body{
 	background-color: #ffd300;
 	.wrap{
 		.hot.dis-b{
-			-webkit-animation-delay: 1s;
-			animation-delay: 1s;
+			-webkit-animation-delay: 0.5s;
+			animation-delay: 0.5s;
 		}
 		.rc.dis-b img{
 			-webkit-animation-delay: 1s;
@@ -327,6 +377,9 @@ body{
 	.cat{
 		position: relative;
 		z-index: 3;
+	}
+	.gc,.rc,.bird{
+		visibility: visible;
 	}
 	.gc.dis-b img{
 		@include animation-mixin($animation-arg-o-s10-cat);
@@ -348,113 +401,15 @@ body{
 }
 
 .section11{
-	background-color: #ae5da1;
-	.wrap{
-		.hot.dis-b{
-			-webkit-animation-delay: 4s;
-			animation-delay: 4s;
-		}
-		.ad2.dis-b{
-			-webkit-animation-delay: 1.3s;
-			animation-delay: 1.3s;
-			-webkit-transform-origin: 10% 55%;
-			transform-origin: 10% 55%;
-		}
-		.ad3.dis-b{
-			-webkit-animation-delay: 1.6s;
-			animation-delay: 1.6s;
-			-webkit-transform-origin: 10% 70%;
-			transform-origin: 10% 70%;
-		}
-		.ad4.dis-b{
-			-webkit-animation-delay: 1.9s;
-			animation-delay: 1.9s;
-			-webkit-transform-origin: 10% 85%;
-			transform-origin: 10% 85%;
-		}
-		.ad5.dis-b{
-			-webkit-animation-delay: 2.2s;
-			animation-delay: 2.2s;
-			-webkit-transform-origin: 10% 55%;
-			transform-origin: 10% 55%;
-		}
-		.ad6.dis-b{
-			-webkit-animation-delay: 2.5s;
-			animation-delay: 2.5s;
-			-webkit-transform-origin: 10% 70%;
-			transform-origin: 10% 70%;
-		}
-		.ad7.dis-b{
-			-webkit-animation-delay: 2.8s;
-			animation-delay: 2.8s;
-			-webkit-transform-origin: 10% 85%;
-			transform-origin: 10% 85%;
-		}
-		.ad8.dis-b{
-			-webkit-animation-delay: 3.1s;
-			animation-delay: 3.1s;
-			-webkit-transform-origin: 10% 70%;
-			transform-origin: 10% 70%;
-		}
-		.ad9.dis-b{
-			-webkit-animation-delay: 3.4s;
-			animation-delay: 3.4s;
-			-webkit-transform-origin: 10% 85%;
-			transform-origin: 10% 85%;
-		}
-		.ad10.dis-b{
-			-webkit-animation-delay: 3.7s;
-			animation-delay: 3.7s;
-			-webkit-transform-origin: 10% 55%;
-			transform-origin: 10% 55%;
-		}
-		.ad11.dis-b{
-			-webkit-animation-delay: 4s;
-			animation-delay: 4s;
-			-webkit-transform-origin: 10% 70%;
-			transform-origin: 10% 70%;
-		}
-		.ad12.dis-b{
-			-webkit-animation-delay: 4.3s;
-			animation-delay: 4.3s;
-			-webkit-transform-origin: 10% 85%;
-			transform-origin: 10% 85%;
-		}
-	}
-	.du.dis-b{
-		@include animation-mixin($animation-arg-o-s11-du);
-	}
-	.flipinX{
-		-webkit-transform:perspective(400px) rotate3d(1,0,0,90deg);
-		transform:perspective(400px) rotate3d(1,0,0,90deg);
-	}
-	.flipinX.dis-b{
-		@include animation-mixin($animation-arg-o-s11-ad);
-		-webkit-animation-delay: 1.5s;
-		animation-delay: 1.5s;
-		-webkit-transform-origin: 10% 40%;
-		transform-origin: 10% 40%;
-	}
-	
-}
-
-.section12{
-	background-color: #f29c9f;
-	.sogou.dis-b{
-		@include animation-mixin($animation-arg-o-s2-dw);
-		-webkit-animation-delay: 0.5s;
-			animation-delay: 0.5s;
-	}
-}
-
-
-.section13{
 	background-color: #a6937c;
 	.wrap{
 		.hot.dis-b{
-			-webkit-animation-delay: 1s;
-			animation-delay: 1s;
+			-webkit-animation-delay: 0.5s;
+			animation-delay: 0.5s;
 		}
+	}
+	.wsc{
+		visibility: visible;
 	}
 	.wsc.dis-b{
 		@include animation-mixin($animation-arg-o-s7-p1);
@@ -484,12 +439,12 @@ body{
 	}
 }
 @include sogou-logo();
-.section14{
+.section12{
 	background-color: #cccccc;
 	.wrap{
 		.hot.dis-b{
-			-webkit-animation-delay: 1s;
-			animation-delay: 1s;
+			-webkit-animation-delay: 0.5s;
+			animation-delay: 0.5s;
 		}
 	}
 	.s-logo.dis-b{
@@ -500,6 +455,39 @@ body{
 		transform-origin: 50% 60%;
 	}
 }
+
+.section13{
+	background-color: #ae5da1;
+	.wrap{
+		.hot.dis-b{
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+		}
+	}
+	.du.dis-b{
+		@include animation-mixin($animation-arg-o-s11-du);
+	}
+	.flipinX{
+		-webkit-transform:perspective(400px) rotate3d(1,0,0,90deg);
+		transform:perspective(400px) rotate3d(1,0,0,90deg);
+	}
+	.flipinX.dis-b{
+		@include animation-mixin($animation-arg-o-s11-ad);
+		-webkit-animation-delay: 1s;
+		animation-delay: 1s;
+	}
+	
+}
+
+.section14{
+	background-color: #f29c9f;
+	.sogou.dis-b{
+		@include animation-mixin($animation-arg-o-s2-dw);
+		-webkit-animation-delay: 0.5s;
+			animation-delay: 0.5s;
+	}
+}
+
 
 
 // 飞机
@@ -530,6 +518,8 @@ body{
 
 .ani-ele{
 	visibility: hidden;
+	-webkit-transform-style:preserve-3d;
+	transform-style:preserve-3d;
 }
 
 .ani-ele.dis-b{
@@ -699,32 +689,28 @@ body{
 	background: url(../img/arr.png) no-repeat center bottom;
 	background-size: auto 9px;
 	padding-bottom: 15px;
-	position: fixed;
-	z-index:3;
-	bottom: 20px;
+	position: absolute;
+	bottom: 10px;
 	left: 0;
 	width: 100%;
+	font-size: 12px;
 	text-align: center;
-	color: #fff;
+	color: #FFC4BB;
 	-webkit-animation: arr 1s linear 0ms infinite alternate;
-	.txt{
-		transition-property: opacity;
-		opacity: 1;
-		transition-duration: 1s;
-	}
 }
 
 .open-box{
 	position: absolute;
 	left: 0;
-	bottom: 20px;
+	bottom: 8%;
 	width: 100%;
 	.open{
 		color:#fff;
-		height: 27px;
-		line-height: 27px;
-		width: 72px;
-		font-size: 14px;
+		height: 38px;
+		line-height: 38px;
+		text-align: center;
+		width: 120px;
+		font-size: 16px;
 		border: 1px solid #fff;
 		display: block;
 		margin: 0 auto;

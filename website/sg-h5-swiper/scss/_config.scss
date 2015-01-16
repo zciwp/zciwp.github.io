@@ -40,13 +40,13 @@ $animation-arg-o-s2-hand:(
 $animation-arg-o-s2-tiger:(
 	name: bounceInLeft,
 	delay: 0s,
-	time: 1s
+	time: 0.8s
 );
 // 大大
 $animation-arg-o-s2-dd:(
 	name: bounceInRight,
 	delay: 0s,
-	time: 1s
+	time: 0.8s
 );
 
 // 第四页，回家
@@ -81,9 +81,18 @@ $animation-arg-o-s7-p1:(
 	mode: false
 );
 // 第8页 小苹果和滑板鞋
-$animation-arg-o-s8-apple:(
+// $animation-arg-o-s8-apple:(
+// 	name: fadeInLeft,
+// 	time: 0.5s
+// );
+// $animation-arg-o-s8-shoe:(
+// 	name: fadeInRight,
+// 	time: 0.5s
+// );
+// 第9页 跳楼
+$animation-arg-o-s9-p:(
 	name: bounceInDown,
-	time: 1.5s
+	time: 1s
 );
 // 第10页 神经猫
 $animation-arg-o-s10-cat:(
