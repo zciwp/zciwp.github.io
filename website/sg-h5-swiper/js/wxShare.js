@@ -1,6 +1,6 @@
 var imgUrl = 'http://zciwp.github.io/website/sg-h5-swiper/img/logo-w.png';
 var lineLink = location.href;
-var descContent = "123";
+var descContent = "回顾2014年在搜狗上德热搜事件";
 var shareTitle = document.title;
 var appid = '';
 
