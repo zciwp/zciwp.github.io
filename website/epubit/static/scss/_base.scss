@@ -1,0 +1,280 @@
+@charset "utf-8";
+@mixin png_img($png-url:null,$png-w:0,$png-h:0){
+	background-image:url($png-url);
+	background-repeat:no-repeat;
+	@if $mobile-switch{
+		background-size: $png-w/2 $png-h/2;
+	}
+	@if $ie6{
+		_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='#{$png-url}');
+		width:$png-w;
+		height: $png-h;
+	}
+}
+// .png_img{ @include png_img($png-url,$png-w,$png-h)}
+@mixin bg_position($x:0,$y:0,$offset:-16px){
+	@if $mobile-switch{
+		background-position: $x*$offset/2 $y*$offset/2;
+	}
+	@if $pc-switch{
+		background-position: $x*$offset $y*$offset;
+		@if $ie6{
+			@if($x == 0){
+				$x:null;
+				@if($y == 0){
+					$y:null;
+					_padding-top:$y;
+					_padding-left:$x;
+					_margin-top:$y;
+					_margin-left:$x;
+				}
+				@else{
+					_padding-top:$y*abs($offset);
+					_padding-left:$x;
+					_margin-top:$y*$offset;
+					_margin-left:$x;
+				}
+			}
+			@else{
+				@if($y == 0){
+					$y:null;
+					_padding-top:$y;
+					_padding-left:$x*abs($offset);
+					_margin-top:$y;
+					_margin-left:$x*$offset;
+				}
+				@else{
+					_padding-top:$y*abs($offset);
+					_padding-left:$x*abs($offset);
+					_margin-top:$y*$offset;
+					_margin-left:$x*$offset;
+				}
+			}
+		}
+	}
+}
+
+// 自适应布局,只适用于移动端
+@mixin father($orient:horizontal,$align:center){
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	-webkit-box-orient: $orient;
+	-moz-box-orient: $orient;
+	box-orient: $orient;
+	-webkit-box-align: $align;
+	-moz-box-align: $align;
+	-ms-flex-align: $align;
+	box-align: $align;
+}
+//-webkit-box-orient:vertical,box-align是子节点元素如何对齐，start，center，end
+@mixin child($flex-num:1){
+	-webkit-box-flex: $flex-num;
+	-moz-box-flex: $flex-num;
+	-ms-flex: $flex-num;
+	box-flex: $flex-num;
+	display: block;
+}
+
+// 解决移动版本中border写圆形的兼容问题
+// 因为android 2.3 自带浏览器不支持百分比，所以需要一个较大的值999px，4.2.X 下不支持缩写radius，所以需要拆开写
+@mixin m_border($m-bor-num:999px){
+	@if $mobile-switch{
+		@if length($m-bor-num) == 1{
+			border-top-left-radius: $m-bor-num;
+			border-top-right-radius: $m-bor-num;
+			border-bottom-right-radius: $m-bor-num;
+			border-bottom-left-radius: $m-bor-num;
+		}
+		@else if length($m-bor-num) == 2{
+			border-top-left-radius: nth($m-bor-num,1);
+			border-top-right-radius: nth($m-bor-num,2);
+			border-bottom-right-radius: nth($m-bor-num,1);
+			border-bottom-left-radius: nth($m-bor-num,2);
+		}
+		@else if length($m-bor-num) == 3{
+			border-top-left-radius: nth($m-bor-num,1);
+			border-top-right-radius: nth($m-bor-num,2);
+			border-bottom-right-radius: nth($m-bor-num,3);
+			border-bottom-left-radius: nth($m-bor-num,2);
+		}
+		@else if length($m-bor-num) == 4{
+			border-top-left-radius: nth($m-bor-num,1);
+			border-top-right-radius: nth($m-bor-num,2);
+			border-bottom-right-radius: nth($m-bor-num,3);
+			border-bottom-left-radius: nth($m-bor-num,4);
+		}
+		border-radius: $m-bor-num;
+		background-clip: padding-box; 
+	}
+}
+
+// 动画,这样不加载动画时，动画样式库(animation.scss)里样式不会加载到css中，实现了按需加载
+@mixin keyframes($animation-name){
+	@-webkit-keyframes #{$animation-name}{
+		@content;
+	}
+	@keyframes #{$animation-name}{
+		@content;
+	}
+}
+
+// 动画的公用样式,如果执行时间或延迟时间为0s时，也需要加上单位s，目的是兼容FF浏览器，不加单位s，会造成在FF下动画失效
+$animation-arg-o:(
+	name: "",
+	time: 1s,
+	delay: 0s,
+	type: linear,
+	mode: true
+);
+
+@mixin animation-mixin($animation-arg){
+	$f-animation-arg: map-merge($animation-arg-o,$animation-arg);
+	-webkit-animation: map-get($f-animation-arg,name) map-get($f-animation-arg,time) map-get($f-animation-arg,delay) map-get($f-animation-arg,type);
+	animation: map-get($f-animation-arg,name) map-get($f-animation-arg,time) map-get($f-animation-arg,delay) map-get($f-animation-arg,type);
+	@if map-get($f-animation-arg,mode){
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+	}
+}
+
+/*=================usage===============
+.animation{
+	@include animation-mixin();
+}
+
+@include keyframes(changeWidth){
+	0%{ width: 0}
+	100%{ width: 100%}
+}
+=======================================*/
+
+
+
+// css3前缀
+@mixin prefix($name,$value,$prefixer:all){
+	@if ($pc-switch and $prefixer == all){
+		@each $prefix in webkit,moz,ms,o{
+			-#{$prefix}-#{$name}: $value;
+		}
+	}
+	@else if ($pc-switch and $prefixer != all){
+		@each $prefix in $prefixer{
+			-#{$prefix}-#{$name}: $value;
+		}
+	}
+	@else if ($mobile-switch){
+		@each $prefix in webkit{
+			-#{$prefix}-#{$name}: $value;
+		}
+	}
+	#{$name}: $value;
+}
+
+
+
+/*=================usage===============
+@mixin boxShadow($value: 0 0 0 #333){
+	@include prefix($name: box-shadow,$value: $value,$prefixer: (webkit,moz));
+}
+.zciwp{
+	@include boxShadow();
+}
+=======================================*/
+
+
+/*=====================================
+hugo 大神写的debug map类型变量内部数据都是什么类型的mixin
+=======================================*/
+
+/// Compute the maximum depth of a map
+/// @param {Map} $map
+/// @return {Number} max depth of `$map`
+@function map-depth($map) {
+  $level: 1;
+  
+  @each $key, $value in $map {
+    @if type-of($value) == "map" {
+      $level: max(map-depth($value) + 1, $level);
+    }  
+  }
+  
+  @return $level;
+}
+
+/// Prints a map and its properties
+/// @param {Map} $map
+/// @requires {function} map-depth
+@mixin debug-map($map) {
+  @debug-map {
+    __inspect__: inspect($map);
+    __length__: length($map);
+    __depth__: map-depth($map);
+    __properties__ {
+      @each $key, $value in $map {
+        #{"(" + type-of($value) + ") " + $key}: inspect($value);
+      }
+    }
+  }
+}
+
+
+
+/*=================usage===============
+/// Sample map
+/// @type Map
+$map: (
+  'this': 'is',
+  'a': ('great', 'test'),
+  'isn\'t it?': true,
+  'and this': 42,
+  'and': ('also', 'this'),
+  'nested': (
+    'map': 1337
+  )
+);
+
+@include debug-map($map);
+
+result：
+@debug-map {
+  __inspect__: ("this": "is", "a": ("great", "test"), "isn't it?": true, "and this": 42, "and": ("also", "this"), "nested": (("map": 1337)));
+  __length__: 6;
+  __depth__: 2;
+  __properties__ {
+    (string) this: "is";
+    (list) a: "great", "test";
+    (bool) isn't it?: true;
+    (number) and this: 42;
+    (list) and: "also", "this";
+    (map) nested: ("map": 1337);
+  }
+}
+=======================================*/
+
+//多行省略，超过显示。。。，多用在移动端，需要注意元素本身要是块级元素
+@mixin multiline-ellipsis($multiline-num: 2){
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+/*=================usage===============
+
+<div class="multiline-ellipsis">多行显示的内容那个</div>
+
+.multiline-ellipsis{
+	@include multiline-ellipsis();
+}
+=======================================*/
+
+
+
+
+
+
+
+
+

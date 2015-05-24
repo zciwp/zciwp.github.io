@@ -1,0 +1,94 @@
+@charset "utf-8";
+$imported-once-files: ();
+ 
+@function import-once($name) {
+  @if index($imported-once-files, $name) {
+    @return false;
+  }
+  $imported-once-files: append($imported-once-files, $name)!global;
+  @return true;
+}
+
+
+$selection:false!default;// 选中文字的样式
+
+@if import-once("_reset.scss"){
+  body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,blockquote,th,td{
+    margin:0;
+    padding:0;
+    @if($mobile-switch){
+      -webkit-box-sizing:border-box;
+              box-sizing:border-box;
+    }
+  }
+  
+  article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{ display: block;}
+
+  html { overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+  table{border-collapse:collapse;border-spacing:0}
+  img{border:0; max-width:100%; vertical-align:top}
+  address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}
+  ol,ul{list-style:none}
+  caption,th{text-align:left}
+  h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+  select{font-size:12px}
+  button{line-height:1.231;white-space:nowrap;vertical-align:middle;cursor:pointer}
+  input,textarea,select,button{outline:none;resize:none}
+  a{
+    text-decoration:none;
+    outline: none;
+    @if($mobile-switch){
+      -webkit-tap-highlight-color:rgba(0,0,0,0);
+      -webkit-focus-ring-color:transparent;
+    }
+  }
+  a:focus{outline:none}
+  // 移动端
+  @if($mobile-switch){
+    input[type="search"]{-webkit-appearance:none;}
+    input[type="search"]:focus{ background: #FFFFFF; color:#333; outline: none;}
+    input:focus::-webkit-input-placeholder { color: transparent; }
+  }
+  // pc端
+  @if($pc-switch){
+    a:hover{text-decoration:underline}
+    .clear:after{content:'.';clear:both;display:block;height:0;visibility:hidden; font-size:0;line-height:0}
+    .clear{ *zoom:1}
+    body{height:100%;font:$global-FontSet;color:$global-FontMainColor; background: $body-bg;}
+    iframe{ vertical-align:top;}    
+    // 选中文字的样式
+    @if nth($selection,1) {
+      ::-moz-selection {
+        background-color: nth($selection,2);
+        color: nth($selection,3);
+      }
+      ::-webkit-selection {
+        background-color: nth($selection,2);
+        color: nth($selection,3);
+      }
+      ::selection {
+        background-color: nth($selection,2);
+        color: nth($selection,3);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

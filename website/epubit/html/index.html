@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>异步社区</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/style.css">
+	<script src="../static/js/jquery.min.js"></script>
+	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/page.js"></script>
+	<!--[if lt IE 9]>
+      <script src="../static/js/html5shiv.js"></script>
+      <script src="../static/js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		        </button>
+		        <a class="navbar-brand" href="http://www.bootcss.com">
+					<img src="../static/images/logo.png" alt="">
+		        </a>
+			</div>
+			<div class="navbar-collapse collapse" role="navigation" aria-expanded="false">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="" class="write"><span class="glyphicon glyphicon-pencil"></span>写作</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="">首页</a>
+					</li>
+					<li>
+						<a href="">类别</a>
+					</li>
+					<li>
+						<a href="">图书</a>
+					</li>
+					<li>
+						<a href="">文章</a>
+					</li>
+					<li>
+						<a href="">专题</a>
+					</li>
+					<li>
+						<a href="">作者</a>
+					</li>
+				</ul>
+				<div class="nav navbar-nav hidden-xs hidden-sm">
+					<div class="search-box">
+						<span class="glyphicon glyphicon-search"></span>
+						<input type="text" class="txt" placeholder="搜索图书名称/作者/类别">
+					</div>
+				</div>
+				<ul class="nav navbar-nav navbar-right o-box">
+					<li class="dropdown">
+						<div class="arr hidden-xs"></div>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							<img src="../static/images/temp/1.png" alt="" class="userpic hidden-xs">
+							<span class="visible-xs-inline-block">个人信息</span>
+							<b class="caret visible-xs-inline-block"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="">个人信息</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<div class="arr"><span class="addon">15</span></div>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							<span class="glyphicon glyphicon-envelope hidden-xs"></span>
+							<span class="visible-xs-inline-block">私信</span>
+							<b class="caret visible-xs-inline-block"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="">私信</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container page-box">
+		<div class="row">
+			<div class="col-md-8">
+
+				<!-- 轮播图 开始 -->
+				<div id="carousel-example-generic" class="carousel slide banner" data-ride="carousel">
+					<ol class="carousel-indicators">
+					    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+					      <img src="../static/images/temp/6.png" alt="">
+					    </div>
+					    <div class="item">
+					      <img src="../static/images/temp/7.png" alt="">
+					    </div>
+					    <div class="item">
+					      <img src="../static/images/temp/6.png" alt="">
+					    </div>
+					</div>
+				</div>
+
+				<!-- 轮播图 结束 -->
+
+
+				<!-- 编辑推荐 开始 -->
+				<div class="g-block">
+					<div class="hd green">
+						<h4>编辑推荐</h4>
+						<div class="r-panel">
+							<a href="" class="more">+更多</a>
+						</div>
+					</div>
+					<div class="bd book-lst">
+						<div class="row">
+							<div class="col-xs-12 col-md-6 pic-txt-lst">
+								<div class="item">
+									<div class="pic-panel">
+										<a href=""><img src="../static/images/temp/2.png" alt=""></a>
+									</div>
+
+									<div class="txt-panel">
+										<div class="hd">
+											<div class="t">摆渡人（媲美《追风筝的人》《偷影子的人》）</div>
+											<div class="author">[英]克莱尔.麦克福尔</div>
+										</div>
+										<div class="bd">
+											<div class="text-muted">
+												畅销欧美33个国家，荣获多项图书大奖。如果命运是一条孤独的河流，谁会是你灵魂的摆渡人？如果我真的存在，也是因为你需要我。
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6 pic-txt-lst">
+								<div class="item">
+									<div class="pic-panel">
+										<a href=""><img src="../static/images/temp/2.png" alt=""></a>
+									</div>
+
+									<div class="txt-panel">
+										<div class="hd">
+											<div class="t">摆渡人（媲美《追风筝的人》《偷影子的人》）</div>
+											<div class="author">[英]克莱尔.麦克福尔</div>
+										</div>
+										<div class="bd">
+											<div class="text-muted">
+												畅销欧美33个国家，荣获多项图书大奖。如果命运是一条孤独的河流，谁会是你灵魂的摆渡人？如果我真的存在，也是因为你需要我。
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6 pic-txt-lst">
+								<div class="item">
+									<div class="pic-panel">
+										<a href=""><img src="../static/images/temp/2.png" alt=""></a>
+									</div>
+
+									<div class="txt-panel">
+										<div class="hd">
+											<div class="t">摆渡人（媲美《追风筝的人》《偷影子的人》）</div>
+											<div class="author">[英]克莱尔.麦克福尔</div>
+										</div>
+										<div class="bd">
+											<div class="text-muted">
+												畅销欧美33个国家，荣获多项图书大奖。如果命运是一条孤独的河流，谁会是你灵魂的摆渡人？如果我真的存在，也是因为你需要我。
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6 pic-txt-lst">
+								<div class="item">
+									<div class="pic-panel">
+										<a href=""><img src="../static/images/temp/2.png" alt=""></a>
+									</div>
+
+									<div class="txt-panel">
+										<div class="hd">
+											<div class="t">摆渡人（媲美《追风筝的人》《偷影子的人》）</div>
+											<div class="author">[英]克莱尔.麦克福尔</div>
+										</div>
+										<div class="bd">
+											<div class="text-muted">
+												畅销欧美33个国家，荣获多项图书大奖。如果命运是一条孤独的河流，谁会是你灵魂的摆渡人？如果我真的存在，也是因为你需要我。
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 编辑推荐 结束 -->
+				
+				<!-- 热门文章 开始 -->
+				<div class="g-block">
+					<div class="hd red">
+						<h4>热门文章</h4>
+						<div class="r-panel">
+							<a href="" class="more">+更多</a>
+						</div>
+					</div>
+					<div class="bd article-lst">
+						<div class="row">
+							<div class="col-md-12 pic-txt-lst">
+								<div class="item">
+									<div class="pic-panel">
+										<a href=""><img src="../static/images/temp/3.png" alt=""></a>
+										<div class="auther-info">
+											<div class="name">韩寒经典语录韩寒经典语录韩寒经典语录</div>
+											<div class="text-muted">2013/12/2</div>
+										</div>
+									</div>
+									<div class="txt-panel">
+										<div class="summary">
+											<a href="" class="text-muted">韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录</a>
+										</div>
+										<div class="opreation-box text-right">
+											<a href="" class="text-muted offsetp10">
+												<span>阅读</span>
+												<span class="offsetp5">1234</span>
+											</a>
+											<a href="" class="text-muted offsetp10">
+												<span>评论</span>
+												<span class="offsetp5">1234</span>
+											</a>
+											<a href="" class="text-muted offsetp10">
+												<span>收藏</span>
+												<span class="offsetp5">1234</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12 pic-txt-lst">
+								<div class="item">
+									<div class="pic-panel">
+										<a href=""><img src="../static/images/temp/3.png" alt=""></a>
+										<div class="auther-info">
+											<div class="name">南派三叔</div>
+											<div class="text-muted">2013/12/2</div>
+										</div>
+									</div>
+									<div class="txt-panel">
+										<div class="summary">
+											<a href="" class="text-muted">韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录</a>
+										</div>
+										<div class="opreation-box text-right">
+											<a href="" class="text-muted offsetp10">
+												<span>阅读</span>
+												<span class="offsetp5">1234</span>
+											</a>
+											<a href="" class="text-muted offsetp10">
+												<span>评论</span>
+												<span class="offsetp5">1234</span>
+											</a>
+											<a href="" class="text-muted offsetp10">
+												<span>收藏</span>
+												<span class="offsetp5">1234</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12 pic-txt-lst">
+								<div class="item">
+									<div class="pic-panel">
+										<a href=""><img src="../static/images/temp/3.png" alt=""></a>
+										<div class="auther-info">
+											<div class="name">林青霞</div>
+											<div class="text-muted">2013/12/2</div>
+										</div>
+									</div>
+									<div class="txt-panel">
+										<div class="summary">
+											<a href="" class="text-muted">韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录韩寒经典语录</a>
+										</div>
+										<div class="opreation-box text-right">
+											<a href="" class="text-muted offsetp10">
+												<span>阅读</span>
+												<span class="offsetp5">1234</span>
+											</a>
+											<a href="" class="text-muted offsetp10">
+												<span>评论</span>
+												<span class="offsetp5">1234</span>
+											</a>
+											<a href="" class="text-muted offsetp10">
+												<span>收藏</span>
+												<span class="offsetp5">1234</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 热门文章 结束 -->
+
+				<!-- 抢先试读 开始 -->
+				<div class="g-block">
+					<div class="hd red">
+						<h4>抢先试读</h4>
+						<div class="r-panel">
+							<a href="" class="more">+更多</a>
+						</div>
+					</div>
+
+					<div class="bd qxsd-lst">
+						<ul>
+							<li>
+								<h6>
+									<a href="">周国平全新作品《觉醒的力量》《人生不较劲》</a>
+								</h6>
+								<a href="">
+									<img src="../static/images/temp/4.png" alt="">
+								</a>
+								<div class="fd clearfix">
+									<div class="l-panel">
+										<span class="time text-muted">2013/12/2</span>
+									</div>
+									<div class="r-panel">
+										<div class="opreation-box text-right">
+											<a href="" class="text-muted offsetp10">
+												<span>阅读</span>
+												<span class="offsetp5">1234</span>
+											</a>
+											<a href="" class="text-muted offsetp10">
+												<span>评论</span>
+												<span class="offsetp5">1234</span>
+											</a>
+											<a href="" class="text-muted offsetp10">
+												<span>收藏</span>
+												<span class="offsetp5">1234</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<h6>
+									<a href="">周国平全新作品《觉醒的力量》《人生不较劲》</a>
+								</h6>
+								<a href="">
+									<img src="../static/images/temp/4.png" alt="">
+								</a>
+								<div class="fd clearfix">
+									<div class="l-panel">
+										<span class="time text-muted">2013/12/2</span>
+									</div>
+									<div class="r-panel">
+										<div class="opreation-box text-right">
+											<a href="" class="text-muted offsetp10">
+												<span>阅读</span>
+												<span class="offsetp5">1234</span>
+											</a>
+											<a href="" class="text-muted offsetp10">
+												<span>评论</span>
+												<span class="offsetp5">1234</span>
+											</a>
+											<a href="" class="text-muted offsetp10">
+												<span>收藏</span>
+												<span class="offsetp5">1234</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 抢先试读 结束 -->
+			</div>
+
+			<!-- 右侧侧边栏 开始 -->
+			<div class="col-md-4">
+				<!-- 联系我们 开始 -->
+				<div class="g-block">
+					<div class="hd green">
+						<h4>联系我们</h4>
+					</div>
+					<div class="bd">
+						<div class="panel-group connect" id="accordion" role="tablist" aria-multiselectable="true">
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingOne">
+						      <h4 class="panel-title wxqr">
+						        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="qricon">
+						          <span class="txt">极思社区 微信公众号</span>
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+						      <div class="panel-body">
+						        <img src="../static/images/temp/5.png" alt="">
+						        <div class="blk5"></div>
+						        <div class="text-muted">扫描二维码即可关注</div>
+						      </div>
+						    </div>
+						  </div>
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingTwo">
+						      <h4 class="panel-title sinaqr">
+						        <a class="collapsed qricon" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						          <span class="txt">极思社区 官方微博</span>
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						      <div class="panel-body">
+						        <img src="../static/images/temp/5.png" alt="">
+						        <div class="blk5"></div>
+						        <div class="text-muted">扫描二维码即可关注</div>
+						      </div>
+						    </div>
+						  </div>
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingThree">
+						      <h4 class="panel-title qqqr">
+						        <a class="collapsed qricon" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						          <span class="txt">极思社区 官方QQ群</span>
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						      <div class="panel-body">
+						        <img src="../static/images/temp/5.png" alt="">
+						        <div class="blk5"></div>
+						        <div class="text-muted">扫描二维码即可关注</div>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+				</div>
+				<!-- 联系我们 结束 -->
+
+				<!-- 近期活动 开始 -->
+				<div class="g-block">
+					<div class="hd green">
+						<h4>近期活动</h4>
+						<div class="r-panel">
+							<a href="" class="more">+更多</a>
+						</div>
+					</div>
+					<div class="bd">
+						<ul class="lst pic-txt-lst jqhd">
+							<li class="item">
+								<div class="time">2015/3/12</div>
+								<div>
+									<div class="pic-panel">
+										<img src="../static/images/temp/1.png" alt="">
+									</div>
+									<div class="txt-panel">
+										<div class="txt t">
+											<span>王府井新书《权利的游戏》签售会</span>
+										</div>
+										<div class="txt text-muted">
+											<span>莫言铁粉</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="time">2015/3/12</div>
+								<div>
+									<div class="pic-panel">
+										<img src="../static/images/temp/1.png" alt="">
+									</div>
+									<div class="txt-panel">
+										<div class="txt t">
+											<span>王府井新书《权利的游戏》签售会</span>
+										</div>
+										<div class="txt text-muted">
+											<span>莫言铁粉</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="time">2015/3/12</div>
+								<div>
+									<div class="pic-panel">
+										<img src="../static/images/temp/1.png" alt="">
+									</div>
+									<div class="txt-panel">
+										<div class="txt t">
+											<span>王府井新书《权利的游戏》签售会</span>
+										</div>
+										<div class="txt text-muted">
+											<span>莫言铁粉</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<a href="" class="text-center jqhd-write-btn">
+							<img src="../static/images/write-btn.png" alt="">
+						</a>
+					</div>
+				</div>
+				<!-- 近期活动 结束 -->
+
+				<!-- 我们的作者 开始 -->
+				<div class="g-block">
+					<div class="hd green">
+						<h4>我们的作者</h4>
+					</div>
+					<div class="bd">
+						<div id="carousel-example-generic2" class="carousel slide banner2" data-ride="carousel">
+							<div class="carousel-inner" role="listbox">
+								<div class="item active">
+								    <div class="big-pic">
+							    		<div class="pic-panel">
+							    			<img src="../static/images/temp/3.png" alt="">
+							    			<div class="name">蒋方舟</div>
+							    		</div>
+							    	</div>
+							    	<div class="small-pic">
+							    		<div class="pic-panel mb10">
+							    			<img src="../static/images/temp/3.png" alt="">
+							    			<div class="name">蒋方舟</div>
+							    		</div>
+							    		<div class="pic-panel">
+							    			<img src="../static/images/temp/3.png" alt="">
+							    			<div class="name">蒋方舟</div>
+							    		</div>
+							    	</div>
+							    </div>
+							    <div class="item">
+								    <div class="big-pic">
+							    		<div class="pic-panel">
+							    			<img src="../static/images/temp/3.png" alt="">
+							    			<div class="name">蒋方舟</div>
+							    		</div>
+							    	</div>
+							    	<div class="small-pic">
+							    		<div class="pic-panel mb10">
+							    			<img src="../static/images/temp/3.png" alt="">
+							    			<div class="name">蒋方舟</div>
+							    		</div>
+							    		<div class="pic-panel">
+							    			<img src="../static/images/temp/3.png" alt="">
+							    			<div class="name">蒋方舟</div>
+							    		</div>
+							    	</div>
+							    </div>
+							    <div class="item">
+								    <div class="big-pic">
+							    		<div class="pic-panel">
+							    			<img src="../static/images/temp/3.png" alt="">
+							    			<div class="name">蒋方舟</div>
+							    		</div>
+							    	</div>
+							    	<div class="small-pic">
+							    		<div class="pic-panel mb10">
+							    			<img src="../static/images/temp/3.png" alt="">
+							    			<div class="name">蒋方舟</div>
+							    		</div>
+							    		<div class="pic-panel">
+							    			<img src="../static/images/temp/3.png" alt="">
+							    			<div class="name">蒋方舟</div>
+							    		</div>
+							    	</div>
+							    </div>
+							</div>
+							<ol class="carousel-indicators">
+							    <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+							    <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+							    <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<!-- 我们的作者 结束 -->
+
+				<!-- 最新专题 开始 -->
+				<div class="g-block">
+					<div class="hd green">
+						<h4>最新专题</h4>
+						<div class="r-panel">
+							<a href="" class="more">+更多</a>
+						</div>
+					</div>
+					<div class="bd">
+						<ul class="lst pic-txt-lst jsdr">
+							<li class="item">
+								<div class="pic-panel">
+									<a href=""><img src="../static/images/temp/1.png" alt=""></a>
+								</div>
+								<div class="txt-panel">
+									<div class="txt">
+										<a href="">王府井图书大厦书友会</a>
+									</div>
+									<div class="txt text-muted">
+										<span class="fs12">2015/3/12</span>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="pic-panel">
+									<a href=""><img src="../static/images/temp/1.png" alt=""></a>
+								</div>
+								<div class="txt-panel">
+									<div class="txt">
+										<a href="">王府井图书大厦书友会</a>
+									</div>
+									<div class="txt text-muted">
+										<span class="fs12">2015/3/12</span>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="pic-panel">
+									<a href=""><img src="../static/images/temp/1.png" alt=""></a>
+								</div>
+								<div class="txt-panel">
+									<div class="txt">
+										<a href="">王府井图书大厦书友会</a>
+									</div>
+									<div class="txt text-muted">
+										<span class="fs12">2015/3/12</span>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="pic-panel">
+									<a href=""><img src="../static/images/temp/1.png" alt=""></a>
+								</div>
+								<div class="txt-panel">
+									<div class="txt">
+										<a href="">王府井图书大厦书友会</a>
+									</div>
+									<div class="txt text-muted">
+										<span class="fs12">2015/3/12</span>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="pic-panel">
+									<a href=""><img src="../static/images/temp/1.png" alt=""></a>
+								</div>
+								<div class="txt-panel">
+									<div class="txt">
+										<a href="">王府井图书大厦书友会</a>
+									</div>
+									<div class="txt text-muted">
+										<span class="fs12">2015/3/12</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<a href="" class="text-center jqhd-write-btn">
+							<img src="../static/images/hd-pic.png" alt="">
+						</a>
+					</div>
+				</div>
+				<!-- <div class="g-block">
+					<div class="hd green">
+						<h4>最新专题</h4>
+					</div>
+					<div class="bd">
+						<ul class="zt-lst">
+							<li>
+								<span class="num numtop3">1</span>
+								<div class="txt">
+									<a href="">成龙专访：还没长大就老了</a>
+								</div>
+							</li>
+							<li>
+								<span class="num numtop3">2</span>
+								<div class="txt">
+									<a href="">成龙专访：还没长大就老了没长大就老了没长大就老了</a>
+								</div>
+							</li>
+							<li>
+								<span class="num numtop3">3</span>
+								<div class="txt">
+									<a href="">成龙专访：还没长大就老了</a>
+								</div>
+							</li>
+							<li>
+								<span class="num">4</span>
+								<div class="txt">
+									<a href="">成龙专访：还没长大就老了</a>
+								</div>
+							</li>
+							<li>
+								<span class="num">5</span>
+								<div class="txt">
+									<a href="">成龙专访：还没长大就老了</a>
+								</div>
+							</li>
+							<li>
+								<span class="num">6</span>
+								<div class="txt">
+									<a href="">成龙专访：还没长大就老了</a>
+								</div>
+							</li>
+							<li>
+								<span class="num">7</span>
+								<div class="txt">
+									<a href="">成龙专访：还没长大就老了</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div> -->
+				<!-- 最新专题 结束 -->
+
+				<!-- 极思达人 开始 -->
+				<div class="g-block">
+					<div class="hd green">
+						<h4>极思达人</h4>
+						<div class="r-panel">
+							<a href="" class="more">+更多</a>
+						</div>
+					</div>
+					<div class="bd">
+						<ul class="lst pic-txt-lst jsdr">
+							<li class="item">
+								<div class="pic-panel">
+									<img src="../static/images/temp/1.png" alt="">
+								</div>
+								<div class="txt-panel">
+									<div class="txt">
+										<span>魏巍</span>
+										<span>当代散文作家、小说家</span>
+									</div>
+									<div class="txt text-muted">
+										<span>上传：2345</span>
+										<span>人气：1234567</span>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="pic-panel">
+									<img src="../static/images/temp/1.png" alt="">
+								</div>
+								<div class="txt-panel">
+									<div class="txt">
+										<span>魏巍</span>
+										<span>当代散文作家、小说家</span>
+									</div>
+									<div class="txt text-muted">
+										<span>上传：2345</span>
+										<span>人气：1234567</span>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="pic-panel">
+									<img src="../static/images/temp/1.png" alt="">
+								</div>
+								<div class="txt-panel">
+									<div class="txt">
+										<span>魏巍</span>
+										<span>当代散文作家、小说家</span>
+									</div>
+									<div class="txt text-muted">
+										<span>上传：2345</span>
+										<span>人气：1234567</span>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="pic-panel">
+									<img src="../static/images/temp/1.png" alt="">
+								</div>
+								<div class="txt-panel">
+									<div class="txt">
+										<span>魏巍</span>
+										<span>当代散文作家、小说家</span>
+									</div>
+									<div class="txt text-muted">
+										<span>上传：2345</span>
+										<span>人气：1234567</span>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="pic-panel">
+									<img src="../static/images/temp/1.png" alt="">
+								</div>
+								<div class="txt-panel">
+									<div class="txt">
+										<span>魏巍</span>
+										<span>当代散文作家、小说家</span>
+									</div>
+									<div class="txt text-muted">
+										<span>上传：2345</span>
+										<span>人气：1234567</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 极思达人 结束 -->
+			</div>
+			<!-- 右侧侧边栏 结束 -->
+		</div>
+		
+	</div>
+
+
+	<footer>
+		<div class="footer">
+			&copy; 2014异步社区 <span>·</span> 人民邮电出版社 <span>·</span> All rights reserved
+		</div>
+	</footer>
+
+
+</body>
+</html>
