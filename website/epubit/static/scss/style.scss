@@ -164,6 +164,50 @@ body{ background-color: $body-bg; font-size: 12px; line-height: 1.5em;}
 .navbar-inverse .navbar-nav .open .dropdown-menu>li>a{
 	color: #fff;
 }
+// 导航2级分类
+.hasSub{
+	position: relative;
+	&>a:after{
+		content: "";
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-style: dashed none dashed solid;
+		border-width: 4px;
+		border-color: transparent transparent transparent #333;
+		margin-left: 5px;
+	}
+	a{
+		color: #333;
+		padding: 5px 20px;
+		display: block;
+		&:hover{
+			text-decoration: none;
+			background-color: #f0f0f0;
+		}
+	}
+	&:hover>.sub-menu2{
+			display: block;
+	}
+	.sub-menu2{
+		position: absolute;
+		top: 0;
+		left: 100%;
+		color: #333;
+		background-color: #fff;
+		white-space: nowrap;
+		display: none;
+		border-left: 1px solid #ccc;
+	}
+}
+.nav{
+	.dropdown{
+		.caret{
+			border-style: solid dashed none;
+			border-top-color: #fff;
+		}
+	}
+}
 
 @media (min-width: 768px){
 	.navbar-inverse{
@@ -205,6 +249,25 @@ body{ background-color: $body-bg; font-size: 12px; line-height: 1.5em;}
 		margin-left: 15px;
 	}
 	.navbar-inverse .dropdown .arr:after{ background: none;}
+	.navbar-inverse .addon{ right: 10px;}
+	.hasSub{
+		&>a:after{
+			border-style: solid dashed none;
+			border-color: #fff transparent transparent;
+		}
+		.sub-menu2{
+			position: static;
+			top: 0;
+			left: 0;
+			background-color: $green;
+			color: #fff;
+			padding-left: 20px;
+			border-left: none;
+			a{
+				color: #fff;
+			}
+		}
+	}
 }
 @media (min-width: 768px) and (max-width: 992px){
 	.navbar-inverse .navbar-nav > li > a{ padding: 0 8px;}
