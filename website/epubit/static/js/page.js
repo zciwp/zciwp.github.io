@@ -43,9 +43,9 @@ $(function(e){
     if (navigator.userAgent.match(/mobile/i)) {
         $('.dropdown-menu .hasSub>a').bind('touchstart',function(e){
             e.preventDefault();
-            $(this).closest('.dropdown').addClass('open').find('.sub-menu2').hide();
-            $(this).parent().parent().show();
-            $(this).next('.sub-menu2').show();
+            $(this).closest('.dropdown').addClass('open');
+            $(this).parent().siblings().find('.sub-menu2').hide();
+            $(this).next('.sub-menu2').toggle();
         });
     }
 })
