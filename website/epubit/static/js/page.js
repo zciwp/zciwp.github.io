@@ -48,6 +48,14 @@ $(function(e){
             $(this).next('.sub-menu2').toggle();
         });
     }
+    //图书分类
+    $('.maintab a').bind('click',function(){
+        $('.tab-content li').removeClass('active');
+        $('.endpane').removeClass('active');
+    });
+    $('.subtab a').bind('click',function(){
+        $('.endpane li').removeClass('active');
+    });
 })
 
 

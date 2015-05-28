@@ -29,7 +29,8 @@ body{ background-color: $body-bg; font-size: 12px; line-height: 1.5em;}
 }
 .offsetp5{ padding-left: 5px}
 .offsetp10{ padding-left: 10px}
-.blk5{ height: 5px; width: 100%}
+.blk5{ height: 5px; width: 100%; overflow: hidden;}
+.blk15{ height: 15px; width: 100%; overflow: hidden;}
 .l-panel{
 	float: left;
 }
@@ -708,5 +709,115 @@ footer{
 		padding: 50px 0;
 		font-size: 16px;
 		color: #fff;
+	}
+}
+
+// 图书页面
+.filter-box{
+	background-color: #fff;
+	border: 1px solid $borColor1;
+	border-top: none;
+	margin-bottom: 20px;
+	.hd{
+		padding: 15px 20px 0;
+		.t{
+			.txt{
+				color: #999;
+			}
+			.glyphicon{
+				color: $green;
+				margin-right: 5px;
+			}
+		}
+	}
+	.bd{
+		.maintab{
+			border-bottom: 1px solid $borColor2;
+			font-size: 14px;
+		}
+		.endpane{
+			border-top: 1px dashed $borColor2;
+		}
+	}
+	.caret{
+		border-top-color: $global-FontMainColor;
+	}
+}
+
+.tablst{
+	padding-left: 5px; 
+	a{
+		color: $global-FontMainColor;
+		&:hover{
+			text-decoration: none;
+			background-color: $green;
+			color: #fff;
+			.caret{
+				border-top-color: #fff;
+			}
+		}
+	}
+	.active>a{
+		text-decoration: none;
+		background-color: $green;
+		color: #fff;
+		.caret{
+			border-top-color: #fff;
+		}
+	}
+	li{
+		float: left;
+		padding: 10px 5px;
+		a{
+			display: block;
+			padding: 6px 10px;
+		}
+	}
+}
+
+.panel{
+	background-color: #fff;
+}
+
+.book-page{
+	.book-lst{
+		padding: 0 10px;
+		img{
+			max-width: none;
+		}
+	}
+	.top-panel{
+		border-bottom: 2px solid $borColor2;
+		.tablst{
+			font-size: 14px;
+			float: left;
+			li{
+				padding: 0;
+				a{
+					padding: 15px;
+				}
+			}
+		}
+		.t-con{
+			font-size: 14px;
+			padding: 15px 20px;
+			float: left;
+			color: $green;
+		}
+	}
+	.media{
+		padding-top: 20px;
+		.media-heading{
+			font-size: 14px;
+		}
+	}
+	.catetab{
+		margin: 0 15px;
+		border-bottom: 1px dashed $borColor2;
+		li{
+			a{
+				padding: 3px 10px;
+			}
+		}
 	}
 }
