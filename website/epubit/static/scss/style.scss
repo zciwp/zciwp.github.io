@@ -204,10 +204,13 @@ body{ background-color: $body-bg; font-size: 12px; line-height: 1.5em;}
 .nav{
 	.dropdown{
 		.caret{
-			border-style: solid dashed none;
 			border-top-color: #fff;
 		}
 	}
+}
+
+.caret{
+	border-style: solid dashed none;
 }
 
 @media (min-width: 768px){
@@ -798,6 +801,10 @@ footer{
 				}
 			}
 		}
+		.dropdown{
+			font-size: 14px;
+			float: left;
+		}
 		.t-con{
 			font-size: 14px;
 			padding: 15px 20px;
@@ -817,6 +824,22 @@ footer{
 		li{
 			a{
 				padding: 3px 10px;
+			}
+		}
+	}
+	.filter-box.visible-xs-block{
+		.bd{
+			padding: 10px 20px 0;
+		}
+	}
+	.mobi-tablst{
+		.dropdown-toggle{
+			padding: 15px;
+			background-color: $green;
+			display: block;
+			color: #fff;
+			&:hover{
+				text-decoration: none;
 			}
 		}
 	}

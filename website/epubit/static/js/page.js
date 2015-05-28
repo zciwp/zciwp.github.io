@@ -56,6 +56,11 @@ $(function(e){
     $('.subtab a').bind('click',function(){
         $('.endpane li').removeClass('active');
     });
+    // 移动端图书分类
+    $('.book-page #mobi-tablst .dropdown-menu a').bind('click',function(e){
+        e.preventDefault();
+        $('.book-page #mobi-tablst #drop4 .txt').html($(this).html());
+    })
 })
 
 

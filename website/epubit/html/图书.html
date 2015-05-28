@@ -412,8 +412,8 @@
 	</div>
 
 	<div class="container page-box book-page">
-		<!-- 分类 开始 -->
-		<div class="filter-box">
+		<!-- pc端展现分类 开始 -->
+		<div class="filter-box hidden-xs">
 			<div class="hd">
 				<div class="t"><i class="glyphicon glyphicon-th"></i><span class="txt">所有类别</span></div>
 			</div>
@@ -780,12 +780,58 @@
 				</div>
 			</div>
 		</div>
-		<!-- 分类 结束 -->
+		<!-- pc端展现分类 结束 -->
+
+		<!-- 移动端展现分类 -->
+		<div class="filter-box visible-xs-block">
+			<div class="hd">
+				<div class="t"><i class="glyphicon glyphicon-th"></i><span class="txt">所有类别</span></div>
+			</div>
+			<div class="bd">
+				<form action="">
+					<div class="form-group">
+				        <label for="exampleInputEmail1">一级分类</label>
+				        <select class="form-control">
+					        <option>1</option>
+					        <option>2</option>
+					        <option>3</option>
+					        <option>4</option>
+					        <option>5</option>
+					    </select>
+				    </div>
+				    <div class="form-group">
+				        <label for="exampleInputEmail1">二级分类</label>
+				        <select class="form-control">
+					        <option>1</option>
+					        <option>2</option>
+					        <option>3</option>
+					        <option>4</option>
+					        <option>5</option>
+					    </select>
+				    </div>
+				    <div class="form-group">
+				        <label for="exampleInputEmail1">三级分类</label>
+				        <select class="form-control">
+					        <option>1</option>
+					        <option>2</option>
+					        <option>3</option>
+					        <option>4</option>
+					        <option>5</option>
+					    </select>
+				    </div>
+				    <a href="" class="btn btn-default">查询</a>
+				    <div class="blk15"></div>
+				</form>
+				
+			</div>
+		</div>
+		<!-- 移动端展现分类 -->
 		
 		<div class="panel">
 			<div class="top-panel clearfix">
 				<div class="t-con">Javascript</div>
-				<ul class="tablst clearfix" role="tablist">
+				<!-- pc端展现 -->
+				<ul class="tablst hidden-xs clearfix" role="tablist">
 					<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab">所有图书</a></li>
 					<li role="presentation"><a href="" role="tab" data-toggle="tab">电子书</a></li>
 					<li role="presentation"><a href="" role="tab" data-toggle="tab">按需印刷</a></li>
@@ -794,6 +840,24 @@
 					<li role="presentation"><a href="" role="tab" data-toggle="tab">收藏</a></li>
 					<li role="presentation"><a href="" role="tab" data-toggle="tab">已购买</a></li>
 				</ul>
+				<!-- /pc端展现 -->
+				<!-- 移动端展现 -->
+				<div role="presentation" class="dropdown mobi-tablst visible-xs-block" id="mobi-tablst">
+			        <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+			          <span class="txt">所有图书</span>
+			          <span class="caret"></span>
+			        </a>
+			        <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+			          <li role="presentation"><a role="menuitem" href="">所有图书</a></li>
+			          <li role="presentation"><a role="menuitem" href="">电子书</a></li>
+			          <li role="presentation"><a role="menuitem" href="">按需印刷</a></li>
+			          <li role="presentation"><a role="menuitem" href="">开放出版</a></li>
+			          <li role="presentation"><a role="menuitem" href="">关注</a></li>
+			          <li role="presentation"><a role="menuitem" href="">收藏</a></li>
+			          <li role="presentation"><a role="menuitem" href="">已购买</a></li>
+			        </ul>
+			    </div>
+			    <!-- /移动端展现 -->
 			</div>
 
 			<ul class="catetab tablst clearfix" role="tablist">
