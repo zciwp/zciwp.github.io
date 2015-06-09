@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>技术圈-异步社区</title>
+	<title>图书-异步社区</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -11,7 +11,6 @@
 	<link rel="stylesheet" href="../static/css/style.css">
 	<script src="../static/js/jquery.min.js"></script>
 	<script src="../static/js/bootstrap.min.js"></script>
-	<script src="../static/js/bootstrap-hover-dropdown.js"></script>
 	<script src="../static/js/page.js"></script>
 	<!--[if lt IE 9]>
       <script src="../static/js/html5shiv.js"></script>
@@ -413,6 +412,7 @@
 	</div>
 
 	<div class="container page-box book-page">
+		
 		<div class="col-md-4">
 			<div class="panel sidebar-box">
 				<div class="sidebar">
@@ -455,133 +455,269 @@
 			</div>
 		</div>
 
-		<div class="col-md-8">
+		<div class="col-md-8 clo-sm-12">
 			<div class="panel">
-				<div class="top-panel clearfix">
-					<div class="t-con">Javascript</div>
-						<!-- pc端展现 -->
-						<ul class="tablst hidden-xs clearfix" role="tablist">
-							<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab">所有图书</a></li>
-							<li role="presentation"><a href="" role="tab" data-toggle="tab">电子书</a></li>
-							<li role="presentation"><a href="" role="tab" data-toggle="tab">按需印刷</a></li>
-							<li role="presentation"><a href="" role="tab" data-toggle="tab">开放出版</a></li>
-							<li role="presentation"><a href="" role="tab" data-toggle="tab">关注</a></li>
-							<li role="presentation"><a href="" role="tab" data-toggle="tab">收藏</a></li>
-							<li role="presentation"><a href="" role="tab" data-toggle="tab">已购买</a></li>
-						</ul>
-						<!-- /pc端展现 -->
-						<!-- 移动端展现 -->
-						<div role="presentation" class="dropdown mobi-tablst visible-xs-block" id="mobi-tablst">
-					        <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-					          <span class="txt">所有图书</span>
-					          <span class="caret"></span>
-					        </a>
-					        <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-					          <li role="presentation"><a role="menuitem" href="">所有图书</a></li>
-					          <li role="presentation"><a role="menuitem" href="">电子书</a></li>
-					          <li role="presentation"><a role="menuitem" href="">按需印刷</a></li>
-					          <li role="presentation"><a role="menuitem" href="">开放出版</a></li>
-					          <li role="presentation"><a role="menuitem" href="">关注</a></li>
-					          <li role="presentation"><a role="menuitem" href="">收藏</a></li>
-					          <li role="presentation"><a role="menuitem" href="">已购买</a></li>
-					        </ul>
-					    </div>
-					    <!-- /移动端展现 -->
-				</div>
+			<div class="top-panel clearfix">
+				<ul class="tablst clearfix" role="tablist">
+					<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab">所有图书</a></li>
+					<li role="presentation"><a href="" role="tab" data-toggle="tab">电子书</a></li>
+				</ul>
+				<ul class="r-tab clearfix r-panel" role="tablist">
+					<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-ok"></span>关注</a></li>
+					<li role="presentation"><a href="" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-ok"></span>收藏</a></li>
+					<li role="presentation"><a href="" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-ok"></span>已购买</a></li>
+				</ul>
+			</div>
+			
+			<div class="mid-panel clearfix">
 				<ul class="catetab tablst clearfix" role="tablist">
 					<li role="presentation"><a href="" role="tab" data-toggle="tab">热门</a></li>
 					<li role="presentation"><a href="" role="tab" data-toggle="tab">新书</a></li>
-					<li role="presentation"><a href="" role="tab" data-toggle="tab">本月</a></li>
-					<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab">本年</a></li>
+					<li role="presentation"><a href="" role="tab" data-toggle="tab">即将上市</a></li>
+					<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab">招募译者</a></li>
 				</ul>
-				<div class="book-lst clearfix">
-					<!-- 一本书 开始 -->
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="media">
-							<div class="media-left">
-								<a href="">
-									<img class="media-object" src="../static/images/temp/2.png" alt="">
-								</a>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
-								<div>[英]克莱儿·麦克福尔</div>
-								<div class="blk15"></div>
-								<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
-							</div>
-						</div>
-					</div>
-					<!-- 一本书 结束 -->
-					<!-- 一本书 开始 -->
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="media">
-							<div class="media-left">
-								<a href="">
-									<img class="media-object" src="../static/images/temp/2.png" alt="">
-								</a>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
-								<div>[英]克莱儿·麦克福尔</div>
-								<div class="blk15"></div>
-								<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
-							</div>
-						</div>
-					</div>
-					<!-- 一本书 结束 -->
-					<!-- 一本书 开始 -->
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="media">
-							<div class="media-left">
-								<a href="">
-									<img class="media-object" src="../static/images/temp/2.png" alt="">
-								</a>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
-								<div>[英]克莱儿·麦克福尔</div>
-								<div class="blk15"></div>
-								<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
-							</div>
-						</div>
-					</div>
-					<!-- 一本书 结束 -->
-					<!-- 一本书 开始 -->
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="media">
-							<div class="media-left">
-								<a href="">
-									<img class="media-object" src="../static/images/temp/2.png" alt="">
-								</a>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
-								<div>[英]克莱儿·麦克福尔</div>
-								<div class="blk15"></div>
-								<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
-							</div>
-						</div>
-					</div>
-					<!-- 一本书 结束 -->
-					<!-- 一本书 开始 -->
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="media">
-							<div class="media-left">
-								<a href="">
-									<img class="media-object" src="../static/images/temp/2.png" alt="">
-								</a>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
-								<div>[英]克莱儿·麦克福尔</div>
-								<div class="blk15"></div>
-								<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
-							</div>
-						</div>
-					</div>
-					<!-- 一本书 结束 -->
-				</div>
+				<ul class="showstyle clearfix r-panel">
+					<li class="active">
+						<a href="#showStyle1" class="glyphicon glyphicon-th-list" data-toggle="tab"></a>
+					</li>
+					<li>
+						<a href="#showStyle2" class="glyphicon glyphicon-th-large" data-toggle="tab"></a>
+					</li>
+				</ul>
 			</div>
+			
+
+			<div class="book-lst clearfix">
+				<div class="tab-content">
+					<!-- 左图右文类型 开始 -->
+					<div class="tab-pane fade active in" id="showStyle1">
+						<!-- 一本书 开始 -->
+						<div class="col-md-12">
+							<div class="media">
+								<div class="media-left">
+									<a href="">
+										<img class="media-object" src="../static/images/temp/2.png" alt="">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">JavaScript高效图形编程（修订版）<i class="ico ico-book"></i><i class="ico ico-ebook"></i></h4>
+									<div>[英]克莱儿·麦克福尔</div>
+									<div class="blk5"></div>
+									<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
+									<div class="blk10"></div>
+									<div class="text-muted">
+										推荐：73052 评论：4288
+									</div>
+								</div>
+								<div class="media-right">
+							        <div class="price-box">
+							        	<div>电子书价格</div>
+							        	<div class="price">￥：66.20</div>
+							        	<div>纸质版价格-平装</div>
+							        	<div class="price">￥：102.20</div>
+							        </div>
+							    </div>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-12">
+							<div class="media">
+								<div class="media-left">
+									<a href="">
+										<img class="media-object" src="../static/images/temp/2.png" alt="">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">JavaScript高效图形编程（修订版）<i class="ico ico-book"></i><i class="ico ico-ebook"></i></h4>
+									<div>[英]克莱儿·麦克福尔</div>
+									<div class="blk5"></div>
+									<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
+									<div class="blk10"></div>
+									<div class="text-muted">
+										推荐：73052 评论：4288
+									</div>
+								</div>
+								<div class="media-right">
+							        <div class="price-box">
+							        	<div>电子书价格</div>
+							        	<div class="price">￥：66.20</div>
+							        	<div>纸质版价格-平装</div>
+							        	<div class="price">￥：102.20</div>
+							        </div>
+							    </div>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-12">
+							<div class="media">
+								<div class="media-left">
+									<a href="">
+										<img class="media-object" src="../static/images/temp/2.png" alt="">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">JavaScript高效图形编程（修订版）<i class="ico ico-book"></i><i class="ico ico-ebook"></i></h4>
+									<div>[英]克莱儿·麦克福尔</div>
+									<div class="blk5"></div>
+									<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
+									<div class="blk10"></div>
+									<div class="text-muted">
+										推荐：73052 评论：4288
+									</div>
+								</div>
+								<div class="media-right">
+							        <div class="price-box">
+							        	<div>电子书价格</div>
+							        	<div class="price">￥：66.20</div>
+							        	<div>纸质版价格-平装</div>
+							        	<div class="price">￥：102.20</div>
+							        </div>
+							    </div>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-12">
+							<div class="media">
+								<div class="media-left">
+									<a href="">
+										<img class="media-object" src="../static/images/temp/2.png" alt="">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">JavaScript高效图形编程（修订版）<i class="ico ico-book"></i><i class="ico ico-ebook"></i></h4>
+									<div>[英]克莱儿·麦克福尔</div>
+									<div class="blk5"></div>
+									<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
+									<div class="blk10"></div>
+									<div class="text-muted">
+										推荐：73052 评论：4288
+									</div>
+								</div>
+								<div class="media-right">
+							        <div class="price-box">
+							        	<div>电子书价格</div>
+							        	<div class="price">￥：66.20</div>
+							        	<div>纸质版价格-平装</div>
+							        	<div class="price">￥：102.20</div>
+							        </div>
+							    </div>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-12">
+							<div class="media">
+								<div class="media-left">
+									<a href="">
+										<img class="media-object" src="../static/images/temp/2.png" alt="">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
+									<div>[英]克莱儿·麦克福尔</div>
+									<div class="blk5"></div>
+									<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
+									<div class="blk10"></div>
+									<div class="text-muted">
+										推荐：73052 评论：4288
+									</div>
+								</div>
+								<div class="media-right">
+							        <div class="price-box">
+							        	<div>电子书价格</div>
+							        	<div class="price">￥：66.20</div>
+							        	<div>纸质版价格-平装</div>
+							        	<div class="price">￥：102.20</div>
+							        </div>
+							    </div>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+					</div>
+					<!-- 左图右文类型 结束 -->
+					<!-- 上图下标题类型 开始 -->
+					<div class="tab-pane fade pn" id="showStyle2">
+						<!-- 一本书 开始 -->
+						<div class="col-md-3 col-sm-4 col-xs-12 book-thumbnail">
+							<div class="pic">
+								<a href=""><span class="img"><img src="../static/images/temp/2.png" alt=""><i class="ico ico-ebook-2"></i></span></a>
+								
+							</div>
+							<div class="name">
+								<a href="">javaScript高效图形编程（修订版）</a>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-3 col-sm-4 col-xs-12 book-thumbnail">
+							<div class="pic">
+								<a href=""><span class="img"><img src="../static/images/temp/1.png" alt=""></span></a>
+							</div>
+							<div class="name">
+								<a href="">javaScript高效javaScrjavaScript高效图形javaScript高效图形ipt高效图形图形编程（修订版）</a>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-3 col-sm-4 col-xs-12 book-thumbnail">
+							<div class="pic">
+								<a href=""><span class="img"><img src="../static/images/temp/2.png" alt=""></span></a>
+							</div>
+							<div class="name">
+								<a href="">javaScript高效图形编程（修订版）</a>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-3 col-sm-4 col-xs-12 book-thumbnail">
+							<div class="pic">
+								<a href=""><span class="img"><img src="../static/images/temp/1.png" alt=""></span></a>
+							</div>
+							<div class="name">
+								<a href="">javaScript高效javaScrjavaScript高效图形javaScript高效图形ipt高效图形图形编程（修订版）</a>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-3 col-sm-4 col-xs-12 book-thumbnail">
+							<div class="pic">
+								<a href=""><span class="img"><img src="../static/images/temp/2.png" alt=""></span></a>
+							</div>
+							<div class="name">
+								<a href="">javaScript高效图形编程（修订版）</a>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-3 col-sm-4 col-xs-12 book-thumbnail">
+							<div class="pic">
+								<a href=""><span class="img"><img src="../static/images/temp/1.png" alt=""></span></a>
+							</div>
+							<div class="name">
+								<a href="">javaScript高效javaScrjavaScript高效图形javaScript高效图形ipt高效图形图形编程（修订版）</a>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+					</div>
+					<!-- 上图下标题类型 结束 -->
+				</div>
+				
+			</div>
+			<div class="pagination-box text-center">
+				<ul class="pagination">
+			        <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+			        <li><a href="#">1</a></li>
+			        <li><a href="#">2</a></li>
+			        <li><a href="#">3</a></li>
+			        <li><a href="#">4</a></li>
+			        <li><a href="#">5</a></li>
+			        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+			    </ul>
+			</div>
+		</div>
 		</div>
 
 	</div>
@@ -591,6 +727,7 @@
 			&copy; 2014异步社区 <span>·</span> 人民邮电出版社 <span>·</span> All rights reserved
 		</div>
 	</footer>
+
 
 
 
