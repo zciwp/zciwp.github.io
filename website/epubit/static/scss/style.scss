@@ -836,7 +836,7 @@ footer{
 	.book-lst{
 		padding: 0 10px;
 		img{
-			max-width: none;
+			max-width: 130px;
 		}
 	}
 	.top-panel{
@@ -893,6 +893,9 @@ footer{
 		padding-top: 20px;
 		.media-heading{
 			font-size: 14px;
+			a{
+				color: #333;
+			}
 		}
 	}
 	.catetab{
@@ -993,7 +996,7 @@ footer{
 	font-size: 0;
 }
 .book-thumbnail{
-	margin-bottom: 20px;
+	margin-top: 20px;
 	display: inline-block;
 	*display: inline;
 	zoom:1;
@@ -1006,7 +1009,7 @@ footer{
 	}
 	.pic{
 		display: table;
-		height: 195px;
+		height: 210px;
 		width: 100%;
 		text-align: center;
 		a{
@@ -1018,6 +1021,10 @@ footer{
 			display: inline-block;
 			*display: inline;;
 			zoom:1;
+			img{
+				max-height: 210px;
+				max-width: none;
+			}
 		}
 		.ico-ebook-2{
 			background: url(../images/ebook.png) no-repeat;
@@ -1425,4 +1432,14 @@ footer{
 	}
 }
 
+.page-tit{
+	font-size: 20px;
+	margin: 10px 0;
+	line-height: normal;
+	.key{
+		color: $green;
+		font-weight: bold;
+		font-style: normal;
+	}
+}
 
