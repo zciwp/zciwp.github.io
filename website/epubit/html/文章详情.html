@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图书-异步社区</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="../static/css/typo.css">
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/style.css">
+	<script src="../static/js/jquery.min.js"></script>
+	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/page.js"></script>
+	<!--[if lt IE 9]>
+      <script src="../static/js/html5shiv.js"></script>
+      <script src="../static/js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		        </button>
+		        <a class="navbar-brand" href="">
+					<img src="../static/images/logo.png" alt="">
+		        </a>
+			</div>
+			<div class="navbar-collapse collapse" role="navigation" aria-expanded="false">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="" class="write"><span class="glyphicon glyphicon-pencil"></span>写作</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">技术圈<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li class="hasSub">
+								<a href="">IT文化与互联网</a>
+								<ul class="sub-menu2">
+									<li><a href="">IT文化</a></li>
+									<li><a href="">人文素养</a></li>
+									<li><a href="">社交媒体</a></li>
+									<li><a href="">网店运营</a></li>
+									<li><a href="">网络营销</a></li>
+									<li><a href="">新经济</a></li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="1.html">Web技术</a>
+								<ul class="sub-menu2">
+									<li class="hasSub">
+										<a href="">服务端开发</a>
+										<ul class="sub-menu2">
+											<li><a href="1.html">Node</a></li>
+											<li><a href="">PHP</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">互联网产品</a>
+									</li>
+									<li class="hasSub">
+										<a href="">交互设计</a>
+										<ul class="sub-menu2">
+											<li><a href="">可用性测试</a></li>
+											<li><a href="">用户体验</a></li>
+											<li><a href="">原型设计</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">前端开发</a>
+										<ul class="sub-menu2">
+											<li><a href="">CSS/CSS3</a></li>
+											<li><a href="">HTML/HTML5</a></li>
+											<li><a href="">JavaScript</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">网页开发</a>
+									</li>
+									<li class="hasSub">
+										<a href="">网页视觉</a>
+										<ul class="sub-menu2">
+											<li><a href="">Dreamweaver</a></li>
+											<li><a href="">Fireworks</a></li>
+											<li><a href="">Flash</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">网站建设</a>
+									</li>
+									<li class="hasSub">
+										<a href="">网站运营</a>
+										<ul class="sub-menu2">
+											<li><a href="">SEO</a></li>
+											<li><a href="">营销分析</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">响应式</a>
+									</li>
+									<li>
+										<a href="">移动端开发</a>
+									</li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">操作系统</a>
+								<ul class="sub-menu2">
+									<li><a href="">Linux/Unix</a></li>
+									<li><a href="">Mac OS</a></li>
+									<li><a href="">Windows</a></li>
+									<li><a href="">并行/并发处理</a></li>
+									<li><a href="">操作系统原理</a></li>
+									<li><a href="">文件系统</a></li>
+									<li><a href="">虚拟化</a></li>
+									<li class="hasSub">
+										<a href="">移动操作系统</a>
+										<ul class="sub-menu2">
+											<li><a href="">Android</a></li>
+											<li><a href="">iOS</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">计算机科学</a>
+								<ul class="sub-menu2">
+									<li class="hasSub">
+										<a href="">安全与加密</a>
+										<ul class="sub-menu2">
+											<li><a href="">计算机病毒</a></li>
+											<li><a href="">加密与解密</a></li>
+											<li><a href="">逆向工程</a></li>
+											<li><a href="">网络安全</a></li>
+										</ul>
+									</li>
+									<li><a href="">编译原理和编译器</a></li>
+									<li><a href="">计算机基础理论</a></li>
+									<li><a href="">计算机结构、设计与制造</a></li>
+									<li><a href="">计算机数学</a></li>
+									<li><a href="">人工智能</a></li>
+									<li><a href="">算法与数据结构</a></li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">软件开发</a>
+								<ul class="sub-menu2">
+									<li class="hasSub">
+										<a href="">编程语言</a>
+										<ul class="sub-menu2">
+											<li><a href="">.NET</a></li>
+											<li><a href="">C#</a></li>
+											<li><a href="">C++</a></li>
+											<li><a href="">C语言</a></li>
+											<li><a href="">Java</a></li>
+											<li><a href="">Python</a></li>
+											<li><a href="">Ruby/Rail</a></li>
+											<li><a href="">Spring</a></li>
+											<li><a href="">函数式语言</a></li>
+										</ul>
+									</li>
+									<li><a href="">并行/并发编程</a></li>
+									<li class="hasSub">
+										<a href="">架构与工具</a>
+										<ul class="sub-menu2">
+											<li><a href="">SOA</a></li>
+											<li><a href="">开发管理</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">软件工程与方法</a>
+										<ul class="sub-menu2">
+											<li><a href="">面向对象方法</a></li>
+											<li><a href="">软件测试与质量控制</a></li>
+											<li><a href="">软件过程</a></li>
+											<li><a href="">软件架构</a></li>
+										</ul>
+									</li>
+									<li><a href="">搜索算法</a></li>
+									<li><a href="">算法</a></li>
+									<li><a href="">图形编程</a></li>
+									<li class="hasSub">
+										<a href="">移动开发</a>
+										<ul class="sub-menu2">
+											<li><a href="">Android开发</a></li>
+											<li><a href="">iOS开发</a></li>
+											<li><a href="">跨平台</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">游戏设计与开发</a>
+										<ul class="sub-menu2">
+											<li><a href="">Cocos2d</a></li>
+											<li><a href="">OpenGL ES</a></li>
+											<li><a href="">Unity</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">数据科学</a>
+								<ul class="sub-menu2">
+									<li><a href="">存储</a></li>
+									<li class="hasSub">
+										<a href="">大数据</a>
+										<ul class="sub-menu2">
+											<li><a href="">Hadoop</a></li>
+											<li><a href="">HBase</a></li>
+											<li><a href="">MapReduce</a></li>
+											<li><a href="">MongoDB</a></li>
+											<li><a href="">Redis</a></li>
+											<li><a href="">Spark</a></li>
+										</ul>
+									</li>
+									<li><a href="">数据安全</a></li>
+									<li><a href="">数据可视化</a></li>
+									<li class="hasSub">
+										<a href="">数据库</a>
+										<ul class="sub-menu2">
+											<li><a href="">Access</a></li>
+											<li><a href="">MySQL</a></li>
+											<li><a href="">NoSQL</a></li>
+											<li><a href="">PostgreSQL</a></li>
+											<li><a href="">SQL Server</a></li>
+											<li><a href="">SQL语言</a></li>
+											<li><a href="">数据库理论</a></li>
+											<li><a href="">数据库设计与管理</a></li>
+											<li><a href="">数据挖掘</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">数据统计与分析</a>
+										<ul class="sub-menu2">
+											<li><a href="">R语言</a></li>
+											<li><a href="">SAS</a></li>
+											<li><a href="">SPSS</a></li>
+											<li><a href="">数据分析</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">数字艺术</a>
+								<ul class="sub-menu2">
+									<li class="hasSub">
+										<a href="">平面设计</a>
+										<ul class="sub-menu2">
+											<li><a href="">Acrobat</a></li>
+											<li><a href="">CorelDraw</a></li>
+											<li><a href="">Illustrator</a></li>
+											<li><a href="">InDesign</a></li>
+											<li><a href="">Lightroom</a></li>
+											<li><a href="">Painter</a></li>
+											<li><a href="">Photoshop</a></li>
+											<li><a href="">设计方法</a></li>
+											<li><a href="">设计文化</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">三维技术</a>
+										<ul class="sub-menu2">
+											<li><a href="">3D Max</a></li>
+											<li><a href="">3D打印</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">音视频制作</a>
+										<ul class="sub-menu2">
+											<li><a href="">After Effects</a></li>
+											<li><a href="">Audition</a></li>
+											<li><a href="">Premiere</a></li>
+											<li><a href="">其他视频软件</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">思科</a>
+								<ul class="sub-menu2">
+									<li class="hasSub">
+										<a href="">思科技术</a>
+										<ul class="sub-menu2">
+											<li><a href="">IP通信</a></li>
+											<li><a href="">安全</a></li>
+											<li><a href="">路由与交换</a></li>
+											<li><a href="">数据中心</a></li>
+											<li><a href="">网络管理与维护</a></li>
+											<li><a href="">网络架构与设计</a></li>
+											<li><a href="">网络协议</a></li>
+											<li><a href="">无线/光通信</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">思科认证</a>
+										<ul class="sub-menu2">
+											<li><a href="">CCIE</a></li>
+											<li><a href="">CCNA</a></li>
+											<li><a href="">CCNP</a></li>
+											<li><a href="">CCNP Security</a></li>
+											<li><a href="">CCVP</a></li>
+										</ul>
+									</li>
+									<li><a href="">思科网络技术学院</a></li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">网络技术</a>
+								<ul class="sub-menu2">
+									<li><a href="">数据中心</a></li>
+									<li><a href="">网络管理</a></li>
+									<li><a href="">网络理论</a></li>
+									<li><a href="">网络设计</a></li>
+									<li><a href="">网络协议</a></li>
+									<li><a href="">云计算</a></li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">效率与娱乐</a>
+								<ul class="sub-menu2">
+									<li class="hasSub">
+										<a href="">电脑办公</a>
+										<ul class="sub-menu2">
+											<li><a href="">Excel</a></li>
+											<li><a href="">Office</a></li>
+											<li><a href="">PPT</a></li>
+											<li><a href="">Word</a></li>
+											<li><a href="">办公设备使用与维修</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">个人应用</a>
+										<ul class="sub-menu2">
+											<li><a href="">PC机</a></li>
+											<li><a href="">乐高机器人</a></li>
+											<li><a href="">苹果电脑</a></li>
+											<li><a href="">时间管理</a></li>
+											<li><a href="">手机与PAD</a></li>
+											<li><a href="">游戏攻略</a></li>
+										</ul>
+									</li>
+									<li><a href="">职场技能</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">图书</a>
+					</li>
+					<li>
+						<a href="">电子书</a>
+					</li>
+					<li>
+						<a href="">文章</a>
+					</li>
+				</ul>
+				<div class="nav navbar-nav hidden-xs hidden-sm">
+					<div class="search-box">
+						<span class="glyphicon glyphicon-search"></span>
+						<input type="text" class="txt" placeholder="搜索图书名称/作者/类别">
+					</div>
+				</div>
+				<ul class="nav navbar-nav navbar-right o-box">
+					<li class="dropdown">
+						<div class="arr hidden-xs"></div>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							<img src="../static/images/temp/1.png" alt="" class="userpic hidden-xs">
+							<span class="visible-xs-inline-block">个人信息</span>
+							<b class="caret visible-xs-inline-block"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="">我的主页</a>
+							</li>
+							<li>
+								<a href="">我的账户</a>
+							</li>
+							<li>
+								<a href="">购物筐</a>
+							</li>
+							<li>
+								<a href="">设置</a>
+							</li>
+							<li>
+								<a href="">私信</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<div class="arr"><span class="addon">15</span></div>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							<span class="glyphicon glyphicon-envelope hidden-xs"></span>
+							<span class="visible-xs-inline-block">私信</span>
+							<b class="caret visible-xs-inline-block"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="">私信</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container page-box book-page">
+		
+		<div class="col-md-4">
+
+
+			<div class="g-block">
+				<div class="hd green">
+					<h4>相关技术</h4>
+					<div class="r-panel">
+						<a href="" class="more">+更多</a>
+					</div>
+				</div>
+				<div class="bd row">
+					<ul class="tag-lst clearfix">
+						<li><a href="">Linux</a></li>
+						<li><a href="">Linux</a></li>
+						<li><a href="">LinuxLinuxLinux</a></li>
+						<li><a href="">web技术</a></li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div class="g-block">
+				<div class="hd green">
+					<h4>相关图书</h4>
+					<div class="r-panel">
+						<a href="" class="more">+更多</a>
+					</div>
+				</div>
+				<div class="bd row book-side">
+					<div class="media col-md-12">
+						<div class="media-left">
+							<a href=""><img src="../static/images/temp/9.png" alt="" class="book-pic"></a>
+						</div>
+						<div class="media-body">
+							<div class="t">iOS7开发快速入门</div>
+							<div>[英]克莱儿·麦克福尔</div>
+							<div><i class="ico ico-book"></i><i class="ico ico-ebook"></i></div>
+							<div class="text-muted">iOS7果公司最新发布的操作系统版本。iOS 7重新设计了用户界面，并且改进了...
+							</div>
+						</div>
+					</div>
+					<div class="media col-md-12">
+						<div class="media-left">
+							<a href=""><img src="../static/images/temp/9.png" alt="" class="book-pic"></a>
+						</div>
+						<div class="media-body">
+							<div class="t">iOS7开发快速入门</div>
+							<div>[英]克莱儿·麦克福尔</div>
+							<div><i class="ico ico-book"></i><i class="ico ico-ebook"></i></div>
+							<div class="text-muted">iOS7果公司最新发布的操作系统版本。iOS 7重新设计了用户界面，并且改进了...
+							</div>
+						</div>
+					</div>
+					<div class="media col-md-12">
+						<div class="media-left">
+							<a href=""><img src="../static/images/temp/9.png" alt="" class="book-pic"></a>
+						</div>
+						<div class="media-body">
+							<div class="t">iOS7开发快速入门</div>
+							<div>[英]克莱儿·麦克福尔</div>
+							<div><i class="ico ico-book"></i><i class="ico ico-ebook"></i></div>
+							<div class="text-muted">iOS7果公司最新发布的操作系统版本。iOS 7重新设计了用户界面，并且改进了...
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="g-block">
+				<div class="hd green">
+					<h4>相关用户</h4>
+					<div class="r-panel">
+						<a href="" class="more">+更多</a>
+					</div>
+				</div>
+				<div class="bd row author-side">
+					<div class="media col-md-12">
+						<div class="media-left">
+							<a href=""><img src="../static/images/temp/3.png" alt="" class="wp50"></a>
+						</div>
+						<div class="media-body">
+							<div class="t">北岛 当代散文作家、小说家</div>
+							<div class="text-muted">
+								<div class="txt">中国作家北岛入围诺贝尔文学奖</div>
+								<div class="txt">中国当代十大诗人评选揭晓</div>
+								<div class="txt">北岛和诗歌节</div>
+								<div class="txt">北岛 ．城门开 ：三联书店</div>
+							</div>
+						</div>
+					</div>
+					<div class="media col-md-12">
+						<div class="media-left">
+							<a href=""><img src="../static/images/temp/3.png" alt="" class="wp50"></a>
+						</div>
+						<div class="media-body">
+							<div class="t">北岛 当代散文作家、小说家</div>
+							<div class="text-muted">
+								<div class="txt">中国作家北岛入围诺贝尔文学奖</div>
+								<div class="txt">中国当代十大诗人评选揭晓</div>
+								<div class="txt">北岛和诗歌节</div>
+								<div class="txt">北岛 ．城门开 ：三联书店</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="col-md-8 clo-sm-12">
+			<div class="panel article-detail">
+				<h2 class="article-tit">网页设计师应该懂代码吗？</h6>
+				<div class="typo typo-selection">
+            <p>我总是在做那些我做不了的事情，这样我就可能学会怎么做这些事情了。</p><p data-indent="10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——毕加索</p><p>绝对有必要懂——至少懂点HTML后去建网站比只在Photoshop上画图要有效率的多。然而懂代码的网页设计师们往往最终还是把他们的PSD文件发送给了“真正的”开发人员。事实是，大多数获奖的网站都是由懂代码的网页设计师设计的。你想知道为什么吗？</p><p>因为HTML和CSS本身都是很视觉化的语言。加之现在的网站交互性越来越强，只用Photoshop是很难预见到用户交互行为的。而“心中有码”则会对做有交互的设计非常有帮助。<br></p><p>更别说钱了。如果你是自由职业设计师，像我之前那样，懂得如何写代码绝对会拓宽你的客户范围，因为你变成了一站式服务（相信我，一个开发人员学设计所需要的时间远远多于设计师学写代码的时间）。而如果你是在公司工作的设计师，正如我现在这样（现就职于ImpressPages，一个用户友好的内容管理系统），至少懂点编码的基础知识能帮助你做出有交互性、更易用的设计，因为它在潜意识里已经考虑到开发人员了。简单来说，你是赚了RP值，能转化成高薪。</p><p>新年下决心的时刻该到了，学习写代码也是一个正确的选择呢。:-D</p><p><b>写代码难吗？</b></p><p>与大家普遍认为的恰恰相反，学习如何写代码在开始时其实非常简单，甚至会让人上瘾。不过，如果你开始时没有上瘾，或者你不喜欢自学，那么大部分编程可能不是你的追求了...</p><p>但是你如果已经很喜欢网页设计了，那么你还是有很大概率会喜欢编程的。</p><p><b>应该选一个编程语言吗？</b></p><p>一开始时，你应该决定你要学什么。如果你喜欢网络解决方案，HTML5和PHP是这方面最受欢迎的语言。但是，现在越来越流行只管招开发人员，不管他们擅长什么编程语言。好的开发人员总是在新技术刚一出现时就去研究使用了。更重要的是，如果一个人擅长一种语言，他们学新语言的速度会很快。所以你不应该只关注某一种语言，而是多试试其它与网络技术相关的语言。</p><p>同样，也有很多网络开发人员在网络设计领域工作（甚至以之为生）。找一个出来喝杯啤酒吧！他会非常愿意告诉你什么样的语言适合你的工作环境、需要注意什么事情。他还会告诉你学会编程以后的好处。</p><p><b>你该从哪儿开始？</b></p><p>网上有很多有用的在线资源教你网络开发的基础知识。很遗憾的是，没有哪个教程是适用于所有人的。我选了一些用来学习和熟悉代码的网站推荐给大家。</p><p><b></b></p><h3><a href="https://dash.generalassemb.ly/" target="_blank">Dash</a></h3><p><img alt="dash.jpg" src="http://file.epubit.com.cn/ScreenShow/150664d674bfc8d754bd" data-image-size="580,323"><br></p><p>Dash通过可以在浏览器里完成的有趣的项目教你HTML，CSS和Javascript。Dash的优点在于通过现实生活场景教你基础知识，比如“Anna的朋友Jeff需要给他的诗歌博客定制一个主题。”代码是写在浏览器里，课程是按照水平等级划分。对于一个网页设计师来说，这确实是一个学习基础知识的有趣的方法，但是很遗憾，只有四个项目（课程）可以学。<br></p><p><b></b><br></p><h3><a href="http://www.codecademy.com/" target="_blank">Codeacademy</a></h3><p><img alt="Codeacademy.jpg" src="http://file.epubit.com.cn/ScreenShow/150612244b33f21932f8" data-image-size="580,413"><br></p><p>Codeacademy对于学网页设计的基础知识来说也非常棒。它也提供互动的课程，并且比Dash有更多的编程语言。Codeacademy由HTML和CSS的课程开始（他们称这些语言为基础课程），这些也的确是初学者的不二之选。学完基础课程之后，你可以选择jQuery，JavaScript, PHP,Python或者Ruby。</p><p>我也喜欢Codeacademy，因为它在教授代码的过程中有两个单独的部分：拆分成网页项目或者API的理论和练习。也就是说它对于全新的菜鸟和想深入学习的人来说都适用。</p><p><b></b></p><h3><a href="http://teamtreehouse.com/" target="_blank">Treehouse</a></h3><p><b><br></b></p><p><img alt="Treehouse.jpg" src="http://file.epubit.com.cn/ScreenShow/1506742098b08a356dd5" data-image-size="580,356"><br></p><p>Treehouse是付费的学习平台，它有海量的编程语言和系统可选（如开发工具或设计）。Treehouse还有一个特色：视频。它还有学习轨迹——根据你的学习目标不同而设计你的课程，比如“成为网络开发人员”“成为网络设计师”或者“学习HTML和CSS”。如果你有闲钱，会发现它很有用。<br></p><p><b></b></p><h3><a href="http://www.w3schools.com/" target="_blank">W3schools</a></h3><p>这套教程非常受欢迎。w3schools既有教程也有参考书——后者甚至经常被有经验的网络开发人员使用。这个网站的课程针对流行编程语言和技术，如HTML，CSS，Javascript，SQL，PHP和jQuery。它也教授服务器，数据库和其它重要内容。它有一千多个代码案例，而且是免费的。如果说Dash更适合菜鸟，那么W3S即使对于专业人员也是得心应手的。<br></p><h3><a href="http://www.learn-js.org/" target="_blank">LEARN JS</a></h3><p>尽管Javascript相对来说属于进阶的课程，我并不推荐它作为你学的第一门技术，但是如果你想做网页插件或者手机APP，那么它还是很需要学的。这门语言目前需求很高，因此它是一门很方便学习的编程语言。</p><p>如果你决定学Javascript，那么Learn-js.com就是你学习的第一站。它提供有交互性的面板供你尝试写出的代码。它的课程既包含基础也有进阶。</p><p><b><br></b></p><p><b>其他</b></p><p>每个开发人员都知道stackoverflow，它有成千上万的问题和答案，加上一个非常有活力的社区。它已经节省了数十亿小时的人力，因此它也绝对会帮你省些时间。</p><p>说到社区，Mozilla同样也有一个很棒的社区，并且提供很多课程和教程。</p><p>当然，你还可以去看看net tut+，它针对初学者可能遇到的问题和挑战提供了数千个教程。</p><p><b>关于作者</b></p><p><a href="https://twitter.com/mindaugasstank" target="_blank">Mindaugas Stankaitis</a>是一个设计师兼ImpressPages的联合创始人。ImpressPages是一个免费的网络内容管理系统，适用于不懂技术的用户。它的特色包括拖拽界面和联机编辑使得ImpressPages对于任何内容管理者来说都容易上手。Mindaugas Stankaitis以设计为生，以设计谋生，为设计而生。他致力于网页设计，能用性和网页的用户体验。好东西很简单！</p>
+        </div>
+			</div>
+		</div>
+
+	</div>
+
+	<footer>
+		<div class="footer">
+			&copy; 2014异步社区 <span>·</span> 人民邮电出版社 <span>·</span> All rights reserved
+		</div>
+	</footer>
+
+
+
+
+</body>
+</html>

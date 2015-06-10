@@ -674,7 +674,7 @@ body {
     width: 50px;
     height: 50px;
     margin-right: 20px;
-    background: url(../images/ico.png) no-repeat; }
+    background: url(../images/qr-ico.png) no-repeat; }
   .connect .wxqr a {
     color: #5ac64f; }
   .connect .sinaqr a {
@@ -1059,5 +1059,153 @@ footer {
     padding-top: 10px; }
     .book-lst .book-thumbnail .pic {
       height: auto; } }
+.article-detail {
+  padding: 20px;
+  font-size: 16px; }
+  .article-detail .article-tit {
+    font-size: 24px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 15px; }
+
+.tag-lst {
+  padding: 5px 0; }
+  .tag-lst li {
+    margin-left: 15px;
+    float: left;
+    padding: 5px 0; }
+    .tag-lst li a {
+      display: block;
+      padding: 5px 8px;
+      background-color: #00a493;
+      color: #fff !important; }
+      .tag-lst li a:hover {
+        background-color: #008c7d;
+        text-decoration: none; }
+
+.tag-banner {
+  width: 100%;
+  padding: 40% 0 0 0;
+  background: #ccc;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px; }
+  .tag-banner:hover .data {
+    background: rgba(0, 0, 0, 0.8); }
+  .tag-banner .data {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    top: auto; }
+    .tag-banner .data h2 {
+      color: white;
+      font-size: 24px;
+      margin: 0; }
+      .tag-banner .data h2 a {
+        padding: 14px 14px 6px 14px;
+        color: white;
+        display: block; }
+        .tag-banner .data h2 a:hover {
+          text-decoration: none; }
+
+.bookdetail-page {
+  background-color: #fff; }
+  .bookdetail-page .bookdetail {
+    padding-top: 80px;
+    font-size: 14px; }
+  .bookdetail-page .bookmenu a {
+    text-decoration: underline;
+    color: #00a493; }
+  .bookdetail-page .booklststyle .form-horizontal .control-label {
+    text-align: left;
+    width: 75px;
+    padding: 7px 0 0 10px; }
+  .bookdetail-page .booklststyle .form-horizontal .form-group {
+    padding-left: 20px;
+    margin-bottom: 0px;
+    margin-top: 10px; }
+  .bookdetail-page .booklststyle .form-horizontal .col-sm-10 {
+    width: auto; }
+  .bookdetail-page .media img {
+    max-width: none; }
+  .bookdetail-page .tag-lst li {
+    margin-left: 0;
+    margin-right: 10px; }
+  .bookdetail-page .book-side {
+    margin-right: 0;
+    font-size: 12px; }
+  .bookdetail-page .media {
+    margin-top: 20px; }
+  .bookdetail-page .xgwz .media {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px; }
+    .bookdetail-page .xgwz .media:last-child {
+      border-bottom: none; }
+  .bookdetail-page .tab {
+    color: #e5e5e5;
+    padding-top: 20px; }
+    .bookdetail-page .tab .active {
+      font-weight: bold;
+      color: #333; }
+    .bookdetail-page .tab .stp {
+      padding: 0 5px; }
+  .bookdetail-page .remark {
+    margin-left: 30px;
+    border: 1px solid #00a493;
+    margin-top: 20px; }
+    .bookdetail-page .remark .txt {
+      border: none;
+      width: 100%;
+      height: 90px;
+      padding: 10px; }
+    .bookdetail-page .remark .remark-btn-box {
+      padding: 5px;
+      background-color: #fbfbfb; }
+  .bookdetail-page .btn-default {
+    color: #fff;
+    background-color: #00a493;
+    color: #fff !important; }
+    .bookdetail-page .btn-default:hover {
+      background-color: #008c7d; }
+  .bookdetail-page .disabled {
+    background-color: #ccc; }
+  .bookdetail-page .exchange {
+    padding-top: 10px; }
+    .bookdetail-page .exchange .btn {
+      font-size: 18px;
+      margin-bottom: 5px;
+      margin-right: 10px; }
+  .bookdetail-page .bookdetail-panel {
+    margin-bottom: 20px;
+    margin-top: 10px; }
+
+.g-block-2 {
+  margin-bottom: 30px; }
+  .g-block-2 .hd {
+    padding: 10px 20px;
+    border-left: 9px solid #00a493;
+    background-color: #f7f7f7; }
+    .g-block-2 .hd .tit {
+      font-size: 18px; }
+  .g-block-2 .bd {
+    padding-left: 30px; }
+    .g-block-2 .bd li {
+      margin-top: 10px; }
+    .g-block-2 .bd a {
+      color: #00a493; }
+  .g-block-2 .more {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #e5f6f4;
+    color: #00a493;
+    font-size: 12px;
+    padding: 5px 0;
+    margin-top: 10px; }
 
 /*# sourceMappingURL=style.css.map */

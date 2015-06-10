@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图书-异步社区</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/style.css">
+	<script src="../static/js/jquery.min.js"></script>
+	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/page.js"></script>
+	<!--[if lt IE 9]>
+      <script src="../static/js/html5shiv.js"></script>
+      <script src="../static/js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		        </button>
+		        <a class="navbar-brand" href="">
+					<img src="../static/images/logo.png" alt="">
+		        </a>
+			</div>
+			<div class="navbar-collapse collapse" role="navigation" aria-expanded="false">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="" class="write"><span class="glyphicon glyphicon-pencil"></span>写作</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">技术圈<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li class="hasSub">
+								<a href="">IT文化与互联网</a>
+								<ul class="sub-menu2">
+									<li><a href="">IT文化</a></li>
+									<li><a href="">人文素养</a></li>
+									<li><a href="">社交媒体</a></li>
+									<li><a href="">网店运营</a></li>
+									<li><a href="">网络营销</a></li>
+									<li><a href="">新经济</a></li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="1.html">Web技术</a>
+								<ul class="sub-menu2">
+									<li class="hasSub">
+										<a href="">服务端开发</a>
+										<ul class="sub-menu2">
+											<li><a href="1.html">Node</a></li>
+											<li><a href="">PHP</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">互联网产品</a>
+									</li>
+									<li class="hasSub">
+										<a href="">交互设计</a>
+										<ul class="sub-menu2">
+											<li><a href="">可用性测试</a></li>
+											<li><a href="">用户体验</a></li>
+											<li><a href="">原型设计</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">前端开发</a>
+										<ul class="sub-menu2">
+											<li><a href="">CSS/CSS3</a></li>
+											<li><a href="">HTML/HTML5</a></li>
+											<li><a href="">JavaScript</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">网页开发</a>
+									</li>
+									<li class="hasSub">
+										<a href="">网页视觉</a>
+										<ul class="sub-menu2">
+											<li><a href="">Dreamweaver</a></li>
+											<li><a href="">Fireworks</a></li>
+											<li><a href="">Flash</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">网站建设</a>
+									</li>
+									<li class="hasSub">
+										<a href="">网站运营</a>
+										<ul class="sub-menu2">
+											<li><a href="">SEO</a></li>
+											<li><a href="">营销分析</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">响应式</a>
+									</li>
+									<li>
+										<a href="">移动端开发</a>
+									</li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">操作系统</a>
+								<ul class="sub-menu2">
+									<li><a href="">Linux/Unix</a></li>
+									<li><a href="">Mac OS</a></li>
+									<li><a href="">Windows</a></li>
+									<li><a href="">并行/并发处理</a></li>
+									<li><a href="">操作系统原理</a></li>
+									<li><a href="">文件系统</a></li>
+									<li><a href="">虚拟化</a></li>
+									<li class="hasSub">
+										<a href="">移动操作系统</a>
+										<ul class="sub-menu2">
+											<li><a href="">Android</a></li>
+											<li><a href="">iOS</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">计算机科学</a>
+								<ul class="sub-menu2">
+									<li class="hasSub">
+										<a href="">安全与加密</a>
+										<ul class="sub-menu2">
+											<li><a href="">计算机病毒</a></li>
+											<li><a href="">加密与解密</a></li>
+											<li><a href="">逆向工程</a></li>
+											<li><a href="">网络安全</a></li>
+										</ul>
+									</li>
+									<li><a href="">编译原理和编译器</a></li>
+									<li><a href="">计算机基础理论</a></li>
+									<li><a href="">计算机结构、设计与制造</a></li>
+									<li><a href="">计算机数学</a></li>
+									<li><a href="">人工智能</a></li>
+									<li><a href="">算法与数据结构</a></li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">软件开发</a>
+								<ul class="sub-menu2">
+									<li class="hasSub">
+										<a href="">编程语言</a>
+										<ul class="sub-menu2">
+											<li><a href="">.NET</a></li>
+											<li><a href="">C#</a></li>
+											<li><a href="">C++</a></li>
+											<li><a href="">C语言</a></li>
+											<li><a href="">Java</a></li>
+											<li><a href="">Python</a></li>
+											<li><a href="">Ruby/Rail</a></li>
+											<li><a href="">Spring</a></li>
+											<li><a href="">函数式语言</a></li>
+										</ul>
+									</li>
+									<li><a href="">并行/并发编程</a></li>
+									<li class="hasSub">
+										<a href="">架构与工具</a>
+										<ul class="sub-menu2">
+											<li><a href="">SOA</a></li>
+											<li><a href="">开发管理</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">软件工程与方法</a>
+										<ul class="sub-menu2">
+											<li><a href="">面向对象方法</a></li>
+											<li><a href="">软件测试与质量控制</a></li>
+											<li><a href="">软件过程</a></li>
+											<li><a href="">软件架构</a></li>
+										</ul>
+									</li>
+									<li><a href="">搜索算法</a></li>
+									<li><a href="">算法</a></li>
+									<li><a href="">图形编程</a></li>
+									<li class="hasSub">
+										<a href="">移动开发</a>
+										<ul class="sub-menu2">
+											<li><a href="">Android开发</a></li>
+											<li><a href="">iOS开发</a></li>
+											<li><a href="">跨平台</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">游戏设计与开发</a>
+										<ul class="sub-menu2">
+											<li><a href="">Cocos2d</a></li>
+											<li><a href="">OpenGL ES</a></li>
+											<li><a href="">Unity</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">数据科学</a>
+								<ul class="sub-menu2">
+									<li><a href="">存储</a></li>
+									<li class="hasSub">
+										<a href="">大数据</a>
+										<ul class="sub-menu2">
+											<li><a href="">Hadoop</a></li>
+											<li><a href="">HBase</a></li>
+											<li><a href="">MapReduce</a></li>
+											<li><a href="">MongoDB</a></li>
+											<li><a href="">Redis</a></li>
+											<li><a href="">Spark</a></li>
+										</ul>
+									</li>
+									<li><a href="">数据安全</a></li>
+									<li><a href="">数据可视化</a></li>
+									<li class="hasSub">
+										<a href="">数据库</a>
+										<ul class="sub-menu2">
+											<li><a href="">Access</a></li>
+											<li><a href="">MySQL</a></li>
+											<li><a href="">NoSQL</a></li>
+											<li><a href="">PostgreSQL</a></li>
+											<li><a href="">SQL Server</a></li>
+											<li><a href="">SQL语言</a></li>
+											<li><a href="">数据库理论</a></li>
+											<li><a href="">数据库设计与管理</a></li>
+											<li><a href="">数据挖掘</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">数据统计与分析</a>
+										<ul class="sub-menu2">
+											<li><a href="">R语言</a></li>
+											<li><a href="">SAS</a></li>
+											<li><a href="">SPSS</a></li>
+											<li><a href="">数据分析</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">数字艺术</a>
+								<ul class="sub-menu2">
+									<li class="hasSub">
+										<a href="">平面设计</a>
+										<ul class="sub-menu2">
+											<li><a href="">Acrobat</a></li>
+											<li><a href="">CorelDraw</a></li>
+											<li><a href="">Illustrator</a></li>
+											<li><a href="">InDesign</a></li>
+											<li><a href="">Lightroom</a></li>
+											<li><a href="">Painter</a></li>
+											<li><a href="">Photoshop</a></li>
+											<li><a href="">设计方法</a></li>
+											<li><a href="">设计文化</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">三维技术</a>
+										<ul class="sub-menu2">
+											<li><a href="">3D Max</a></li>
+											<li><a href="">3D打印</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">音视频制作</a>
+										<ul class="sub-menu2">
+											<li><a href="">After Effects</a></li>
+											<li><a href="">Audition</a></li>
+											<li><a href="">Premiere</a></li>
+											<li><a href="">其他视频软件</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">思科</a>
+								<ul class="sub-menu2">
+									<li class="hasSub">
+										<a href="">思科技术</a>
+										<ul class="sub-menu2">
+											<li><a href="">IP通信</a></li>
+											<li><a href="">安全</a></li>
+											<li><a href="">路由与交换</a></li>
+											<li><a href="">数据中心</a></li>
+											<li><a href="">网络管理与维护</a></li>
+											<li><a href="">网络架构与设计</a></li>
+											<li><a href="">网络协议</a></li>
+											<li><a href="">无线/光通信</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">思科认证</a>
+										<ul class="sub-menu2">
+											<li><a href="">CCIE</a></li>
+											<li><a href="">CCNA</a></li>
+											<li><a href="">CCNP</a></li>
+											<li><a href="">CCNP Security</a></li>
+											<li><a href="">CCVP</a></li>
+										</ul>
+									</li>
+									<li><a href="">思科网络技术学院</a></li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">网络技术</a>
+								<ul class="sub-menu2">
+									<li><a href="">数据中心</a></li>
+									<li><a href="">网络管理</a></li>
+									<li><a href="">网络理论</a></li>
+									<li><a href="">网络设计</a></li>
+									<li><a href="">网络协议</a></li>
+									<li><a href="">云计算</a></li>
+								</ul>
+							</li>
+							<li class="hasSub">
+								<a href="">效率与娱乐</a>
+								<ul class="sub-menu2">
+									<li class="hasSub">
+										<a href="">电脑办公</a>
+										<ul class="sub-menu2">
+											<li><a href="">Excel</a></li>
+											<li><a href="">Office</a></li>
+											<li><a href="">PPT</a></li>
+											<li><a href="">Word</a></li>
+											<li><a href="">办公设备使用与维修</a></li>
+										</ul>
+									</li>
+									<li class="hasSub">
+										<a href="">个人应用</a>
+										<ul class="sub-menu2">
+											<li><a href="">PC机</a></li>
+											<li><a href="">乐高机器人</a></li>
+											<li><a href="">苹果电脑</a></li>
+											<li><a href="">时间管理</a></li>
+											<li><a href="">手机与PAD</a></li>
+											<li><a href="">游戏攻略</a></li>
+										</ul>
+									</li>
+									<li><a href="">职场技能</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">图书</a>
+					</li>
+					<li>
+						<a href="">电子书</a>
+					</li>
+					<li>
+						<a href="">文章</a>
+					</li>
+				</ul>
+				<div class="nav navbar-nav hidden-xs hidden-sm">
+					<div class="search-box">
+						<span class="glyphicon glyphicon-search"></span>
+						<input type="text" class="txt" placeholder="搜索图书名称/作者/类别">
+					</div>
+				</div>
+				<ul class="nav navbar-nav navbar-right o-box">
+					<li class="dropdown">
+						<div class="arr hidden-xs"></div>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							<img src="../static/images/temp/1.png" alt="" class="userpic hidden-xs">
+							<span class="visible-xs-inline-block">个人信息</span>
+							<b class="caret visible-xs-inline-block"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="">我的主页</a>
+							</li>
+							<li>
+								<a href="">我的账户</a>
+							</li>
+							<li>
+								<a href="">购物筐</a>
+							</li>
+							<li>
+								<a href="">设置</a>
+							</li>
+							<li>
+								<a href="">私信</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<div class="arr"><span class="addon">15</span></div>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							<span class="glyphicon glyphicon-envelope hidden-xs"></span>
+							<span class="visible-xs-inline-block">私信</span>
+							<b class="caret visible-xs-inline-block"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="">私信</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container page-box book-page">
+		
+		<div class="col-md-4 col-sm-12">
+			<div class="panel sidebar-box">
+				<div class="sidebar">
+					<ul class="main-cate">
+						<li>
+							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">所有类别</span><span class="glyphicon glyphicon-menu-right"></span></a>
+						</li>
+						<li>
+							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">IT文化与互联网</span><span class="glyphicon glyphicon-menu-right"></span></a>
+						</li>
+						<li>
+							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">Web技术</span><span class="glyphicon glyphicon-menu-right"></span></a>
+						</li>
+						<li>
+							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">操作系统</span><span class="glyphicon glyphicon-menu-right"></span></a>
+						</li>
+						<li>
+							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">计算机科学</span><span class="glyphicon glyphicon-menu-right"></span></a>
+						</li>
+						<li>
+							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">软件开发</span><span class="glyphicon glyphicon-menu-right"></span></a>
+						</li>
+						<li>
+							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">数据科学</span><span class="glyphicon glyphicon-menu-right"></span></a>
+						</li>
+						<li>
+							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">数字艺术</span><span class="glyphicon glyphicon-menu-right"></span></a>
+						</li>
+						<li>
+							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">思科</span><span class="glyphicon glyphicon-menu-right"></span></a>
+						</li>
+						<li>
+							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">网络技术</span><span class="glyphicon glyphicon-menu-right"></span></a>
+						</li>
+						<li>
+							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">效率与娱乐</span><span class="glyphicon glyphicon-menu-right"></span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-8 col-sm-12">
+
+			<div class="tag-banner" style="background-image: url(http://file.epubit.com.cn/Original/);">
+				<div class="data">
+					<h2><a href="">类别banner</a></h2>
+				</div>
+			</div>
+
+			<div class="panel">
+			<div class="top-panel clearfix">
+				<ul class="tablst clearfix" role="tablist">
+					<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab">所有文章</a></li>
+				</ul>
+				<ul class="r-tab clearfix r-panel" role="tablist">
+					<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-ok"></span>关注</a></li>
+					<li role="presentation"><a href="" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-ok"></span>推荐</a></li>
+					<li role="presentation"><a href="" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-ok"></span>收藏</a></li>
+				</ul>
+			</div>
+			
+			<div class="mid-panel clearfix">
+				<ul class="catetab tablst clearfix" role="tablist">
+					<li role="presentation"><a href="" role="tab" data-toggle="tab">热门</a></li>
+					<li role="presentation"><a href="" role="tab" data-toggle="tab">本月</a></li>
+					<li role="presentation"><a href="" role="tab" data-toggle="tab">本年</a></li>
+					<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab">新帖</a></li>
+				</ul>
+				<ul class="showstyle clearfix r-panel">
+					<li class="active">
+						<a href="#showStyle1" class="glyphicon glyphicon-th-list" data-toggle="tab"></a>
+					</li>
+					<li>
+						<a href="#showStyle2" class="glyphicon glyphicon-th-large" data-toggle="tab"></a>
+					</li>
+				</ul>
+			</div>
+			
+
+			<div class="book-lst clearfix">
+				<div class="tab-content">
+					<!-- 左图右文类型 开始 -->
+					<div class="tab-pane fade active in" id="showStyle1">
+						<!-- 一篇文章 开始 -->
+						<div class="col-md-12 article">
+							<h6 class="article-name"><a href="">师不吃香而家教却十分热火</a></h6>
+							<div class="media">
+								<div class="media-left">
+									<a href="">
+										<img class="media-object" src="../static/images/temp/8.png" alt="" class="article-img">
+									</a>
+								</div>
+								<div class="media-body">
+									<a href="" class="text-muted">教师不吃香而家教却十分热火，可见求授知识这东西就像谈恋爱，一拖几十的就是低贱，而一对一的便是珍贵。珍贵的东西当然真贵，一个小时几十元，基本上与妓女开的是一个价。同是赚钱，教师就比妓女厉害多了。</a>
+								</div>
+							</div>
+							<div class="article-fd clearfix">
+								<div class="l-panel">
+									<img src="../static/images/temp/1.png" alt="" class="userPic"><span class="author">韩寒</span><span class="time">2013/12/02</span>
+								</div>
+								<div class="r-panel">
+									<span class="i">阅读 4982</span>
+									<span class="i">评论 263</span>
+									<span class="i">收藏 1096</span>
+								</div>
+							</div>
+						</div>
+						<!-- 一篇文章 结束 -->
+						<!-- 一篇文章 开始 -->
+						<div class="col-md-12 article">
+							<h6 class="article-name"><a href="">师不吃香而家教却十分热火</a></h6>
+							<div class="media">
+								<div class="media-left">
+									<a href="">
+										<img class="media-object" src="../static/images/temp/8.png" alt="" class="article-img">
+									</a>
+								</div>
+								<div class="media-body">
+									<a href="" class="text-muted">教师不吃香而家教却十分热火，可见求授知识这东西就像谈恋爱，一拖几十的就是低贱，而一对一的便是珍贵。珍贵的东西当然真贵，一个小时几十元，基本上与妓女开的是一个价。同是赚钱，教师就比妓女厉害多了。</a>
+								</div>
+							</div>
+							<div class="article-fd clearfix">
+								<div class="l-panel">
+									<img src="../static/images/temp/1.png" alt="" class="userPic"><span class="author">韩寒</span><span class="time">2013/12/02</span>
+								</div>
+								<div class="r-panel">
+									<span class="i">阅读 4982</span>
+									<span class="i">评论 263</span>
+									<span class="i">收藏 1096</span>
+								</div>
+							</div>
+						</div>
+						<!-- 一篇文章 结束 -->
+						<!-- 一篇文章 开始 -->
+						<div class="col-md-12 article">
+							<h6 class="article-name"><a href="">师不吃香而家教却十分热火</a></h6>
+							<div class="media">
+								<div class="media-body">
+									<a href="" class="text-muted">教师不吃香而家教却十分热火，可见求授知识这东西就像谈恋爱，一拖几十的就是低贱，而一对一的便是珍贵。珍贵的东西当然真贵，一个小时几十元，基本上与妓女开的是一个价。同是赚钱，教师就比妓女厉害多了。</a>
+								</div>
+							</div>
+							<div class="article-fd clearfix">
+								<div class="l-panel">
+									<img src="../static/images/temp/1.png" alt="" class="userPic"><span class="author">韩寒</span><span class="time">2013/12/02</span>
+								</div>
+								<div class="r-panel">
+									<span class="i">阅读 4982</span>
+									<span class="i">评论 263</span>
+									<span class="i">收藏 1096</span>
+								</div>
+							</div>
+						</div>
+						<!-- 一篇文章 结束 -->
+					</div>
+					<!-- 左图右文类型 结束 -->
+					<!-- 上图下标题类型 开始 -->
+					<div class="tab-pane fade pn" id="showStyle2">
+						<!-- 一篇文章 开始 -->
+						<div class="article article-2 col-md-6 col-lg-4 col-sm-12">
+							<h6 class="article-name"><i class="hot">热</i><a href="">师不吃香而家教却十分热火师不吃香而家教却十分热火</a></h6>
+							<div class="media">
+								<div class="media-body">
+									<div class="text-muted info">韩寒发表于2013/12/2</div>
+									<a href="" class="text-muted">教师不吃香而家教却十分热火，可见求授知识这东西就像谈恋爱，一拖几十的就是低贱，而一对一的便是珍贵。珍贵的东西当然真贵，一个小时几十元，基本上与妓女开的是一个价。同是赚钱，教师就比妓女厉害多了。</a>
+								</div>
+							</div>
+							<div class="article-fd clearfix">
+								<span class="i">阅读 4982</span>
+								<span class="i">评论 263</span>
+								<span class="i">收藏 1096</span>
+							</div>
+						</div>
+						<!-- 一篇文章 结束 -->
+						<!-- 一篇文章 开始 -->
+						<div class="article article-2 col-md-6 col-lg-4 col-sm-12">
+							<h6 class="article-name"><i class="recom">荐</i><a href="">师不吃香而家教却十分热火师不吃香而家教却十分热火</a></h6>
+							<div class="media">
+								<div class="media-body">
+									<div class="text-muted info">韩寒发表于2013/12/2</div>
+									<a href="" class="text-muted">教师不吃香而家教却十分热火，可见求授知识这东西就像谈恋爱，一拖几十的就是低贱，而一对一的便是珍贵。珍贵的东西当然真贵，一个小时几十元，基本上与妓女开的是一个价。同是赚钱，教师就比妓女厉害多了。</a>
+								</div>
+							</div>
+							<div class="article-fd clearfix">
+								<span class="i">阅读 4982</span>
+								<span class="i">评论 263</span>
+								<span class="i">收藏 1096</span>
+							</div>
+						</div>
+						<!-- 一篇文章 结束 -->
+						<!-- 一篇文章 开始 -->
+						<div class="article article-2 col-md-6 col-lg-4 col-sm-12">
+							<h6 class="article-name"><a href="">师不吃香而家教却十分热火师不吃香而家教却十分热火</a></h6>
+							<div class="media">
+								<div class="media-body">
+									<div class="text-muted info">韩寒发表于2013/12/2</div>
+									<a href="" class="text-muted">教师不吃香而家教却十分热火，可见求授知识这东西就像谈恋爱，一拖几十的就是低贱，而一对一的便是珍贵。珍贵的东西当然真贵，一个小时几十元，基本上与妓女开的是一个价。同是赚钱，教师就比妓女厉害多了。教师不吃香而家教却十分热火，可见求授知识这东西就像谈恋爱，一拖几十的就是低贱，而一对一的便是珍贵。珍贵的东西当然真贵，一个小时几十元，基本上与妓女开的是一个价。同是赚钱，教师就比妓女厉害多了。</a>
+								</div>
+							</div>
+							<div class="article-fd clearfix">
+								<span class="i">阅读 4982</span>
+								<span class="i">评论 263</span>
+								<span class="i">收藏 1096</span>
+							</div>
+						</div>
+						<!-- 一篇文章 结束 -->
+					</div>
+					<!-- 上图下标题类型 结束 -->
+				</div>
+				
+			</div>
+			<div class="pagination-box text-center">
+				<ul class="pagination">
+			        <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+			        <li><a href="#">1</a></li>
+			        <li><a href="#">2</a></li>
+			        <li><a href="#">3</a></li>
+			        <li><a href="#">4</a></li>
+			        <li><a href="#">5</a></li>
+			        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+			    </ul>
+			</div>
+			</div>
+
+
+
+			<div class="panel">
+			<div class="top-panel clearfix">
+				<ul class="tablst clearfix" role="tablist">
+					<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab">所有图书</a></li>
+					<li role="presentation"><a href="" role="tab" data-toggle="tab">电子书</a></li>
+				</ul>
+				<ul class="r-tab clearfix r-panel" role="tablist">
+					<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-ok"></span>关注</a></li>
+					<li role="presentation"><a href="" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-ok"></span>收藏</a></li>
+					<li role="presentation"><a href="" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-ok"></span>已购买</a></li>
+				</ul>
+			</div>
+			
+			<div class="mid-panel clearfix">
+				<ul class="catetab tablst clearfix" role="tablist">
+					<li role="presentation"><a href="" role="tab" data-toggle="tab">热门</a></li>
+					<li role="presentation"><a href="" role="tab" data-toggle="tab">新书</a></li>
+					<li role="presentation"><a href="" role="tab" data-toggle="tab">即将上市</a></li>
+					<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab">招募译者</a></li>
+				</ul>
+				<ul class="showstyle clearfix r-panel">
+					<li class="active">
+						<a href="#showStyle1" class="glyphicon glyphicon-th-list" data-toggle="tab"></a>
+					</li>
+					<li>
+						<a href="#showStyle2" class="glyphicon glyphicon-th-large" data-toggle="tab"></a>
+					</li>
+				</ul>
+			</div>
+			
+
+			<div class="book-lst clearfix">
+				<div class="tab-content">
+					<!-- 左图右文类型 开始 -->
+					<div class="tab-pane fade active in" id="showStyle1">
+						<!-- 一本书 开始 -->
+						<div class="col-md-12">
+							<div class="media">
+								<div class="media-left">
+									<a href="">
+										<img class="media-object" src="../static/images/temp/2.png" alt="">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">JavaScript高效图形编程（修订版）<i class="ico ico-book"></i><i class="ico ico-ebook"></i></h4>
+									<div>[英]克莱儿·麦克福尔</div>
+									<div class="blk5"></div>
+									<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
+									<div class="blk10"></div>
+									<div class="text-muted">
+										推荐：73052 评论：4288
+									</div>
+								</div>
+								<div class="media-right">
+							        <div class="price-box">
+							        	<div>电子书价格</div>
+							        	<div class="price">￥：66.20</div>
+							        	<div>纸质版价格-平装</div>
+							        	<div class="price">￥：102.20</div>
+							        </div>
+							    </div>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-12">
+							<div class="media">
+								<div class="media-left">
+									<a href="">
+										<img class="media-object" src="../static/images/temp/2.png" alt="">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">JavaScript高效图形编程（修订版）<i class="ico ico-book"></i><i class="ico ico-ebook"></i></h4>
+									<div>[英]克莱儿·麦克福尔</div>
+									<div class="blk5"></div>
+									<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
+									<div class="blk10"></div>
+									<div class="text-muted">
+										推荐：73052 评论：4288
+									</div>
+								</div>
+								<div class="media-right">
+							        <div class="price-box">
+							        	<div>电子书价格</div>
+							        	<div class="price">￥：66.20</div>
+							        	<div>纸质版价格-平装</div>
+							        	<div class="price">￥：102.20</div>
+							        </div>
+							    </div>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-12">
+							<div class="media">
+								<div class="media-left">
+									<a href="">
+										<img class="media-object" src="../static/images/temp/2.png" alt="">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">JavaScript高效图形编程（修订版）<i class="ico ico-book"></i><i class="ico ico-ebook"></i></h4>
+									<div>[英]克莱儿·麦克福尔</div>
+									<div class="blk5"></div>
+									<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
+									<div class="blk10"></div>
+									<div class="text-muted">
+										推荐：73052 评论：4288
+									</div>
+								</div>
+								<div class="media-right">
+							        <div class="price-box">
+							        	<div>电子书价格</div>
+							        	<div class="price">￥：66.20</div>
+							        	<div>纸质版价格-平装</div>
+							        	<div class="price">￥：102.20</div>
+							        </div>
+							    </div>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-12">
+							<div class="media">
+								<div class="media-left">
+									<a href="">
+										<img class="media-object" src="../static/images/temp/2.png" alt="">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">JavaScript高效图形编程（修订版）<i class="ico ico-book"></i><i class="ico ico-ebook"></i></h4>
+									<div>[英]克莱儿·麦克福尔</div>
+									<div class="blk5"></div>
+									<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
+									<div class="blk10"></div>
+									<div class="text-muted">
+										推荐：73052 评论：4288
+									</div>
+								</div>
+								<div class="media-right">
+							        <div class="price-box">
+							        	<div>电子书价格</div>
+							        	<div class="price">￥：66.20</div>
+							        	<div>纸质版价格-平装</div>
+							        	<div class="price">￥：102.20</div>
+							        </div>
+							    </div>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-12">
+							<div class="media">
+								<div class="media-left">
+									<a href="">
+										<img class="media-object" src="../static/images/temp/2.png" alt="">
+									</a>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
+									<div>[英]克莱儿·麦克福尔</div>
+									<div class="blk5"></div>
+									<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
+									<div class="blk10"></div>
+									<div class="text-muted">
+										推荐：73052 评论：4288
+									</div>
+								</div>
+								<div class="media-right">
+							        <div class="price-box">
+							        	<div>电子书价格</div>
+							        	<div class="price">￥：66.20</div>
+							        	<div>纸质版价格-平装</div>
+							        	<div class="price">￥：102.20</div>
+							        </div>
+							    </div>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+					</div>
+					<!-- 左图右文类型 结束 -->
+					<!-- 上图下标题类型 开始 -->
+					<div class="tab-pane fade pn" id="showStyle2">
+						<!-- 一本书 开始 -->
+						<div class="col-md-3 col-sm-4 col-xs-12 book-thumbnail">
+							<div class="pic">
+								<a href=""><span class="img"><img src="../static/images/temp/2.png" alt=""><i class="ico ico-ebook-2"></i></span></a>
+								
+							</div>
+							<div class="name">
+								<a href="">javaScript高效图形编程（修订版）</a>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-3 col-sm-4 col-xs-12 book-thumbnail">
+							<div class="pic">
+								<a href=""><span class="img"><img src="../static/images/temp/1.png" alt=""></span></a>
+							</div>
+							<div class="name">
+								<a href="">javaScript高效javaScrjavaScript高效图形javaScript高效图形ipt高效图形图形编程（修订版）</a>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-3 col-sm-4 col-xs-12 book-thumbnail">
+							<div class="pic">
+								<a href=""><span class="img"><img src="../static/images/temp/2.png" alt=""></span></a>
+							</div>
+							<div class="name">
+								<a href="">javaScript高效图形编程（修订版）</a>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-3 col-sm-4 col-xs-12 book-thumbnail">
+							<div class="pic">
+								<a href=""><span class="img"><img src="../static/images/temp/1.png" alt=""></span></a>
+							</div>
+							<div class="name">
+								<a href="">javaScript高效javaScrjavaScript高效图形javaScript高效图形ipt高效图形图形编程（修订版）</a>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-3 col-sm-4 col-xs-12 book-thumbnail">
+							<div class="pic">
+								<a href=""><span class="img"><img src="../static/images/temp/2.png" alt=""></span></a>
+							</div>
+							<div class="name">
+								<a href="">javaScript高效图形编程（修订版）</a>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+						<!-- 一本书 开始 -->
+						<div class="col-md-3 col-sm-4 col-xs-12 book-thumbnail">
+							<div class="pic">
+								<a href=""><span class="img"><img src="../static/images/temp/1.png" alt=""></span></a>
+							</div>
+							<div class="name">
+								<a href="">javaScript高效javaScrjavaScript高效图形javaScript高效图形ipt高效图形图形编程（修订版）</a>
+							</div>
+						</div>
+						<!-- 一本书 结束 -->
+					</div>
+					<!-- 上图下标题类型 结束 -->
+				</div>
+				
+			</div>
+			<div class="pagination-box text-center">
+				<ul class="pagination">
+			        <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+			        <li><a href="#">1</a></li>
+			        <li><a href="#">2</a></li>
+			        <li><a href="#">3</a></li>
+			        <li><a href="#">4</a></li>
+			        <li><a href="#">5</a></li>
+			        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+			    </ul>
+			</div>
+		</div>
+			<!-- 搜索相关图书 结束 -->
+
+		</div>
+
+	</div>
+
+	<footer>
+		<div class="footer">
+			&copy; 2014异步社区 <span>·</span> 人民邮电出版社 <span>·</span> All rights reserved
+		</div>
+	</footer>
+
+
+
+
+</body>
+</html>
