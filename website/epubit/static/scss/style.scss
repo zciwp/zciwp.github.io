@@ -563,6 +563,8 @@ body{ background-color: $body-bg; font-size: 12px; line-height: 1.5em;}
 				white-space: nowrap;
 				overflow: hidden;
 				text-overflow: ellipsis;
+				word-break: normal;
+				word-wrap: normal;
 			}
 		}
 		a{
@@ -1080,6 +1082,23 @@ footer{
 			}
 		}
 	}
+	.hot,.recom{
+		font-style: normal;
+		color: #fff;
+		background-color: #fbb3b3;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		vertical-align: middle;
+		display: inline-block;
+		*display: inline;
+		zoom: 1; 
+		text-align: center;
+		margin-right: 5px;
+	}
+	.recom{
+		background-color: #99dbd4;
+	}
 }
 
 .article-2{
@@ -1104,23 +1123,6 @@ footer{
 	}
 	.article-fd{
 		padding-top: 5px;
-	}
-	.hot,.recom{
-		font-style: normal;
-		color: #fff;
-		background-color: #fbb3b3;
-		width: 20px;
-		height: 20px;
-		line-height: 20px;
-		vertical-align: middle;
-		display: inline-block;
-		*display: inline;
-		zoom: 1; 
-		text-align: center;
-		margin-right: 5px;
-	}
-	.recom{
-		background-color: #99dbd4;
 	}
 }
 
@@ -1183,8 +1185,223 @@ footer{
 	}
 }
 
+// 图书3种模式
+.book-box{
+	.lst-normal,.lst-side{
+		.book-name{
+			display: none;
+		}
+	}
+}
+.book-box{
+	.lst-grid{
+		font-size: 0;
+		.book-name{
+			display: block;
+			font-size: 14px;
+		}
+		.media-right,.media-body{
+			display: none;
+		}
+		.col-md-12{
+			width: 33%;
+			float: none;
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
+			vertical-align: top;
+			text-align: center;
+		}
+		.media-left{
+			.book-pic{
+				display: block;
+			}
+			img{
+				margin: 0 auto;
+			}
+		}
+	}
+}
+.book-box{
+	.lst-side{
+		padding-right: 15px;
+		img{
+			width: 60px;
+			max-width: none;
+		}
+		.media-right{
+			display: none;
+		}
+		h4{
+			height: auto;
+			line-height: normal;
+			border: none;
+		}
+		.sidehide{
+			display: none;
+		}
+	}
+}
+
+// 文章3种模式
+.article-box{
+	.lst-normal{
+		.hot,.recom{
+			display: none;
+		}
+	}
+	.lst-grid,.lst-side{
+		.col-md-12{
+			width: 33%;
+			float: none;
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
+			vertical-align: top;
+			border-bottom: none;
+		}
+		.article-name{
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 20px;
+			line-height: 20px;
+			word-break: normal;
+			word-wrap: normal;
+		}
+		.media{
+			padding-top: 5px;
+		}
+		.media-left{
+			display: none;
+		}
+		.article-fd{
+			.l-panel{
+				display: none;
+			}
+			.r-panel{
+				float: none!important;
+				.i{
+					padding: 0 5px 0 0;
+				}
+			}
+		}
+	}
+	.lst-side{
+		padding-right: 10px;
+		.col-md-12{
+			width: 100%;
+		}
+	}
+}
+
+
+// 用户3种模式
+.user-box{
+	.lst-normal{
+		padding-right: 10px;
+		.col-md-12{
+			width: 33%;
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
+			float: none;
+			vertical-align: top;
+		}
+	}
+	.lst-grid{
+		font-size: 0;
+		.sidehide{
+			display: none;
+		}
+		.col-md-12{
+			width: 33%;
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
+			float: none;
+			vertical-align: top;
+		}
+		.media{
+			text-align: center;
+		}
+		.media-left{
+			display: block;
+			padding-right: 0;
+			img{
+				margin: 0 auto;
+			}
+		}
+		.name{
+			font-size: 14px;
+		}
+	}
+	.lst-side{
+		.col-md-12{
+			width: 33%;
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
+			vertical-align: top;
+		}
+		.media{
+			text-align: center;
+			border-bottom: none;
+			img{
+				margin: 0 auto;
+			}
+		}
+		.media-left{
+			display: block;
+			padding-right: 0;
+		}
+		.sidehide{
+			display: none;
+		}
+		.media-body{
+			display: block;
+			width: auto;
+			.name{
+				a{
+					display: block;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					word-break: normal;
+					word-wrap: normal;
+				}
+			}
+		}
+	}
+}
+
+
+
 // 文章和图书在移动端下的样式
 @media (max-width: 768px){
+	.container{
+		.lst-grid{
+			.col-md-12{
+				width: 100%;
+			}
+		}
+		.user-box{
+			.lst-normal{
+				.col-md-12{
+					width: 100%;
+					text-align: center;
+					img{
+						margin: 0 auto;
+					}
+				}
+			}
+			.lst-side{
+				.col-md-12{
+					width: 50%;
+				}
+			}
+		}
+	}
 	.article,.book-lst{
 		.media-body{
 			display: block;
@@ -1381,14 +1598,6 @@ footer{
 			background-color: #fbfbfb;
 		}
 	}
-	.btn-default{
-		color: #fff;
-		background-color: $green;
-		color: #fff!important;
-		&:hover{
-			background-color: $nav-hover;
-		}
-	}
 	.disabled{
 		background-color: #ccc;
 	}
@@ -1583,6 +1792,231 @@ label{
 }
 
 
+.modal-body{
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.modal-title{
+	font-size: 18px;
+	.submodalt{
+		font-size: 14px;
+	}
+}
+
+// 我的主页
+.my-profile{
+	.profile-menu{
+		padding: 15px 0;
+		margin-bottom: 20px;
+		font-size: 14px;
+		background-color: #fff;
+		border-width: 1px;
+		border-style: none solid;
+		border-color: $borColor1;
+		dl{
+			margin-left: 30px;
+		}
+		dd{
+			margin-left: 27px;
+			a{
+				display: block;
+				padding: 5px 0;
+			}
+		}
+		dt{
+			font-weight: bold;
+			margin: 15px 0;
+		}
+		a{
+			color: #333;
+		}
+	}
+	.profile-panel{
+		background-color: #fff;
+		margin-bottom: 20px;
+		padding: 20px 0 20px 20px;
+		border-width: 1px;
+		border-style: none solid solid;
+		border-color: $borColor1;
+		box-shadow: 0 1px 1px rgba(0,0,0,.2);
+		.mypic{
+			width: 100px;
+			height: 100px;
+		}
+		.edit-btn{
+			padding: 0;
+			display: block;
+			width: 100px;
+			height: 30px;
+			line-height: 30px;
+			margin-top: 10px;
+		}
+	}
+	.profile-info{
+		.media-body{
+			.top{
+				border-bottom: 1px solid $borColor3;
+				font-size: 18px;
+				padding-bottom: 10px; 
+				.lv{
+					background-color: $green;
+					font-size: 16px;
+					padding: 3px;
+					margin-left: 5px;
+					color: #fff;
+					em{
+						font-style: italic;
+					}
+				}
+			}
+			.mid{
+				font-size: 14px;
+				.row{
+					margin-left: -10px;
+					margin-right: -10px;
+					.item{
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+	}
+	.g-block{
+		.media{
+			padding-top: 20px;
+		}
+	}
+}
+
+.offsetl20{ padding-left: 20px;}
+.order-panel{
+	.order-item{
+		padding: 1px;
+		background-color: #fff;
+		margin-bottom: 20px;
+		font-size: 14px;
+		.bookpic{
+			width: 80px;
+			border: 1px solid $borColor3;
+			padding: 3px;
+			max-width: none;
+		}
+		.top{
+			background-color: #f5f5f5;
+			padding: 10px 20px;
+			.l-panel{
+				font-weight: bold;
+			}
+		}
+		.mid{
+			padding: 10px 20px;
+			table{
+				width: 100%;
+				th,td{
+					table-layout: fixed;
+					padding-bottom: 5px;
+				}
+				.bp{
+					width: 90px;
+				}
+			}
+			.media-left{
+				padding-top: 20px;
+			}
+			.media-right{
+				.yf{
+					padding-top: 5px;
+				}
+				.inner{
+					white-space: nowrap;
+				}
+			}
+		}
+		.bottom{
+			border-top: 1px solid $borColor2;
+			.inner{
+				padding: 10px 20px;
+				line-height: 22px;
+			}
+			.row{
+				margin-left: -10px;
+				margin-right: -10px;
+			}
+			.bor-r{
+				text-align: right;
+				border-left: 1px solid $borColor2;
+			}
+			.fcg{
+				font-weight: bold;
+			}
+		}
+	}
+	.nopay{
+		.top{
+			background-color: #e3f5f3
+		}
+	}
+}
+
+.fcg{
+	color: $green!important;
+}
+
+.ico-dot3{
+	background-position: -40px 0;
+	margin-right: 5px;
+}
+
+.btn-default{
+	color: #fff;
+	background-color: $green;
+	color: #fff!important;
+	&:hover{
+		background-color: $nav-hover;
+	}
+}
+
+
+// 我的账户-样书
+.exchange-box{
+	.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+		border: none;
+		background: none;
+		font-weight: bold;
+	}
+	.nav-tabs>li>a:hover{
+		border-bottom: 2px solid #66c8be;
+	}
+	.nav>li>a:focus,.nav>li>a:hover {
+	    text-decoration: none;
+	    background: none;
+	}
+	.nav-tabs>li.active>a,.nav-tabs>li.active>a:hover,.nav-tabs>li.active>a:focus{
+		border-bottom: 2px solid $green;
+	}
+	.nav-tabs{
+		border-bottom: none;
+		li{
+			a{
+				border: none;
+				margin-right: 0;
+				display: block;
+				padding: 0 15px;
+				height: 42px;
+				line-height: 42px;
+				font-size: 14px;
+				color: #333;
+			}
+		}
+	}
+}
+
+
+
+
+
+
 @media (max-width: 1200px){
 	.bookdetail-page .bookdetail-panel .bookDeFd .btn{
 		margin-left: 10px 
@@ -1645,16 +2079,10 @@ label{
 	.bookdetail-page .remark{
 		margin-left: 10px;
 	}
-}
-
-.modal-body{
-	font-size: 14px;
-	line-height: 22px;
-}
-
-.modal-title{
-	font-size: 18px;
-	.submodalt{
-		font-size: 14px;
+	.media-left{
+		display: block;
+	}
+	.my-profile .profile-info .media-body .top{
+		padding-top: 10px;
 	}
 }
