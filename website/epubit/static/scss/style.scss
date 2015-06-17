@@ -484,7 +484,7 @@ body{ background-color: $body-bg; font-size: 12px; line-height: 1.5em;}
 		}
 	}
 	.media-body{
-		padding-top: 10px;
+		padding-top: 5px;
 	}
 }
 
@@ -1213,8 +1213,15 @@ footer{
 			text-align: center;
 		}
 		.media-left{
+			.bpic-panel{
+				display: table;
+				width: 100%;
+			}
 			.book-pic{
-				display: block;
+				display: table-cell;
+				height: 190px;
+				padding-bottom: 10px;
+				vertical-align: bottom;
 			}
 			img{
 				margin: 0 auto;
@@ -1225,6 +1232,10 @@ footer{
 .book-box{
 	.lst-side{
 		padding-right: 15px;
+		padding-bottom: 20px;
+		.col-md-12{
+			float: none;
+		}
 		img{
 			width: 60px;
 			max-width: none;
