@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>我的账户-样书-异步社区</title>
+	<title>我的账户-私信-异步社区</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="format-detection" content="telephone=no" />
 	<link rel="stylesheet" href="../static/css/typo.css">
+	<link rel="stylesheet" href="../static/css/kendo.css">
 	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../static/css/style.css">
 	<script src="../static/js/jquery.min.js"></script>
 	<script src="../static/js/bootstrap.min.js"></script>
 	<script src="../static/js/page.js"></script>
+	<script src="../static/js/base.js"></script>
+	<script src="../static/js/flat-ui.js"></script>
+	<script src="../static/js/kendo.js"></script>
 	<!--[if lt IE 9]>
 	<script src="../static/js/html5shiv.js"></script>
 	<script src="../static/js/respond.js"></script>
@@ -770,244 +774,79 @@
 
 				<div class="g-block exchange-box">
 					<div class="hd green">
-						<ul class="nav nav-tabs">
-							<li class="active">
-								<a href="#exchangetab1" data-toggle="tab">兑换样书</a>
-							</li>
-							<li>
-								<a href="#exchangetab2" data-toggle="tab">兑换记录</a>
-							</li>
-						</ul>
+						<h4>私信</h4>
 					</div>
 					<div class="bd clearfix">
-						<div class="blk20"></div>
-						<div class="tab-content">
-							<!-- 兑换样书 -->
-							<div class="tab-pane fade active in" id="exchangetab1">
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<div class="input-group">
-												<a href="" class="input-group-addon">筛选</a>
-												<input type="text" class="form-control">
+						<div class="row score-box">
+							<div class="col-md-4 user-lst">
+								<div>
+					                <div class="tit">最近联系人列表：</div>
+					                <div class="user-lst-panel">
+					                	<div class="item selected">
+					                        <div class="pull-left" style="margin-right: 10px">
+					                            <img src="../static/images/temp/1.png">
+					                        </div>
+					                        <div>
+					                            <span class="pull-right">
+					                                <a class="btn btn-mini" href="/Point?selectedId=1">查看对话</a>
+					                            </span>
+					                            <b>bank</b>
+					                        </div>
+					                        <div class="clearfix"></div>
+					                    </div>
+					                    <div class="item">
+					                        <div class="pull-left" style="margin-right: 10px">
+					                            <img src="../static/images/temp/1.png">
+					                        </div>
+					                        <div>
+					                            <span class="pull-right">
+					                                <a class="btn btn-mini" href="/Point?selectedId=1">查看对话</a>
+					                            </span>
+					                            <b>bank</b>
+					                        </div>
+					                        <div class="clearfix"></div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+							</div>
+							<div class="col-md-8 dialog-lst mail-lst">
+								<div class="dialog-lst-box clearfix">
+									<div class="media plcr">
+										<div class="media-left">
+											<div class="arr">
+												<div class="arr-out"></div>
+												<div class="arr-inner"></div>
 											</div>
+											<img src="../static/images/temp/1.png" alt="">
 										</div>
-										<div class="form-group">
-											<div class="input-group">
-												<a href="" class="input-group-addon">排序</a>
-												<select name="" id="" class="form-control">
-													<option value="">所需积分</option>
-												</select>
-											</div>
-										</div>
-										<div>
-											<div class="bor-box">
-												<table class="g-table">
-													<thead>
-														<tr>
-															<th>书名/书号</th>
-															<th>定价</th>
-															<th class="dhbtn"></th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr>
-															<td>
-																<div><a href="">C++并发编程实战</a></div>
-																<div class="blk5"></div>
-																<div>978-7-115-38732-5</div>
-															</td>
-															<td>40</td>
-															<td class="dhbtn">
-																<a href="" class="btn btn-default btn-small">兑换</a>
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<div><a href="">C++并发编程实战</a></div>
-																<div class="blk5"></div>
-																<div>978-7-115-38732-5</div>
-															</td>
-															<td>40</td>
-															<td class="dhbtn">
-																<a href="" class="btn btn-default btn-small">兑换</a>
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<div><a href="">C++并发编程实战</a></div>
-																<div class="blk5"></div>
-																<div>978-7-115-38732-5</div>
-															</td>
-															<td>40</td>
-															<td class="dhbtn">
-																<a href="" class="btn btn-default btn-small">兑换</a>
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<div><a href="">C++并发编程实战</a></div>
-																<div class="blk5"></div>
-																<div>978-7-115-38732-5</div>
-															</td>
-															<td>40</td>
-															<td class="dhbtn">
-																<a href="" class="btn btn-default btn-small">兑换</a>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-												<div class="pagination-box text-center">
-													<ul class="pagination">
-												        <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-												        <li><a href="#">1</a></li>
-												        <li><a href="#">2</a></li>
-												        <li><a href="#">3</a></li>
-												        <li><a href="#">4</a></li>
-												        <li><a href="#">5</a></li>
-												        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-												    </ul>
-												</div>
+										<div class="media-body">
+											<div class="con-panel">
+												<p>不能用兑换样书</p>
+												<p>2015/4/7 14:43:45</p>
+												<p>对数失败退回：40</p>
 											</div>
 										</div>
 									</div>
-
-									<div class="col-md-6">
-										<div class="bor-box">
-											<table class="g-table">
-												<thead>
-													<tr>
-														<th colspan="3">希望兑换的图书</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>
-															<div><a href="">C++并发编程实战</a></div>
-															<div class="blk5"></div>
-															<div>978-7-115-38732-5</div>
-														</td>
-														<td>
-															<div class="counter">
-																<span class="addon">+</span>
-																<input type="text" class="txt" value="0">
-																<span class="addon disable">-</span>
-															</div>
-														</td>
-														<td class="dhbtn">
-															<a href="" class="btn btn-default btn-small">删除</a>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div><a href="">C++并发编程实战</a></div>
-															<div class="blk5"></div>
-															<div>978-7-115-38732-5</div>
-														</td>
-														<td>
-															<div class="counter">
-																<span class="addon">+</span>
-																<input type="text" class="txt" value="0">
-																<span class="addon">-</span>
-															</div>
-														</td>
-														<td class="dhbtn">
-															<a href="" class="btn btn-default btn-small">删除</a>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<div><a href="">C++并发编程实战C++并发编程实战C++并发编程实战</a></div>
-															<div class="blk5"></div>
-															<div>978-7-115-38732-5</div>
-														</td>
-														<td>
-															<div class="counter">
-																<span class="addon disable">+</span>
-																<input type="text" class="txt" value="0">
-																<span class="addon">-</span>
-															</div>
-														</td>
-														<td class="dhbtn">
-															<a href="" class="btn btn-default btn-small">删除</a>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-											<div class="preson-info-box">
-												<div class="t">
-													收件人信息
-												</div>
-												<ul>
-													<li>姓名：李然</li>
-													<li>省/市：北京市</li>
-													<li>市/区：朝阳区</li>
-													<li>邮寄地址：花家地小区29号楼3单元501</li>
-													<li>邮政编码：100056</li>
-													<li>移动电话</li>
-												</ul>
-												<a href="" class="btn btn-default btn-small">修改送货地址</a>
+									<div class="media prcl">
+										<div class="media-body">
+											<div class="con-panel">
+												<p>不能用兑换样书</p>
+												<p>2015/4/7 14:43:45</p>
+												<p>对数失败退回：40</p>
 											</div>
-											<div class="remark-box">
-												<div class="t">留言</div>
-												<div class="remark-txt">
-													<textarea></textarea>
-												</div>
-												<div class="blk10"></div>
-												<div class="btn-panel clearfix">
-													<a href="" class="btn btn-default r-panel">确定兑换</a>
-												</div>
+										</div>
+										<div class="media-right">
+											<div class="arr">
+												<div class="arr-out"></div>
+												<div class="arr-inner"></div>
 											</div>
+											<img src="../static/images/temp/1.png" alt="">
 										</div>
 									</div>
 								</div>
 							</div>
-							<!-- /兑换样书 -->
-							<!-- 兑换记录 -->
-							<div class="tab-pane fade in" id="exchangetab2">
-								<div class="panel-group">
-									<div class="panel panel-default">
-										<div class="panel-heading">
-											<a href="#collapse1" data-toggle="collapse" class="clearfix">
-												<span class="l-panel">兑换单#2<span class="offsetl20">2015-06-23</span></span>
-												<span class="r-panel">已取消</span>
-											</a>
-										</div>
-										<div class="panel-collapse collapse" id="collapse1">
-											<div class="record-info">
-												<div class="top clearfix">
-													<div class="l-panel">
-														<div>C++并发编程实战</div>
-														<div class="blk5"></div>
-														<div>978-7-115-38732-5</div>
-													</div>
-													<div class="r-panel">
-														40分 X 1册 = 40分
-													</div>
-												</div>
-												<div class="mid">
-													<div class="preson-info-box">
-														<div class="t">
-															收件人信息
-														</div>
-														<ul>
-															<li>姓名：李然</li>
-															<li>省/市：北京市</li>
-															<li>市/区：朝阳区</li>
-															<li>邮寄地址：花家地小区29号楼3单元501</li>
-															<li>邮政编码：100056</li>
-															<li>移动电话</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /兑换记录 -->
 						</div>
-						<div class="blk20"></div>
 					</div>
 				</div>
 
@@ -1020,83 +859,83 @@
 					</div>
 					<div class="bd author-lst row">
 						<div class="user-box">
-						<div class="lst-normal">
-							<div class="col-md-12">
-								<div class="media">
-									<div class="media-left">
-										<a href="">
-											<img class="media-object" src="../static/images/temp/3.png" alt="">
-										</a>
+							<div class="lst-normal">
+								<div class="col-md-12">
+									<div class="media">
+										<div class="media-left">
+											<a href="">
+												<img class="media-object" src="../static/images/temp/3.png" alt="">
+											</a>
+										</div>
+										<ul class="media-body">
+											<li class="name"><a href="">七堇年七堇年七堇年七堇年</a></li>
+											<li class="sidehide">文章 236</li>
+											<li class="sidehide">著作 12</li>
+											<li class="sidehide">声望 11万2</li>
+										</ul>
 									</div>
-									<ul class="media-body">
-										<li class="name"><a href="">七堇年七堇年七堇年七堇年</a></li>
-										<li class="sidehide">文章 236</li>
-										<li class="sidehide">著作 12</li>
-										<li class="sidehide">声望 11万2</li>
-									</ul>
 								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="media">
-									<div class="media-left">
-										<a href="">
-											<img class="media-object" src="../static/images/temp/3.png" alt="">
-										</a>
+								<div class="col-md-12">
+									<div class="media">
+										<div class="media-left">
+											<a href="">
+												<img class="media-object" src="../static/images/temp/3.png" alt="">
+											</a>
+										</div>
+										<ul class="media-body">
+											<li class="name"><a href="">七堇年七堇年七堇年七堇年七堇年七堇年七堇年七堇年</a></li>
+											<li class="sidehide">文章 236</li>
+											<li class="sidehide">著作 12</li>
+											<li class="sidehide">声望 11万2</li>
+										</ul>
 									</div>
-									<ul class="media-body">
-										<li class="name"><a href="">七堇年七堇年七堇年七堇年七堇年七堇年七堇年七堇年</a></li>
-										<li class="sidehide">文章 236</li>
-										<li class="sidehide">著作 12</li>
-										<li class="sidehide">声望 11万2</li>
-									</ul>
+								</div><div class="col-md-12">
+									<div class="media">
+										<div class="media-left">
+											<a href="">
+												<img class="media-object" src="../static/images/temp/3.png" alt="">
+											</a>
+										</div>
+										<ul class="media-body">
+											<li class="name"><a href="">七堇年七堇年七堇年七堇年</a></li>
+											<li class="sidehide">文章 236</li>
+											<li class="sidehide">著作 12</li>
+											<li class="sidehide">声望 11万2</li>
+										</ul>
+									</div>
 								</div>
-							</div><div class="col-md-12">
-								<div class="media">
-									<div class="media-left">
-										<a href="">
-											<img class="media-object" src="../static/images/temp/3.png" alt="">
-										</a>
+								<div class="col-md-12">
+									<div class="media">
+										<div class="media-left">
+											<a href="">
+												<img class="media-object" src="../static/images/temp/3.png" alt="">
+											</a>
+										</div>
+										<ul class="media-body">
+											<li class="name"><a href="">七堇年</a></li>
+											<li class="sidehide">文章 236</li>
+											<li class="sidehide">著作 12</li>
+											<li class="sidehide">声望 11万2</li>
+										</ul>
 									</div>
-									<ul class="media-body">
-										<li class="name"><a href="">七堇年七堇年七堇年七堇年</a></li>
-										<li class="sidehide">文章 236</li>
-										<li class="sidehide">著作 12</li>
-										<li class="sidehide">声望 11万2</li>
-									</ul>
 								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="media">
-									<div class="media-left">
-										<a href="">
-											<img class="media-object" src="../static/images/temp/3.png" alt="">
-										</a>
+								<div class="col-md-12">
+									<div class="media">
+										<div class="media-left">
+											<a href="">
+												<img class="media-object" src="../static/images/temp/3.png" alt="">
+											</a>
+										</div>
+										<ul class="media-body">
+											<li class="name"><a href="">七堇年</a></li>
+											<li class="sidehide">文章 236</li>
+											<li class="sidehide">著作 12</li>
+											<li class="sidehide">声望 11万2</li>
+										</ul>
 									</div>
-									<ul class="media-body">
-										<li class="name"><a href="">七堇年</a></li>
-										<li class="sidehide">文章 236</li>
-										<li class="sidehide">著作 12</li>
-										<li class="sidehide">声望 11万2</li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="media">
-									<div class="media-left">
-										<a href="">
-											<img class="media-object" src="../static/images/temp/3.png" alt="">
-										</a>
-									</div>
-									<ul class="media-body">
-										<li class="name"><a href="">七堇年</a></li>
-										<li class="sidehide">文章 236</li>
-										<li class="sidehide">著作 12</li>
-										<li class="sidehide">声望 11万2</li>
-									</ul>
 								</div>
 							</div>
 						</div>
-					</div>
 					</div>
 				</div>
 			</div>

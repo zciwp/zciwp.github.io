@@ -30,6 +30,20 @@ body{ background-color: $body-bg; font-size: 12px; line-height: 1.5em;}
 	background: url(../images/ico.png) no-repeat;
 }
 
+a{
+	color: $green;
+	&:hover{
+		color: $nav-hover;
+	}
+}
+
+.share{
+	cursor: pointer;
+	span{
+		cursor: pointer;
+	}
+}
+
 .wp50{
 	width: 50px!important;
 	height: 50px!important;
@@ -47,6 +61,7 @@ body{ background-color: $body-bg; font-size: 12px; line-height: 1.5em;}
 .blk5{ height: 5px; width: 100%; overflow: hidden;}
 .blk10{ height: 10px; width: 100%; overflow: hidden;}
 .blk15{ height: 15px; width: 100%; overflow: hidden;}
+.blk20{ height: 20px; width: 100%; overflow: hidden;}
 .l-panel{
 	float: left;
 }
@@ -1204,7 +1219,7 @@ footer{
 			display: none;
 		}
 		.col-md-12{
-			width: 33%;
+			width: 25%;
 			float: none;
 			display: inline-block;
 			*display: inline;
@@ -1837,7 +1852,7 @@ label{
 		}
 		dt{
 			font-weight: bold;
-			margin: 15px 0;
+			margin: 15px 0 5px;
 		}
 		a{
 			color: #333;
@@ -1850,10 +1865,10 @@ label{
 		border-width: 1px;
 		border-style: none solid solid;
 		border-color: $borColor1;
-		box-shadow: 0 1px 1px rgba(0,0,0,.2);
 		.mypic{
 			width: 100px;
 			height: 100px;
+			max-width: none;
 		}
 		.edit-btn{
 			padding: 0;
@@ -1898,6 +1913,53 @@ label{
 			padding-top: 20px;
 		}
 	}
+	.custom-bg{
+		padding: 2px 2px 0;
+		background-color: #fff;
+		border-width: 1px;
+		border-style: none solid;
+		border-color: #e7e7e7;
+		margin-bottom: -48px;
+		text-align: center;
+	}
+}
+
+.private-profile-page{
+	.profile-info{
+		.media-body{
+			.top{
+				border-bottom: none;
+			}
+			.mid{
+				.num-panel{
+					padding-right: 20px;
+				}
+				.num-item{
+					display: inline-block;
+					*display: inline;
+					zoom: 1;
+					border-left: 1px solid $borColor2;
+					margin-top: 10px;
+					a{
+						display: block;
+						font-size: 14px;
+						color: #333;
+						text-align: center;
+						padding: 10px;
+						&:hover{
+							text-decoration: none;
+						}
+					}
+					.num{
+						display: block;
+						font-family: Arial,sans-serif;
+						font-size: 16px;
+						padding-bottom: 10px;
+					}
+				}
+			}
+		}
+	}  
 }
 
 .offsetl20{ padding-left: 20px;}
@@ -1988,44 +2050,379 @@ label{
 	}
 }
 
+.btn{
+	border-radius: 0;
+}
+
+.btn-small{
+	border-radius: 0;
+	padding: 3px 12px;
+	font-size: 12px;
+}
+
 
 // 我的账户-样书
-.exchange-box{
-	.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
-		border: none;
-		background: none;
-		font-weight: bold;
-	}
-	.nav-tabs>li>a:hover{
-		border-bottom: 2px solid #66c8be;
-	}
-	.nav>li>a:focus,.nav>li>a:hover {
-	    text-decoration: none;
-	    background: none;
-	}
-	.nav-tabs>li.active>a,.nav-tabs>li.active>a:hover,.nav-tabs>li.active>a:focus{
-		border-bottom: 2px solid $green;
-	}
-	.nav-tabs{
-		border-bottom: none;
-		li{
-			a{
-				border: none;
-				margin-right: 0;
-				display: block;
-				padding: 0 15px;
-				height: 42px;
-				line-height: 42px;
-				font-size: 14px;
-				color: #333;
+.g-block{
+	.hd{
+		.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+			border: none;
+			background: none;
+			font-weight: bold;
+		}
+		.nav-tabs>li>a:hover{
+			border-bottom: 2px solid #66c8be;
+		}
+		.nav>li>a:focus,.nav>li>a:hover {
+		    text-decoration: none;
+		    background: none;
+		}
+		.nav-tabs>li.active>a,.nav-tabs>li.active>a:hover,.nav-tabs>li.active>a:focus{
+			border-bottom: 2px solid $green;
+		}
+		.nav-tabs{
+			border-bottom: none;
+			li{
+				a{
+					border: none;
+					margin-right: 0;
+					display: block;
+					padding: 0 15px;
+					height: 42px;
+					line-height: 42px;
+					font-size: 14px;
+					color: #333;
+				}
 			}
 		}
 	}
 }
+.exchange-box{
+	.bd{
+		padding-right: 15px;
+	}
+	.panel-default>.panel-heading{
+		padding: 0;
+	}
+	.panel-group{
+		.panel-heading{
+			a{
+				display: block;
+				padding: 10px 15px;
+				color: #333;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.record-info{
+		.top{
+			padding: 10px 15px;
+		}
+		.mid{
+			border-top: 1px solid #e8e8e8;
+		}
+	}
+}
 
+.input-group-addon{
+	background-color: $green;
+	color: #fff;
+}
 
+.g-table{
+	width: 100%;
+	font-size: 14px;
+	th{
+		background-color: #f5f5f5;
+		padding: 10px 20px;
+	}
+	td{
+		padding: 10px 20px;
+		border-bottom: 1px solid #e8e8e8;
+	}
+	.dhbtn{
+		width: 90px;
+	}
+}
 
+a.input-group-addon{
+	&:hover{
+		color: #fff;
+		background-color: $nav-hover;
+		text-decoration: none;
+	}
+}
 
+.bor-box{
+	border: 1px solid #e8e8e8;
+	margin-bottom: 20px;
+}
+
+.preson-info-box,.remark-box{
+	font-size: 14px;
+	padding: 10px 20px;
+	border-bottom: 1px solid #e8e8e8;
+	.t{
+		padding-bottom: 10px;
+	}
+	li{
+		padding-bottom: 8px;
+	}
+}
+
+.remark-box{
+	.remark-txt{
+		border: 1px solid #e8e8e8;
+		padding: 5px;
+		textarea{
+			width: 100%;
+			height: 50px;
+			border: none;
+		}
+	}
+}
+
+.counter{
+	font-size: 0;
+	border: 1px solid #e8e8e8;
+	display: inline-block;
+	*display: inline;;
+	zoom: 1;
+	white-space: nowrap;
+	.addon{
+		display: inline-block;
+		*display: inline;;
+		zoom: 1;
+		vertical-align: middle;
+		width: 22px;
+		height: 22px;
+		line-height: 22px;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		background-color: #e8e8e8;
+		color: #666;
+		cursor: pointer;
+	}
+	.txt{
+		text-align: center;
+		display: inline-block;
+		*display: inline;;
+		zoom: 1;
+		vertical-align: middle;
+		width: 35px;
+		height: 22px;
+		line-height: 22px;
+		font-size: 12px;
+		border: none;
+		background-color: #fff;
+	}
+	.disable{
+		color: #c1c1c1;
+		cursor: default;
+	}
+}
+
+// 我的账户-积分
+.score-box{
+	.tit{
+		height: 42px;
+		line-height: 42px;
+		font-weight: bold;
+		padding-left: 10px;
+		border-bottom: 1px solid #e8e8e8;
+	}
+	.user-lst{
+		border-right: 1px solid #e8e8e8;
+		padding-right: 0;
+		.item{
+			padding: 15px 10px;
+			border-bottom: 1px solid #e8e8e8;
+		}
+		.user-lst-panel{
+			max-height: 700px;
+			overflow-y: auto;
+			.selected{ background-color: #c4eae6}
+		}
+	}
+	.dialog-lst{
+		margin-left: -1px;
+		border-left: 1px solid #e8e8e8;
+		padding-left: 0;
+		.tit{
+			padding-left: 20px;
+		}
+		.sendscore-box{
+			margin: 0 20px;
+			padding: 20px 0;
+			border-bottom: 1px dotted #e8e8e8;
+		}
+		.k-state-default>.k-select,.k-autocomplete.k-state-default, .k-picker-wrap.k-state-default, .k-numeric-wrap.k-state-default, .k-dropdown-wrap.k-state-default{
+			border-color: #e8e8e8;
+		}
+		.remark-panel{
+			margin: 0 20px;
+			.remark-txt{
+				border: 1px solid #e8e8e8;
+				padding: 5px;
+				textarea{
+					border: none;
+					width: 100%;
+					height: 60px;
+				}
+			}
+		}
+		.control-label{
+			text-align: left;
+		}
+	}
+
+}
+
+.dialog-lst-box{
+	border-top: 1px solid #e8e8e8;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	overflow-y: auto;
+	margin-top: 10px;
+	max-height: 500px; 
+	img{
+		max-width: none;
+	}
+	.arr{
+		position: relative;
+		.arr-inner,.arr-out{
+			position: absolute;
+			top: 10px;
+			border-width: 10px;
+		}
+	}
+	.media-left{
+		padding-right: 15px;
+	}
+	.media-right{
+		padding-left: 15px;
+	}
+	.plcr{
+		.con-panel{
+			border: 1px solid #e8e8e8;
+			background-color: #f9f9f9;
+		}
+		.arr-inner{
+			right: -17px;
+			border-style: dashed solid dashed none;
+			border-color: transparent #f9f9f9 transparent transparent;
+		}
+		.arr-out{
+			right: -15px;
+			border-style: dashed solid dashed none;
+			border-color: transparent #e8e8e8 transparent transparent;
+		}
+	}
+	.prcl{
+		.con-panel{
+			border: 1px solid #b8d6d3;
+			background-color: #d9f1ef;
+			text-align: left;
+		}
+		.arr-inner{
+			left: -17px;
+			border-style: dashed none dashed solid;
+			border-color: transparent transparent transparent #d9f1ef;
+		}
+		.arr-out{
+			left: -15px;
+			border-style: dashed none dashed solid;
+			border-color: transparent transparent transparent #b8d6d3;
+		}
+		.media-body{
+			text-align: right;
+		}
+	}
+	.con-panel{
+		display: inline-block;
+		*display: inline;
+		zoom: 1;
+		padding: 10px;
+		border-radius: 3px;
+		width: 300px;
+		line-height: 24px;
+	}
+}
+.mail-lst{
+	.dialog-lst-box{
+		border-top: none;
+		margin-top: 0;
+	}
+}
+
+// 新提醒
+.notice-lst{
+	.media{
+		font-size: 14px;
+		line-height: 22px;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px dotted $borColor2;
+		.media-left{
+			img{
+				max-width: none;
+			}
+		}
+	}
+	a{
+		color: $green;
+		display: block;
+		&:hover{
+			text-decoration: none;
+			color: #666;
+		}
+	}
+}
+
+.time{
+	color: #999;
+}
+
+// 地址管理
+.addr-lst{
+	.t{
+		font-size: 16px;
+		font-weight: bold;
+		padding-bottom: 20px;
+	}
+	.form-group{
+		.checkbox{
+			margin-top: 4px
+		}
+	}
+}
+
+//订阅
+.rssbook{
+	.author{
+		font-size: 12px;
+		color: #999;
+		padding-top: 3px;
+		text-align: left;
+	}
+	.cancel-btn{
+		background-color: #ccc;
+		color: #fff;
+		font-size: 12px;
+		padding: 3px 10px;
+	}
+	.lst-grid{
+		.book-name{
+			text-align: left;
+		}
+	}
+	.cancel-btn-panel{
+		padding-top: 10px;
+		text-align: left;
+	}
+} 
 
 
 @media (max-width: 1200px){
@@ -2045,6 +2442,9 @@ label{
 	}
 	.bookdetail-page .bookdetail-panel .bookDeFd .stp{
 		display: none;
+	}
+	.private-profile-page .profile-info .media-body .mid .pull-right{
+		float: none!important;
 	}
 }
 
