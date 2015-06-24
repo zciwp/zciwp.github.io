@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>图书-异步社区</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="format-detection" content="telephone=no" />
@@ -396,7 +396,7 @@
 					<li class="dropdown">
 						<div class="arr"><span class="addon">15</span></div>
 						<a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-							<span class="glyphicon glyphicon-envelope hidden-xs"></span>
+							<span class="glyphicon glyphicon-bell hidden-xs"></span>
 							<span class="visible-xs-inline-block">私信</span>
 							<b class="caret visible-xs-inline-block"></b>
 						</a>
@@ -440,7 +440,7 @@
 									<span class="top glyphicon glyphicon-heart"></span>
 									<span class="txt">收藏</span>
 								</a>
-								<a data-toggle="popover" data-content="<div class='share'><div><a href='' class='ico-wx'>微信</a><a href='' class='ico-wb'>微博</a><a href='' class='ico-pyq'>朋友圈</a></div></div>" data-placement="left" data-html="true" class="share">
+								<a data-toggle="popover" data-content="<div class='share-ico-panel'><div><a href='' class='share-ico ico-wb'></a><a href='' class='share-ico ico-db'></a><a href='' class='share-ico ico-qq'></a><a href='' class='share-ico ico-in'></a></div></div>" data-placement="left" data-html="true" class="share">
 									<span class="top glyphicon glyphicon-share"></span>
 									<span class="txt">分享</span>
 								</a>
@@ -714,6 +714,121 @@
 							</div>
 						</div>
 					</div>
+					<div class="errata-commit">
+						<button id="errata-commit" class="btn btn-default">提交勘误</button>
+					</div>
+					<link rel="stylesheet" href="../static/css/simditor.css">
+					<div id="errata-form">
+						<form action="/Comment/Add" class="comment-box" data-ajax="true" data-ajax-failure="ErrataFailure" data-ajax-method="Post" data-ajax-success="ErrataSuccess" id="form0" method="post"><input name="__RequestVerificationToken" type="hidden" value="-6_DGDVdCUndHAYy-LI7e4juD97rdSc5Z4EARh6hWk-Myod5RVsvZunNMldDMr9DFu2bPui03bUUJTUf3-ERjr2zUu6-x2x6OJpB83KSo93CT8Qfx2AuJC_jxK_jsJUqGu1WEAi4HSNgU8utmhVkQw2">    <input name="IsErrata" value="true" type="hidden">
+						    <input name="BookId" value="1616" type="hidden">
+						    <input name="commentBlockFor" value="Book" type="hidden">
+						        <div class="form-inline" style="margin-bottom:10px;">
+						            <label class="control-label" for="Page">页码</label>
+						            <input class="form-control" id="Page" name="Page" size="6" type="text" value="">
+						            <label class="control-label" for="Line">　页内位置（行数）</label>
+						            <input class="form-control" id="Line" name="Line" size="6" type="text" value="">
+						            <label class="control-label" for="Print">　发现勘误印次</label>
+						            <input class="form-control" data-val="true" data-val-number="The field Print must be a number." data-val-required="Print 字段是必需的。" id="Print" name="Print" size="6" type="text" value="">
+						        </div>
+						<div class="simditor">
+						  <div class="simditor-wrapper"><div class="simditor-toolbar" style="width: 708px; top: 0px; left: 112px;"><ul><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-bold" href="javascript:;" title="加粗文字 ( Ctrl + b )"><span class="fa fa-bold"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-italic" href="javascript:;" title="斜体文字 ( Ctrl + i )"><span class="fa fa-italic"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-underline" href="javascript:;" title="下划线文字 ( Ctrl + u )"><span class="fa fa-underline"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-strikethrough" href="javascript:;" title="删除线文字"><span class="fa fa-strikethrough"></span></a></li><li><span class="separator"></span></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-ol" href="javascript:;" title="有序列表 ( ctrl + / )"><span class="fa fa-list-ol"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-ul" href="javascript:;" title="无序列表 ( Ctrl + . )"><span class="fa fa-list-ul"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-blockquote" href="javascript:;" title="引用"><span class="fa fa-quote-left"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-code" href="javascript:;" title="插入代码"><span class="fa fa-code"></span></a></li><li><span class="separator"></span></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-link" href="javascript:;" title="插入链接"><span class="fa fa-link"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-image" href="javascript:;" title="插入图片"><span class="fa fa-picture-o"></span></a><div class="toolbar-menu toolbar-menu-image"><ul><li><a tabindex="-1" unselectable="on" class="menu-item menu-item-upload-image" href="javascript:;" title="本地图片"><span>本地图片</span><input type="file" title="上传图片" accept="image/*"></a></li><li><a tabindex="-1" unselectable="on" class="menu-item menu-item-external-image" href="javascript:;" title="外链图片"><span>外链图片</span></a></li></ul></div></li><li><span class="separator"></span></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-indent" href="javascript:;" title="向右缩进 (Tab)"><span class="fa fa-indent"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-outdent" href="javascript:;" title="向左缩进 (Shift + Tab)"><span class="fa fa-outdent"></span></a></li></ul></div>
+						    <div class="simditor-placeholder" style="top: 41px;"></div>
+						    <div class="simditor-body" contenteditable="true"><p><br></p></div>
+						  </div>
+						<textarea class="text-box multi-line" data-val="true" data-val-length="字段 Content 必须是最大长度为 2000 的字符串。" data-val-length-max="2000" data-val-required="Content 字段是必需的。" id="Content" name="Content" style="display: none;"></textarea><div tabindex="-1" contenteditable="true" class="simditor-paste-area" style="width: 1px; height: 1px; overflow: hidden; position: fixed; right: 0px; bottom: 100px;"></div><textarea tabindex="-1" class="simditor-clean-paste-area" style="width: 1px; height: 1px; overflow: hidden; position: fixed; right: 0px; bottom: 101px;"></textarea><div class="simditor-popover code-popover"><div class="code-settings">
+						  <div class="settings-field">
+						    <select class="select-lang">
+						      <option value="-1">选择程序语言</option>
+						      <option value="bash">Bash</option>
+						      <option value="c++">C++</option>
+						      <option value="cs">C#</option>
+						      <option value="css">CSS</option>
+						      <option value="erlang">Erlang</option>
+						      <option value="less">Less</option>
+						      <option value="scss">Sass</option>
+						      <option value="diff">Diff</option>
+						      <option value="coffeeScript">CoffeeScript</option>
+						      <option value="html">Html,XML</option>
+						      <option value="json">JSON</option>
+						      <option value="java">Java</option>
+						      <option value="js">JavaScript</option>
+						      <option value="markdown">Markdown</option>
+						      <option value="oc">Objective C</option>
+						      <option value="php">PHP</option>
+						      <option value="perl">Perl</option>
+						      <option value="python">Python</option>
+						      <option value="ruby">Ruby</option>
+						      <option value="sql">SQL</option>
+						    </select>
+						  </div>
+						</div></div><div class="simditor-popover link-popover"><div class="link-settings">
+						  <div class="settings-field">
+						    <label></label>
+						    <input class="link-text" type="text">
+						    <a class="btn-unlink" href="javascript:;" title="" tabindex="-1"><span class="fa fa-unlink"></span></a>
+						  </div>
+						  <div class="settings-field">
+						    <label></label>
+						    <input class="link-url" type="text">
+						  </div>
+						</div></div><div class="simditor-popover image-popover"><div class="link-settings">
+						  <div class="settings-field">
+						    <label></label>
+						    <input class="image-src" type="text" tabindex="1">
+						    <a class="btn-upload" href="javascript:;" title="" tabindex="-1">
+						      <span class="fa fa-upload"></span>
+						    <input type="file" title="" accept="image/*"></a>
+						  </div>
+						  <div class="settings-field">
+						    <label></label>
+						    <input class="image-size" id="image-width" type="text" tabindex="2">
+						    <span class="times">×</span>
+						    <input class="image-size" id="image-height" type="text" tabindex="3">
+						    <a class="btn-restore" href="javascript:;" title="" tabindex="-1">
+						      <span class="fa fa-reply"></span>
+						    </a>
+						  </div>
+						</div></div></div>
+						<button id="comment-submit" class="btn btn-default pull-right">发表</button>
+						    <span id="errata-error"></span>
+						</form><script type="text/javascript">
+						    function CommentSuccess(data) {
+						        $('#comment-block').html(data);
+						        $('#comment-error').text();
+						        $('#Content').val('');
+						    }
+						    function CommentFailure(xhr) {
+						         $('#comment-error').html(xhr.responseText);
+						    }
+						    function ErrataSuccess(data) {
+						        $('#errata-block').html(data);
+						        $('#errata-error').text();
+						        $('#Content').val('');
+						    }
+						    function ErrataFailure(xhr) {
+						        $('#errata-error').html(xhr.responseText);
+						    }
+						    $(function () {
+						        var text;
+						        if ('true' == 'true') {
+						            text = $('#errata-form textarea[name=Content]');
+						        } else {
+						            text = $('#comment-form textarea[name=Content]');
+						        }
+						        var editor = new Simditor({
+						            textarea: text,
+						            defaultImage: '/Content/front/lib/simditor/images/image.png',
+						            upload: {
+						                url: 'http://file.epubit.com.cn/upload',
+						                params: null,
+						                fileKey: null,
+						                connectionCount: 3,
+						                leaveConfirm: '正在上传文件，如果离开上传会自动取消'
+						            }
+						        });
+						    });
+						</script>
+						</div>
 				</div>
 			</div>
 

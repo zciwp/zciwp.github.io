@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>我的账户-订单-异步社区</title>
+	<title>我的账户-订单下单-异步社区</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -768,206 +768,126 @@
 					</div>
 				</div>
 
-				<div class="order-panel">
-					<div class="order-item nopay">
-						<div class="top clearfix">
-							<div class="l-panel">
-								2015-6-11<span class="offsetl20">订单号:0975622</span>
-							</div>
-							<div class="r-panel">
-								请在30分钟以内支付<span class="offsetl20">订单状态：待付款</span>
-							</div>
-						</div>
-						<div class="mid">
-							<div class="media">
-								<div class="media-body">
-									<table>
-										<tr>
-											<th>书名：</th>
-											<th>版本：</th>
-											<th>数量：</th>
-											<th>定价：</th>
-										</tr>
-										<tr>
-											<td class="book-name"><a href="">Adobe Photoshop CC</a></td>
-											<td>纸质版</td>
-											<td>10</td>
-											<td>49.00元</td>
-										</tr>
-										<tr>
-											<td class="book-name"><a href="">经典教程（彩色版）</a></td>
-											<td>纸质版</td>
-											<td>10</td>
-											<td>49.00元</td>
-										</tr>
-									</table>
-								</div>
-								<div class="media-right">
-									 <div class="inner">
-									 	运费：
-									 	<div class="yf">11.00元</div>
-									 </div>
-								</div>
-							</div>
-						</div>
-						<div class="bottom clearfix">
-							<div class="row">
-								<div class="col-md-6 col-sm-6">
-									<div class="inner">
-										<div>收货信息：</div>
-										<div>张峰</div>     
-										<div>北京市丰台区成寿寺路11号邮电出版大厦</div>
-										<div>100164</div>
-										<div>13523768909</div>
-									</div>
-								</div>
-								<div class="col-md-6 col-sm-6 bor-r">
-									<div class="inner">
-										<div>总计金额<span class="offsetl20">90.00 元</span></div>
-										<div>优惠金额<span class="offsetl20">-0.00 元</span></div>
-										<div>积分代替<span class="offsetl20">-0.00 元</span></div>
-										<div class="fcg">支付金额<span class="offsetl20">90.00 元</span></div>
-										<div>赠送积分<span class="offsetl20">0 分</span></div>
-										<div class="blk5"></div>
-										<div>
-											<a href="#bank-list" class="btn btn-default btn-s" data-toggle="collapse">用网银付款</a>
-											<a href="" class="btn btn-default btn-s">用支付宝付款</a>
-											<a href="" class="btn btn-default btn-s">取消订单</a>
+				<div class="g-block">
+					<div class="hd green">
+						<h4>我的购书单</h4>
+					</div>
+					<div class="bd order-lst-panel clearfix">
+						<div class="order-panel">
+							<div class="order-item">
+								<div class="mid">
+									<div class="media">
+										<div class="media-body">
+											<table>
+												<tbody><tr>
+													<th>书名：</th>
+													<th>版本：</th>
+													<th>数量：</th>
+													<th>定价：</th>
+													<th class="del">删除</th>
+												</tr>
+												<tr>
+													<td class="book-name"><a href="">Adobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CC</a></td>
+													<td>纸质版</td>
+													<td>10 <a href="">修改</a></td>
+													<td>49.00元</td>
+													<td class="del"><a href="">&times;</a></td>
+												</tr>
+												<tr>
+													<td class="book-name"><a href="">经典教程（彩色版）</a></td>
+													<td>纸质版</td>
+													<td><form action="/User/ModifyCartItem/35" method="post">    <input name="id" value="35" type="hidden">
+													    <input name="quantity" value="1" style="width:50px">
+													    <button class="btn btn-xs btn-primary">保存</button>
+													<a data-ajax="true" data-ajax-mode="replace" data-ajax-update="#quantity-35-1" href="/User/CartItemQuantity/35?edition=Paper">取消</a></form>
+													</td>
+													<td>49.00元</td>
+													<td class="del"><a href="">&times;</a></td>
+												</tr>
+											</tbody></table>
+										</div>
+										<div class="media-right">
+											 <div class="inner">
+											 	运费：
+											 	<div class="yf">11.00元</div>
+											 </div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="clearfix">
-							<ul id="bank-list" class="bank-list collapse">
-	                            <li>
-	                                <a href="/users/pay/11?bank=ICBCB2C" target="_blank">中国工商银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=CMB" target="_blank">招商银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=CCB" target="_blank">中国建设银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=ABC" target="_blank">中国农业银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=BOCB2C" target="_blank">中国银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=SPDB" target="_blank">上海浦东发展银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=CIB" target="_blank">兴业银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=GDB" target="_blank">广东发展银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=SDB" target="_blank">深圳发展银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=CMBC" target="_blank">中国民生银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=COMM" target="_blank">交通银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=CITIC" target="_blank">中信银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=CEBBANK" target="_blank">光大银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=HZCBB2C" target="_blank">杭州银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=SHBANK" target="_blank">上海银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=SPABANK" target="_blank">平安银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=BJBANK" target="_blank">北京银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=NBBANK" target="_blank">宁波银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=BJRCB" target="_blank">北京农村商业银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=fdb101" target="_blank">富滇银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=PSBC-DEBIT" target="_blank">中国邮政储蓄银行</a>
-	                            </li>
-	                    </ul>
-						</div>
-					</div>
-
-					<div class="order-item">
-						<div class="top clearfix">
-							<div class="l-panel">
-								2015-6-11<span class="offsetl20">订单号:0975622</span>
-							</div>
-							<div class="r-panel">
-								<span class="offsetl20">订单状态：已发货</span>
-							</div>
-						</div>
-						<div class="mid">
-							<div class="media">
-								<div class="media-body">
-									<table>
-										<tr>
-											<th>书名：</th>
-											<th>版本：</th>
-											<th>数量：</th>
-											<th>定价：</th>
-										</tr>
-										<tr>
-											<td class="book-name"><a href="">Adobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CC</a></td>
-											<td>纸质版</td>
-											<td>10</td>
-											<td>49.00元</td>
-										</tr>
-										<tr>
-											<td class="book-name"><a href="">经典教程（彩色版）</a></td>
-											<td>纸质版</td>
-											<td>10</td>
-											<td>49.00元</td>
-										</tr>
-									</table>
-								</div>
-								<div class="media-right">
-									 <div class="inner">
-									 	运费：
-									 	<div class="yf">11.00元</div>
-									 </div>
+						<div class="bor-t">
+							<div class="tit">收货信息</div>
+							<div class="addr">
+								<table>
+									<thead>
+										<th>姓名</th>
+										<th>省份</th>
+										<th>城市</th>
+										<th>街道信息</th>
+										<th>邮编</th>
+										<th>电话</th>
+									</thead>
+									<tbody>
+										<td>张峰</td>
+										<td>北京市</td>
+										<td>北京市</td>
+										<td>丰台区成寿寺11号邮电出版大厦</td>
+										<td>100064</td>
+										<td>12345678901</td>
+									</tbody>
+								</table>
+								<div class="blk10"></div>
+								<div>
+									<a href="" data-toggle="modal" data-target="#myaddrModal">修改送货地址</a>
 								</div>
 							</div>
 						</div>
-						<div class="bottom clearfix">
-							<div class="row">
-								<div class="col-md-6 col-sm-6">
-									<div class="inner">
-										<div>收货信息：</div>
-										<div>张峰</div>     
-										<div>北京市丰台区成寿寺路11号邮电出版大厦</div>
-										<div>100164</div>
-										<div>13523768909</div>
+						<div class="bor-t">
+							<div class="tit">优惠码及积分</div>
+							<div class="row yhm">
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="请输入优惠码">
+											<a href="" class="input-group-addon">使用优惠码</a>
+										</div>
 									</div>
 								</div>
-								<div class="col-md-6 col-sm-6 bor-r">
-									<div class="inner">
-										<div>总计金额<span class="offsetl20">90.00 元</span></div>
-										<div>优惠金额<span class="offsetl20">-0.00 元</span></div>
-										<div>积分代替<span class="offsetl20">-0.00 元</span></div>
-										<div class="fcg">支付金额<span class="offsetl20">90.00 元</span></div>
-										<div>赠送积分<span class="offsetl20">0 分</span></div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="请输入积分">
+											<a href="" class="input-group-addon">使用积分</a>
+										</div>
 									</div>
 								</div>
+								<div class="col-md-4">
+									<p class="help-block">(可以使用1688积分)</p>
+								</div>
+							</div>
+						</div>
+						<div class="bor-t">
+							<div class="tit">订单结算</div>
+							<div class="text-right total">
+								<div>合计金额：84.40 元</div>
+								<div>实际支付：84.40 元</div>
+							</div>
+						</div>
+						<div class="bor-t">
+							<div class="blk10"></div>
+							<div class="text-center form-group">
+								<div class="checkbox">
+							        <label>
+							          <input type="checkbox" checked>  我已经阅读并同意 <a href="">极思社区图书购买及使用协议</a>
+							        </label>
+							    </div>
+							    <div class="blk20"></div>
+							    <div class="pay-box">
+							    	<a href="" class="btn btn-default">确定下单</a>
+							    	<a href="" class="btn btn-default">继续选书</a>
+							    </div>
+							    <div class="blk20"></div>
 							</div>
 						</div>
 					</div>
@@ -1074,6 +994,74 @@
 			All rights reserved
 		</div>
 	</footer>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="myaddrModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">
+	        	增加新地址
+	        </h4>
+	      </div>
+	      <div class="modal-body">
+			<form action="">
+								<div class="addr-form form-horizontal">
+									<div class="form-group">
+										<label class="col-sm-3 control-label">收件人姓名：</label>
+										<div class="col-sm-8">
+								          <input class="form-control" placeholder="">
+								        </div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label">省/市：</label>
+										<div class="col-sm-8">
+								          <input class="form-control" placeholder="">
+								        </div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label">市/区：</label>
+										<div class="col-sm-8">
+								          <input class="form-control" placeholder="">
+								        </div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label">地址：</label>
+										<div class="col-sm-8">
+								          <input class="form-control" placeholder="">
+								        </div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label">邮编：</label>
+										<div class="col-sm-8">
+								          <input class="form-control" placeholder="">
+								        </div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label">联系电话：</label>
+										<div class="col-sm-8">
+								          <input class="form-control" placeholder="">
+								        </div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label">设为默认：</label>
+										<div class="col-sm-8">
+								          <input type="checkbox" class="checkbox">
+								        </div>
+									</div>
+								</div>
+							</form>
+	      </div>
+	      <div class="modal-footer">
+	      	<button type="button" class="btn btn-default">添加</button>
+	        <button type="button" class="btn btn-sec" data-dismiss="modal">关闭</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 
 </body>
 </html>

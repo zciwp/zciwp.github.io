@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>我的账户-订单-异步社区</title>
+	<title>写作-异步社区</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="format-detection" content="telephone=no" />
 	<link rel="stylesheet" href="../static/css/typo.css">
 	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/simditor.css">
+	<link rel="stylesheet" href="../static/css/kendo.css">
 	<link rel="stylesheet" href="../static/css/style.css">
 	<script src="../static/js/jquery.min.js"></script>
 	<script src="../static/js/bootstrap.min.js"></script>
@@ -680,387 +682,323 @@
 		</div>
 	</div>
 
-	<div class="container page-box my-profile">
-		<div class="row">
-			<div class="col-md-3">
-				<div class="profile-menu">
-					<dl>
-						<dt><span class="ico ico-dot3"></span>订单中心</dt>
-						<dd><a href="">我的订单</a></dd>
-						<dd><a href="">购书单</a></dd>
-						<dd><a href="">书架</a></dd>
-						<dd><a href="">样书</a></dd>
-						<dd><a href="">积分（5269）</a></dd>
-						<dd><a href="">地址管理</a></dd>
-					</dl>
-					<dl>
-						<dt><span class="ico ico-dot3"></span>关注中心</dt>
-						<dd><a href="">新提醒</a></dd>
-						<dd><a href="">新私信</a></dd>
-						<dd><a href="">收藏</a></dd>
-						<dd><a href="">订阅</a></dd>
-					</dl>
-					<dl>
-						<dt><span class="ico ico-dot3"></span>作译者服务</dt>
-						<dd><a href="">我的图书</a></dd>
-						<dd><a href="">我的稿费</a></dd>
-						<dd><a href="">图书销售</a></dd>
-					</dl>
-				</div>
+	<div class="container page-box write-page">
+
+		<div class="g-block">
+			<div class="hd green">
+				<h4>写作</h4>
 			</div>
+			<div class="bd">
+				<!-- 写作结构开始 和线上一致 -->
+				<div class="row">
+			<div class="col-md-12">
+				<form action="/Article/Write" data-ajax="true" data-ajax-failure="errorMessage" data-ajax-success="successMessage" id="form0" method="post" novalidate="novalidate">
+					<input name="__RequestVerificationToken" type="hidden" value="197ZFoJJ9RcqjV4sNjZvINixuWmXMNwCQI7XfkKhHt0XJREY0FsSFp7CkYP1Xmxum-acRkzgTJNXNFHor-SFSrkM6qn3TECw6tGnTqvf8isehjuuCRhZfuMFZZWXKRRS-fx9yqXLtDGqyQYjkNl0IA2">
+					<div class="form-horizontal">
 
-			<div class="col-md-9">
-				<div class="profile-panel">
-					<div class="media profile-info">
-						<div class="media-left">
-							<img src="../static/images/temp/3.png" alt="" class="mypic">
-							<a href="" class="btn btn-default edit-btn">编辑信息</a>
-						</div>
-						<div class="media-body">
-							<div class="top">赫贤<span class="lv"><em>v</em>4</span></div>
-							<div class="mid disable-edit">
-								<form>
-									<div class="row">
-										<div class="col-md-4 item">
-											<label>所在地：</label>
-											<span>北京市朝阳区</span>
-										</div>
-										<div class="col-md-4 item">
-											<label>所在地：</label>
-											<span>北京市朝阳区</span>
-										</div>
-										<div class="col-md-4 item">
-											<label>所在地：</label>
-											<span>北京市朝阳区</span>
-										</div>
-										<div class="col-md-12 item">
-											<label>个人网站 ：</label>
-											<span>Manabuqiao.lofter.com.cn</span>
-										</div>
-										<div class="col-md-4 item">
-											<label>关注好友 ：</label>
-											<span>56</span>
-										</div>
-										<div class="col-md-4 item">
-											<label>粉丝:</label>
-											<span>23789</span>
-										</div>
-										<div class="col-md-4 item">
-											<label>文章 ：</label>
-											<span>424</span>
-										</div>
-										<div class="col-md-4 item">
-											<label>关注领域 ：</label>
-											<span>4</span>
-										</div>
-										<div class="col-md-4 item">
-											<label>推荐:</label>
-											<span>999</span>
-										</div>
-										<div class="col-md-4 item">
-											<label>评论：</label>
-											<span>56</span>
-										</div>
-									</div>
-								</form>
+						<input data-val="true" data-val-number="The field Id must be a number." id="Id" name="Id" type="hidden" value="">
+						<div class="form-group">
+							<label class="control-label col-md-2" for="Subject">标题</label>
+							<div class="col-md-10">
+								<input class="form-control text-box single-line" data-val="true" data-val-length="字段 标题 必须是最大长度为 50 的字符串。" data-val-length-max="50" data-val-required="标题 字段是必需的。" id="Subject" name="Subject" type="text" value="">
+								<span class="field-validation-valid text-danger" data-valmsg-for="Subject" data-valmsg-replace="true"></span>
 							</div>
 						</div>
-					</div>
-				</div>
+						<div class="form-group">
+							<label class="control-label col-md-2" for="Body">正文</label>
+							<div class="col-md-10">
+								<div class="simditor">
+									<div class="simditor-wrapper">
+										<div class="simditor-toolbar" style="width: 943px; top: 0px; left: 287px;">
+											<ul>
+												<li>
+													<a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-bold" href="javascript:;" title="加粗文字 ( Ctrl + b )">
+														<span class="fa fa-bold"></span>
+													</a>
+												</li>
+												<li>
+													<a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-italic" href="javascript:;" title="斜体文字 ( Ctrl + i )">
+														<span class="fa fa-italic"></span>
+													</a>
+												</li>
+												<li>
+													<a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-underline" href="javascript:;" title="下划线文字 ( Ctrl + u )">
+														<span class="fa fa-underline"></span>
+													</a>
+												</li>
+												<li>
+													<a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-strikethrough" href="javascript:;" title="删除线文字">
+														<span class="fa fa-strikethrough"></span>
+													</a>
+												</li>
+												<li>
+													<span class="separator"></span>
+												</li>
+												<li>
+													<a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-ol" href="javascript:;" title="有序列表 ( ctrl + / )">
+														<span class="fa fa-list-ol"></span>
+													</a>
+												</li>
+												<li>
+													<a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-ul" href="javascript:;" title="无序列表 ( Ctrl + . )">
+														<span class="fa fa-list-ul"></span>
+													</a>
+												</li>
+												<li>
+													<a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-blockquote" href="javascript:;" title="引用">
+														<span class="fa fa-quote-left"></span>
+													</a>
+												</li>
+												<li>
+													<a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-code" href="javascript:;" title="插入代码">
+														<span class="fa fa-code"></span>
+													</a>
+												</li>
+												<li>
+													<span class="separator"></span>
+												</li>
+												<li>
+													<a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-link" href="javascript:;" title="插入链接">
+														<span class="fa fa-link"></span>
+													</a>
+												</li>
+												<li>
+													<a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-image" href="javascript:;" title="插入图片">
+														<span class="fa fa-picture-o"></span>
+													</a>
+													<div class="toolbar-menu toolbar-menu-image">
+														<ul>
+															<li>
+																<a tabindex="-1" unselectable="on" class="menu-item menu-item-upload-image" href="javascript:;" title="本地图片">
+																	<span>本地图片</span>
+																	<input type="file" title="上传图片" accept="image/*"></a>
+															</li>
+															<li>
+																<a tabindex="-1" unselectable="on" class="menu-item menu-item-external-image" href="javascript:;" title="外链图片">
+																	<span>外链图片</span>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</li>
+												<li>
+													<span class="separator"></span>
+												</li>
+												<li>
+													<a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-indent" href="javascript:;" title="向右缩进 (Tab)">
+														<span class="fa fa-indent"></span>
+													</a>
+												</li>
+												<li>
+													<a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-outdent" href="javascript:;" title="向左缩进 (Shift + Tab)">
+														<span class="fa fa-outdent"></span>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="simditor-placeholder" style="top: 41px;"></div>
+										<div class="simditor-body" contenteditable="true">
+											<p>
+												<br></p>
+										</div>
+									</div>
+									<textarea class="form-control text-box multi-line" data-val="true" data-val-length="字段 正文 必须是最大长度为 100000 的字符串。" data-val-length-max="100000" id="Body" name="Body" style="display: none;"></textarea>
+									<div tabindex="-1" contenteditable="true" class="simditor-paste-area" style="width: 1px; height: 1px; overflow: hidden; position: fixed; right: 0px; bottom: 100px;"></div>
+									<textarea tabindex="-1" class="simditor-clean-paste-area" style="width: 1px; height: 1px; overflow: hidden; position: fixed; right: 0px; bottom: 101px;"></textarea>
+									<div class="simditor-popover code-popover">
+										<div class="code-settings">
+											<div class="settings-field">
+												<select class="select-lang">
+													<option value="-1">选择程序语言</option>
+													<option value="bash">Bash</option>
+													<option value="c++">C++</option>
+													<option value="cs">C#</option>
+													<option value="css">CSS</option>
+													<option value="erlang">Erlang</option>
+													<option value="less">Less</option>
+													<option value="scss">Sass</option>
+													<option value="diff">Diff</option>
+													<option value="coffeeScript">CoffeeScript</option>
+													<option value="html">Html,XML</option>
+													<option value="json">JSON</option>
+													<option value="java">Java</option>
+													<option value="js">JavaScript</option>
+													<option value="markdown">Markdown</option>
+													<option value="oc">Objective C</option>
+													<option value="php">PHP</option>
+													<option value="perl">Perl</option>
+													<option value="python">Python</option>
+													<option value="ruby">Ruby</option>
+													<option value="sql">SQL</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="simditor-popover link-popover">
+										<div class="link-settings">
+											<div class="settings-field">
+												<label></label>
+												<input class="link-text" type="text">
+												<a class="btn-unlink" href="javascript:;" title="" tabindex="-1">
+													<span class="fa fa-unlink"></span>
+												</a>
+											</div>
+											<div class="settings-field">
+												<label></label>
+												<input class="link-url" type="text"></div>
+										</div>
+									</div>
+									<div class="simditor-popover image-popover">
+										<div class="link-settings">
+											<div class="settings-field">
+												<label></label>
+												<input class="image-src" type="text" tabindex="1">
+												<a class="btn-upload" href="javascript:;" title="" tabindex="-1">
+													<span class="fa fa-upload"></span>
+													<input type="file" title="" accept="image/*"></a>
+											</div>
+											<div class="settings-field">
+												<label></label>
+												<input class="image-size" id="image-width" type="text" tabindex="2">
+												<span class="times">×</span>
+												<input class="image-size" id="image-height" type="text" tabindex="3">
+												<a class="btn-restore" href="javascript:;" title="" tabindex="-1">
+													<span class="fa fa-reply"></span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<span class="field-validation-valid text-danger" data-valmsg-for="Body" data-valmsg-replace="true"></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-md-2" for="Abstract">摘要</label>
+							<div class="col-md-10">
+								<textarea class="form-control text-box multi-line" data-val="true" data-val-length="字段 摘要 必须是最大长度为 500 的字符串。" data-val-length-max="500" id="Abstract" name="Abstract"></textarea>
+								<span class="field-validation-valid text-danger" data-valmsg-for="Abstract" data-valmsg-replace="true"></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-md-2" for="Published">发表</label>
+							<div class="col-md-10">
+								<label class="radio">
+									<input data-toggle="radio" data-val="true" data-val-required="发表 字段是必需的。" id="Published" name="Published" type="radio" value="True" class="custom-radio">
+									<span class="icons">
+										<span class="icon-unchecked"></span>
+										<span class="icon-checked"></span>
+									</span>
+									对外发表
+								</label>
+								<label class="radio">
+									<input data-toggle="radio" id="Published" name="Published" type="radio" value="False" class="custom-radio">
+									<span class="icons">
+										<span class="icon-unchecked"></span>
+										<span class="icon-checked"></span>
+									</span>
+									保存为草稿
+								</label>
+								<span class="field-validation-valid text-danger" data-valmsg-for="Published" data-valmsg-replace="true"></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-md-2" for="Published">写作使用编辑器</label>
+							<div class="col-md-10">
+								<label class="radio">
+									<input data-toggle="radio" data-val="true" data-val-required="发表 字段是必需的。" id="Published" name="Published" type="radio" value="True" class="custom-radio">
+									<span class="icons">
+										<span class="icon-unchecked"></span>
+										<span class="icon-checked"></span>
+									</span>
+									Markdown编辑器
+								</label>
+								<label class="radio">
+									<input data-toggle="radio" id="Published" name="Published" type="radio" value="False" class="custom-radio">
+									<span class="icons">
+										<span class="icon-unchecked"></span>
+										<span class="icon-checked"></span>
+									</span>
+									HTML编辑器
+								</label>
+								<span class="field-validation-valid text-danger" data-valmsg-for="Published" data-valmsg-replace="true"></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-md-2" for="ArticlePersonalCategoryId">私人分类</label>
+							<div class="col-md-10">
+								<select class="form-control" data-val="true" data-val-number="The field 私人分类 must be a number." data-val-required="私人分类 字段是必需的。" id="ArticlePersonalCategoryId" name="ArticlePersonalCategoryId">
+									<option value="">***请选择***</option>
+									<option value="2">社区文档</option>
+									<option value="9">测试</option>
+								</select>
+								<span class="field-validation-valid text-danger" data-valmsg-for="ArticlePersonalCategoryId" data-valmsg-replace="true"></span>
+								<a href="javascript:void(0)" id="personal-category-modal">管理</a>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-md-2">技术类别</label>
+							<div class="col-md-10">
+								<a href="javascript:void(0)" id="article-category-modal" class="btn btn-default">修改技术类别</a>
+								<div id="categoryList">
+									<ul>
 
-				<div class="order-panel">
-					<div class="order-item nopay">
-						<div class="top clearfix">
-							<div class="l-panel">
-								2015-6-11<span class="offsetl20">订单号:0975622</span>
-							</div>
-							<div class="r-panel">
-								请在30分钟以内支付<span class="offsetl20">订单状态：待付款</span>
-							</div>
-						</div>
-						<div class="mid">
-							<div class="media">
-								<div class="media-body">
-									<table>
-										<tr>
-											<th>书名：</th>
-											<th>版本：</th>
-											<th>数量：</th>
-											<th>定价：</th>
-										</tr>
-										<tr>
-											<td class="book-name"><a href="">Adobe Photoshop CC</a></td>
-											<td>纸质版</td>
-											<td>10</td>
-											<td>49.00元</td>
-										</tr>
-										<tr>
-											<td class="book-name"><a href="">经典教程（彩色版）</a></td>
-											<td>纸质版</td>
-											<td>10</td>
-											<td>49.00元</td>
-										</tr>
-									</table>
-								</div>
-								<div class="media-right">
-									 <div class="inner">
-									 	运费：
-									 	<div class="yf">11.00元</div>
-									 </div>
-								</div>
-							</div>
-						</div>
-						<div class="bottom clearfix">
-							<div class="row">
-								<div class="col-md-6 col-sm-6">
-									<div class="inner">
-										<div>收货信息：</div>
-										<div>张峰</div>     
-										<div>北京市丰台区成寿寺路11号邮电出版大厦</div>
-										<div>100164</div>
-										<div>13523768909</div>
-									</div>
-								</div>
-								<div class="col-md-6 col-sm-6 bor-r">
-									<div class="inner">
-										<div>总计金额<span class="offsetl20">90.00 元</span></div>
-										<div>优惠金额<span class="offsetl20">-0.00 元</span></div>
-										<div>积分代替<span class="offsetl20">-0.00 元</span></div>
-										<div class="fcg">支付金额<span class="offsetl20">90.00 元</span></div>
-										<div>赠送积分<span class="offsetl20">0 分</span></div>
-										<div class="blk5"></div>
-										<div>
-											<a href="#bank-list" class="btn btn-default btn-s" data-toggle="collapse">用网银付款</a>
-											<a href="" class="btn btn-default btn-s">用支付宝付款</a>
-											<a href="" class="btn btn-default btn-s">取消订单</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="clearfix">
-							<ul id="bank-list" class="bank-list collapse">
-	                            <li>
-	                                <a href="/users/pay/11?bank=ICBCB2C" target="_blank">中国工商银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=CMB" target="_blank">招商银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=CCB" target="_blank">中国建设银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=ABC" target="_blank">中国农业银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=BOCB2C" target="_blank">中国银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=SPDB" target="_blank">上海浦东发展银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=CIB" target="_blank">兴业银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=GDB" target="_blank">广东发展银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=SDB" target="_blank">深圳发展银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=CMBC" target="_blank">中国民生银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=COMM" target="_blank">交通银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=CITIC" target="_blank">中信银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=CEBBANK" target="_blank">光大银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=HZCBB2C" target="_blank">杭州银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=SHBANK" target="_blank">上海银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=SPABANK" target="_blank">平安银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=BJBANK" target="_blank">北京银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=NBBANK" target="_blank">宁波银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=BJRCB" target="_blank">北京农村商业银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=fdb101" target="_blank">富滇银行</a>
-	                            </li>
-	                            <li>
-	                                <a href="/users/pay/11?bank=PSBC-DEBIT" target="_blank">中国邮政储蓄银行</a>
-	                            </li>
-	                    </ul>
-						</div>
-					</div>
+										<li>
+											<a href="/Category/Details/19" target="_blank">软件开发</a>
+										</li>
 
-					<div class="order-item">
-						<div class="top clearfix">
-							<div class="l-panel">
-								2015-6-11<span class="offsetl20">订单号:0975622</span>
-							</div>
-							<div class="r-panel">
-								<span class="offsetl20">订单状态：已发货</span>
-							</div>
-						</div>
-						<div class="mid">
-							<div class="media">
-								<div class="media-body">
-									<table>
-										<tr>
-											<th>书名：</th>
-											<th>版本：</th>
-											<th>数量：</th>
-											<th>定价：</th>
-										</tr>
-										<tr>
-											<td class="book-name"><a href="">Adobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CCAdobe Photoshop CC</a></td>
-											<td>纸质版</td>
-											<td>10</td>
-											<td>49.00元</td>
-										</tr>
-										<tr>
-											<td class="book-name"><a href="">经典教程（彩色版）</a></td>
-											<td>纸质版</td>
-											<td>10</td>
-											<td>49.00元</td>
-										</tr>
-									</table>
-								</div>
-								<div class="media-right">
-									 <div class="inner">
-									 	运费：
-									 	<div class="yf">11.00元</div>
-									 </div>
-								</div>
-							</div>
-						</div>
-						<div class="bottom clearfix">
-							<div class="row">
-								<div class="col-md-6 col-sm-6">
-									<div class="inner">
-										<div>收货信息：</div>
-										<div>张峰</div>     
-										<div>北京市丰台区成寿寺路11号邮电出版大厦</div>
-										<div>100164</div>
-										<div>13523768909</div>
-									</div>
-								</div>
-								<div class="col-md-6 col-sm-6 bor-r">
-									<div class="inner">
-										<div>总计金额<span class="offsetl20">90.00 元</span></div>
-										<div>优惠金额<span class="offsetl20">-0.00 元</span></div>
-										<div>积分代替<span class="offsetl20">-0.00 元</span></div>
-										<div class="fcg">支付金额<span class="offsetl20">90.00 元</span></div>
-										<div>赠送积分<span class="offsetl20">0 分</span></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+									</ul>
 
-				<div class="g-block">
-					<div class="hd green">
-						<h4>推荐用户</h4>
-						<div class="r-panel">
-							<a href="" class="more">+更多</a>
+								</div>
+								<input id="CategoryIds" name="CategoryIds" type="hidden" value="19"></div>
 						</div>
-					</div>
-					<div class="bd author-lst row">
-						<div class="user-box">
-						<div class="lst-normal">
-							<div class="col-md-12">
-								<div class="media">
-									<div class="media-left">
-										<a href="">
-											<img class="media-object" src="../static/images/temp/3.png" alt="">
-										</a>
+						<div class="form-group">
+							<label class="control-label col-md-2" for="BookIdNamePairs">相关图书</label>
+							<div class="col-md-10">
+								<div class="k-widget k-multiselect k-header k-state-focused" unselectable="on" style="">
+									<div class="k-multiselect-wrap k-floatwrap" unselectable="on">
+										<ul role="listbox" unselectable="on" class="k-reset" id="BookIds_taglist"></ul>
+										<input class="k-input k-readonly" style="width: 25px;" accesskey="" role="listbox" aria-expanded="false" tabindex="0" aria-owns="BookIds_taglist BookIds_listbox" aria-disabled="false" aria-readonly="false" aria-busy="false">
+										<span class="k-icon k-loading k-loading-hidden"></span>
 									</div>
-									<ul class="media-body">
-										<li class="name"><a href="">七堇年七堇年七堇年七堇年</a></li>
-										<li class="sidehide">文章 236</li>
-										<li class="sidehide">著作 12</li>
-										<li class="sidehide">声望 11万2</li>
-									</ul>
+									<select id="BookIds" multiple="multiple" name="BookIds" data-role="multiselect" aria-disabled="false" aria-readonly="false" style="display: none;"></select>
+									<span style="font-family: Avenir, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif; font-size: 14px; font-stretch: normal; font-style: normal; font-weight: normal; letter-spacing: normal; text-transform: none; line-height: 18.3400001525879px; position: absolute; visibility: hidden; top: -3333px; left: -3333px;"></span>
 								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="media">
-									<div class="media-left">
-										<a href="">
-											<img class="media-object" src="../static/images/temp/3.png" alt="">
-										</a>
-									</div>
-									<ul class="media-body">
-										<li class="name"><a href="">七堇年七堇年七堇年七堇年七堇年七堇年七堇年七堇年</a></li>
-										<li class="sidehide">文章 236</li>
-										<li class="sidehide">著作 12</li>
-										<li class="sidehide">声望 11万2</li>
-									</ul>
-								</div>
-							</div><div class="col-md-12">
-								<div class="media">
-									<div class="media-left">
-										<a href="">
-											<img class="media-object" src="../static/images/temp/3.png" alt="">
-										</a>
-									</div>
-									<ul class="media-body">
-										<li class="name"><a href="">七堇年七堇年七堇年七堇年</a></li>
-										<li class="sidehide">文章 236</li>
-										<li class="sidehide">著作 12</li>
-										<li class="sidehide">声望 11万2</li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="media">
-									<div class="media-left">
-										<a href="">
-											<img class="media-object" src="../static/images/temp/3.png" alt="">
-										</a>
-									</div>
-									<ul class="media-body">
-										<li class="name"><a href="">七堇年</a></li>
-										<li class="sidehide">文章 236</li>
-										<li class="sidehide">著作 12</li>
-										<li class="sidehide">声望 11万2</li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="media">
-									<div class="media-left">
-										<a href="">
-											<img class="media-object" src="../static/images/temp/3.png" alt="">
-										</a>
-									</div>
-									<ul class="media-body">
-										<li class="name"><a href="">七堇年</a></li>
-										<li class="sidehide">文章 236</li>
-										<li class="sidehide">著作 12</li>
-										<li class="sidehide">声望 11万2</li>
-									</ul>
-								</div>
+								<script>
+	jQuery(function(){jQuery("#BookIds").kendoMultiSelect({"dataSource":{"transport":{"read":{"url":"/Jsondata/Books","data":function() { return kendo.ui.MultiSelect.requestData("#BookIds"); }},"prefix":""},"serverFiltering":true,"filter":[],"schema":{"errors":"Errors"}},"dataTextField":"Name","autoBind":false,"dataValueField":"Id","value":[]});});
+</script>
 							</div>
 						</div>
+						<div class="form-group">
+							<label class="control-label col-md-2" for="UserIdNamePairs">相关用户</label>
+							<div class="col-md-10" id="artilce-users">
+								<div class="k-widget k-multiselect k-header k-state-focused" unselectable="on" style="">
+									<div class="k-multiselect-wrap k-floatwrap" unselectable="on">
+										<ul role="listbox" unselectable="on" class="k-reset" id="UserIds_taglist"></ul>
+										<input class="k-input k-readonly" style="width: 25px;" accesskey="" role="listbox" aria-expanded="false" tabindex="0" aria-owns="UserIds_taglist UserIds_listbox" aria-disabled="false" aria-readonly="false" aria-busy="false">
+										<span class="k-icon k-loading k-loading-hidden"></span>
+									</div>
+									<select id="UserIds" multiple="multiple" name="UserIds" data-role="multiselect" aria-disabled="false" aria-readonly="false" style="display: none;"></select>
+									<span style="font-family: Avenir, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif; font-size: 14px; font-stretch: normal; font-style: normal; font-weight: normal; letter-spacing: normal; text-transform: none; line-height: 18.3400001525879px; position: absolute; visibility: hidden; top: -3333px; left: -3333px;"></span>
+								</div>
+								<script>
+	jQuery(function(){jQuery("#UserIds").kendoMultiSelect({"dataSource":{"transport":{"read":{"url":"/Jsondata/Users","data":function() { return kendo.ui.MultiSelect.requestData("#UserIds"); }},"prefix":""},"serverFiltering":true,"filter":[],"schema":{"errors":"Errors"}},"dataTextField":"Name","autoBind":false,"dataValueField":"Id","value":[]});});
+</script>
+							</div>
+						</div>
+						<hr>
+						<div id="article-save-message"></div>
+						<div class="form-group">
+							<div class="col-md-offset-2 col-md-10">
+								<input type="submit" value="保存" class="btn btn-primary">
+								<a id="article-preview" href="javascript:void(0)" target="_blank" class="btn btn-primary" style="display:none;">预览</a>
+							</div>
+						</div>
+
 					</div>
-					</div>
-				</div>
+				</form>
+			</div>
+		</div>
+		<!-- 写作结构结束 和线上一致 -->
 			</div>
 		</div>
 	</div>
