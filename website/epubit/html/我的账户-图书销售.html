@@ -2,16 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>我的账户-我的图书-异步社区</title>
+	<title>我的账户-图书销售-异步社区</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="format-detection" content="telephone=no" />
 	<link rel="stylesheet" href="../static/css/typo.css">
 	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/daterangepicker.css">
 	<link rel="stylesheet" href="../static/css/style.css">
 	<script src="../static/js/jquery.min.js"></script>
 	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/moment.min.js"></script>
+	<script src="../static/js/daterangepicker.js"></script>
 	<script src="../static/js/page.js"></script>
 	<!--[if lt IE 9]>
 	<script src="../static/js/html5shiv.js"></script>
@@ -770,59 +773,306 @@
 
 				<div class="g-block">
 					<div class="hd green">
-						<h4>我的图书</h4>
-						<span class="tips">(您可以查看图书的印次、印数、库存等信息)</span>
+						<h4>图书销售</h4>
 					</div>
 					<div class="bd nopl0 clearfix">
-						<table class="table mp-table">
-							<thead>
-								<tr>
-									<th class="f">书号</th>
-									<th class="book-name">书名</th>
-									<th>印数</th>
-									<th>印次</th>
-									<th>印刷时间</th>
-									<th>当前库存</th>
-									<th>累计印数</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="f">978-7-115-36847-8</td>
-									<td class="book-name">权威指南Swift</td>
-									<td>5000</td>
-									<td>
-										<div class="pb10">1版1次</div>
-										<div class="pb10">1版2次</div>
-										<div class="pb10">1版3次</div>
-									</td>
-									<td>
-										<div class="pb10">2015/1/1</div>
-										<div class="pb10">2015/5/2</div>
-										<div class="pb10">2015/6/22</div>
-									</td>
-									<td>130</td>
-									<td>21000</td>
-								</tr>
-								<tr>
-									<td class="f">978-7-115-36847-8</td>
-									<td class="book-name">信息存储与管理（第二版）:数字信息存储、管理和保护</td>
-									<td>5000</td>
-									<td>
-										<div class="pb10">1版1次</div>
-										<div class="pb10">1版2次</div>
-										<div class="pb10">1版3次</div>
-									</td>
-									<td>
-										<div class="pb10">2015/1/1</div>
-										<div class="pb10">2015/5/2</div>
-										<div class="pb10">2015/6/22</div>
-									</td>
-									<td>130</td>
-									<td>21000</td>
-								</tr>
-							</tbody>
-						</table>
+						<div class="clearfix">
+							<div class="blk10"></div>
+							<div class="pull-right pr20">
+								<div class="form-inline">
+									<div class="form-group">
+										<label class="disi">查询历史数据：</label>
+										<div class="input-group">
+											<input type="text" class="form-control days" value="2015-04-17">
+											<div class="input-group-addon nobg">至</div>
+											<input type="text" class="form-control days" value="2015-04-17">
+										</div>
+									</div>
+									<button class="btn btn-default">导出</button>
+								</div>
+							</div>
+							<div class="blk10"></div>
+						</div>
+						<div class="myincome">
+							<!-- 第一本书销售情况开始 -->
+							<div class="item clearfix">
+								<div class="book-info pull-left clearfix">
+									<div class="pull-left isbn">
+										<div class="tit">
+											<span class="osp10">书号</span>
+										</div>
+										<div class="txt">
+											<span class="osp10">978-7-115-36847-8</span>
+										</div>
+									</div>
+									<div class="pull-left bn">
+										<div class="tit">
+											<span class="osp10">书名</span>
+										</div>
+										<div class="txt">
+											<span class="osp10">Android深度探索（卷2）</span>
+										</div>
+									</div>
+								</div>
+								<div class="income-info pull-left">
+									<div class="clearfix">
+										<div class="pull-left wp29">
+											<div class="tit">
+												<span class="osp10">销售周期</span>  
+											</div>
+										</div>
+										<div class="pull-left wp51">
+											<div class="tit">
+												<span class="osp10">网店销售</span>
+											</div>
+										</div>
+										<div class="pull-left wp20">
+											<div class="tit">
+												<span class="osp10">发货册数</span>
+											</div>
+										</div>
+									</div>
+									<!-- 数据模块开始 -->
+									<div class="bor-t clearfix">
+										<div class="pull-left wp29">
+											<div class="txt">
+												<span class="osp10">2015/6/8-2015/6/14</span>
+											</div>
+										</div>
+										<div class="pull-left wp51">
+											<div class="txt">
+												<div class="pull-left wp33">
+													<span class="osp10">京东</span>
+												</div>
+												<div class="pull-left wp33">
+													<span class="osp10">当当</span>
+												</div>
+												<div class="pull-left wp33 last">
+													<span class="osp10">亚马逊</span>
+												</div>
+											</div>
+										</div>
+										<div class="pull-left wp20">
+											<div class="txt">
+												<span class="osp10">50000</span>
+											</div>
+										</div>
+									</div>
+									<div class="bor-t-dot clearfix">
+										<div class="pull-left wp29">
+											<div>
+												<span class="osp10 strong">123456</span>
+											</div>
+										</div>
+										<div class="pull-left wp51">
+											<div class="txt">
+												<div class="pull-left wp33">
+													<span class="osp10">123</span>
+												</div>
+												<div class="pull-left wp33">
+													<span class="osp10">654</span>
+												</div>
+												<div class="pull-left wp33 last">
+													<span class="osp10">135123</span>
+												</div>
+											</div>
+										</div>
+										<div class="pull-left wp20">
+										</div>
+									</div>
+									<!-- 数据模块结束 -->
+									<!-- 数据模块开始 -->
+									<div class="bor-t clearfix">
+										<div class="pull-left wp29">
+											<div class="txt">
+												<span class="osp10">2015/6/8-2015/6/14</span>
+											</div>
+										</div>
+										<div class="pull-left wp51">
+											<div class="txt">
+												<div class="pull-left wp33">
+													<span class="osp10">京东</span>
+												</div>
+												<div class="pull-left wp33">
+													<span class="osp10">当当</span>
+												</div>
+												<div class="pull-left wp33 last">
+													<span class="osp10">亚马逊</span>
+												</div>
+											</div>
+										</div>
+										<div class="pull-left wp20">
+											<div class="txt">
+												<span class="osp10">50000</span>
+											</div>
+										</div>
+									</div>
+									<div class="bor-t-dot clearfix">
+										<div class="pull-left wp29">
+											<div>
+												<span class="osp10 strong">123456</span>
+											</div>
+										</div>
+										<div class="pull-left wp51">
+											<div class="txt">
+												<div class="pull-left wp33">
+													<span class="osp10">123</span>
+												</div>
+												<div class="pull-left wp33">
+													<span class="osp10">654</span>
+												</div>
+												<div class="pull-left wp33 last">
+													<span class="osp10">135123</span>
+												</div>
+											</div>
+										</div>
+										<div class="pull-left wp20">
+										</div>
+									</div>
+									<!-- 数据模块结束 -->
+								</div>
+							</div>
+							<!-- 第一本书销售情况结束 -->
+							<!-- 第二本书销售情况开始 -->
+							<div class="item clearfix">
+								<div class="book-info pull-left clearfix">
+									<div class="pull-left isbn">
+										<div class="tit">
+											<span class="osp10">书号</span>
+										</div>
+										<div class="txt">
+											<span class="osp10">978-7-115-36847-8</span>
+										</div>
+									</div>
+									<div class="pull-left bn">
+										<div class="tit">
+											<span class="osp10">书名</span>
+										</div>
+										<div class="txt">
+											<span class="osp10">Android深度探索（卷2）</span>
+										</div>
+									</div>
+								</div>
+								<div class="income-info pull-left">
+									<div class="clearfix">
+										<div class="pull-left wp29">
+											<div class="tit">
+												<span class="osp10">销售周期</span>  
+											</div>
+										</div>
+										<div class="pull-left wp51">
+											<div class="tit">
+												<span class="osp10">网店销售</span>
+											</div>
+										</div>
+										<div class="pull-left wp20">
+											<div class="tit">
+												<span class="osp10">发货册数</span>
+											</div>
+										</div>
+									</div>
+									<!-- 数据模块开始 -->
+									<div class="bor-t clearfix">
+										<div class="pull-left wp29">
+											<div class="txt">
+												<span class="osp10">2015/6/8-2015/6/14</span>
+											</div>
+										</div>
+										<div class="pull-left wp51">
+											<div class="txt">
+												<div class="pull-left wp33">
+													<span class="osp10">京东</span>
+												</div>
+												<div class="pull-left wp33">
+													<span class="osp10">当当</span>
+												</div>
+												<div class="pull-left wp33 last">
+													<span class="osp10">亚马逊</span>
+												</div>
+											</div>
+										</div>
+										<div class="pull-left wp20">
+											<div class="txt">
+												<span class="osp10">50000</span>
+											</div>
+										</div>
+									</div>
+									<div class="bor-t-dot clearfix">
+										<div class="pull-left wp29">
+											<div>
+												<span class="osp10 strong">123456</span>
+											</div>
+										</div>
+										<div class="pull-left wp51">
+											<div class="txt">
+												<div class="pull-left wp33">
+													<span class="osp10">123</span>
+												</div>
+												<div class="pull-left wp33">
+													<span class="osp10">654</span>
+												</div>
+												<div class="pull-left wp33 last">
+													<span class="osp10">135123</span>
+												</div>
+											</div>
+										</div>
+										<div class="pull-left wp20">
+										</div>
+									</div>
+									<!-- 数据模块结束 -->
+									<!-- 数据模块开始 -->
+									<div class="bor-t clearfix">
+										<div class="pull-left wp29">
+											<div class="txt">
+												<span class="osp10">2015/6/8-2015/6/14</span>
+											</div>
+										</div>
+										<div class="pull-left wp51">
+											<div class="txt">
+												<div class="pull-left wp33">
+													<span class="osp10">京东</span>
+												</div>
+												<div class="pull-left wp33">
+													<span class="osp10">当当</span>
+												</div>
+												<div class="pull-left wp33 last">
+													<span class="osp10">亚马逊</span>
+												</div>
+											</div>
+										</div>
+										<div class="pull-left wp20">
+											<div class="txt">
+												<span class="osp10">50000</span>
+											</div>
+										</div>
+									</div>
+									<div class="bor-t-dot clearfix">
+										<div class="pull-left wp29">
+											<div>
+												<span class="osp10 strong">123456</span>
+											</div>
+										</div>
+										<div class="pull-left wp51">
+											<div class="txt">
+												<div class="pull-left wp33">
+													<span class="osp10">123</span>
+												</div>
+												<div class="pull-left wp33">
+													<span class="osp10">654</span>
+												</div>
+												<div class="pull-left wp33 last">
+													<span class="osp10">135123</span>
+												</div>
+											</div>
+										</div>
+										<div class="pull-left wp20">
+										</div>
+									</div>
+									<!-- 数据模块结束 -->
+								</div>
+							</div>
+							<!-- 第二本书销售情况结束 -->
+						</div>
 					</div>
 				</div>
 
@@ -927,6 +1177,18 @@
 			All rights reserved
 		</div>
 	</footer>
+
+
+	<script>
+	$(function(){
+		//单日期显示
+		$(".days").daterangepicker({
+	        singleDatePicker: true,
+	        format: 'YYYY-MM-DD'
+	    });  
+	})
+	</script>
+
 
 </body>
 </html>

@@ -1959,6 +1959,21 @@ label{
 		margin-bottom: -48px;
 		text-align: center;
 	}
+	.mp-table{
+		font-size: 14px;
+		.f{
+			padding-left: 20px;
+		}
+		th{
+			background-color: #f2faf9;
+		}
+		td,th{
+			white-space: nowrap;
+		}
+		td.book-name,th.book-name{
+			white-space: normal;
+		}
+	}
 }
 
 .private-profile-page{
@@ -2467,11 +2482,15 @@ a.input-group-addon{
 		padding-top: 3px;
 		text-align: left;
 	}
+	.bk-info{
+		height: 100px;
+		overflow: hidden;
+	}
 	.cancel-btn{
-		background-color: #ccc;
+		background-color: $green;
 		color: #fff;
-		font-size: 12px;
-		padding: 3px 10px;
+		font-size: 14px;
+		padding: 6px 12px;
 	}
 	.lst-grid{
 		.book-name{
@@ -2481,6 +2500,17 @@ a.input-group-addon{
 	.cancel-btn-panel{
 		padding-top: 10px;
 		text-align: left;
+	}
+	.lst-grid{
+		.media-left{
+			img{
+				margin: 0;
+				max-width: 150px;
+			}
+			.book-pic{
+				height: 230px;
+			}
+		}
 	}
 } 
 
@@ -2662,4 +2692,100 @@ a.input-group-addon{
 
 .bor-t{
 	border-top: 1px solid $borColor2;
+}
+.nopl0{
+	padding-left: 0!important;
+}
+.pb10{
+	padding-bottom: 10px;
+}
+
+// 我的稿费
+.myincome{
+	width: 100%;
+	.tit{
+		background-color: #f2faf9;
+		border-top: 1px solid $borColor2;
+		border-bottom: 1px solid $borColor2;
+	}
+	.book-info{
+		width: 30%;
+		margin-right: -1px;
+		border-right: 1px solid $borColor2;
+		.isbn{
+			width: 40%;
+		}
+		.bn{
+			width: 60%;
+		}
+	}
+	.income-info{
+		width: 70%;
+		margin-left: -1px;
+		border-left: 1px solid $borColor2;
+		.last{
+			border-right: 1px solid $borColor2;
+		}
+	}
+	.sub-tit{
+		.osp10{
+			padding: 10px 10px 0;
+		}
+	}
+}
+
+.bor-t-dot{
+	.osp10{
+		border-top: 1px dotted $borColor2;
+	}
+}
+
+.wp25{
+	width: 25%;
+}
+.wp33{
+	width: 33%;
+}
+.wp20{
+	width: 20%;
+}
+.wp29{
+	width: 29%;
+}
+.wp51{
+	width: 51%;
+}
+
+.osp10{
+	padding: 10px;
+	display: block;	
+}
+
+.nobg{
+	background: none!important;
+}
+
+.input-group{
+	.nobg{
+		color: #333;
+		border: none;
+	}
+}
+.pr20{
+	padding-right: 20px;
+}
+
+// 覆盖时间控件
+.table-condensed thead tr:last-child th{
+	background-color: $green;
+}
+.daterangepicker td.active, .daterangepicker td.active:hover{
+	background-color: $green;
+	border-color: $green;
+}
+.disi{
+	display: inline;
+}
+.strong{
+	font-weight: bold;
 }
