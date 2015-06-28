@@ -18,7 +18,7 @@ $nav-hover2: #008c7d;
 @import "_reset";
 @import "_base";
 
-body{ background-color: $body-bg; font-size: 12px; line-height: 1.5em;}
+body{ background-color: $body-bg; font-size: 12px; line-height: 1.5em; font-family: '微软雅黑',Microsoft YaHei,arial,simsun,sans-serif}
 
 .ico{
 	display: inline-block;
@@ -2788,4 +2788,39 @@ a.input-group-addon{
 }
 .strong{
 	font-weight: bold;
+}
+
+.book-table{
+	font-size: 14px;
+	th,td{
+		white-space: nowrap;
+	}
+	.book-name{
+		white-space: normal;
+	}
+}
+
+.edit-profile{
+	padding: 20px 0 30px;
+	.form-group{
+		.checkbox input[type=checkbox],
+		.checkbox-inline input[type=checkbox],
+		.radio input[type=radio],
+		.radio-inline input[type=radio]{
+			position: static;
+			margin: 0;
+		}
+		.icons{
+			display: none;
+		}
+	}
+	.form-horizontal{
+		.form-group{
+			margin-right: 15px;
+			margin-left: -5px;
+		}
+	}
+	h4{
+		margin-bottom: 20px; font-size: 20px;
+	}
 }
