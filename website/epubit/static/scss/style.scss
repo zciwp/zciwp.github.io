@@ -86,6 +86,7 @@ a{
 .blk10{ height: 10px; width: 100%; overflow: hidden;}
 .blk15{ height: 15px; width: 100%; overflow: hidden;}
 .blk20{ height: 20px; width: 100%; overflow: hidden;}
+.blk40{ height: 40px; width: 100%; overflow: hidden;}
 .l-panel{
 	float: left;
 }
@@ -2515,78 +2516,8 @@ a.input-group-addon{
 } 
 
 
-@media (max-width: 1200px){
-	.bookdetail-page .bookdetail-panel .bookDeFd .btn{
-		margin-left: 10px 
-	}
-	
-}
 
-@media (max-width: 991px){
-	.bookdetail-page .bookdetail-panel .bookDeFd .btn-box{
-		padding-top: 10px;
-	}
-	.bookdetail-page .bookdetail-panel .bookDeFd .btn{
-		margin-left: 0;
-		margin-right: 10px; 
-	}
-	.bookdetail-page .bookdetail-panel .bookDeFd .stp{
-		display: none;
-	}
-	.private-profile-page .profile-info .media-body .mid .pull-right{
-		float: none!important;
-	}
-}
 
-@media (max-width: 768px){
-	body{
-		overflow-x: hidden; 
-	}
-	.bookdetail-panel .media-left{
-		display: block;
-	}
-	.bookdetail-panel .media-left,.bookdetail-panel .media-body .bookDeHd{
-		text-align: center;
-	}
-	.bookdetail-panel .media-body{
-		display: block;
-		width: auto;
-		.l-panel,.r-panel{
-			float: none!important;
-		}
-	}
-	.bookdetail-page .bookdetail-panel .bookDeFd{
-		padding: 10px 0 10px 10px;
-	}
-	.bookdetail-page .bookdetail-panel .bookDeFd .btn-box{
-		padding-top: 10px;
-		display: block;
-	}
-	.bookdetail-page .bookdetail-panel .bookDeFd .btn{
-		margin-left: 0;
-		margin-right: 5px; 
-		margin-bottom: 10px;
-	}
-	.bookdetail-page .bookdetail-panel .bookDeFd .stp{
-		display: block;
-		height: 0;
-	}
-	.g-block-2 .hd{
-		padding-left: 10px;
-	}
-	.g-block-2 .bd{
-		padding-left: 10px;
-	}
-	.bookdetail-page .remark{
-		margin-left: 10px;
-	}
-	.media-left{
-		display: block;
-	}
-	.my-profile .profile-info .media-body .top{
-		padding-top: 10px;
-	}
-}
 
 // 写作页面
 .write-page{
@@ -2822,5 +2753,220 @@ a.input-group-addon{
 	}
 	h4{
 		margin-bottom: 20px; font-size: 20px;
+	}
+}
+
+// 修改密码
+.modify-pw-box{
+	.cur-acc{
+		padding: 15px 0 15px 50px;
+		border-bottom: 1px dotted $borColor2;
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+	.other-acc-panel{
+		padding-left: 50px;
+	}
+	.other-acc{
+		font-size: 14px;
+		padding-top: 10px;
+		li{
+			padding: 5px;
+		}
+		.accbtn{
+			display: inline-block;
+			*display: inline;
+			zoom: 1;
+			vertical-align: middle;
+			width: 325px;
+			height: 45px;
+			line-height: 45px;
+			font-size: 0;
+			text-align: center;
+			border-radius: 3px;
+			color: #fff;
+			span{
+				display: inline-block;
+				*display: inline;
+				zoom: 1;
+				vertical-align: middle;
+				font-size: 14px;
+			}
+			.i{
+				background: url(../images/accbtn.png) no-repeat;
+				display: inline-block;
+				*display: inline;
+				zoom: 1;
+				vertical-align: middle;
+				width: 25px;
+				height: 25px;
+				margin-right: 5px;
+			}
+		}
+		.qq{
+			background-color: #4e9ac8;
+			.i{
+				background-position: 0 0;
+			}
+		}
+		.wb{
+			background-color: #d42c4c;
+			.i{
+				background-position: -25px 0;
+			}
+		}
+		.ms{
+			background-color: #7cbb00;
+			.i{
+				background-position: -50px 0;
+			}
+		}
+	}
+}
+
+// 作者展示
+.author-show-page{
+	.banner{
+		img{
+			width: 100%;
+		}
+	}
+	.user-box{
+		padding-bottom: 20px;
+		.lst-grid{
+			.col-md-12{
+				width: 20%;
+			}
+			.media{
+				padding-top: 20px;
+			}
+		}
+	}
+	.name{
+		padding-top: 5px;
+		a{
+			color: #333;
+		}
+	}
+	.filter{
+		padding: 15px 0 0;
+		border-bottom: 1px dotted $borColor2;
+		.control-label{
+			width: 110px;
+		}
+	}
+}
+
+// 投稿
+.contribute-page{
+	.g-txt-panel{
+		font-size: 14px;
+		line-height: 24px;
+	}
+	.form-horizontal{
+		padding-top: 20px;
+	}
+	.checkbox{
+		input{
+			margin-top: 3px;
+		}
+	}
+}
+.line-dot{
+	height: 0;
+	width: 100%;
+	border-bottom: 1px solid $borColor2;
+	margin-bottom: 15px;
+}
+
+
+@media (max-width: 1200px){
+	.bookdetail-page .bookdetail-panel .bookDeFd .btn{
+		margin-left: 10px 
+	}
+	
+}
+
+@media (max-width: 991px){
+	.bookdetail-page .bookdetail-panel .bookDeFd .btn-box{
+		padding-top: 10px;
+	}
+	.bookdetail-page .bookdetail-panel .bookDeFd .btn{
+		margin-left: 0;
+		margin-right: 10px; 
+	}
+	.bookdetail-page .bookdetail-panel .bookDeFd .stp{
+		display: none;
+	}
+	.private-profile-page .profile-info .media-body .mid .pull-right{
+		float: none!important;
+	}
+}
+
+@media (max-width: 768px){
+	body{
+		overflow-x: hidden; 
+	}
+	.bookdetail-panel .media-left{
+		display: block;
+	}
+	.bookdetail-panel .media-left,.bookdetail-panel .media-body .bookDeHd{
+		text-align: center;
+	}
+	.bookdetail-panel .media-body{
+		display: block;
+		width: auto;
+		.l-panel,.r-panel{
+			float: none!important;
+		}
+	}
+	.bookdetail-page .bookdetail-panel .bookDeFd{
+		padding: 10px 0 10px 10px;
+	}
+	.bookdetail-page .bookdetail-panel .bookDeFd .btn-box{
+		padding-top: 10px;
+		display: block;
+	}
+	.bookdetail-page .bookdetail-panel .bookDeFd .btn{
+		margin-left: 0;
+		margin-right: 5px; 
+		margin-bottom: 10px;
+	}
+	.bookdetail-page .bookdetail-panel .bookDeFd .stp{
+		display: block;
+		height: 0;
+	}
+	.g-block-2 .hd{
+		padding-left: 10px;
+	}
+	.g-block-2 .bd{
+		padding-left: 10px;
+	}
+	.bookdetail-page .remark{
+		margin-left: 10px;
+	}
+	.media-left{
+		display: block;
+	}
+	.my-profile .profile-info .media-body .top{
+		padding-top: 10px;
+	}
+	.modify-pw-box{
+		.modify-pw-panel{
+			padding: 0 15px 0 10px;
+		}
+		.cur-acc{
+			padding: 15px 0;
+		}
+		.other-acc-panel{
+			padding-left: 0px;
+		}
+	}
+	.author-show-page{
+		.user-box{
+			.lst-grid .col-md-12{
+				width: 50%;
+			}
+		}
 	}
 }

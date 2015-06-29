@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>编辑资料-异步社区</title>
+	<title>投稿-异步社区</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="format-detection" content="telephone=no" />
 	<link rel="stylesheet" href="../static/css/typo.css">
 	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../static/css/simditor.css">
-	<link rel="stylesheet" href="../static/css/kendo.css">
+	<link rel="stylesheet" href="../static/css/daterangepicker.css">
 	<link rel="stylesheet" href="../static/css/style.css">
 	<script src="../static/js/jquery.min.js"></script>
 	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/moment.min.js"></script>
+	<script src="../static/js/daterangepicker.js"></script>
 	<script src="../static/js/page.js"></script>
 	<!--[if lt IE 9]>
 	<script src="../static/js/html5shiv.js"></script>
@@ -682,219 +683,154 @@
 		</div>
 	</div>
 
-	<div class="container page-box">
-
-		<div class="g-block">
-			<div class="hd green">
-				<h4>编辑资料</h4>
-			</div>
-			<div class="bd edit-profile">
-				<!-- 编辑资料和线上结构一致,保存按钮结构稍微变了一点 -->
-				<div class="row">
-					<div class="col-md-2">
-						<div style="text-align:center">
-							<img id="avatar" src="http://file.epubit.com.cn/LargeAvatar/">
-						</div>
-						<div style="width:120px;margin: 10px auto">
-					        <div class="k-widget k-upload k-header k-upload-empty"><div class="k-dropzone"><div class="k-button k-upload-button"><input id="upload-avatar" name="upload-avatar" type="file" data-role="upload" autocomplete="off"><span>Select files...</span></div><em>drop files here to upload</em></div></div>
-					    </div>
+	<div class="container page-box contribute-page">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="g-block">
+					<div class="hd green">
+						<h4>联系我们</h4>
 					</div>
-					<div class="col-md-8">
-						<form action="/User/Edit" method="post" novalidate="novalidate"><input name="__RequestVerificationToken" type="hidden" value="K2HTMdgxPErXD-ACM7ae_Up-vSN-ptDNPY5wjHsD67SSpyMQBs3DTcFmN34otusovHFZxDyF0b3EKTjsOK1gffFxgB1rgAsyeVMroSZBTQ_8380l_Nlidv6BveIBUBw6gvZhTTFqJthAEd8AdSpxWQ2">            <div class="form-horizontal">
-                
-                <input data-val="true" data-val-number="The field Id must be a number." data-val-required="Id 字段是必需的。" id="Id" name="Id" type="hidden" value="13">
-
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="Memo">自我介绍</label>
-                    <div class="col-md-9">
-                        <div class="simditor">
-  <div class="simditor-wrapper" style=""><div class="simditor-toolbar" style="width: 553px; top: 0px; left: 448px;"><ul><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-bold" href="javascript:;" title="加粗文字 ( Ctrl + b )"><span class="fa fa-bold"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-italic" href="javascript:;" title="斜体文字 ( Ctrl + i )"><span class="fa fa-italic"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-underline" href="javascript:;" title="下划线文字 ( Ctrl + u )"><span class="fa fa-underline"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-strikethrough" href="javascript:;" title="删除线文字"><span class="fa fa-strikethrough"></span></a></li><li><span class="separator"></span></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-ol" href="javascript:;" title="有序列表 ( ctrl + / )"><span class="fa fa-list-ol"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-ul" href="javascript:;" title="无序列表 ( Ctrl + . )"><span class="fa fa-list-ul"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-blockquote" href="javascript:;" title="引用"><span class="fa fa-quote-left"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-code" href="javascript:;" title="插入代码"><span class="fa fa-code"></span></a></li><li><span class="separator"></span></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-link" href="javascript:;" title="插入链接"><span class="fa fa-link"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-image" href="javascript:;" title="插入图片"><span class="fa fa-picture-o"></span></a><div class="toolbar-menu toolbar-menu-image"><ul><li><a tabindex="-1" unselectable="on" class="menu-item menu-item-upload-image" href="javascript:;" title="本地图片"><span>本地图片</span><input type="file" title="上传图片" accept="image/*"></a></li><li><a tabindex="-1" unselectable="on" class="menu-item menu-item-external-image" href="javascript:;" title="外链图片"><span>外链图片</span></a></li></ul></div></li><li><span class="separator"></span></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-indent" href="javascript:;" title="向右缩进 (Tab)"><span class="fa fa-indent"></span></a></li><li><a tabindex="-1" unselectable="on" class="toolbar-item toolbar-item-outdent" href="javascript:;" title="向左缩进 (Shift + Tab)"><span class="fa fa-outdent"></span></a></li></ul></div>
-    <div class="simditor-placeholder" style="top: 81px;"></div>
-    <div class="simditor-body" contenteditable="true"><p>أهلا وسهلا</p><p>مرحبا بك</p></div>
-  </div>
-<textarea cols="20" data-val="true" data-val-length="自我介绍不要超过512个字" data-val-length-max="512" htmlattributes="{ class = form-control }" id="Memo" name="Memo" rows="2" style="display: none;">&lt;p&gt;أهلا وسهلا&lt;/p&gt;&lt;p&gt;مرحبا بك&lt;/p&gt;</textarea><div tabindex="-1" contenteditable="true" class="simditor-paste-area" style="width: 1px; height: 1px; overflow: hidden; position: fixed; right: 0px; bottom: 100px;"></div><textarea tabindex="-1" class="simditor-clean-paste-area" style="width: 1px; height: 1px; overflow: hidden; position: fixed; right: 0px; bottom: 101px;"></textarea><div class="simditor-popover code-popover"><div class="code-settings">
-  <div class="settings-field">
-    <select class="select-lang">
-      <option value="-1">选择程序语言</option>
-      <option value="bash">Bash</option>
-      <option value="c++">C++</option>
-      <option value="cs">C#</option>
-      <option value="css">CSS</option>
-      <option value="erlang">Erlang</option>
-      <option value="less">Less</option>
-      <option value="scss">Sass</option>
-      <option value="diff">Diff</option>
-      <option value="coffeeScript">CoffeeScript</option>
-      <option value="html">Html,XML</option>
-      <option value="json">JSON</option>
-      <option value="java">Java</option>
-      <option value="js">JavaScript</option>
-      <option value="markdown">Markdown</option>
-      <option value="oc">Objective C</option>
-      <option value="php">PHP</option>
-      <option value="perl">Perl</option>
-      <option value="python">Python</option>
-      <option value="ruby">Ruby</option>
-      <option value="sql">SQL</option>
-    </select>
-  </div>
-</div></div><div class="simditor-popover link-popover"><div class="link-settings">
-  <div class="settings-field">
-    <label></label>
-    <input class="link-text" type="text">
-    <a class="btn-unlink" href="javascript:;" title="" tabindex="-1"><span class="fa fa-unlink"></span></a>
-  </div>
-  <div class="settings-field">
-    <label></label>
-    <input class="link-url" type="text">
-  </div>
-</div></div><div class="simditor-popover image-popover"><div class="link-settings">
-  <div class="settings-field">
-    <label></label>
-    <input class="image-src" type="text" tabindex="1">
-    <a class="btn-upload" href="javascript:;" title="" tabindex="-1">
-      <span class="fa fa-upload"></span>
-    <input type="file" title="" accept="image/*"></a>
-  </div>
-  <div class="settings-field">
-    <label></label>
-    <input class="image-size" id="image-width" type="text" tabindex="2">
-    <span class="times">×</span>
-    <input class="image-size" id="image-height" type="text" tabindex="3">
-    <a class="btn-restore" href="javascript:;" title="" tabindex="-1">
-      <span class="fa fa-reply"></span>
-    </a>
-  </div>
-</div></div></div>
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Memo" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="Website">个人网站</label>
-                    <div class="col-md-9">
-                        <input class="form-control text-box single-line" data-val="true" data-val-length="网站地址不要超过256个字符" data-val-length-max="256" id="Website" name="Website" type="text" value="www.baidu.com">
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Website" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="PublicProvince">所在省市</label>
-                    <div class="col-md-9">
-                    	<select class="form-control">
-                    		<option value="">北京</option>
-                    	</select>
-                        <span class="field-validation-valid text-danger" data-valmsg-for="PublicProvince" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="PublicCity">所在市区</label>
-                    <div class="col-md-9">
-                    	<select class="form-control">
-                    		<option value="">海淀</option>
-                    	</select>
-                        <span class="field-validation-valid text-danger" data-valmsg-for="PublicCity" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="UseMarkdownEditor">写作使用编辑器</label>
-                    <div class="col-md-9">
-                        <label class="radio">
-                            <input data-toggle="radio" data-val="true" data-val-required="写作使用编辑器 字段是必需的。" id="UseMarkdownEditor" name="UseMarkdownEditor" type="radio" value="True" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span> Markdown编辑器
-                        </label>
-                        <label class="radio">
-                            <input checked="checked" data-toggle="radio" id="UseMarkdownEditor" name="UseMarkdownEditor" type="radio" value="False" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span> HTML编辑器
-                        </label>
-
-                        <span class="field-validation-valid text-danger" data-valmsg-for="UseMarkdownEditor" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-
-                <h4>以下信息用于快递和活动身份确认，仅相关社区管理员可见：</h4>
-
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="TrueName">真实姓名</label>
-                    <div class="col-md-9">
-                        <input class="form-control text-box single-line" data-val="true" data-val-length="真实姓名不要超过30个字符" data-val-length-max="30" id="TrueName" name="TrueName" type="text" value="">
-                        <span class="field-validation-valid text-danger" data-valmsg-for="TrueName" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="Province">省/市</label>
-                    <div class="col-md-9">
-                        <input class="form-control text-box single-line" data-val="true" data-val-length="所在省份不要超过10个字" data-val-length-max="10" id="Province" name="Province" type="text" value="">
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Province" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="City">市/区</label>
-                    <div class="col-md-9">
-                        <input class="form-control text-box single-line" data-val="true" data-val-length="所在省份不要超过10个字" data-val-length-max="10" id="City" name="City" type="text" value="">
-                        <span class="field-validation-valid text-danger" data-valmsg-for="City" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="Address">邮寄地址</label>
-                    <div class="col-md-9">
-                        <input class="form-control text-box single-line" data-val="true" data-val-length="邮寄地址不要超过64个字符" data-val-length-max="64" id="Address" name="Address" type="text" value="">
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Address" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="Zipcode">邮政编码</label>
-                    <div class="col-md-9">
-                        <input class="form-control text-box single-line" data-val="true" data-val-length="邮政编码要求6个字符" data-val-length-max="6" data-val-length-min="6" id="Zipcode" name="Zipcode" type="text" value="">
-                        <span class="field-validation-valid text-danger" data-valmsg-for="Zipcode" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="MobilePhone">移动电话</label>
-                    <div class="col-md-9">
-                        <input class="form-control text-box single-line" data-val="true" data-val-length="电话号码要求不超过20个字符" data-val-length-max="20" id="MobilePhone" name="MobilePhone" type="text" value="">
-                        <span class="field-validation-valid text-danger" data-valmsg-for="MobilePhone" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-
-                <h4>证件信息用于实名认证作者，用于为作者提供稿费查询服务：</h4>
-
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="IdCardNumber">证件号码</label>
-                    <div class="col-md-9">
-                        <input class="form-control text-box single-line" data-val="true" data-val-length="证件号码不能超过64个字符" data-val-length-max="64" id="IdCardNumber" name="IdCardNumber" type="text" value="">
-                        <span class="field-validation-valid text-danger" data-valmsg-for="IdCardNumber" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="IdCardName">证件姓名</label>
-                    <div class="col-md-9">
-                        <input class="form-control text-box single-line" data-val="true" data-val-length="证件姓名不能超过64个字符" data-val-length-max="64" id="IdCardName" name="IdCardName" type="text" value="">
-                        <span class="field-validation-valid text-danger" data-valmsg-for="IdCardName" data-valmsg-replace="true"></span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                	<label class="control-label col-md-3"></label>
-                	<div class="col-md-9">
-                		<input type="submit" value="保 存" class="btn btn-default">
-                	</div>
-                </div>
-
-                
-
-
-            </div>
-</form>
+					<div class="bd">
+						<div class="panel-group connect" id="accordion" role="tablist" aria-multiselectable="true">
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingOne">
+						      <h4 class="panel-title wxqr">
+						        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="qricon">
+						          <span class="txt">极思社区 微信公众号</span>
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+						      <div class="panel-body">
+						        <img src="../static/images/temp/5.png" alt="">
+						        <div class="blk5"></div>
+						        <div class="text-muted">扫描二维码即可关注</div>
+						      </div>
+						    </div>
+						  </div>
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingTwo">
+						      <h4 class="panel-title sinaqr">
+						        <a class="collapsed qricon" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						          <span class="txt">极思社区 官方微博</span>
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						      <div class="panel-body">
+						        <img src="../static/images/temp/5.png" alt="">
+						        <div class="blk5"></div>
+						        <div class="text-muted">扫描二维码即可关注</div>
+						      </div>
+						    </div>
+						  </div>
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingThree">
+						      <h4 class="panel-title qqqr">
+						        <a class="collapsed qricon" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						          <span class="txt">极思社区 官方QQ群</span>
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						      <div class="panel-body">
+						        <img src="../static/images/temp/5.png" alt="">
+						        <div class="blk5"></div>
+						        <div class="text-muted">扫描二维码即可关注</div>
+						      </div>
+						    </div>
+						  </div>
+						</div>
 					</div>
 				</div>
-				<!-- /编辑资料和线上结构一致,保存按钮结构稍微变了一点 -->
+			</div>
+
+			<div class="col-md-9">
+				<div class="g-block">
+					<div class="hd green">
+						<h4>作者投稿</h4>
+					</div>
+					<div class="bd clearfix">
+						<div class="g-txt-panel">
+							<div class="blk20"></div>
+							<p>关于极思社区</p>
+							<p>人民邮电出版社是工业和信息化部主管的大型专业出版社，成立于1953年10月1日。2003年被中央确定为文化体制改革第一批试点单位。2010年5月，人民邮电出版社核销了事业单位编制、注销了事业单位法人登记，并作为企业法人单位在国家工商行政管理总局进行了工商登记，标志着转企改革工作全面完成。</p>
+							<div class="blk40"></div>
+							<p>投稿须知：</p>
+							<p>2003年成为中央文化体制改革试点单位以来，人民邮电出版社依托资源优势，建立和完善现代企业制度，重塑文化市场竞争主体，着力推进各项机制改革，资产规模和经营效益得到大幅提升，实现了跨越式发展，已于2010年正式转制为企业，已成为我国出版市场上最有活力和影响力的大型出版社之一。在工业和信息化部的指导及支持下，2013年，人民邮电出版社参与组建的中国工信出版传媒集团正式成立。站在历史发展的新起点上，人民邮电出版社正以坚毅的步伐和开拓进取的精神，不断深化体制机制改革，将为建设社会主义文化强国、实现文化大发展大繁荣做出新的更大贡献！</p>
+							<div class="blk20"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="g-block">
+					<div class="hd green">
+						<h4>作者投稿</h4>
+					</div>
+					<div class="bd clearfix">
+						<form action="">
+							<div class="form-horizontal">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">稿件类别：</label>
+									<div class="col-sm-5">
+										<select class="form-control">
+											<option value="">信息技术类图书</option>
+										</select>
+							        </div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">书名或标题：</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control">
+							        </div>
+								</div>
+								<div class="line-dot"></div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">内容简介：</label>
+									<div class="col-sm-8">
+										<textarea rows="5" class="form-control"></textarea>
+							        </div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">作者简介：</label>
+									<div class="col-sm-8">
+										<textarea rows="5" class="form-control"></textarea>
+							        </div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">联系方式：</label>
+									<div class="col-sm-8">
+										<textarea rows="5" class="form-control"></textarea>
+							        </div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">预计交稿日期：</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control days">
+							        </div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label"></label>
+									<div class="col-sm-8">
+										<div class="checkbox">
+									        <label>
+									          <input type="checkbox" value="">我已阅读<a href="">《人民邮电出版社投稿须知》</a>
+									        </label>
+									    </div>
+							        </div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label"></label>
+									<div class="col-sm-8">
+										<button class="btn btn-default">投稿</button>
+							        </div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				
 			</div>
 		</div>
 	</div>
@@ -908,6 +844,17 @@
 			All rights reserved
 		</div>
 	</footer>
+
+
+	<script>
+	$(function(){
+		//单日期显示
+		$(".days").daterangepicker({
+	        singleDatePicker: true,
+	        format: 'YYYY-MM-DD'
+	    });  
+	})
+	</script>
 
 </body>
 </html>
