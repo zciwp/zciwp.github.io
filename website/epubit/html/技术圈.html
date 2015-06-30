@@ -412,174 +412,94 @@
 		</div>
 	</div>
 
-	<div class="container page-box book-page">
+	<div class="container page-box tech-circle-page">
 		<div class="col-md-4">
 			<div class="panel sidebar-box">
 				<div class="sidebar">
-					<ul class="main-cate">
-						<li>
-							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">所有类别</span><span class="glyphicon glyphicon-menu-right"></span></a>
-						</li>
-						<li>
-							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">IT文化与互联网</span><span class="glyphicon glyphicon-menu-right"></span></a>
-						</li>
-						<li>
-							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">Web技术</span><span class="glyphicon glyphicon-menu-right"></span></a>
-						</li>
-						<li>
-							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">操作系统</span><span class="glyphicon glyphicon-menu-right"></span></a>
-						</li>
-						<li>
-							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">计算机科学</span><span class="glyphicon glyphicon-menu-right"></span></a>
-						</li>
-						<li>
-							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">软件开发</span><span class="glyphicon glyphicon-menu-right"></span></a>
-						</li>
-						<li>
-							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">数据科学</span><span class="glyphicon glyphicon-menu-right"></span></a>
-						</li>
-						<li>
-							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">数字艺术</span><span class="glyphicon glyphicon-menu-right"></span></a>
-						</li>
-						<li>
-							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">思科</span><span class="glyphicon glyphicon-menu-right"></span></a>
-						</li>
-						<li>
-							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">网络技术</span><span class="glyphicon glyphicon-menu-right"></span></a>
-						</li>
-						<li>
-							<a href="" class="clearfix" data-toggle="dropdown" data-hover="dropdown"><span class="txt">效率与娱乐</span><span class="glyphicon glyphicon-menu-right"></span></a>
-						</li>
+					<!-- 一级分类，只有所有类别一个 -->
+					<ul class="fmenu">
+						<li><a href="">所有类别</a></li>
 					</ul>
+					<!-- 二级分类 -->
+					<ul class="smenu">
+						<li><a href="">软件开发</a></li>
+					</ul>
+					<!-- 三级分类 -->
+					<ul class="tmenu">
+						<li><a href="">- 编程语言</a></li>
+						<li class="active"><a href="">- 算法</a></li>
+						<li><a href="">- 软件工程与方法</a></li>
+					</ul>
+					<div class="text-center promotionimg">
+						<a href="">
+							<img src="../static/images/promotion.png" alt="">
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="col-md-8">
-			<div class="panel">
-				<div class="top-panel clearfix">
-					<div class="t-con">Javascript</div>
-						<!-- pc端展现 -->
-						<ul class="tablst hidden-xs clearfix" role="tablist">
-							<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab">所有图书</a></li>
-							<li role="presentation"><a href="" role="tab" data-toggle="tab">电子书</a></li>
-							<li role="presentation"><a href="" role="tab" data-toggle="tab">按需印刷</a></li>
-							<li role="presentation"><a href="" role="tab" data-toggle="tab">开放出版</a></li>
-							<li role="presentation"><a href="" role="tab" data-toggle="tab">关注</a></li>
-							<li role="presentation"><a href="" role="tab" data-toggle="tab">收藏</a></li>
-							<li role="presentation"><a href="" role="tab" data-toggle="tab">已购买</a></li>
-						</ul>
-						<!-- /pc端展现 -->
-						<!-- 移动端展现 -->
-						<div role="presentation" class="dropdown mobi-tablst visible-xs-block" id="mobi-tablst">
-					        <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-					          <span class="txt">所有图书</span>
-					          <span class="caret"></span>
-					        </a>
-					        <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-					          <li role="presentation"><a role="menuitem" href="">所有图书</a></li>
-					          <li role="presentation"><a role="menuitem" href="">电子书</a></li>
-					          <li role="presentation"><a role="menuitem" href="">按需印刷</a></li>
-					          <li role="presentation"><a role="menuitem" href="">开放出版</a></li>
-					          <li role="presentation"><a role="menuitem" href="">关注</a></li>
-					          <li role="presentation"><a role="menuitem" href="">收藏</a></li>
-					          <li role="presentation"><a role="menuitem" href="">已购买</a></li>
-					        </ul>
-					    </div>
-					    <!-- /移动端展现 -->
+			<div class="g-block">
+				<div class="hd green">
+					<h4>全部类别</h4>
+					<span class="tips">极思社区采用类别层级的组织方式，每个类别下面有相应的图书、文章、用户。</span>
 				</div>
-				<ul class="catetab tablst clearfix" role="tablist">
-					<li role="presentation"><a href="" role="tab" data-toggle="tab">热门</a></li>
-					<li role="presentation"><a href="" role="tab" data-toggle="tab">新书</a></li>
-					<li role="presentation"><a href="" role="tab" data-toggle="tab">本月</a></li>
-					<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab">本年</a></li>
-				</ul>
-				<div class="book-lst clearfix">
-					<!-- 一本书 开始 -->
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="media">
-							<div class="media-left">
-								<a href="">
-									<img class="media-object" src="../static/images/temp/2.png" alt="">
-								</a>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
-								<div>[英]克莱儿·麦克福尔</div>
-								<div class="blk15"></div>
-								<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
-							</div>
-						</div>
+				<div class="blk20"></div>
+				<div class="row cate-box">
+					<div class="col-md-12">
+						<div style="background-image: url(../static/images/temp/16.png);" class="category-item cat-digital">
+			                <div class="url"></div>
+			                <div class="data">
+			                    <h2><a href="/Category/Details/61">思科 <small>Special Topics</small></a></h2>
+			                    <p><b>子类 </b><a href="/course/show/51">大数据</a> | <a href="/course/show/51">移动应用</a> | <a href="">更多…</a></p>
+			                </div>
+			            </div>
 					</div>
-					<!-- 一本书 结束 -->
-					<!-- 一本书 开始 -->
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="media">
-							<div class="media-left">
-								<a href="">
-									<img class="media-object" src="../static/images/temp/2.png" alt="">
-								</a>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
-								<div>[英]克莱儿·麦克福尔</div>
-								<div class="blk15"></div>
-								<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
-							</div>
-						</div>
+				</div>
+				<div class="row cate-box">
+					<div class="col-md-6">
+						<div style="background-image: url(../static/images/temp/17.png);" class="category-item">
+	                        <a href="/Category/Details/64">
+	                            <h2>效率与娱乐<small>Traffic &amp; Transport</small></h2>
+	                        </a>
+	                    </div>
 					</div>
-					<!-- 一本书 结束 -->
-					<!-- 一本书 开始 -->
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="media">
-							<div class="media-left">
-								<a href="">
-									<img class="media-object" src="../static/images/temp/2.png" alt="">
-								</a>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
-								<div>[英]克莱儿·麦克福尔</div>
-								<div class="blk15"></div>
-								<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
-							</div>
-						</div>
+					<div class="col-md-6">
+						<div style="background-image: url(../static/images/temp/18.png);" class="category-item">
+	                        <a href="/Category/Details/64">
+	                            <h2>Web技术<small>Traffic &amp; Transport</small></h2>
+	                        </a>
+	                    </div>
 					</div>
-					<!-- 一本书 结束 -->
-					<!-- 一本书 开始 -->
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="media">
-							<div class="media-left">
-								<a href="">
-									<img class="media-object" src="../static/images/temp/2.png" alt="">
-								</a>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
-								<div>[英]克莱儿·麦克福尔</div>
-								<div class="blk15"></div>
-								<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
-							</div>
-						</div>
+					<div class="col-md-6">
+						<div style="background-image: url(../static/images/temp/19.png);" class="category-item">
+	                        <a href="/Category/Details/64">
+	                            <h2>软件开发<small>Traffic &amp; Transport</small></h2>
+	                        </a>
+	                    </div>
 					</div>
-					<!-- 一本书 结束 -->
-					<!-- 一本书 开始 -->
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<div class="media">
-							<div class="media-left">
-								<a href="">
-									<img class="media-object" src="../static/images/temp/2.png" alt="">
-								</a>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
-								<div>[英]克莱儿·麦克福尔</div>
-								<div class="blk15"></div>
-								<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
-							</div>
-						</div>
+					<div class="col-md-6">
+						<div style="background-image: url(../static/images/temp/20.png);" class="category-item">
+	                        <a href="/Category/Details/64">
+	                            <h2>专业应用<small>Traffic &amp; Transport</small></h2>
+	                        </a>
+	                    </div>
 					</div>
-					<!-- 一本书 结束 -->
+					<div class="col-md-6">
+						<div style="background-image: url(../static/images/temp/21.png);" class="category-item">
+	                        <a href="/Category/Details/64">
+	                            <h2>软件开发<small>Traffic &amp; Transport</small></h2>
+	                        </a>
+	                    </div>
+					</div>
+					<div class="col-md-6">
+						<div style="background-image: url(../static/images/temp/22.png);" class="category-item">
+	                        <a href="/Category/Details/64">
+	                            <h2>专业应用<small>Traffic &amp; Transport</small></h2>
+	                        </a>
+	                    </div>
+					</div>
 				</div>
 			</div>
 		</div>

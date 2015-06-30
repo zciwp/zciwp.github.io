@@ -1039,6 +1039,9 @@ footer{
 			color: $global-FontMainColor
 		}
 	}
+	.promotionimg{
+		padding: 20px;
+	}
 }
 
 .pn{
@@ -2516,6 +2519,150 @@ a.input-group-addon{
 } 
 
 
+// 技术圈
+.tech-circle-page{
+	.sidebar{
+		padding: 8px 0 20px;
+		.fmenu{
+			a{
+				padding-left: 30px;
+				font-weight: bold;
+			}
+		}
+		.smenu{
+			a{
+				padding-left: 42px;
+			}
+		}
+		.tmenu{
+			a{
+				padding-left: 56px;
+			}
+		}
+		a{
+			display: block;
+			height: 32px;
+			line-height: 32px;
+			font-size: 14px;
+			color: #333;
+			&:hover{
+				background-color: #b2e4de;
+			}
+		}
+		.active{
+			a{
+				background-color: #00a493;
+				color: #fff;
+			}
+		}
+	}
+	.cate-box{
+		padding: 0 35px;
+		.col-md-12,.col-md-6{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.category-item {
+  width: 100%;
+  padding: 40% 0 0 0;
+  height: 0;
+  margin: 0 0 20px 0;
+  background: #ccc;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  .category-item .url {
+    right: 0;
+    top: 0;
+    margin-top: -40%;
+    text-align: right;
+    bottom: auto;
+    left: auto;
+    padding: 10px 14px;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+    .category-item .url a {
+      color: white; }
+  .category-item .data {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+padding-bottom: 20px;}
+  .category-item:hover .data {
+    background: rgba(0, 0, 0, 0.8); }
+  .category-item h2 {
+    color: white;
+    font-size: 24px;
+    margin: 0; }
+    .category-item h2 a {
+      padding: 14px 14px 6px 14px;
+      color: white;
+      display: block; }
+      .category-item h2 a:hover {
+        color: #d5d4cc; }
+      .category-item h2 a small, .category-item h2 a small > b {
+        font-weight: normal;
+        color: #d5d4cc; }
+  .category-item p {
+    color: #aaa;
+    padding: 0 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    .category-item p b {
+      font-weight: normal;
+      color: #939189; }
+    .category-item p > a {
+      color: #ccc; }
+      .category-item p > a:hover {
+        color: #d5d4cc; }
+
+
+
+        .col-md-6 > .category-item {
+    padding: 0;
+    height: auto; }
+    .col-md-6 > .category-item > a {
+      display: block;
+      padding: 48% 0 0 0;
+      width: 100%; }
+      .col-md-6 > .category-item > a > h2 {
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        background: rgba(0, 0, 0, 0.6);
+        font-size: 18px;
+        color: white;
+        padding: 10px 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+        .col-md-6 > .category-item > a > h2 > small {
+          display: block;
+          font-size: 14px;
+          line-height: 20px; }
+          .col-md-6 > .category-item > a > h2 > small, .col-md-6 > .category-item > a > h2 > small b {
+            font-weight: normal; }
+      .col-md-6 > .category-item > a:hover > h2 {
+        background: #1b4d20;
+        color: #d5d4cc; }
+	}
+	.promotionimg{
+		padding: 10px 20px 0;
+		a{
+			height: auto;
+		}
+	}
+}
+
+
 
 
 
@@ -2537,6 +2684,17 @@ a.input-group-addon{
 		}
 		.icons{
 			display: none;
+		}
+	}
+	#categoryList{
+		padding-top: 10px;
+		.t{
+			padding-bottom: 5px;
+		}
+		li{
+			float: left;
+			padding-left: 20px;
+			padding-bottom: 5px;
 		}
 	}
 }
@@ -2878,7 +3036,9 @@ a.input-group-addon{
 	border-bottom: 1px solid $borColor2;
 	margin-bottom: 15px;
 }
-
+.mr20{
+	margin-right: 20px;
+}
 
 @media (max-width: 1200px){
 	.bookdetail-page .bookdetail-panel .bookDeFd .btn{

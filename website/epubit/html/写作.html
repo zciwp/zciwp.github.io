@@ -689,7 +689,7 @@
 				<h4>写作</h4>
 			</div>
 			<div class="bd">
-				<!-- 写作结构开始 和线上一致 -->
+				<!-- 写作结构开始 和线上基本一致，修改了一些顺序，修改了输入框长度，从原来的col-md-10变为col-md-8 -->
 				<div class="row">
 			<div class="col-md-12">
 				<form action="/Article/Write" data-ajax="true" data-ajax-failure="errorMessage" data-ajax-success="successMessage" id="form0" method="post" novalidate="novalidate">
@@ -699,14 +699,20 @@
 						<input data-val="true" data-val-number="The field Id must be a number." id="Id" name="Id" type="hidden" value="">
 						<div class="form-group">
 							<label class="control-label col-md-2" for="Subject">标题</label>
-							<div class="col-md-10">
+							<div class="col-md-8">
 								<input class="form-control text-box single-line" data-val="true" data-val-length="字段 标题 必须是最大长度为 50 的字符串。" data-val-length-max="50" data-val-required="标题 字段是必需的。" id="Subject" name="Subject" type="text" value="">
 								<span class="field-validation-valid text-danger" data-valmsg-for="Subject" data-valmsg-replace="true"></span>
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="control-label col-md-2" for="Body">正文</label>
+							<label class="control-label col-md-2" for="Published">写作使用编辑器</label>
 							<div class="col-md-10">
+								<div class="form-control-static"><a href="" class="fs16">设置</a></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-md-2" for="Body">正文</label>
+							<div class="col-md-8">
 								<div class="simditor">
 									<div class="simditor-wrapper">
 										<div class="simditor-toolbar" style="width: 943px; top: 0px; left: 287px;">
@@ -874,76 +880,39 @@
 						</div>
 						<div class="form-group">
 							<label class="control-label col-md-2" for="Abstract">摘要</label>
-							<div class="col-md-10">
+							<div class="col-md-8">
 								<textarea class="form-control text-box multi-line" data-val="true" data-val-length="字段 摘要 必须是最大长度为 500 的字符串。" data-val-length-max="500" id="Abstract" name="Abstract"></textarea>
 								<span class="field-validation-valid text-danger" data-valmsg-for="Abstract" data-valmsg-replace="true"></span>
 							</div>
 						</div>
-						<div class="form-group">
-							<label class="control-label col-md-2" for="Published">发表</label>
-							<div class="col-md-10">
-								<label class="radio">
-									<input data-toggle="radio" data-val="true" data-val-required="发表 字段是必需的。" id="Published" name="Published" type="radio" value="True" class="custom-radio">
-									<span class="icons">
-										<span class="icon-unchecked"></span>
-										<span class="icon-checked"></span>
-									</span>
-									对外发表
-								</label>
-								<label class="radio">
-									<input data-toggle="radio" id="Published" name="Published" type="radio" value="False" class="custom-radio">
-									<span class="icons">
-										<span class="icon-unchecked"></span>
-										<span class="icon-checked"></span>
-									</span>
-									保存为草稿
-								</label>
-								<span class="field-validation-valid text-danger" data-valmsg-for="Published" data-valmsg-replace="true"></span>
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="control-label col-md-2" for="Published">写作使用编辑器</label>
-							<div class="col-md-10">
-								<label class="radio">
-									<input data-toggle="radio" data-val="true" data-val-required="发表 字段是必需的。" id="Published" name="Published" type="radio" value="True" class="custom-radio">
-									<span class="icons">
-										<span class="icon-unchecked"></span>
-										<span class="icon-checked"></span>
-									</span>
-									Markdown编辑器
-								</label>
-								<label class="radio">
-									<input data-toggle="radio" id="Published" name="Published" type="radio" value="False" class="custom-radio">
-									<span class="icons">
-										<span class="icon-unchecked"></span>
-										<span class="icon-checked"></span>
-									</span>
-									HTML编辑器
-								</label>
-								<span class="field-validation-valid text-danger" data-valmsg-for="Published" data-valmsg-replace="true"></span>
-							</div>
-						</div>
+						
 						<div class="form-group">
 							<label class="control-label col-md-2" for="ArticlePersonalCategoryId">私人分类</label>
-							<div class="col-md-10">
+							<div class="col-md-8">
 								<select class="form-control" data-val="true" data-val-number="The field 私人分类 must be a number." data-val-required="私人分类 字段是必需的。" id="ArticlePersonalCategoryId" name="ArticlePersonalCategoryId">
 									<option value="">***请选择***</option>
 									<option value="2">社区文档</option>
 									<option value="9">测试</option>
 								</select>
 								<span class="field-validation-valid text-danger" data-valmsg-for="ArticlePersonalCategoryId" data-valmsg-replace="true"></span>
-								<a href="javascript:void(0)" id="personal-category-modal">管理</a>
+							</div>
+							<div class="col-md-2">
+								<div class="form-control-static"><a href="javascript:void(0)" id="personal-category-modal">管理</a></div>
 							</div>
 						</div>
 						<div class="form-group">
 							<label class="control-label col-md-2">技术类别</label>
-							<div class="col-md-10">
-								<a href="javascript:void(0)" id="article-category-modal" class="btn btn-default">修改技术类别</a>
-								<div id="categoryList">
-									<ul>
+							<div class="col-md-8">
+								<a href="javascript:void(0)" id="article-category-modal" class="btn btn-sec">修改技术类别</a>
+								<div id="categoryList" class="clearfix">
+									<div class="t pull-left">已选技术类别</div>
+									<ul class="pull-left">
 
 										<li>
 											<a href="/Category/Details/19" target="_blank">软件开发</a>
+										</li>
+										<li>
+											<a href="/Category/Details/19" target="_blank">数字艺术</a>
 										</li>
 
 									</ul>
@@ -953,7 +922,7 @@
 						</div>
 						<div class="form-group">
 							<label class="control-label col-md-2" for="BookIdNamePairs">相关图书</label>
-							<div class="col-md-10">
+							<div class="col-md-8">
 								<div class="k-widget k-multiselect k-header k-state-focused" unselectable="on" style="">
 									<div class="k-multiselect-wrap k-floatwrap" unselectable="on">
 										<ul role="listbox" unselectable="on" class="k-reset" id="BookIds_taglist"></ul>
@@ -970,7 +939,7 @@
 						</div>
 						<div class="form-group">
 							<label class="control-label col-md-2" for="UserIdNamePairs">相关用户</label>
-							<div class="col-md-10" id="artilce-users">
+							<div class="col-md-8" id="artilce-users">
 								<div class="k-widget k-multiselect k-header k-state-focused" unselectable="on" style="">
 									<div class="k-multiselect-wrap k-floatwrap" unselectable="on">
 										<ul role="listbox" unselectable="on" class="k-reset" id="UserIds_taglist"></ul>
@@ -989,8 +958,9 @@
 						<div id="article-save-message"></div>
 						<div class="form-group">
 							<div class="col-md-offset-2 col-md-10">
-								<input type="submit" value="保存" class="btn btn-default">
-								<a id="article-preview" href="javascript:void(0)" target="_blank" class="btn btn-primary" style="display:none;">预览</a>
+								<input type="submit" value="发布" class="btn btn-default mr20">
+								<input type="submit" value="保存为草稿" class="btn btn-sec">
+								<a href="" class="offsetl20">预览</a>
 							</div>
 						</div>
 
@@ -1012,6 +982,109 @@
 			All rights reserved
 		</div>
 	</footer>
+
+
+
+
+
+
+<!-- 点击管理出的浮层 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">
+        	私人分类管理
+        </h4>
+      </div>
+      <div class="modal-body">
+		<div id="personal-category">
+			<div>添加新分类：</div>
+			<div class="blk5"></div>
+			<form action="">
+				<div class="form-horizontal">
+					<div class="form-group">
+				        <div class="col-sm-8">
+				          <input type="text" class="form-control">
+				        </div>
+				        <div class="col-sm-4">
+				        	<button class="btn btn-default">增加</button>
+				        </div>
+				    </div>
+				</div>
+			</form>
+			<div>已有分类：</div>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>分类名</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>测试</td>
+						<td>
+							<a data-ajax="true" data-ajax-mode="replace" data-ajax-update="#personal-category" href="/ArticlePersonalCategory/Edit/9">改名</a>
+							<a href="javascript:void(0)" id="delete-9">删除</a>
+							<a href="javascript:void(0)" id="up-9">上移</a>
+							<a href="javascript:void(0)" id="down-9">下移</a>
+						</td>
+					</tr>
+					<tr>
+						<td>社区文档</td>
+						<td>
+							<a data-ajax="true" data-ajax-mode="replace" data-ajax-update="#personal-category" href="/ArticlePersonalCategory/Edit/2">改名</a>
+							<a href="javascript:void(0)" id="delete-2">删除</a>
+							<a href="javascript:void(0)" id="up-2">上移</a>
+							<a href="javascript:void(0)" id="down-2">下移</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 点击修改技术类别出的浮层 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">
+        	技术类别管理
+        </h4>
+      </div>
+      <div class="modal-body">
+		<div id="article-category">
+                    <div id="treeview" data-role="treeview" class="k-widget k-treeview" tabindex="0" role="tree"><ul class="k-group k-treeview-lines" role="group"><li role="treeitem" class="k-item k-first" data-uid="ff8b5f24-9f1b-4f5f-9209-640a6611b75d"><div class="k-top k-top"><span class="k-icon k-plus" role="presentation"></span><span class="k-checkbox" role="presentation"><input type="checkbox"></span><span class="k-in">软件开发</span></div></li><li role="treeitem" class="k-item" data-uid="876243be-9cc8-4379-93e8-921d2ea2b16c"><div class="k-mid"><span class="k-icon k-plus" role="presentation"></span><span class="k-checkbox" role="presentation"><input type="checkbox"></span><span class="k-in">数字艺术</span></div></li><li role="treeitem" class="k-item" data-uid="6ba12e6a-64d2-4f73-a5b0-a3af7aa11038"><div class="k-mid"><span class="k-icon k-plus" role="presentation"></span><span class="k-checkbox" role="presentation"><input type="checkbox"></span><span class="k-in">Web技术</span></div></li><li role="treeitem" class="k-item" data-uid="f1e86284-1abc-4bb6-a5a4-d430eb6ebae0"><div class="k-mid"><span class="k-icon k-plus" role="presentation"></span><span class="k-checkbox" role="presentation"><input type="checkbox"></span><span class="k-in">操作系统</span></div></li><li role="treeitem" class="k-item" data-uid="0af6f2e9-5d2c-47e7-92a2-edb9ee8f2648"><div class="k-mid"><span class="k-icon k-plus" role="presentation"></span><span class="k-checkbox" role="presentation"><input type="checkbox"></span><span class="k-in">数据科学</span></div></li><li role="treeitem" class="k-item" data-uid="f1d920d0-c194-4050-9b0e-8ab080ee3f71"><div class="k-mid"><span class="k-icon k-plus" role="presentation"></span><span class="k-checkbox" role="presentation"><input type="checkbox"></span><span class="k-in">网络技术</span></div></li><li role="treeitem" class="k-item" data-uid="78211ddd-021c-4b04-b11e-f9ca5d409c72"><div class="k-mid"><span class="k-icon k-plus" role="presentation"></span><span class="k-checkbox" role="presentation"><input type="checkbox"></span><span class="k-in">思科</span></div></li><li role="treeitem" class="k-item" data-uid="2e37055e-72b6-4b47-baad-c992ea42f48e"><div class="k-mid"><span class="k-icon k-plus" role="presentation"></span><span class="k-checkbox" role="presentation"><input type="checkbox"></span><span class="k-in">计算机科学</span></div></li><li role="treeitem" class="k-item" data-uid="684e0b4f-56c2-4219-93c2-afede7310d7b"><div class="k-mid"><span class="k-icon k-plus" role="presentation"></span><span class="k-checkbox" role="presentation"><input type="checkbox"></span><span class="k-in">专业应用</span></div></li><li role="treeitem" class="k-item" data-uid="71739214-f692-499f-b280-340a6d03f415"><div class="k-mid"><span class="k-icon k-plus" role="presentation"></span><span class="k-checkbox" role="presentation"><input type="checkbox"></span><span class="k-in">效率与娱乐</span></div></li><li role="treeitem" class="k-item" data-uid="dcee9838-1ab3-4b6e-b124-8a164eedb2d7"><div class="k-mid"><span class="k-icon k-plus" role="presentation"></span><span class="k-checkbox" role="presentation"><input type="checkbox"></span><span class="k-in">智能技术</span></div></li><li role="treeitem" class="k-item k-last" data-uid="117b5663-7479-46af-b07e-d5dc11b989d7"><div class="k-bot"><span class="k-icon k-plus" role="presentation"></span><span class="k-checkbox" role="presentation"><input type="checkbox"></span><span class="k-in">IT文化与互联网</span></div></li></ul></div>
+                </div>
+      	</div>
+      	<div class="modal-footer">
+          <button type="button" class="btn btn-sec" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-default">保存</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+$('#personal-category-modal').bind('click',function(){
+	$('#myModal').modal();
+});
+$('#article-category-modal').bind('click',function(){
+	$('#myModal2').modal();
+});
+</script>
+
 
 </body>
 </html>
