@@ -2651,7 +2651,7 @@ padding-bottom: 20px;}
           .col-md-6 > .category-item > a > h2 > small, .col-md-6 > .category-item > a > h2 > small b {
             font-weight: normal; }
       .col-md-6 > .category-item > a:hover > h2 {
-        background: #1b4d20;
+        background: #000;
         color: #d5d4cc; }
 	}
 	.promotionimg{
@@ -3029,6 +3029,19 @@ padding-bottom: 20px;}
 			margin-top: 3px;
 		}
 	}
+	.upload-demo{
+		display: none;
+	}
+	.form-control-static{
+		.tips{
+			background-color: #f2f2f2;
+			color: #999;
+			padding: 5px 10px;
+			display: inline; 
+			zoom: 1;
+			border: 1px solid $borColor2;
+		}
+	}
 }
 .line-dot{
 	height: 0;
@@ -3039,6 +3052,8 @@ padding-bottom: 20px;}
 .mr20{
 	margin-right: 20px;
 }
+
+
 
 @media (max-width: 1200px){
 	.bookdetail-page .bookdetail-panel .bookDeFd .btn{
