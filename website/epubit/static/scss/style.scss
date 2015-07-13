@@ -1256,6 +1256,11 @@ footer{
 
 // 图书3种模式
 .book-box{
+	.book-pic{
+		img{
+			border: 1px solid $borColor2;
+		}
+	}
 	.lst-normal,.lst-side{
 		.book-name{
 			display: none;
@@ -1380,6 +1385,7 @@ footer{
 .user-box{
 	.lst-normal{
 		padding-right: 10px;
+		font-size: 0;
 		.col-md-12{
 			width: 33%;
 			display: inline-block;
@@ -1387,6 +1393,7 @@ footer{
 			zoom: 1;
 			float: none;
 			vertical-align: top;
+			font-size: 14px;
 		}
 	}
 	.lst-grid{
