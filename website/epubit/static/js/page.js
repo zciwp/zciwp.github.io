@@ -26,6 +26,32 @@ $(function(e){
         e.preventDefault();
         $('.book-page #mobi-tablst #drop4 .txt').html($(this).html());
     })
+    // 图书详情目录展开收起
+    if ($('#directory .bookmenu').height()>333) {
+        $('#directoryMore').css('display','block');
+    }
+    else{
+        $('#directoryMore').css('display','none');
+    }
+    $("#directoryMore").on('click',function(e){
+        e.preventDefault();
+        if($(this).hasClass('extend')){
+            $('#directory .inner').css({
+                'max-height':'none',
+                'overflow':'auto'
+            });
+            $(this).addClass('abridge').removeClass('extend');
+            $(this).html('收起');
+        }else{
+            $('#directory .inner').css({
+                'max-height':'333px',
+                'overflow':'hidden'
+            });
+            $(this).addClass('extend').removeClass('abridge');
+            $(this).html('点击展开全部章节');
+        }
+
+    });
 })
 
 

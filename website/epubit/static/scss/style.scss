@@ -1527,6 +1527,14 @@ footer{
 }
 
 // 文章详情
+.article-detail-page{
+	.col-md-4{
+		float: left;
+	}
+	.col-md-8{
+		float: right;
+	}
+}
 .article-detail{
 	padding: 20px;
 	font-size: 16px;
@@ -1602,6 +1610,12 @@ footer{
 	.bookdetail{
 		padding-top: 90px;
 		font-size: 14px;
+	}
+	.directory{
+		.inner{
+			max-height: 333px;
+			overflow: hidden;
+		}
 	}
 	.bookmenu{
 		td{
@@ -3217,6 +3231,14 @@ padding-bottom: 20px;}
 			.lst-grid .col-md-12{
 				width: 50%;
 			}
+		}
+	}
+	.article-detail-page{
+		.col-md-4{
+			float: none;
+		}
+		.col-md-8{
+			float: none;
 		}
 	}
 }
