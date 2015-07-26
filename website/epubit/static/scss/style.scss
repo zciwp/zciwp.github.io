@@ -528,6 +528,7 @@ a{
 		border-left: 1px solid $borColor2;
 		padding: 5px 0 5px 15px;
 		margin-left: 10px;
+		width: 110px;
 		.price{
 			color: $green;
 			font-size: 14px;
@@ -1125,7 +1126,7 @@ footer{
 		}
 	}
 	.media{
-		padding-top: 15px;
+		padding-top: 10px;
 		margin-top: 0;
 	}
 	.media-body{
@@ -1158,12 +1159,13 @@ footer{
 		width: 20px;
 		height: 20px;
 		line-height: 20px;
-		vertical-align: middle;
+		vertical-align: top;
 		display: inline-block;
 		*display: inline;
 		zoom: 1; 
 		text-align: center;
 		margin-right: 5px;
+		font-size: 14px;
 	}
 	.recom{
 		background-color: #99dbd4;
@@ -1238,6 +1240,7 @@ footer{
 }
 
 .book-side{
+	margin-right: 0;
 	img{
 		max-width: none;
 	}
@@ -1330,6 +1333,13 @@ footer{
 
 // 文章3种模式
 .article-box{
+	.article-name{
+		font-size: 18px;
+	}
+	.media{
+		font-size: 15px;
+		line-height: 24px;
+	}
 	.lst-normal{
 		.hot,.recom{
 			display: none;
@@ -1354,9 +1364,6 @@ footer{
 			word-break: normal;
 			word-wrap: normal;
 		}
-		.media{
-			padding-top: 5px;
-		}
 		.media-left{
 			display: none;
 		}
@@ -1376,6 +1383,9 @@ footer{
 		padding-right: 10px;
 		.col-md-12{
 			width: 100%;
+		}
+		.article-name{
+			font-size: 16px;
 		}
 	}
 }
@@ -2565,6 +2575,7 @@ a.input-group-addon{
 			margin-top: 4px
 		}
 	}
+	a{ white-space: nowrap;}
 }
 
 //订阅

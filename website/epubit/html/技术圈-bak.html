@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>图书-异步社区</title>
+	<title>技术圈-异步社区</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -413,8 +413,7 @@
 	</div>
 
 	<div class="container page-box book-page">
-		
-		<div class="col-md-4 col-sm-12">
+		<div class="col-md-4">
 			<div class="panel sidebar-box">
 				<div class="sidebar">
 					<ul class="main-cate">
@@ -454,152 +453,133 @@
 					</ul>
 				</div>
 			</div>
-
-			<div class="g-block">
-				<div class="hd green">
-					<h4>社区专家</h4>
-					<div class="r-panel">
-						<a href="" class="more">+更多</a>
-					</div>
-				</div>
-				<div class="bd row author-side">
-					<div class="item col-lg-3 col-md-4 col-sm-3 col-xs-6">
-						<a href="">
-							<img src="../static/images/temp/3.png" alt="">
-							<span class="name">北岛</span>
-						</a>
-					</div>
-					<div class="item col-lg-3 col-md-4 col-sm-3 col-xs-6">
-						<a href="">
-							<img src="../static/images/temp/3.png" alt="">
-							<span class="name">北岛北岛北岛北岛北岛</span>
-						</a>
-					</div>
-					<div class="item col-lg-3 col-md-4 col-sm-3 col-xs-6">
-						<a href="">
-							<img src="../static/images/temp/3.png" alt="">
-							<span class="name">北岛</span>
-						</a>
-					</div>
-					<div class="item col-lg-3 col-md-4 col-sm-3 col-xs-6">
-						<a href="">
-							<img src="../static/images/temp/3.png" alt="">
-							<span class="name">北岛</span>
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="g-block">
-				<div class="hd green">
-					<h4>社区专家</h4>
-					<div class="r-panel">
-						<a href="" class="more">+更多</a>
-					</div>
-				</div>
-				<div class="bd row author-side">
-					<div class="media col-md-12">
-						<div class="media-left">
-							<a href=""><img src="../static/images/temp/3.png" alt="" class="wp50"></a>
-						</div>
-						<div class="media-body">
-							<div class="t">北岛 当代散文作家、小说家</div>
-							<div class="text-muted">
-								<div class="txt">中国作家北岛入围诺贝尔文学奖</div>
-								<div class="txt">中国当代十大诗人评选揭晓</div>
-								<div class="txt">北岛和诗歌节</div>
-								<div class="txt">北岛 ．城门开 ：三联书店</div>
-							</div>
-						</div>
-					</div>
-					<div class="media col-md-12">
-						<div class="media-left">
-							<a href=""><img src="../static/images/temp/3.png" alt="" class="wp50"></a>
-						</div>
-						<div class="media-body">
-							<div class="t">北岛 当代散文作家、小说家</div>
-							<div class="text-muted">
-								<div class="txt">中国作家北岛入围诺贝尔文学奖</div>
-								<div class="txt">中国当代十大诗人评选揭晓</div>
-								<div class="txt">北岛和诗歌节</div>
-								<div class="txt">北岛 ．城门开 ：三联书店</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 
-		<div class="col-md-8 col-sm-12">
-			
-			<div class="g-block">
-				<div class="hd green">
-					<h4>作者展示台</h4>
-					<div class="r-panel">
-						<a href="" class="more">+更多</a>
-					</div>
+		<div class="col-md-8">
+			<div class="panel">
+				<div class="top-panel clearfix">
+					<div class="t-con">Javascript</div>
+						<!-- pc端展现 -->
+						<ul class="tablst hidden-xs clearfix" role="tablist">
+							<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab">所有图书</a></li>
+							<li role="presentation"><a href="" role="tab" data-toggle="tab">电子书</a></li>
+							<li role="presentation"><a href="" role="tab" data-toggle="tab">按需印刷</a></li>
+							<li role="presentation"><a href="" role="tab" data-toggle="tab">开放出版</a></li>
+							<li role="presentation"><a href="" role="tab" data-toggle="tab">关注</a></li>
+							<li role="presentation"><a href="" role="tab" data-toggle="tab">收藏</a></li>
+							<li role="presentation"><a href="" role="tab" data-toggle="tab">已购买</a></li>
+						</ul>
+						<!-- /pc端展现 -->
+						<!-- 移动端展现 -->
+						<div role="presentation" class="dropdown mobi-tablst visible-xs-block" id="mobi-tablst">
+					        <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+					          <span class="txt">所有图书</span>
+					          <span class="caret"></span>
+					        </a>
+					        <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+					          <li role="presentation"><a role="menuitem" href="">所有图书</a></li>
+					          <li role="presentation"><a role="menuitem" href="">电子书</a></li>
+					          <li role="presentation"><a role="menuitem" href="">按需印刷</a></li>
+					          <li role="presentation"><a role="menuitem" href="">开放出版</a></li>
+					          <li role="presentation"><a role="menuitem" href="">关注</a></li>
+					          <li role="presentation"><a role="menuitem" href="">收藏</a></li>
+					          <li role="presentation"><a role="menuitem" href="">已购买</a></li>
+					        </ul>
+					    </div>
+					    <!-- /移动端展现 -->
 				</div>
-				<div class="bd author-lst row">
-					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+				<ul class="catetab tablst clearfix" role="tablist">
+					<li role="presentation"><a href="" role="tab" data-toggle="tab">热门</a></li>
+					<li role="presentation"><a href="" role="tab" data-toggle="tab">新书</a></li>
+					<li role="presentation"><a href="" role="tab" data-toggle="tab">本月</a></li>
+					<li role="presentation" class="active"><a href="" role="tab" data-toggle="tab">本年</a></li>
+				</ul>
+				<div class="book-lst clearfix">
+					<!-- 一本书 开始 -->
+					<div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="media">
 							<div class="media-left">
 								<a href="">
-									<img class="media-object" src="../static/images/temp/3.png" alt="">
+									<img class="media-object" src="../static/images/temp/2.png" alt="">
 								</a>
 							</div>
-							<ul class="media-body">
-								<li class="name"><a href="">七堇年</a></li>
-								<li>文章 236</li>
-								<li>著作 12</li>
-								<li>声望 11万2</li>
-							</ul>
+							<div class="media-body">
+								<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
+								<div>[英]克莱儿·麦克福尔</div>
+								<div class="blk15"></div>
+								<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
+							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+					<!-- 一本书 结束 -->
+					<!-- 一本书 开始 -->
+					<div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="media">
 							<div class="media-left">
 								<a href="">
-									<img class="media-object" src="../static/images/temp/3.png" alt="">
+									<img class="media-object" src="../static/images/temp/2.png" alt="">
 								</a>
 							</div>
-							<ul class="media-body">
-								<li class="name"><a href="">七堇年</a></li>
-								<li>文章 236</li>
-								<li>著作 12</li>
-								<li>声望 11万2</li>
-							</ul>
+							<div class="media-body">
+								<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
+								<div>[英]克莱儿·麦克福尔</div>
+								<div class="blk15"></div>
+								<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
+							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+					<!-- 一本书 结束 -->
+					<!-- 一本书 开始 -->
+					<div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="media">
 							<div class="media-left">
 								<a href="">
-									<img class="media-object" src="../static/images/temp/3.png" alt="">
+									<img class="media-object" src="../static/images/temp/2.png" alt="">
 								</a>
 							</div>
-							<ul class="media-body">
-								<li class="name"><a href="">七堇年</a></li>
-								<li>文章 236</li>
-								<li>著作 12</li>
-								<li>声望 11万2</li>
-							</ul>
+							<div class="media-body">
+								<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
+								<div>[英]克莱儿·麦克福尔</div>
+								<div class="blk15"></div>
+								<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
+							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+					<!-- 一本书 结束 -->
+					<!-- 一本书 开始 -->
+					<div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="media">
 							<div class="media-left">
 								<a href="">
-									<img class="media-object" src="../static/images/temp/3.png" alt="">
+									<img class="media-object" src="../static/images/temp/2.png" alt="">
 								</a>
 							</div>
-							<ul class="media-body">
-								<li class="name"><a href="">七堇年</a></li>
-								<li>文章 236</li>
-								<li>著作 12</li>
-								<li>声望 11万2</li>
-							</ul>
+							<div class="media-body">
+								<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
+								<div>[英]克莱儿·麦克福尔</div>
+								<div class="blk15"></div>
+								<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
+							</div>
 						</div>
 					</div>
+					<!-- 一本书 结束 -->
+					<!-- 一本书 开始 -->
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="media">
+							<div class="media-left">
+								<a href="">
+									<img class="media-object" src="../static/images/temp/2.png" alt="">
+								</a>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">JavaScript高效图形编程（修订版）</h4>
+								<div>[英]克莱儿·麦克福尔</div>
+								<div class="blk15"></div>
+								<div class="text-muted">本书是一本具有很强实操性的JavaScript图书，全书共分10章，涵盖的主要内容有：JavaScript的面向对象机制、JavaScript性能优化、jQuery和ExtJS库、高级UI设计、Web游戏开发、面向...</div>
+							</div>
+						</div>
+					</div>
+					<!-- 一本书 结束 -->
 				</div>
 			</div>
 		</div>
@@ -611,7 +591,6 @@
 			&copy; 2014异步社区 <span>·</span> 人民邮电出版社 <span>·</span> All rights reserved
 		</div>
 	</footer>
-
 
 
 

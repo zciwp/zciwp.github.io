@@ -8,11 +8,13 @@ $(function(e){
         });
     }
     var UA = navigator.userAgent,
+    isIE = navigator.userAgent.indexOf('MSIE') >= 0 ? true : false,
     start = navigator.userAgent.indexOf('MSIE')+4,
     ver = UA.substr(start,2);
-    if(ver < 8){
+    if(isIE && ver < 8){
         window.location.href = "warnpage.html";
     }
+    
     //图书分类
     $('.maintab a').bind('click',function(){
         $('.tab-content li').removeClass('active');
@@ -52,6 +54,13 @@ $(function(e){
         }
 
     });
+})
+
+$(document).ready(function(){
+    $('.navbar .dropdown-toggle').dropdownHover().dropdown();
+    $('#techCircleAll').on('click',function(){
+        window.location = '技术圈.html';
+    })
 })
 
 
