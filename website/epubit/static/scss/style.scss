@@ -1340,6 +1340,14 @@ footer{
 		font-size: 15px;
 		line-height: 24px;
 	}
+	.media-body{
+		.text-muted{
+			color: #666;
+			&:hover{
+				color: #444;
+			}
+		}
+	}
 	.lst-normal{
 		.hot,.recom{
 			display: none;
