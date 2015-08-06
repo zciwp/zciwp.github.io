@@ -3216,6 +3216,32 @@ padding-bottom: 20px;}
 	margin-right: 20px;
 }
 
+// 重置markdown预览和文章详情的样式
+
+.markdown-body{
+	pre{
+		padding: 5px 10px;
+	}
+	em{
+		font-style: italic;
+	}
+	h1{
+		font-size: 22px;
+		margin: 10px 0;
+	}
+	h2{
+		font-size: 20px;
+		margin: 8px 0;
+	}
+	h1,h2,h3,h4,h5,h6{
+		font-weight: bolder;
+	}
+}
+.typo{
+	.markdown-body{
+		border: none;
+	}
+}
 
 // @media (min-width: 1200px){
 // 	.article-box{
