@@ -1291,6 +1291,10 @@ footer{
 			vertical-align: top;
 			text-align: center;
 		}
+		.media{
+			display: table;
+			width: 100%;
+		}
 		.media-left{
 			.bpic-panel{
 				display: table;
@@ -3375,4 +3379,101 @@ padding-bottom: 20px;}
 			float: none;
 		}
 	}
+}
+
+// 温谦老师添加的page.css
+.PagedList-pager ul {
+  display: block;
+  margin: 15px 0;
+  padding: 0;
+  list-style: none; }
+  .PagedList-pager ul li {
+    margin: 2px;
+    display: inline-block;
+    float: left; }
+    .PagedList-pager ul li a {
+      display: block;
+      padding: 4px 12px;
+      color: #808185; }
+.PagedList-pager .PagedList-currentPage a {
+  color: #fff; }
+
+.PagedList-skipToPage,
+.PagedList-skipToLast,
+.PagedList-skipToFirst {
+  border: 1px solid #CCCCCC; }
+
+.PagedList-currentPage {
+  border: 1px solid #808185;
+  background-color: #808185; }
+// 温谦老师添加的added-style.css
+body{
+    line-height:1.7;
+}
+
+.fcg {
+  margin-bottom:1px;
+  font-size:26px !important;
+}
+
+.sidebar-box .main-cate li.active {background-color:#00a493;}
+.sidebar-box .main-cate li.active a{color:#fff;}
+
+.profile-menu dl dd { padding-left:5px; width:80%;}
+.profile-menu dl dd.active {background-color:#00a493;}
+.profile-menu dl dd.active a{color:#fff;}
+
+.g-block-2 .bd .text-muted a {color:#999;}
+.g-block-2 .media .media-heading a {color:#333;}
+
+.article-box .media {
+    font-size:12px;
+    line-height: 1.7;
+}
+
+.article-box .lst-side .article-name
+{
+    font-size:14px;
+}
+
+.article-box .article-name {
+  font-size: 14px;
+}
+
+.article .article-name a {
+  color: #555;
+  font-weight: bold;
+}
+
+.book-page .media .media-heading a b{
+    color:#555;
+}
+
+.article-share a {
+    line-height: 1;
+    padding: 10px 15px;
+    display: inline-block;
+    zoom: 1;
+    text-align: center;
+    color: #999;
+    text-decoration: none;
+}
+
+.article-share .glyphicon {
+    color: #00a493;
+}
+
+.article-share .txt {
+    display: block;
+    font-size: 18px;
+}
+
+.article-share .top {
+    font-size: 24px;
+    padding-bottom: 5px;
+    display: block;
+}
+
+.article-share .bor-r-g{
+    border-right: 1px solid #e5e5e5;
 }

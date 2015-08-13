@@ -10,7 +10,7 @@ $(function(e){
     var UA = navigator.userAgent,
     isIE = navigator.userAgent.indexOf('MSIE') >= 0 ? true : false,
     start = navigator.userAgent.indexOf('MSIE')+4,
-    ver = UA.substr(start,2);
+    ver = parseInt(UA.substr(start,3));
     if(isIE && ver < 8){
         window.location.href = "warnpage.html";
     }
