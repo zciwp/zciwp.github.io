@@ -3309,6 +3309,23 @@ padding-bottom: 20px;}
 	body{
 		overflow-x: hidden; 
 	}
+	.search-box{
+		margin: 0 15px;
+		display: table;
+		width: 100%;
+		.glyphicon-search{
+			display: table-cell;
+			vertical-align: middle;
+			width: 34px;
+			&:before{
+				padding: 0 5px;
+			}
+		}
+		.txt{
+			display: table-cell;
+			width: 100%;
+		}
+	}
 	.bookdetail-panel .media-left{
 		display: block;
 	}
