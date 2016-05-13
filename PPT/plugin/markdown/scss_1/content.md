@@ -195,7 +195,7 @@ ruby的安装程序可以在 [rubyinstaller.org](http://rubyinstaller.org) 上�
 <img src="img/win_ruby_installer.png" alt="win_ruby_installer" style="height: 400px;">
 
 
-sass的gem包可以在 [rubygems.org](http://rubygems.org/gem/sass) 上下载得到。
+sass的gem包可以在 [rubygems.org](https://rubygems.org/gems/sass) 上下载得到。
 
 <div class="space"></div>
 
